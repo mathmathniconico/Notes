@@ -29,7 +29,9 @@ __事実__ （H.Whitney, 1936）多様体が高々可算個の局所座標で覆
 
 特に$r=\infty$のとき、これらの問題は1936年にWhitneyによって肯定的によって解かれている。（精密には多様体は可算個の局所座標で覆えるとし、$s\ge 1$である。$s=0$については存在も一意性も否定的であり、位相構造と可微分構造の本質的な差を見ることができる。）
 
-ちなみに、$C^{\infty}$構造より一層細かい構造として、実解析的な同相写像を出発点とする$C^{\omega}$多様体がある。これについても$C^{\infty}$多様体の上に、唯一つの$C^{\omega}$構造が存在することが知られている。（要検証：条件不明）
+ちなみに、$C^{\infty}$構造より一層細かい構造として、実解析的な同相写像を出発点とする$C^{\omega}$多様体がある。これについても$C^{\infty}$多様体の上に、唯一つの$C^{\omega}$構造が存在することが知られている。
+
+> 可算個の局所座標で覆えることはもちろん、局所有限性などの条件が必要かもしれない。後で厳密な議論を行うと思う。
 
 
 ## 複素多様体
@@ -50,20 +52,22 @@ $$
 
 複素構造の存在や実現可能性は、実の場合と比べて易しくない。例えば偶数次元の球面$S^{2n}(n\ge 1, n\neq 3)$には複素構造が存在しない。コンパクトな複素多様体は（1点などの自明な場合を除いて）$\mathbb{C}^{L}$の中に複素解析的に埋め込めるとは限らない。$\mathbb{C}^{n}$と位相的には同相でも定数函数しか正則函数が存在しないような複素構造も知られている。
 
-<!--
-### 多様体の複素化（要検証：局所有限で可能なのか不明）
 
-$M$を$C^{\infty}$多様体とすると、先程述べた通り実解析的な構造が本質的に唯一つ定まる。つまり適当な（局所有限な）局所座標系$\lbrace (U_{\alpha}, \phi_{\alpha}) \rbrace$を取ると、座標変換$\phi_{\beta\alpha}=\phi_{\beta}\circ\phi_{\alpha}^{-1}$が実解析函数となるように取れる。従って解析接続が可能で、$\phi_{\alpha}(U_{\alpha}\cap U_{\beta})$の$\mathbb{C}^{n}$における近傍上で定義された複素解析函数$\phi_{\beta\alpha}^{\mathbb{C}}$に一意的に拡張できる。一意性により
+### 多様体の複素化
 
-$$
-\phi_{\gamma\beta}^{\mathbb{C}}\circ\phi_{\beta\alpha}^{\mathbb{C}}=\phi_{\gamma\alpha}^{\mathbb{C}}
-$$
+> あまり自信がないが、この本は実多様体のみを扱うので基本気にしなくていいはず。
 
-も成り立つ。特に$\phi_{\alpha\beta}^{\mathbb{C}}\circ\phi_{\beta\alpha}^{\mathbb{C}}=\mathrm{id}$であり、$\phi_{\alpha\beta}^{\mathbb{C}}$は複素解析的な同相写像であることが分かる。これを糊として貼り合わせた空間を考えると、座標変換とする$n$次元複素多様体$M^{\mathbb{C}}$を構成することができる。
+$M$を$C^{\infty}$多様体とすると、先程述べた通り実解析的な構造が本質的に唯一つ定まる。つまり適当な（局所有限な）局所座標系$\lbrace (U_{\alpha}, \phi_{\alpha}) \rbrace$を取ると、座標変換$\phi_{\beta\alpha}=\phi_{\beta}\circ\phi_{\alpha}^{-1}$が実解析函数となるように取れる。従って解析接続が可能で、$\phi_{\alpha}(U_{\alpha}\cap U_{\beta})$の$\mathbb{C}^{n}$における近傍上で定義された複素解析函数$\phi_{\beta\alpha}^{\mathbb{C}}$に一意的に拡張できる。
 
-丁寧に述べよう。$\phi_{\beta\alpha}^{\mathbb{C}}$が取れるところまでは良い。
+これらを糊として貼り合わせたいのだが、定義域がバラバラだと上手く行かない。しかし$M$は局所有限なので、任意の$p\in M$に対して$p$の開近傍$O$を取ることができて、$O\cap U_{\alpha}\neq\empty$なる$\alpha$は有限個である。そこで$O$上で考えると、適当な正の連続関数$\varepsilon$が取れて、
 
 $$
-\phi_{\alpha}(U_{\alpha})^{\mathbb{C}}:=\lbrace (x_{i}+\sqrt{-1}y_{i})\in\mathbb{C}^{n} : x\in\phi_{\alpha}(U_{\alpha}), \vert y_{i} \vert\lt\varepsilon(x) \rbrace
+\begin{aligned}
+\phi_{\alpha}(O\cap U_{\alpha})^{\mathbb{C}} &:=\lbrace (x_{i}+\sqrt{-1}y_{i})\in\mathbb{C}^{n} : x\in\phi_{\alpha}(O\cap U_{\alpha}), \vert y_{i} \vert\lt\varepsilon(x) \rbrace, \\
+\phi_{\alpha}(O\cap U_{\alpha}\cap U_{\beta})^{\mathbb{C}} &:=\phi_{\alpha}(O\cap U_{\alpha})^{\mathbb{C}}\cap\lbrace (x_{i}+\sqrt{-1}y_{i})\in\mathbb{C}^{n} : x\in\phi_{\alpha}(O\cap U_{\alpha}\cap U_{\beta}) \rbrace
+\end{aligned}
 $$
--->
+
+としたときに、$\phi_{\beta\alpha}^{\mathbb{C}}$が$\phi_{\alpha}(O\cap U_{\alpha}\cap U_{\beta})^{\mathbb{C}}$上の複素解析函数となる。解析接続の一意性より座標変換の性質から$\phi_{\gamma\beta}^{\mathbb{C}}\circ\phi_{\beta\alpha}^{\mathbb{C}}=\phi_{\gamma\alpha}^{\mathbb{C}}$が成り立つ。特に$\phi_{\alpha\beta}^{\mathbb{C}}\circ\phi_{\beta\alpha}^{\mathbb{C}}=\mathrm{id}$であり、$\phi_{\alpha\beta}^{\mathbb{C}}$は複素解析的な同相写像であることが分かる。
+
+さて、全ての$p\in M$と$O\cap U_{\alpha}\neq\empty$なる$\alpha$についての直和$\bigsqcup \phi_{\alpha}(O\cap U_{\alpha})^{\mathbb{C}}$を考える。座標変換$\phi_{\alpha\beta}^{\mathbb{C}}$で移り合う点同士を同一視したものを$M^{\mathbb{C}}$とすると、$M^{\mathbb{C}}$は$\overline{\phi_{\alpha}(O\cap U_{\alpha})^{\mathbb{C}}}$を局所座標とする複素多様体となる。これを$M$の複素化という。
