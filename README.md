@@ -18,7 +18,12 @@
     1. [曲線と曲面概念の拡張](/Manifold/WhatIsManifold.md)
     1. [多様体の誕生](/Manifold/BirthOfManifold.md)
     1. [多様体に関する諸注意](/Manifold/RemarkOfManifold.md)
-    1. 接ベクトルと接バンドル
+    1. [接ベクトルと接バンドル](\Manifold/Tangent.md)
 
 1. 多様体論
 
+
+
+# 解析学
+
+- [ダルブーの公式](/Analysis/DarbouxFormula.md)
