@@ -24,6 +24,13 @@
 
 
 
-# 解析学
+# 収束空間論
 
-- ダルブーの公式
+過去に作ったノートを修正しつつ移植中。
+
+1. フィルターの基礎
+
+    1. [フィルター](/ConvergentSpace/Filter.md)
+    1. [フィルターの大小](/ConvergentSpace/FinerCoarser.md)
+    1. フィルター射
+    1. 超フィルター
