@@ -51,9 +51,7 @@ $$
 
 定理の系として次の推移性が成り立つ。
 
-__系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \mathscr{H}_{ij} : i\in I, j\in J_{i} ) \rbrace$をフィルター付き集合の族とする。$f_{i}\colon X\rightarrow Y_{i}, g_{ij}\colon Y_{i}\rightarrow Z_{ij}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による始フィルター$\mathscr{G}_{i}$でフィルター付き集合とみなせる。次が成り立つ。
-
-- $\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始フィルターと、$\lbrace f_{i} : i\in I \rbrace$による始フィルターは一致する。
+__系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \mathscr{H}_{ij} : i\in I, j\in J_{i} ) \rbrace$をフィルター付き集合の族とする。$f_{i}\colon X\rightarrow Y_{i}, g_{ij}\colon Y_{i}\rightarrow Z_{ij}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による始フィルター$\mathscr{G}_{i}$でフィルター付き集合とみなせる。このとき$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始フィルターと、$\lbrace f_{i} : i\in I \rbrace$による始フィルターは一致する。
 
 （証明）$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始フィルターを$\mathcal{I}$、$\lbrace f_{i} : i\in I \rbrace$による始フィルターを$\mathcal{J}$とする。$(Z, \mathscr{H})$をフィルター付き集合、$h\colon Z\rightarrow X$とする。定理より以下は同値である。
 
