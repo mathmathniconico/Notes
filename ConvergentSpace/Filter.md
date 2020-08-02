@@ -35,12 +35,15 @@ $A\subset X$について$\lbrace A \rbrace$が生成するフィルターを **�
 
 真フィルターより弱い概念を導入する。
 
-__定義__ $\mathscr{B}\subset 2^{X}, \neq\emptyset$が以下を満たすとき$X$の **prefilter** という。
+__定義__ $\mathscr{B}\subset 2^{X}, \neq\emptyset$が以下を満たすとき$X$の **prefilter** と呼ぶ。
 
-- $\emptyset\notin\mathscr{B}$である。
 - $A, B\in\mathscr{B}$なら、ある$C\in\mathscr{B}$が存在して$C\subset A\cap B$が成り立つ。
 
-真フィルターはprefilterである。逆にprefilterが生成するフィルターは次のような真フィルターである。
+同様に$\emptyset\notin\mathscr{B}$のとき **真prefilter** と呼ぶ。
+
+> ただしフィルターの場合と異なり、$\emptyset\in\mathscr{B}$だからといって自明（$\mathscr{B}=2^{X}$）とは限らない。
+
+フィルターはprefilterである。真フィルターは真prefilterである。
 
 __命題__ $\mathscr{B}\subset 2^{X}$をprefilterとする。このとき
 
@@ -48,11 +51,13 @@ $$
 \langle \mathscr{B} \rangle=\lbrace F\subset X : \exists B\in\mathscr{B}, B\subset F \rbrace
 $$
 
-が成り立ち、$\langle \mathscr{B} \rangle$は真フィルターである。
+が成り立ち、特に右辺は$\mathscr{B}$を含む最小のフィルターである。
+
+$\mathscr{B}$が真prefilterのとき$\langle \mathscr{B} \rangle$は真フィルターである。
 
 （証明）左辺が右辺を含むことは定義より明らか。$F\in\langle \mathscr{B} \rangle$とすると、$B_{1}, \dotsc, B_{n}\in\mathscr{B}$が存在して$B_{1}\cap\dotsm\cap B_{n}\subset F$となる。prefilterの定義から$n$を一つずつ減らすことができて、結局ある$B\in\mathscr{B}$が存在して$B\subset F$となる。
 
-$\emptyset\notin\langle \mathscr{B} \rangle$は$\mathscr{B}$がprefilterであることから従う。$\square$
+$\emptyset\in\langle \mathscr{B} \rangle$とすると、ある$B\in\mathscr{B}$が存在して$B\subset\emptyset$である。故に$B\in\mathscr{B}$が従う。$\square$
 
 
 

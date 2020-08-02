@@ -20,7 +20,7 @@ __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。TFAE
 
 フィルターより粗いフィルターの作り方を考える。
 
-$\mathscr{G}, \mathscr{G}\subset 2^{X}$をフィルターとする。集合としての共通部分$\mathscr{G}\cap\mathscr{F}$もまたフィルターである。一般に$\mathscr{F}_{\lambda}, \lambda\in\Lambda$をフィルターの族として、$\bigcap_{\lambda\in\Lambda}\mathscr{F}_{\lambda}$もまたフィルターである。
+__定義__ $\mathscr{G}, \mathscr{G}\subset 2^{X}$をフィルターとする。集合としての共通部分$\mathscr{G}\cap\mathscr{F}$もまたフィルターである。一般に$\mathscr{F}_{\lambda}, \lambda\in\Lambda$をフィルターの族として、$\bigcap_{\lambda\in\Lambda}\mathscr{F}_{\lambda}$もまたフィルターである。このとき
 
 $$
 \begin{aligned}
@@ -35,18 +35,13 @@ $$
 
 prefilterより細かいprefilterの作り方を考える。
 
-__定義__ $\mathscr{S}, \mathscr{T}\subset 2^{X}$を集合族とする。以下が成り立つとき$\mathscr{S}$と$\mathscr{T}$は **交わる** という。
-
-- 任意の$S\in\mathscr{S}$と任意の$T\in\mathscr{T}$について$S\cap T\neq\emptyset$が成り立つ。
-
-
-__命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$を交わるprefilterとする。以下が成り立つ。
+__命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。以下が成り立つ。
 
 - $\mathscr{A}\vee\mathscr{B}:=\lbrace A\cap B : A\in\mathscr{A}, B\in\mathscr{B} \rbrace$はprefilterである。
 - $\mathscr{A}\vee\mathscr{B}$は$\mathscr{A}, \mathscr{B}$より細かい。つまり$\mathscr{A}, \mathscr{B}\dashv\mathscr{A}\vee\mathscr{B}$が成り立つ。
 - $\mathscr{A}\vee\mathscr{B}$は$\dashv$に関する上限を与える。つまり$\mathscr{A}, \mathscr{B}\dashv\mathscr{C}$なら$\mathscr{A}\vee\mathscr{B}\dashv\mathscr{C}$が成り立つ。
 
-（証明）交わるので$\mathscr{A}\vee\mathscr{B}$は空集合を含まない。$A_{1}, A_{2}\in\mathscr{A}, B_{1}, B_{2}\in\mathscr{B}$として$V=A_{1}\cap B_{1}, W=A_{2}\cap B_{2}\in\mathscr{A}\vee\mathscr{B}$を取る。$\mathscr{A}$はprefilterだから、ある$A\in\mathscr{A}$が存在して$A\subset A_{1}\cap A_{2}$である。同様に$B\in\mathscr{B}$が存在して$B\subset B_{1}\cap B_{2}$である。$A\cap B\in\mathscr{A}\vee\mathscr{B}$であり、
+（証明）$A_{1}, A_{2}\in\mathscr{A}, B_{1}, B_{2}\in\mathscr{B}$として$V=A_{1}\cap B_{1}, W=A_{2}\cap B_{2}\in\mathscr{A}\vee\mathscr{B}$を取る。$\mathscr{A}$はprefilterだから、ある$A\in\mathscr{A}$が存在して$A\subset A_{1}\cap A_{2}$である。同様に$B\in\mathscr{B}$が存在して$B\subset B_{1}\cap B_{2}$である。$A\cap B\in\mathscr{A}\vee\mathscr{B}$であり、
 
 $$
 A\cap B\subset A_{1}\cap A_{2}\cap B_{1}\cap B_{2}\subset V\cap W
@@ -62,9 +57,16 @@ __定義__ 上記の$\mathscr{A}\vee\mathscr{B}$をprefilterの **vel積**とい
 
 > 集合としての共通部分がwedge積であり粗く、元の共通部分を集めた集合がvel積であり細かい。
 
-__命題__ $\mathscr{F}, \mathscr{G}\subset 2^{X}$を交わるフィルターとする。（特に真フィルターである。）このとき$\mathscr{F}\vee\mathscr{G}$は真フィルターである。
+__定義__ $\mathscr{S}, \mathscr{T}\subset 2^{X}$を集合族とする。以下が成り立つとき$\mathscr{S}$と$\mathscr{T}$は **交わる** という。
 
-（証明）フィルターとなることを示す。$V=F\cap G\in\mathscr{F}\vee\mathscr{G}$を取る。$V\subset W$とすると$F\subset W\cup F\in\mathscr{F}, G\subset W\cup G\in\mathscr{G}$である。故に
+- 任意の$S\in\mathscr{S}$と任意の$T\in\mathscr{T}$について$S\cap T\neq\emptyset$が成り立つ。
+
+特にprefilter $\mathscr{A}, \mathscr{B}$が交わるとき$\mathscr{A}\vee\mathscr{B}$は真prefilterである。
+
+
+__命題__ $\mathscr{F}, \mathscr{G}\subset 2^{X}$をフィルターとする。このとき$\mathscr{F}\vee\mathscr{G}$はフィルターである。
+
+（証明）$V=F\cap G\in\mathscr{F}\vee\mathscr{G}$を取る。$V\subset W$とすると$F\subset W\cup F\in\mathscr{F}, G\subset W\cup G\in\mathscr{G}$である。故に
 
 $$
 W=W\cup V=( W\cup F )\cap( W\cup G )\in\mathscr{F}\vee\mathscr{G}
@@ -72,9 +74,9 @@ $$
 
 を得る。$i=1, 2$に対して$V_{i}=F_{i}\cap G_{i}\in\mathscr{F}\vee\mathscr{G}$を取る。$F_{1}\cap F_{2}\in\mathscr{F}, G_{1}\cap G_{2}\in\mathscr{G}$より$V_{1}\cap V_{2}=( F_{1}\cap F_{2} )\cap( G_{1}\cap G_{2} )\in\mathscr{F}\vee\mathscr{G}$を得る。$\square$
 
-vel積は生成と可換になる。
+特に$\mathscr{F}, \mathscr{G}$が交わるとき$\mathscr{F}\vee\mathscr{G}$は真フィルターである。
 
-__命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$を交わるprefilterとする。このとき
+__命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。このとき
 
 $$
 \langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle=\langle \mathscr{A}\vee\mathscr{B} \rangle
@@ -82,8 +84,8 @@ $$
 
 が成り立つ。
 
-（証明）任意の$F\in\langle \mathscr{A} \rangle, G\in\langle \mathscr{B} \rangle$について、ある$A\in\mathscr{A}, B\in\mathscr{B}$が存在して$A\subset F, B\subset G$より$\emptyset\neq A\cap B\subset F\cap G$が成り立つ。つまり$\langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle$を定義できる。
-
-$\mathscr{A}, \mathscr{B}\dashv\mathscr{A}\vee\mathscr{B}$より$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle\subset\langle \mathscr{A}\vee\mathscr{B} \rangle$である。prefilterとして$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle\dashv\langle \mathscr{A}\vee\mathscr{B} \rangle$だから$\langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle\dashv\langle \mathscr{A}\vee\mathscr{B} \rangle$であり、従って$\langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle\subset\langle \mathscr{A}\vee\mathscr{B} \rangle$を得る。
+（証明）$\mathscr{A}, \mathscr{B}\dashv\mathscr{A}\vee\mathscr{B}$より$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle\subset\langle \mathscr{A}\vee\mathscr{B} \rangle$である。prefilterとして$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle\dashv\langle \mathscr{A}\vee\mathscr{B} \rangle$だから$\langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle\dashv\langle \mathscr{A}\vee\mathscr{B} \rangle$であり、従って$\langle \mathscr{A} \rangle\vee\langle \mathscr{B} \rangle\subset\langle \mathscr{A}\vee\mathscr{B} \rangle$を得る。
 
 一方で$\mathscr{A}\subset\langle \mathscr{A} \rangle, \mathscr{B}\subset\langle \mathscr{B} \rangle$より$\mathscr{A}\vee\mathscr{B}\subset\langle \mathscr{A} \rangle\vee\langle\ \mathscr{B} \rangle$であり、この右辺はフィルターであることから、生成の最小性より従う。$\square$
+
+> このようにvel積は生成と可換になる。$\mathscr{A}, \mathscr{B}$が交われば$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle$も交わり、上記は真フィルターとなる。

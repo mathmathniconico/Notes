@@ -32,5 +32,5 @@
 
     1. [フィルター](/ConvergentSpace/Filter.md)
     1. [フィルターの大小](/ConvergentSpace/FinerCoarser.md)
-    1. フィルター射
-    1. 超フィルター
+    1. [フィルター射](/ConvergentSpace/FilterMap.md)
+    1. [超フィルター](/ConvergentSpace/Ultrafilter.md)
