@@ -1,12 +1,15 @@
 # 読み方
 
 - 拡張機能を使う
-    1. Chrome系のブラウザなら[github-math-display](https://chrome.google.com/webstore/detail/github-math-display/cgolaobglebjonjiblcjagnpmdmlgmda)という拡張機能を入れるとGitHub上である程度は見れる。ただしまだ完全ではない。
+    1. Chrome系のブラウザなら[github-math-display](https://chrome.google.com/webstore/detail/github-math-display/cgolaobglebjonjiblcjagnpmdmlgmda)という拡張機能を入れるとGitHub上で数式が見れるようになる。[GitHubページ](https://github.com/AaronCQL/katex-github-chrome-extension)
 
 - VSCodeを使う
     1. VSCodeにMarkdown+Mathプラグインを入れる。
     1. このリポジトリをクローンorダウンロードして、各markdownファイルをプレビューする。
 
+# 可換環論
+
+準備中
 
 # 収束空間論
 
@@ -14,12 +17,12 @@
 
 1. フィルターと収束空間の基礎
 
-    1. [フィルター](/ConvergentSpace/Filter.md)
-    1. [フィルターの大小](/ConvergentSpace/FinerCoarser.md)
-    1. [フィルター射](/ConvergentSpace/FilterMap.md)
+    1. [フィルターとprefilter](/ConvergentSpace/Filter.md)
+    1. [フィルターの大小（Wedge積とVel積）](/ConvergentSpace/FinerCoarser.md)
+    1. [フィルター射（始フィルターと終フィルター）](/ConvergentSpace/InitialFinal.md)
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
-    1. [収束空間](/ConvergentSpace/Conv.md)
-
+    1. [収束空間と連続射](/ConvergentSpace/Conv.md)
+    1. [Continuous Convergence Structure](/CnvergentSpace/CCS.md)
 
 
 # 多様体ノート

@@ -1,4 +1,4 @@
-## prefilterの大小
+## フィルターの大小（Wedge積とVel積）
 
 __定義__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。関係$\mathscr{A}\dashv\mathscr{B}$を以下で定める。
 
