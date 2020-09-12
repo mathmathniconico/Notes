@@ -67,14 +67,46 @@ $(Z, \mathscr{H})=(X, \mathcal{I})$として$h(x)=x$を取れば上から下へ�
 
 始フィルターで定義できる概念がいくつかある。
 
-- $(Y, \mathscr{G})$をフィルター付き集合、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による始フィルターを **逆像フィルター** と呼び、$f^{\ast}\mathscr{G}$と表す。
-- $(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$X=\prod Y_{i}$として、$p_{i}\colon X\rightarrow Y_{i}$を射影とする。$\lbrace p_{i} \rbrace$による始フィルターを **直積フィルター** と呼び、$\prod\mathscr{G}_{i}$と表す。
+#### 逆像フィルター
+
+__定義__ $(Y, \mathscr{G})$をフィルター付き集合、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による始フィルターを **逆像フィルター** と呼び、$f^{\ast}\mathscr{G}$と表す。
+
+- 逆像フィルターの生成系$f^{-1}\mathscr{G}$はprefilterである。
+
+
+#### 直積フィルター
+
+__定義__ $(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$X=\prod Y_{i}$として、$p_{i}\colon X\rightarrow Y_{i}$を射影とする。$\lbrace p_{i} \rbrace$による始フィルターを **直積フィルター** と呼び、$\prod\mathscr{G}_{i}$と表す。
 
 __系__ $(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合とする。$(\prod Y_{i}, \prod\mathscr{G}_{i})$は直積対象である。つまり次の普遍性を満たす。
 
 - $(Z, \mathscr{H})$をフィルター付き集合、$g_{i}\colon (Z, \mathscr{H})\rightarrow (Y_{i}, \mathscr{G}_{i})$をフィルター射とする。このときあるフィルター射$h\colon (Z, \mathscr{H})\rightarrow (\prod Y_{i}, \prod \mathscr{G}_{i})$が存在して、$p_{i}\circ h=g_{i}$を満たす。
 
-（証明）集合としての直積の定義より$p_{i}\circ h=g_{i}$を満たす写像$h\colon Z\rightarrow \prod Y_{i}$が唯一つ存在する。$g_{i}$がフィルター射なので、定理より$h$はフィルター射である。$\square$
+（証明）集合としての直積の定義より$p_{i}\circ h=g_{i}$を満たす写像$h\colon Z\rightarrow \prod Y_{i}$が唯一つ存在する。$g_{i}=p_{i}\circ h$がフィルター射なので、定理より$h$はフィルター射である。$\square$
+
+一般に$\prod Y_{i}$のフィルター$\mathscr{G}$に対し、系において$(Z, \mathscr{H})=(\prod Y_{i}, \mathscr{G})$及び$g_{i}=p_{i}$を取れば$h=\mathrm{id}$であり、普遍性より$\prod p_{i}\mathscr{F}\subset\mathscr{F}$が従う。
+
+__命題__ 有限直積のとき
+
+$$
+\prod_{i=1}^{n}\mathscr{G}_{i}=\langle \lbrace G_{1}\times\dotsb\times G_{n} : G_{i}\in\mathscr{G}_{i} \rbrace \rangle
+$$
+
+が成り立つ。
+
+（証明）直積フィルターの定義より、$p_{i}$を射影として
+
+$$
+\prod_{i=1}^{n}\mathscr{G}_{i}=\langle \lbrace p_{i}^{-1}(G_{i}) : G_{i}\in\mathscr{G}_{i}, i\in I \rbrace \rangle
+$$
+
+である。よって
+
+$$
+G_{1}\times\dotsb\times G_{n}=p_{1}^{-1}(G_{1})\cap\dotsb\cap p_{n}^{-1}(G_{n})\in\prod_{i=1}^{n}\mathscr{G}_{i}
+$$
+
+が成り立つ。一方で$p_{i}^{-1}(G_{1})=Y_{1}\times\dotsb\times G_{i} \times\dotsb\times Y_{n}$より逆の包含も成り立つ。$\square$
 
 
 ### 終フィルター
@@ -102,9 +134,11 @@ __定理__ $(X, \mathscr{F}), (Z_{i}, \mathscr{H}_{i})$をフィルター付き�
 
 __系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \mathscr{H}_{ij} : i\in I, j\in J_{i} ) \rbrace$をフィルター付き集合の族とする。$f_{i}\colon Y_{i}\rightarrow X, g_{ij}\colon Z_{ij}\rightarrow Y_{i}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による終フィルター$\mathscr{G}_{i}$でフィルター付き集合とみなせる。このとき$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による終フィルターと、$\lbrace f_{i} : i\in I \rbrace$による終フィルターは一致する。
 
+#### 像フィルター
+
 __定義__ $(X, \mathscr{F})$をフィルター付き集合、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による終フィルターを **像フィルター** と呼び、$f_{\ast}\mathscr{F}$と表す。
 
-> 真フィルターの像フィルターは真フィルターになる。
+- 像フィルターの生成系$f\mathscr{F}$はprefilterである。故に真フィルターの像フィルターは真フィルターになる。
 
 __命題__ $f\colon X\rightarrow Y$を写像とする。集合族$\mathscr{S}\subset 2^{X}$について
 
