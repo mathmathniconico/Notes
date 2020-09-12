@@ -22,7 +22,7 @@
     1. [フィルター射（始フィルターと終フィルター）](/ConvergentSpace/InitialFinal.md)
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
     1. [収束空間と連続射](/ConvergentSpace/Conv.md)
-    1. [Continuous Convergence Structure](/CnvergentSpace/CCS.md)
+    1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
 
 
 # 多様体ノート
