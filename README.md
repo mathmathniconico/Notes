@@ -24,7 +24,7 @@
     1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
 
 1. 収束空間と位相空間
-    1. [位相ライクな概念（近傍、open、closed）](/ConvergentSpace/ToplikeNotion.md)
+    1. [収束空間の位相構造](/ConvergentSpace/Conv_to_Top.md)
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
     1. [コンパクト性とチコノフの定理](/ConvergentSpace/Compactness.md)
 
