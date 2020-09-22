@@ -30,8 +30,8 @@ $$
 
 __定理__ $(X, \mathscr{F}), (Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$f_{i}\colon X\rightarrow Y_{i}$とする。TFAE
 
-- 任意のフィルター付き集合$(Z, \mathscr{H})$及び$h\colon Z\rightarrow X$について、$f_{i}\circ h$がフィルター射であることと$h$がフィルター射であることは同値である。
-- $\mathscr{F}$は$\lbrace f_{i} \rbrace$による始フィルターである。
+1. 任意のフィルター付き集合$(Z, \mathscr{H})$及び$h\colon Z\rightarrow X$について、$f_{i}\circ h$がフィルター射であることと$h$がフィルター射であることは同値である。
+1. $\mathscr{F}$は$\lbrace f_{i} \rbrace$による始フィルターである。
 
 （証明）$\lbrace f_{i} \rbrace$による始フィルターを$\mathcal{I}$とおく。
 
@@ -45,10 +45,10 @@ $$
 
 だから、以下は同値である。
 
-- $h$はフィルター射である。
-- 任意の$i\in I, G_{i}\in\mathscr{G}_{i}$について$h^{-1}(f_{i}^{-1}(G_{i}))\in\mathscr{H}$である。
-- 任意の$i\in I, G_{i}\in\mathscr{G}_{i}$について$(f_{i}\circ h)^{-1}(G_{i})\in\mathscr{H}$である。
-- 任意の$i\in I$について$f_{i}\circ h$はフィルター射である。
+1. $h$はフィルター射である。
+1. 任意の$i\in I, G_{i}\in\mathscr{G}_{i}$について$h^{-1}(f_{i}^{-1}(G_{i}))\in\mathscr{H}$である。
+1. 任意の$i\in I, G_{i}\in\mathscr{G}_{i}$について$(f_{i}\circ h)^{-1}(G_{i})\in\mathscr{H}$である。
+1. 任意の$i\in I$について$f_{i}\circ h$はフィルター射である。
 
 以上より下から上が成り立つ。$\square$
 
@@ -58,10 +58,10 @@ __系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (
 
 （証明）$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始フィルターを$\mathcal{I}$、$\lbrace f_{i} : i\in I \rbrace$による始フィルターを$\mathcal{J}$とする。$(Z, \mathscr{H})$をフィルター付き集合、$h\colon Z\rightarrow X$とする。定理より以下は同値である。
 
-- $h\colon (Z, \mathscr{H})\rightarrow(X, \mathcal{I})$がフィルター射である。
-- 任意の$i\in I, j\in J_{i}$について$(g_{ij}\circ f_{i})\circ h=g_{ij}\circ(f_{i}\circ h)\colon (Z, \mathscr{H})\rightarrow (Z_{ij}, \mathscr{H}_{ij})$がフィルター射である。
-- 任意の$i\in I$について$f_{i}\circ h\colon(Z, \mathscr{H})\rightarrow(Y_{i}, \mathscr{G}_{i})$がフィルター射である。
-- $h\colon(Z, \mathscr{H})\rightarrow(X, \mathcal{J})$がフィルター射である。
+1. $h\colon (Z, \mathscr{H})\rightarrow(X, \mathcal{I})$がフィルター射である。
+1. 任意の$i\in I, j\in J_{i}$について$(g_{ij}\circ f_{i})\circ h=g_{ij}\circ(f_{i}\circ h)\colon (Z, \mathscr{H})\rightarrow (Z_{ij}, \mathscr{H}_{ij})$がフィルター射である。
+1. 任意の$i\in I$について$f_{i}\circ h\colon(Z, \mathscr{H})\rightarrow(Y_{i}, \mathscr{G}_{i})$がフィルター射である。
+1. $h\colon(Z, \mathscr{H})\rightarrow(X, \mathcal{J})$がフィルター射である。
 
 $(Z, \mathscr{H})=(X, \mathcal{I})$として$h(x)=x$を取れば上から下へ辿って$\mathcal{J}\subset\mathcal{I}$を得る。同様に$\mathscr{H}=\mathcal{J}$とすれば下から上へ辿って$\mathcal{I}\subset\mathcal{J}$を得る。故に$\mathcal{I}=\mathcal{J}$である。$\square$
 
@@ -129,8 +129,8 @@ $$
 
 __定理__ $(X, \mathscr{F}), (Z_{i}, \mathscr{H}_{i})$をフィルター付き集合、$f_{i}\colon H_{i}\rightarrow X$とする。TFAE
 
-- 任意のフィルター付き集合$(Y, \mathscr{G})$及び$h\colon X\rightarrow Y$について、$h\circ f_{i}$がフィルター射であることと$h$がフィルター射であることは同値である。
-- $\mathscr{F}$は$\lbrace f_{i} \rbrace$による終フィルターである。
+1. 任意のフィルター付き集合$(Y, \mathscr{G})$及び$h\colon X\rightarrow Y$について、$h\circ f_{i}$がフィルター射であることと$h$がフィルター射であることは同値である。
+1. $\mathscr{F}$は$\lbrace f_{i} \rbrace$による終フィルターである。
 
 __系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \mathscr{H}_{ij} : i\in I, j\in J_{i} ) \rbrace$をフィルター付き集合の族とする。$f_{i}\colon Y_{i}\rightarrow X, g_{ij}\colon Z_{ij}\rightarrow Y_{i}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による終フィルター$\mathscr{G}_{i}$でフィルター付き集合とみなせる。このとき$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による終フィルターと、$\lbrace f_{i} : i\in I \rbrace$による終フィルターは一致する。
 

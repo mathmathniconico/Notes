@@ -1,36 +1,6 @@
 
 ## 超フィルター
 
-__定義__ $\mathscr{A}\subset 2^{X}$を集合族とする。$S\subset X$は$S\notin\mathscr{A}$を満たすとする。
-
-$$
-\mathscr{A}_{\neg S}:=\lbrace V\subset X : \exists A\in\mathscr{A}, A\backslash S\subset V \rbrace
-$$
-
-を$\mathscr{A}$の$S$による **補拡大** と呼ぶ。
-
-__命題__ $\mathscr{A}\subset 2^{X}$を集合族とする。$S\subset X$は$S\notin\mathscr{A}$を満たすとする。次が成り立つ。
-
-- $V\in\mathscr{A}_{\neg S}, V\subset W$なら$W\in\mathscr{A}_{\neg S}$である。
-- $\mathscr{A}\subset\mathscr{A}_{\neg S}, X\backslash S\in\mathscr{A}_{\neg S}$である。
-- フィルター$\mathscr{F}$について$\mathscr{A}\subset\mathscr{F}, X\backslash S\in\mathscr{F}$なら$\mathscr{A}_{\neg S}\subset\mathscr{F}$である。
-- $\mathscr{A}$がprefilterなら$\mathscr{A}_{\neg S}$はフィルターである。
-- $\mathscr{A}$が真フィルターなら$\mathscr{A}_{\neg S}$は真フィルターである。
-
-（証明）上三つは明らか。
-
-$\mathscr{A}$はprefilterとする。$V, W\in\mathscr{A}_{\neg S}$とする。ある$A, B\in\mathscr{A}$が存在して$A\backslash S\subset V, B\backslash S\subset W$である。
-
-$$
-V\cap W\supset (A\backslash S)\cap(B\backslash S)=(A\cap B)\backslash S
-$$
-
-が成り立つ。prefilterの性質より、ある$C\in\mathscr{A}$が存在して$(A\cap B)\backslash S\supset C\cap S$である。故に$V\cap W\in\mathscr{A}_{\neg S}$を得る。
-
-$\mathscr{A}$を真フィルターとする。$\emptyset\in\mathscr{A}_{\neg S}$とすると、ある$A\in\mathscr{A}$が存在して$A\backslash S\subset\emptyset$である。$A\subset S$より$S\in\mathscr{A}$となり矛盾する。故に$\emptyset\notin\mathscr{A}_{\neg S}$である。$\square$
-
-> $\mathscr{A}$がprefilterなら、$\mathscr{A}_{\neg S}$は$\mathscr{A}$と$X\backslash S$を含む最小のフィルターである。
-
 __定義__ $X$の真フィルターに関して、包含順序で極大なものを **超フィルター** （ultra filter）と呼ぶ。
 
 点フィルターは超フィルターである。実際$\langle x \rangle\subsetneq\mathscr{F}$なるフィルターを取ると、ある$F\in\mathscr{F}$が存在して$F\notin\langle x \rangle$である。つまり$F$は$\lbrace x \rbrace$を含まないので$x\notin F$である。一方$\lbrace x \rbrace\in\mathscr{F}$より$F\cap\lbrace x \rbrace=\emptyset\in\mathscr{F}$となり$\mathscr{F}$は自明である。
@@ -94,5 +64,5 @@ __命題__ $f\colon X\rightarrow Y$を写像とする。以下が成り立つ。
 
 （証明）$W\notin f_{\ast}\mathscr{U}$とする。$f(f^{-1}(W))\subset W$より$f^{-1}(W)\notin\mathscr{U}$である。超フィルターの特徴付けより$X\backslash f^{-1}(W)\in\mathscr{U}$を得る。$f(X\backslash f^{-1}(W))\subset Y\backslash W$より$Y\backslash W\in f_{\ast}\mathscr{U}$である。
 
-$V\in\mathscr{V}$について$X\in\mathscr{F}$より$f(X)\subset Y\backslash V$なら$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$より矛盾する。故に$f^{-1}(V)\neq\emptyset$であり、従って$f^{\ast}\mathscr{V}$は真フィルターである。更に$\mathscr{F}$と$f^{\ast}\mathscr{V}$は交わる。実際$F\in\mathscr{F}$及び$V\in\mathscr{V}$について$f(F)\cap V=\emptyset$なら$f(F)\subset Y\backslash V$より$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$となり矛盾する。以上より$\mathscr{F}\vee f^{\ast}\mathscr{V}$は真フィルターである。これを含む超フィルター$\mathscr{U}$を取れば、$\mathscr{F}\subset\mathscr{U}$であり、$\mathscr{V}\subset f_{\ast}(f^{\ast}\mathscr{V})\subset f_{\ast}\mathscr{U}$と極大性より$\mathscr{V}=f_{\ast}\mathscr{U}$を得る。$\square$
+$V\in\mathscr{V}$について$X\in\mathscr{F}$より$f(X)\subset Y\backslash V$なら$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$より矛盾する。故に$f^{-1}(V)\neq\emptyset$であり、従って$f^{\ast}\mathscr{V}$は真フィルターである。更に$\mathscr{F}$と$f^{\ast}\mathscr{V}$はmeshである。実際$F\in\mathscr{F}$及び$V\in\mathscr{V}$について$f(F)\cap V=\emptyset$なら$f(F)\subset Y\backslash V$より$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$となり矛盾する。以上より$\mathscr{F}\vee f^{\ast}\mathscr{V}$は真フィルターである。これを含む超フィルター$\mathscr{U}$を取れば、$\mathscr{F}\subset\mathscr{U}$であり、$\mathscr{V}\subset f_{\ast}(f^{\ast}\mathscr{V})\subset f_{\ast}\mathscr{U}$と極大性より$\mathscr{V}=f_{\ast}\mathscr{U}$を得る。$\square$
 

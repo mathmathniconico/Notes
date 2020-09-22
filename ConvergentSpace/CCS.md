@@ -37,10 +37,10 @@ __定義__ 定理の収束構造を$C(X, Y)$の **Continuous Convergence Structu
 
 評価写像$\mathrm{eval}\colon C(X, Y)\times X\rightarrow Y$を$\mathrm{eval}(f, x)=f(x)$で定める。
 
-__命題__ $X, Y$を収束空間とする。$\mathscr{F}$を$X$のフィルター、$f\colon X\rightarrow Y$を連続射とする。TFAE
+__補題__ $X, Y$を収束空間とする。$\mathscr{F}$を$X$のフィルター、$f\colon X\rightarrow Y$を連続射とする。TFAE
 
-- $C(X, Y)$において$\mathscr{F}\rightarrow f$である。
-- $X$において$\mathscr{A}\rightarrow x$なら、$Y$において$\mathrm{eval}_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow f(x)$である。
+1. $C(X, Y)$において$\mathscr{F}\rightarrow f$である。
+1. $X$において$\mathscr{A}\rightarrow x$なら、$Y$において$\mathrm{eval}_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow f(x)$である。
 
 （証明）$\mathscr{A}$を$X$のフィルターとする。$\mathscr{F}\prod\mathscr{A}=\langle \lbrace F\times A : F\in\mathscr{A}, A\in\mathscr{A} \rbrace \rangle$だから、
 
@@ -53,11 +53,11 @@ $$
 \end{aligned}
 $$
 
-が成り立つ。命題の同値性はこの等式より従う。$\square$
+が成り立つ。主張の同値性はこの等式より従う。$\square$
 
 __系__ $\mathrm{eval}\colon C(X, Y)\times X\rightarrow Y$は連続射である。
 
-（証明）$C(X, Y)$において$\mathscr{F}\rightarrow (f, x)$とする。$p_{i}$を射影として$p_{1}\mathscr{F}\rightarrow f, p_{2}\mathscr{F}\rightarrow x$が成り立つ。$p_{1}\mathscr{F}\rightarrow f$より、上の命題から$\mathrm{eval}_{\ast}(p_{1}\mathscr{F}\prod p_{2}\mathscr{F})\rightarrow f(x)$を得る。$\mathscr{F}\supset p_{1}\mathscr{F}\prod p_{2}\mathscr{F}$より$\mathrm{eval}_{\ast}\mathscr{F}\rightarrow f(x)$を得る。$\square$
+（証明）$C(X, Y)$において$\mathscr{F}\rightarrow (f, x)$とする。$p_{i}$を射影として$p_{1}\mathscr{F}\rightarrow f, p_{2}\mathscr{F}\rightarrow x$が成り立つ。$p_{1}\mathscr{F}\rightarrow f$より、補題から$\mathrm{eval}_{\ast}(p_{1}\mathscr{F}\prod p_{2}\mathscr{F})\rightarrow f(x)$を得る。$\mathscr{F}\supset p_{1}\mathscr{F}\prod p_{2}\mathscr{F}$より$\mathrm{eval}_{\ast}\mathscr{F}\rightarrow f(x)$を得る。$\square$
 
 CCSは次の普遍性を満たし、従って圏$\mathbf{Conv}$における冪対象を定める。
 
@@ -91,7 +91,7 @@ $$
 \end{aligned}
 $$
 
-より（逆の包含も成り立つ。）
+より
 
 $$
 \begin{aligned}
@@ -101,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-を得る。今$\mathscr{F}\rightarrow x, \mathscr{G}\rightarrow y$だから$\mathscr{F}\rightarrow\prod\mathscr{A}\rightarrow (x, y)$であり、$g$は連続なので$g_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$つまり$\mathrm{eval}_{\ast}(h_{\ast}\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$が従う。$\square$
+を得る。（どちらも逆の包含も成り立つ。）今$\mathscr{F}\rightarrow x, \mathscr{G}\rightarrow y$だから$\mathscr{F}\rightarrow\prod\mathscr{A}\rightarrow (x, y)$であり、$g$は連続なので$g_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$つまり$\mathrm{eval}_{\ast}(h_{\ast}\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$が従う。$\square$
 
 > 上の写像$h$は$\lambda g$とも書かれ、カリー化と呼ばれたりする。
 

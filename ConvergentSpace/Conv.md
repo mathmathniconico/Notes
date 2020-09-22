@@ -36,8 +36,8 @@ $$
 
 __定理__ $(V_{1}, E_{1}), (V_{2}, E_{2})$を反射的有向グラフとする。$f\colon V_{1}\rightarrow V_{2}$を写像とする。$v\in V_{1}$とする。TFAE
 
-- $f$は$v$で連続である。
-- $f(\overrightarrow{v})\subset\overrightarrow{f(v)}$が成り立つ。
+1. $f$は$v$で連続である。
+1. $f(\overrightarrow{v})\subset\overrightarrow{f(v)}$が成り立つ。
 
 （証明）$f$が$v$で連続とすると、$\langle \overrightarrow{v} \rangle\rightarrow v$より$f_{\ast}\langle \overrightarrow{v} \rangle\rightarrow f(v)$である。つまり$\overrightarrow{f(v)}\in f_{\ast}\langle \overrightarrow{v} \rangle=\langle f(\overrightarrow{v}) \rangle$だから、$f(\overrightarrow{v})\subset\overrightarrow{f(v)}$となる。
 

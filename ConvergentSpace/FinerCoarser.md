@@ -10,8 +10,8 @@ __定義__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。関係
 
 __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。TFAE
 
-- $\mathscr{A}\dashv\mathscr{B}$である。
-- $\langle \mathscr{A} \rangle\subset\langle \mathscr{B} \rangle$である。
+1. $\mathscr{A}\dashv\mathscr{B}$である。
+1. $\langle \mathscr{A} \rangle\subset\langle \mathscr{B} \rangle$である。
 
 関係$\dashv$は反射的（$\mathscr{A}\dashv\mathscr{A}$）かつ推移的（$\mathscr{A}\dashv\mathscr{B}, \mathscr{B}\dashv\mathscr{C}$なら$\mathscr{A}\dashv\mathscr{C}$）である。そこで関係$\mathscr{A}\sim\mathscr{B}$を$\mathscr{A}\dashv\mathscr{B}$かつ$\mathscr{B}\dashv\mathscr{A}$（つまり生成するフィルターが等しい）で定めると$\sim$は同値関係となる。
 
@@ -57,11 +57,11 @@ __定義__ 上記の$\mathscr{A}\vee\mathscr{B}$をprefilterの **vel積**とい
 
 > 集合としての共通部分がwedge積であり粗く、元の共通部分を集めた集合がvel積であり細かい。
 
-__定義__ $\mathscr{S}, \mathscr{T}\subset 2^{X}$を集合族とする。以下が成り立つとき$\mathscr{S}$と$\mathscr{T}$は **交わる** という。
+__定義__ $\mathscr{S}, \mathscr{T}\subset 2^{X}$を集合族とする。以下が成り立つとき$\mathscr{S}$と$\mathscr{T}$は **mesh** という。
 
 - 任意の$S\in\mathscr{S}$と任意の$T\in\mathscr{T}$について$S\cap T\neq\emptyset$が成り立つ。
 
-特にprefilter $\mathscr{A}, \mathscr{B}$が交わるとき$\mathscr{A}\vee\mathscr{B}$は真prefilterである。
+特にprefilter $\mathscr{A}, \mathscr{B}$がmeshのとき$\mathscr{A}\vee\mathscr{B}$は真prefilterである。
 
 
 __命題__ $\mathscr{F}, \mathscr{G}\subset 2^{X}$をフィルターとする。このとき$\mathscr{F}\vee\mathscr{G}$はフィルターである。
@@ -74,7 +74,7 @@ $$
 
 を得る。$i=1, 2$に対して$V_{i}=F_{i}\cap G_{i}\in\mathscr{F}\vee\mathscr{G}$を取る。$F_{1}\cap F_{2}\in\mathscr{F}, G_{1}\cap G_{2}\in\mathscr{G}$より$V_{1}\cap V_{2}=( F_{1}\cap F_{2} )\cap( G_{1}\cap G_{2} )\in\mathscr{F}\vee\mathscr{G}$を得る。$\square$
 
-特に$\mathscr{F}, \mathscr{G}$が交わるとき$\mathscr{F}\vee\mathscr{G}$は真フィルターである。
+特に$\mathscr{F}, \mathscr{G}$がmeshのとき$\mathscr{F}\vee\mathscr{G}$は真フィルターである。
 
 __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。このとき
 
@@ -88,4 +88,4 @@ $$
 
 一方で$\mathscr{A}\subset\langle \mathscr{A} \rangle, \mathscr{B}\subset\langle \mathscr{B} \rangle$より$\mathscr{A}\vee\mathscr{B}\subset\langle \mathscr{A} \rangle\vee\langle\ \mathscr{B} \rangle$であり、この右辺はフィルターであることから、生成の最小性より従う。$\square$
 
-> このようにvel積は生成と可換になる。$\mathscr{A}, \mathscr{B}$が交われば$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle$も交わり、上記は真フィルターとなる。
+> このようにvel積は生成と可換になる。$\mathscr{A}, \mathscr{B}$がmeshであれば$\langle \mathscr{A} \rangle, \langle \mathscr{B} \rangle$もmeshとなり、上記は真フィルターとなる。
