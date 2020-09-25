@@ -1,5 +1,5 @@
 
-## 収束空間と連続射
+# 収束空間と連続射
 
 __定義__ $X$を集合とする。各点$x\in X$について$\lambda(x)$をフィルターの族とする。$\lambda\colon x\mapsto\lambda(x)$は以下を満たすとする。
 
@@ -20,7 +20,7 @@ __定義__ $X, Y$を収束空間、$f\colon X\rightarrow Y$を写像とする。
 > 始対象は$(X=\emptyset, \lambda=\emptyset)$、終対象は$(Y=\lbrace \ast \rbrace, \lambda(\ast)=\lbrace\emptyset, \lbrace \ast \rbrace \rbrace=2^{Y})$である。
 
 
-### 収束構造の例（反射的有向グラフ）
+## 収束構造の例（反射的有向グラフ）
 
 **有向グラフ**（directed graph）とは、頂点の集合$V$と、向き付けられた辺の集合$E\subset V\times V$の組$(V, E)$である。（$(v, u)\in E$は始点$v$から終点$u$への有向辺とする。）有向グラフが**反射的**（reflexible）とは、任意の頂点$v\in V$について$(v, v)\in E$が成り立つことをいう。
 
@@ -48,7 +48,7 @@ __定理__ $(V_{1}, E_{1}), (V_{2}, E_{2})$を反射的有向グラフとする�
 半順序集合は反射的有向グラフとみなせる。このとき連続射は順序を保つ写像に他ならない。
 
 
-### 収束空間の積
+## 収束空間の積
 
 __命題__ $X_{i}$を収束空間とする。$p_{i}\colon X=\prod_{j\in I}X_{j}\rightarrow X_{i}$を射影とする。$X$において関係$\mathscr{F}\rightarrow x$を以下で定める。
 

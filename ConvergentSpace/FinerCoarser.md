@@ -1,4 +1,5 @@
-## フィルターの大小（Wedge積とVel積）
+
+# フィルターの大小（Wedge積とVel積）
 
 __定義__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。関係$\mathscr{A}\dashv\mathscr{B}$を以下で定める。
 
@@ -16,7 +17,7 @@ __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。TFAE
 関係$\dashv$は反射的（$\mathscr{A}\dashv\mathscr{A}$）かつ推移的（$\mathscr{A}\dashv\mathscr{B}, \mathscr{B}\dashv\mathscr{C}$なら$\mathscr{A}\dashv\mathscr{C}$）である。そこで関係$\mathscr{A}\sim\mathscr{B}$を$\mathscr{A}\dashv\mathscr{B}$かつ$\mathscr{B}\dashv\mathscr{A}$（つまり生成するフィルターが等しい）で定めると$\sim$は同値関係となる。
 
 
-### フィルターのwedge積
+## フィルターのwedge積
 
 フィルターより粗いフィルターの作り方を考える。
 
@@ -31,7 +32,7 @@ $$
 をフィルターの **wedge積** という。
 
 
-### prefilterのvel積
+## prefilterのvel積
 
 prefilterより細かいprefilterの作り方を考える。
 

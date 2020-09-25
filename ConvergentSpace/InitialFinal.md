@@ -1,5 +1,5 @@
 
-## フィルター射（始フィルターと終フィルター）
+# フィルター射（始フィルターと終フィルター）
 
 集合$X$とフィルター$\mathscr{F}\subset 2^{X}$の組$(X, \mathscr{F})$を **フィルター付き集合** と呼ぶ。
 
@@ -14,7 +14,7 @@ __定義__ フィルター付き集合$(X, \mathscr{F}), (Y, \mathscr{G})$につ
 > フィルター射の合成はフィルター射になる。よってフィルター付き集合とフィルター射は圏を為す。圏としては始対象$(\emptyset, \lbrace \emptyset \rbrace)$と終対象$(\lbrace \ast \rbrace, \lbrace\lbrace \ast \rbrace\rbrace)$がある。
 
 
-### 始フィルター
+## 始フィルター
 
 __定義__ $X$を集合とする。添え字$i\in I$について、$(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。
 
@@ -67,14 +67,14 @@ $(Z, \mathscr{H})=(X, \mathcal{I})$として$h(x)=x$を取れば上から下へ�
 
 始フィルターで定義できる概念がいくつかある。
 
-#### 逆像フィルター
+### 逆像フィルター
 
 __定義__ $(Y, \mathscr{G})$をフィルター付き集合、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による始フィルターを **逆像フィルター** と呼び、$f^{\ast}\mathscr{G}$と表す。
 
 - 逆像フィルターの生成系$f^{-1}\mathscr{G}$はprefilterである。
 
 
-#### 直積フィルター
+### 直積フィルター
 
 __定義__ $(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$X=\prod Y_{i}$として、$p_{i}\colon X\rightarrow Y_{i}$を射影とする。$\lbrace p_{i} \rbrace$による始フィルターを **直積フィルター** と呼び、$\prod\mathscr{G}_{i}$と表す。
 
@@ -109,7 +109,7 @@ $$
 が成り立つ。一方で$p_{i}^{-1}(G_{1})=Y_{1}\times\dotsb\times G_{i} \times\dotsb\times Y_{n}$より逆の包含も成り立つ。$\square$
 
 
-### 終フィルター
+## 終フィルター
 
 始フィルターの逆向きで定義される概念が終フィルターである。
 
@@ -134,7 +134,7 @@ __定理__ $(X, \mathscr{F}), (Z_{i}, \mathscr{H}_{i})$をフィルター付き�
 
 __系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \mathscr{H}_{ij} : i\in I, j\in J_{i} ) \rbrace$をフィルター付き集合の族とする。$f_{i}\colon Y_{i}\rightarrow X, g_{ij}\colon Z_{ij}\rightarrow Y_{i}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による終フィルター$\mathscr{G}_{i}$でフィルター付き集合とみなせる。このとき$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による終フィルターと、$\lbrace f_{i} : i\in I \rbrace$による終フィルターは一致する。
 
-#### 像フィルター
+### 像フィルター
 
 __定義__ $(X, \mathscr{F})$をフィルター付き集合、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による終フィルターを **像フィルター** と呼び、$f_{\ast}\mathscr{F}$と表す。
 

@@ -1,5 +1,5 @@
 
-## フィルターとprefilter
+# フィルターとprefilter
 
 __定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満たすとき$X$の **フィルター** と呼ぶ。
 

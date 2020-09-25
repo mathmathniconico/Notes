@@ -1,5 +1,5 @@
 
-## Continuous Convergence Structure
+# Continuous Convergence Structure
 
 __定義__ $X, Y$を収束空間とする。次の記号を導入する。
 

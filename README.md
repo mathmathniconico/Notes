@@ -1,11 +1,20 @@
 # 読み方
 
-- 拡張機能を使う
-    1. Chrome系のブラウザなら[github-math-display](https://chrome.google.com/webstore/detail/github-math-display/cgolaobglebjonjiblcjagnpmdmlgmda)という拡張機能を入れるとGitHub上で数式が見れるようになる。[GitHubページ](https://github.com/AaronCQL/katex-github-chrome-extension)
+- ブラウザの拡張機能を使う（Chrome系のブラウザの場合）
+    1. [github-math-display](https://chrome.google.com/webstore/detail/github-math-display/cgolaobglebjonjiblcjagnpmdmlgmda)（[GitHub](https://github.com/AaronCQL/katex-github-chrome-extension)）
+    一番手軽。
 
-- VSCodeを使う
-    1. VSCodeにMarkdown+Mathプラグインを入れる。
-    1. このリポジトリをクローンorダウンロードして、各markdownファイルをプレビューする。
+- VSCodeで見る
+    1. このリポジトリをクローンorダウンロードして、各markdownをプレビューする。以下のプラグインが必要。
+    1. [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)（[GitHub](https://github.com/goessner/mdmath)）
+    数式をプレビューできるシンプルなプラグイン。更にmarkdownの数式をハイライトしてくれる。
+
+    1. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)（[GitHub](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)）
+    多機能かつ強力なプラグイン。プレビューだけでなく、コードの実行も可能。LaTeXも動かすことができ、TikZ-cdを用いて可換図式を表示することもできるのだが、以下の問題がある。
+        - markdownの数式をハイライトしてくれない。（Markdown+Mathと併用可能）
+        - コードの実行には設定の`enableScriptExecution`を`true`にする必要がある。（注意：セキュリティ上のリスクあり）
+        - 可換図式の描画にはLaTeXエンジン（最新の[TeXLive](https://www.tug.org/texlive/)で良い）と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。特に後者は環境変数を自分で設定する必要がある。（注意：環境変数は編集前に必ずバックアップを取ること）
+        - 出力されたsvgは一時ファイルだが、その保存方法が分からない。可能ならリンクを挿入することでGitHub上でも見れるようになるのだが。
 
 # 可換環論
 
@@ -24,9 +33,13 @@
     1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
 
 1. 収束空間と位相空間
-    1. [収束空間の位相構造](/ConvergentSpace/Conv_to_Top.md)
+    1. [収束空間の位相構造](/ConvergentSpace/FilterOpenTopology.md)
+    1. 位相空間の収束構造
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
-    1. [コンパクト性とチコノフの定理](/ConvergentSpace/Compactness.md)
+
+# 圏論
+
+- [テスト用](/Category/Category.md)
 
 # 多様体ノート
 
