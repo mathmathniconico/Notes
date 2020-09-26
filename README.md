@@ -39,7 +39,7 @@
 
 # 圏論
 
-- [テスト用](/Category/Category.md)
+- [米田の補題](/Category/YonedaLemma.md)
 
 # 多様体ノート
 
