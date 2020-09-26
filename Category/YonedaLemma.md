@@ -6,7 +6,7 @@ __補題__ （米田の補題）函手$h\colon\mathscr{C}\rightarrow\mathbf{Psh}
 - $h$は忠実充満である。
 - $F\in\mathbf{Psh}(\mathscr{C}), U\in\mathscr{C}$とする。$\mathrm{Mor}_{\mathrm{Psh}(\mathscr{C})}(h_{U}, F)\rightarrow FU$を$s\mapsto s_{U}(\mathrm{id}_{U})$で定める。この対応は自然な全単射である。
 
-<p align=center><img src="pics/yoneda_01.svg" /></p>
+<p align=center><img src="pics/yoneda_01.svg" width="300"/></p>
 
 $h\colon\mathscr{C}\rightarrow\mathrm{Psh}(\mathscr{C})$が忠実充満ということは、射に関する$\mathscr{C}$での議論と$\mathrm{Psh}(\mathscr{C})$での議論は「同じ」とみなせる。後者の方が構造的には豊かであり、対象も多く、調べやすい。また二つ目の全単射により、$h_{U}$から$F$への自然変換は$FU$の元に対応している。
 
