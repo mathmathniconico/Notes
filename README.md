@@ -2,19 +2,19 @@
 
 - ブラウザの拡張機能を使う（Chrome系のブラウザの場合）
     1. [github-math-display](https://chrome.google.com/webstore/detail/github-math-display/cgolaobglebjonjiblcjagnpmdmlgmda)（[GitHub](https://github.com/AaronCQL/katex-github-chrome-extension)）
-    一番手軽。
 
 - VSCodeで見る
-    1. このリポジトリをクローンorダウンロードし、[VSCode](https://code.visualstudio.com)でプレビューする。以下のプラグインが必要となる。
+    1. このリポジトリをダウンロードして[VSCode](https://code.visualstudio.com)でプレビューする。以下のプラグインが必要。
     1. [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)（[GitHub](https://github.com/goessner/mdmath)）
-    数式をプレビューできるプラグイン。ソースの数式をハイライトしてくれる。
-
+    数式をプレビューできるプラグイン。
     1. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)（[GitHub](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)）
-    数式をプレビューできる多機能で強力なプラグイン。パスを通せばmarkdown中のコードを実行できる。
-        - コードの実行には設定の`enableScriptExecution`を`true`にする必要がある。（注意：セキュリティ上のリスクあり）
-        - 可換図式の描画にはLaTeXエンジン（最新の[TeXLive](https://www.tug.org/texlive/)で良い）と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。後者は環境変数を手動で設定する必要がある。（注意：環境変数は編集前に必ずバックアップを取ること）
+    数式をプレビューできる多機能で強力なプラグイン。
+        - `enableScriptExecution`を`true`に設定すればmarkdown内のコードを実行できる。
+        - 可換図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)）と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
+        - 環境変数の編集前に必ずバックアップを取ること。
         - 出力された一時ファイルのsvgを保存する方法が分からない。
-        - 現在私は、これを執筆時の確認用として使い、[Tex2img](https://tex2img.tech)でsvgを生成している。
+
+[参考資料](/References.md)
 
 # 可換環論
 
@@ -37,11 +37,9 @@
     1. 位相空間の収束構造
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
 
-
-[参考資料](/ConvergentSpace/References.md)
-
 # 圏論
 
+- [圏の定義](/Category/Category.md)
 - [米田の補題](/Category/YonedaLemma.md)
 
 # 多様体ノート
@@ -57,3 +55,17 @@
     1. [接ベクトルと接バンドル](/Manifold/Tangent.md)
 
 1. 多様体論
+
+
+# 執筆環境
+
+- VSCodeでmarkdownを書く。
+- Markdown+Mathでインライン数式をハイライトする。
+- Markdown Preview Enhancedでプレビューする。図式のプレビューとしても用いる。
+- [Tex2img](https://tex2img.tech)で図式等のsvgを生成。
+
+## 筆者について
+
+- [arXiv探訪](https://arxiv.hatenablog.com) ブログ
+- [マストドン](https://mathtod.online/@mathmathniconico) 数式が書けるツイッターみたいなSNS
+- [エッセイ2020](/Essay/Essay2020.md)

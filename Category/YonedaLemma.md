@@ -125,7 +125,7 @@ s \arrow[r, mapsto] & s_{U}(\mathrm{id}_{U})
 ```
 
 ```latex
-%yoneda_02.dvg
+%yoneda_02.svg
 \begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
 U \arrow[d, leftarrow, "\rho"'] & h_{U}(U) \arrow[r, "s_{U}"] \arrow[d, "h_{U}\rho"'] \arrow[dr, phantom, "\circlearrowright"] & h_{V}(U) \arrow[d, "h_{V}\rho"] & & \mathrm{id}_{U} \arrow[r, mapsto] \arrow[d, mapsto] & s_{U}(\mathrm{id}_{U})=\phi \arrow[d, mapsto] \\
 X & h_{U}(X) \arrow[r, "s_{X}"'] & h_{V}(X) & & \mathrm{id}_{U}\circ\rho=\rho \arrow[r, mapsto] & s_{X}(\rho)=\phi\circ\rho=(h\phi)_{X}(\rho)
@@ -133,7 +133,7 @@ X & h_{U}(X) \arrow[r, "s_{X}"'] & h_{V}(X) & & \mathrm{id}_{U}\circ\rho=\rho \a
 ```
 
 ```latex
-%yoneda_03.dvg
+%yoneda_03.svg
 \begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
 \lbrack h_{U}, F \rbrack \arrow[rr] \arrow[dr] \arrow[dd, leftrightarrow] & & \lbrack h_{U}, G \rbrack \arrow[dr] \arrow[dd, leftrightarrow] & \\
 & \lbrack h_{V}, F \rbrack \arrow[rr] \arrow[dd, leftrightarrow] & & \lbrack h_{V}, G \rbrack \arrow[dd, leftrightarrow] \\
