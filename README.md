@@ -39,7 +39,8 @@
 
 # 圏論
 
-- [圏の定義](/Category/Category.md)
+- [圏と函手](/Category/Category.md)
+- [忠実充満函手と部分圏](/Category/Subcategory.md)
 - [米田の補題](/Category/YonedaLemma.md)
 
 # 多様体ノート
