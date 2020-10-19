@@ -9,16 +9,13 @@
     数式をプレビューできるプラグイン。
     1. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)（[GitHub](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)）
     数式をプレビューできる多機能で強力なプラグイン。
-        - `enableScriptExecution`を`true`に設定すればmarkdown内のコードを実行できる。
-        - 可換図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)）と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
-        - 環境変数の編集前に必ずバックアップを取ること。
-        - 出力された一時ファイルのsvgを保存する方法が分からない。
 
-[参考資料](/References.md)
 
-# 可換環論
+# 代数学
 
-- [環と加群](/Ring/Ring.md)
+## 可換環論
+
+- [環と加群](/Algebra/Ring.md)
 - 素イデアルと整域
 - ネーター加群
 - 多項式環
@@ -65,16 +62,35 @@
 
 1. 多様体論
 
+# 数学基礎論
 
-# 執筆環境
+- [順序数](/Logic/Ordinal.md)
+
+
+
+# このリポジトリについて
+
+基本的には勉強ノートなので命題の並びや証明は底本の影響が大きい。とは言え理解した部分を書くので丸写しにはならないと思う。
+
+- [参考文献](/References.md)
+
+## 著者
+
+- [arXiv探訪](https://arxiv.hatenablog.com) ブログ
+- [マストドン](https://mathtod.online/@mathmathniconico) 数式が書けるツイッターみたいなSNS
+- [エッセイ2020](/Essay/Essay2020.md)
+
+## 執筆環境
 
 - VSCodeでmarkdownを書く。
 - Markdown+Mathでインライン数式をハイライトする。
 - Markdown Preview Enhancedでプレビューする。図式のプレビューとしても用いる。
 - [Tex2img](https://tex2img.tech)で図式等のsvgを生成。
 
-## 筆者について
+## Markdown Preview Enhanced
 
-- [arXiv探訪](https://arxiv.hatenablog.com) ブログ
-- [マストドン](https://mathtod.online/@mathmathniconico) 数式が書けるツイッターみたいなSNS
-- [エッセイ2020](/Essay/Essay2020.md)
+- `enableScriptExecution`を`true`に設定すればmarkdown内のコードを実行できる。
+- 可換図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
+- 環境変数の編集前に必ずバックアップを取ること。
+- 出力された一時ファイルのsvgを保存する方法が分からない。
+- 微妙に動作が不安定で、表示が更新されずVSCodeを閉じないと復活しないときがある。

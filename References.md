@@ -1,6 +1,8 @@
 # 参考資料
 
+## 数理論理学
 
+- 藤田博司．キューネン数学基礎論講義．日本評論社．（"Kenneth Kunen. The Foundations of Mathematics."の日本語訳）
 
 ## 圏論
 
