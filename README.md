@@ -26,20 +26,20 @@
 
 ## ガロア理論入門
 
-- [体とその拡大](/GaloisIntro/Field.md)
-- [多項式](/GaloisIntro/Polynomial.md)
-- [ガロア拡大](/GaloisIntro/GaloisExtension.md)
-- [代数体のガロア理論](/GaloisIntro/GaloisTheory.md)
+- [体とその拡大](/Algebra/GaloisIntro/Field.md)
+- [多項式](/Algebra/GaloisIntro/Polynomial.md)
+- [ガロア拡大](/Algebra/GaloisIntro/GaloisExtension.md)
+- [代数体のガロア理論](/Algebra/GaloisIntro/GaloisTheory.md)
 
 ## 余代数
 
 - 代数と余代数
 - 余代数の基礎
 - 余代数の例
-- [余代数のイデアルと剰余余代数](/Coalgebra/QuotientCoalgebra.md)
-- [Incidence余代数](/Coalgebra/IncidenceCoalgebra.md)
-- [半順序集合のIncidence Algebra](/Coalgebra/PosetIncidenceAlgebra.md)
-- [メビウス函数の計算](/Coalgebra/MobiusFunction.md)
+- [余代数のイデアルと剰余余代数](/Algebra/Coalgebra/QuotientCoalgebra.md)
+- [Incidence余代数](/Algebra/Coalgebra/IncidenceCoalgebra.md)
+- [半順序集合のIncidence Algebra](/Algebra/Coalgebra/PosetIncidenceAlgebra.md)
+- [メビウス函数の計算](/Algebra/Coalgebra/MobiusFunction.md)
 
 
 # 収束空間論
