@@ -24,6 +24,23 @@
 - 環上の代数と次数付き環
 - 斉次イデアルとクルルの交叉定理
 
+## ガロア理論入門
+
+- [体とその拡大](/GaloisIntro/Field.md)
+- [多項式](/GaloisIntro/Polynomial.md)
+- [ガロア拡大](/GaloisIntro/GaloisExtension.md)
+- [代数体のガロア理論](/GaloisIntro/GaloisTheory.md)
+
+## 余代数
+
+- 代数と余代数
+- 余代数の基礎
+- 余代数の例
+- [余代数のイデアルと剰余余代数](/Coalgebra/QuotientCoalgebra.md)
+- [Incidence余代数](/Coalgebra/IncidenceCoalgebra.md)
+- [半順序集合のIncidence Algebra](/Coalgebra/PosetIncidenceAlgebra.md)
+- [メビウス函数の計算](/Coalgebra/MobiusFunction.md)
+
 
 # 収束空間論
 
@@ -50,7 +67,7 @@
 
 # 多様体ノート
 
-志賀浩二「多様体論」（岩波基礎数学選書）を底本とした多様体のノート。序章で多様体論の概要について述べ、精密な議論は後の章で行う。底本はファイバーバンドルからドラーム理論、サードの定理まで書いてあるが、そこまでこのノートが続くかは不明。
+志賀浩二「多様体論」（岩波基礎数学選書）を底本とした多様体のノート。序章で多様体論の概要について述べ、精密な議論は後の章で行う。底本はファイバーバンドルからドラーム理論、サードの定理まで書いてある。
 
 1. 序章
 
@@ -67,10 +84,16 @@
 - [順序数](/Logic/Ordinal.md)
 
 
+# 未分類
+
+- [Microfacet理論](/Misc/Microfacet.md)
+- [組合せ論的クリフォード代数](/Misc/CombinatorialCliffordAlgebra.md)
+- [クリフォード代数の例](/Misc/CliffordAlgebraExamples.md)
+
 
 # このリポジトリについて
 
-基本的には勉強ノートなので命題の並びや証明は底本の影響が大きい。とは言え理解した部分を書くので丸写しにはならないと思う。
+勉強ノートなので命題の並びや証明は底本の影響が大きい。なるべく自分の言葉で書けるように努める。
 
 - [参考文献](/References.md)
 
@@ -86,8 +109,9 @@
 - Markdown+Mathでインライン数式をハイライトする。
 - Markdown Preview Enhancedでプレビューする。図式のプレビューとしても用いる。
 - [Tex2img](https://tex2img.tech)で図式等のsvgを生成。
+- GitHub Desktopで公開。
 
-## Markdown Preview Enhanced
+Markdown Preview Enhancedは数式をプレビューできるVSCodeのプラグイン。
 
 - `enableScriptExecution`を`true`に設定すればmarkdown内のコードを実行できる。
 - 可換図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
