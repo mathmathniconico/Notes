@@ -1,6 +1,8 @@
 
 # フィルターとprefilter
 
+## フィルター
+
 __定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満たすとき$X$の **フィルター** と呼ぶ。
 
 - $X\in\mathscr{F}$である。
@@ -33,6 +35,9 @@ $A\subset X$について$\lbrace A \rbrace$が生成するフィルターを **�
 
 > フィルターは素朴な概念なので、これ以上のことは何も言えない。しかしその素朴さから数学の様々な場面で用いられ、豊富な付加構造を伴うことが重要である。
 
+
+## prefilter
+
 真フィルターより弱い概念を導入する。
 
 __定義__ $\mathscr{B}\subset 2^{X}, \neq\emptyset$が以下を満たすとき$X$の **prefilter** と呼ぶ。
@@ -58,3 +63,37 @@ $\mathscr{B}$が真prefilterのとき$\langle \mathscr{B} \rangle$は真フィ�
 （証明）左辺が右辺を含むことは定義より明らか。$F\in\langle \mathscr{B} \rangle$とすると、$B_{1}, \dotsc, B_{n}\in\mathscr{B}$が存在して$B_{1}\cap\dotsm\cap B_{n}\subset F$となる。prefilterの定義から$n$を一つずつ減らすことができて、結局ある$B\in\mathscr{B}$が存在して$B\subset F$となる。
 
 $\emptyset\in\langle \mathscr{B} \rangle$とすると、ある$B\in\mathscr{B}$が存在して$B\subset\emptyset$である。故に$B\in\mathscr{B}$が従う。$\square$
+
+
+## 補拡大
+
+様々な場所で用いられるテクニックとして補拡大というものがある。
+
+__定義__ $\mathscr{A}\subset 2^{X}$を集合族とする。$S\subset X$は$S\notin\mathscr{A}$を満たすとする。
+
+$$
+\mathscr{A}_{\neg S}:=\lbrace V\subset X : \exists A\in\mathscr{A}, A\backslash S\subset V \rbrace
+$$
+
+を$\mathscr{A}$の$S$による **補拡大** と呼ぶ。
+
+__命題__ $\mathscr{A}\subset 2^{X}$を集合族とする。$S\subset X$は$S\notin\mathscr{A}$を満たすとする。次が成り立つ。
+
+- $V\in\mathscr{A}_{\neg S}, V\subset W$なら$W\in\mathscr{A}_{\neg S}$である。
+- $\mathscr{A}\subset\mathscr{A}_{\neg S}, X\backslash S\in\mathscr{A}_{\neg S}$である。
+- フィルター$\mathscr{F}$について$\mathscr{A}\subset\mathscr{F}, X\backslash S\in\mathscr{F}$なら$\mathscr{A}_{\neg S}\subset\mathscr{F}$である。
+- $\mathscr{A}$がprefilterなら$\mathscr{A}_{\neg S}$はフィルターである。特に$\mathscr{A}_{\neg S}$は$\mathscr{A}$と$X\backslash S$を含む最小のフィルターである。
+- $\mathscr{A}$が真フィルターなら$\mathscr{A}_{\neg S}$は真フィルターである。
+
+（証明）上三つは明らか。
+
+$\mathscr{A}$はprefilterとする。$V, W\in\mathscr{A}_{\neg S}$とする。ある$A, B\in\mathscr{A}$が存在して$A\backslash S\subset V, B\backslash S\subset W$である。
+
+$$
+V\cap W\supset (A\backslash S)\cap(B\backslash S)=(A\cap B)\backslash S
+$$
+
+が成り立つ。prefilterの性質より、ある$C\in\mathscr{A}$が存在して$(A\cap B)\backslash S\supset C\cap S$である。故に$V\cap W\in\mathscr{A}_{\neg S}$を得る。最小性は明らかだろう。
+
+$\mathscr{A}$を真フィルターとする。$\emptyset\in\mathscr{A}_{\neg S}$とすると、ある$A\in\mathscr{A}$が存在して$A\backslash S\subset\emptyset$である。$A\subset S$より$S\in\mathscr{A}$となり矛盾する。故に$\emptyset\notin\mathscr{A}_{\neg S}$である。$\square$
+

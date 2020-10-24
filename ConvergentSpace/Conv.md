@@ -1,15 +1,15 @@
 
 # 収束空間と連続射
 
-__定義__ $X$を集合とする。各点$x\in X$について$\lambda(x)$をフィルターの族とする。$\lambda\colon x\mapsto\lambda(x)$は以下を満たすとする。
+__定義__ $X$を集合とする。各点$x\in X$について$\phi(x)$をフィルターの族とする。$\phi\colon x\mapsto\phi(x)$は以下を満たすとする。
 
-- $\langle x \rangle\in\lambda(x)$である。
-- $\mathscr{F}\in\lambda(x)$とする。フィルター$\mathscr{G}\subset 2^{X}$について$\mathscr{F}\subset\mathscr{G}$なら$\mathscr{G}\in\lambda(x)$である。
-- $\mathscr{F}, \mathscr{G}\in\lambda(x)$なら$\mathscr{F}\cap\mathscr{G}\in\lambda(x)$である。
+- $\langle x \rangle\in\phi(x)$である。
+- $\mathscr{F}\in\phi(x)$とする。フィルター$\mathscr{G}\subset 2^{X}$について$\mathscr{F}\subset\mathscr{G}$なら$\mathscr{G}\in\phi(x)$である。
+- $\mathscr{F}, \mathscr{G}\in\phi(x)$なら$\mathscr{F}\cap\mathscr{G}\in\phi(x)$である。
 
-このとき$\lambda$を**収束構造**（convergent structure）と呼び、組$(X, \lambda)$を **収束空間** （convergent space）と呼ぶ。$\mathscr{F}\in\lambda(x)$のときフィルター$\mathscr{F}$は$x$に収束するといい、$x$は$\mathscr{F}$の収束先や極限点などという。
+このとき$\phi$を**収束構造**（convergent structure）と呼び、組$(X, \phi)$を **収束空間** （convergent space）と呼ぶ。$\mathscr{F}\in\phi(x)$のときフィルター$\mathscr{F}$は$x$に収束するといい、$x$は$\mathscr{F}$の収束先や極限点などという。
 
-フィルター$\mathscr{F}\subset 2^{X}$について$\mathscr{F}\in\lambda(x)$であることを$\mathscr{F}\rightarrow x$と書けば$\lambda$を明示せずに収束空間を定義できる。これはフィルター全体$\Phi(X)$について$\Phi(X)\times X$の部分集合としての「関係」である。
+フィルター$\mathscr{F}\subset 2^{X}$について$\mathscr{F}\in\phi(x)$であることを$\mathscr{F}\rightarrow x$と書けば$\phi$を明示せずに収束空間を定義できる。これはフィルター全体$\Phi(X)$について$\Phi(X)\times X$の部分集合としての「関係」である。
 
 __定義__ $X, Y$を収束空間、$f\colon X\rightarrow Y$を写像とする。任意のフィルター$\mathscr{F}\subset 2^{X}$について$\mathscr{F}\rightarrow x$なら$f_{\ast}\mathscr{F}\rightarrow f(x)$であるとき、$f$は$x$で **連続** （continuous）であるという。任意の$x\in X$で$f$が連続のとき、$f$を **連続射** と呼ぶ。
 
@@ -17,7 +17,7 @@ __定義__ $X, Y$を収束空間、$f\colon X\rightarrow Y$を写像とする。
 
 収束空間と連続射は圏を為す。これを$\mathbf{Conv}$と書く。
 
-> 始対象は$(X=\emptyset, \lambda=\emptyset)$、終対象は$(Y=\lbrace \ast \rbrace, \lambda(\ast)=\lbrace\emptyset, \lbrace \ast \rbrace \rbrace=2^{Y})$である。
+> 始対象は$(X=\emptyset, \phi=\emptyset)$、終対象は$(Y=\lbrace \ast \rbrace, \phi(\ast)=\lbrace\emptyset, \lbrace \ast \rbrace \rbrace=2^{Y})$である。
 
 
 ## 収束構造の例（反射的有向グラフ）
@@ -48,7 +48,7 @@ __定理__ $(V_{1}, E_{1}), (V_{2}, E_{2})$を反射的有向グラフとする�
 半順序集合は反射的有向グラフとみなせる。このとき連続射は順序を保つ写像に他ならない。
 
 
-## 収束空間の積
+## 収束空間の直積
 
 __命題__ $X_{i}$を収束空間とする。$p_{i}\colon X=\prod_{j\in I}X_{j}\rightarrow X_{i}$を射影とする。$X$において関係$\mathscr{F}\rightarrow x$を以下で定める。
 
@@ -70,10 +70,10 @@ $$
 
 より$p_{i}^{-1}(V)\in\mathscr{F}\cap\mathscr{G}$が分かる。よって$V=p_{i}(p_{i}^{-1}(V))\in p_{i}(\mathscr{F}\cap\mathscr{G})$である。以上より$p_{i}(\mathscr{F}\cap\mathscr{G})\rightarrow p_{i}(x)$を得る。$\square$
 
-__定義__ 上記の収束構造により$X=\prod X_{i}$は収束空間となる。これを収束空間$X_{i}$の積と呼ぶ。
+__定義__ 上記の収束構造により$X=\prod X_{i}$は収束空間となる。これを収束空間$X_{i}$の直積と呼ぶ。
 
-収束空間の積は次の普遍性を満たす。つまり圏$\mathbf{Conv}$における積対象である。
+収束空間の直積は次の普遍性を満たす。つまり圏$\mathbf{Conv}$における直積対象である。
 
-__命題__ $X_{i}$を収束空間、$X=\prod X_{i}$をその積、$p_{i}\colon X\rightarrow X_{i}$を射影とする。収束空間$Z$と連続射$f_{i}\colon Z\rightarrow X_{i}$に対し、ある唯一つの連続射$h\colon Z\rightarrow X$が存在して$f_{i}=p_{i}\circ h$を満たす。
+__命題__ $X_{i}$を収束空間、$X=\prod X_{i}$をその直積、$p_{i}\colon X\rightarrow X_{i}$を射影とする。収束空間$Z$と連続射$f_{i}\colon Z\rightarrow X_{i}$に対し、ある唯一つの連続射$h\colon Z\rightarrow X$が存在して$f_{i}=p_{i}\circ h$を満たす。
 
 （証明）$h(z):=(f_{i}(z))$が連続射となることを示せばよい。$Z$において$\mathscr{H}\rightarrow z$とする。$f_{i}$は連続射なので$(f_{i})_{\ast}\mathscr{H}\rightarrow f_{i}(z)$が成り立つ。推移性より$(f_{i})_{\ast}=p_{i}\circ h_{\ast}$だから$p_{i}(h_{\ast}\mathscr{H})=( f_{i} )_{\ast}\mathscr{H}\rightarrow f_{i}(z)=p_{i}( h(z) )$が成り立つ。故に$h_{\ast}\mathscr{H}\rightarrow h(z)$を得る。$\square$

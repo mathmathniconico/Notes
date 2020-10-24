@@ -15,6 +15,7 @@
 
 ## 可換環論
 
+- 群
 - [環と加群](/Algebra/Ring.md)
 - 素イデアルと整域
 - ネーター加群
@@ -56,7 +57,7 @@
 
 1. 収束空間と位相空間
     1. [収束空間の位相構造](/ConvergentSpace/FilterOpenTopology.md)
-    1. 位相空間の収束構造
+    1. [位相空間の収束構造](/ConvergentSpace/TopologicalConv.md)
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
 
 # 圏論
@@ -93,7 +94,7 @@
 
 # このリポジトリについて
 
-勉強ノートなので命題の並びや証明は底本の影響が大きい。なるべく自分の言葉で書けるように努める。
+勉強ノートなので命題の並びや証明は底本の影響が大きい。
 
 - [参考文献](/References.md)
 
