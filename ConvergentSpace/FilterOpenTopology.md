@@ -7,11 +7,11 @@
 
 __定義__ $X$を収束空間とする。
 
-- $x\in X$に対し$\mathscr{N}_{x}:=\cap\lbrace \mathscr{F}\in\Phi(X) :  \mathscr{F}\rightarrow x \rbrace$を **収束近傍** （convergent neighborhood）と呼ぶ。
+- $x\in X$に対し$\mathscr{N}_{x}:=\cap\lbrace \mathscr{F}\in\Phi(X) :  \mathscr{F}\rightarrow x \rbrace$を **隣接フィルター** （nearby filter）と呼ぶ。
 - $A\subset X$について、$\mathrm{pcl}(A):=\lbrace x\in X : \exists\mathscr{F}\in\Phi_{\lt 1}(X), A\in\mathscr{F}, \mathscr{F}\rightarrow x \rbrace$を$A$の **preclosure** と呼ぶ。
 - $A\subset X$について、$\mathrm{pcl}(A)=A$が成り立つとき、$A$は **closed** であるという。
 
-> 収束近傍はフィルターのwedge積だからフィルターである。preclosureは閉包やKatětov閉包、Čech閉包などと呼ばれる。
+> 隣接フィルターはフィルターのwedge積だからフィルターである。preclosureは閉包やKatětov閉包、Čech閉包などと呼ばれる。
 
 __命題__ $X$を収束空間、$A, B\subset X$とする。以下が成り立つ。
 
@@ -55,13 +55,13 @@ __補題__ $X$を収束空間とする。以下が成り立つ。
 - $A\subset X$について$\mathrm{pcl}(A)\subset\overline{A}$が成り立つ。ただし$\overline{A}$はフィルター開位相における$A$の閉包とする。
 - $N\in\mathscr{N}_{x}\Longleftrightarrow x\notin\mathrm{pcl}(X\backslash N)$が成り立つ。
 
-（証明）$N\in\mathfrak{N}_{x}$とすると、ある開集合$U\in\mathcal{O}$が存在して$x\in U\subset N$を満たす。$U$はopenだから$U\in\mathscr{N}_{x}$である。よって$N\in\mathscr{N}_{x}$である。
+（証明）$N\in\mathfrak{N}_{x}$とすると、ある開集合$U\in\mathcal{O}_{\phi}$が存在して$x\in U\subset N$を満たす。$U$はopenだから$U\in\mathscr{N}_{x}$である。よって$N\in\mathscr{N}_{x}$である。
 
 $A\subset\overline{A}$である。$\overline{A}$は閉集合だから$\mathrm{pcl}(A)\subset\mathrm{pcl}(\overline{A})=\overline{A}$を得る。
 
 $N\in\mathscr{N}_{x}$とする。$x\in\mathrm{pcl}(X\backslash N)$なら、真フィルター$\mathscr{F}\rightarrow x$が存在して$X\backslash N\in\mathscr{F}$を満たす。近傍フィルターの定義より$N\in\mathscr{F}$となり矛盾する。逆に$N\notin\mathscr{N}_{x}$とする。あるフィルター$\mathscr{F}\rightarrow x$が存在して$N\notin\mathscr{F}$である。$\mathscr{F}$は真フィルターだから$\mathscr{F}$の$N$による補拡大$\mathscr{F}_{\neg N}$は$\mathscr{F}$と$X\backslash N$を含む真フィルターとなる。このとき$\mathscr{F}_{\neg N}\rightarrow x$より$x\in\mathrm{cl}(X\backslash N)$である。$\square$
 
-> openと開集合、closedと閉集合は同値の概念だが、一般に近傍系は収束近傍と一致せず、またpreclosureも閉包と一致しない。
+> openと開集合、closedと閉集合は同値の概念だが、一般に隣接フィルターは近傍系と一致せず、またpreclosureも閉包と一致しない。
 
 __命題__ $f\colon X\rightarrow Y$は連続射とする。以下が成り立つ。
 
@@ -86,17 +86,16 @@ $N\in\mathscr{N}_{f(x)}$とする。補題より$f(x)\notin\mathrm{pcl}(Y\backsl
 __定義__ 函手$T\colon\mathbf{Conv}\rightarrow\mathbf{Top}$を以下で定義する。
 
 - 収束空間$(X, \phi)$について、位相空間$(X, \mathcal{O}_{\phi})$を対応させる。
-- 連続射は連続写像に対応させる。
+- 連続射$f\colon X\rightarrow Y$について、連続写像$f\colon X\rightarrow Y$を対応させる。
 
 > 対応する射は写像として等しいので、函手$T$は忠実になる。
-
 
 
 ## 例：反射的有向グラフ
 
 反射的有向グラフ$(V, E)$の収束空間を例に取り、上記の概念を求めてみよう。
 
-まず収束近傍を考える。フィルター$\mathscr{F}$について$\mathscr{F}\rightarrow v$の定義は$\overrightarrow{v}\in\mathscr{F}$である。このとき$F\supset\overrightarrow{v}$なら$F\in\mathscr{F}$より$\langle \overrightarrow{v} \rangle\subset\mathscr{F}$が成り立つ。特に$\langle \overrightarrow{v} \rangle\rightarrow v$だから、結局$\mathscr{N}_{v}=\langle \overrightarrow{v} \rangle$が分かる。
+まず隣接フィルターを考える。フィルター$\mathscr{F}$について$\mathscr{F}\rightarrow v$の定義は$\overrightarrow{v}\in\mathscr{F}$である。このとき$F\supset\overrightarrow{v}$なら$F\in\mathscr{F}$より$\langle \overrightarrow{v} \rangle\subset\mathscr{F}$が成り立つ。特に$\langle \overrightarrow{v} \rangle\rightarrow v$だから、結局$\mathscr{N}_{v}=\langle \overrightarrow{v} \rangle$が分かる。
 
 $U$がopenであるとは任意の$v\in U$について$U\in\langle \overrightarrow v \rangle$つまり$\overrightarrow{v}\subset U$が成り立つことだから、これが全ての$v\in U$で成り立つということは、矢印の先を辿れるところまで$U$が全て含むことを意味する。
 
