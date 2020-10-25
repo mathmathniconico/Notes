@@ -1,7 +1,7 @@
 
 # 位相空間の収束構造
 
-$X$を位相空間とする。$x\in X$の近傍系$\mathfrak{N}(x)$はフィルターである。
+位相空間$X$において$x\in X$の近傍系$\mathfrak{N}(x)$はフィルターである。
 
 そこで$X$の収束構造$\mathscr{F}\rightarrow x$を$\mathfrak{N}({x})\subset\mathscr{F}$で定めることができる。実際$N\in\mathfrak{N}(x)$なら$x\in N$より$N\in\langle x \rangle$だから$\langle x \rangle\rightarrow x$である。$\mathscr{F}\rightarrow x, \mathscr{F}\subset\mathscr{G}$について$\mathfrak{N}(x)\subset\mathscr{F}\subset\mathscr{G}$より$\mathscr{G}\rightarrow x$である。また$\mathfrak{N}(x)\subset\mathscr{F}, \mathscr{G}$なら$\mathfrak{N}(x)\subset\mathscr{F}\cap\mathscr{G}$も成り立つ。特に$\mathfrak{N}(x)\rightarrow x$である。
 
@@ -36,6 +36,8 @@ __命題__ $(X, \mathcal{O}_{X}), (Y, \mathcal{O}_{Y})$を位相空間、$\phi_{
 
 $f$を連続射とする。$U\in\mathcal{O}_{Y}$とする。$x\in f^{-1}(U)$について、$U$はopenだから補題より$U\in\mathscr{N}_{f(x)}=\mathfrak{N}(f(x))\subset f_{\ast}\mathfrak{N}(x)$である。故にある$V_{x}\in\mathfrak{N}(x)$が存在して$f(V_{x})\subset U$を満たす。特に$V_{x}$は開集合としてよい。$x\in V_{x}\subset f^{-1}(f(V))\subset f^{-1}(U)$が成り立つ。選択公理より$f^{-1}(U)\in\mathcal{O}_{X}$を得る。$\square$
 
+> 以上より$\mathbf{Top}$から$\mathbf{Conv}$への函手を定義できる。
+
 __定義__ 函手$F\colon\mathbf{Top}\rightarrow\mathbf{Conv}$を以下で定義する。
 
 - 位相空間$(X, \mathcal{O})$について、$\phi$を誘導される収束構造として、収束空間$(X, \phi)$を対応させる。
@@ -44,3 +46,13 @@ __定義__ 函手$F\colon\mathbf{Top}\rightarrow\mathbf{Conv}$を以下で定義
 __定理__ 函手$F$は忠実充満である。更に$T\circ F=\mathrm{id}_{\mathbf{Top}}$が成り立つ。
 
 （証明）位相空間$(X, \mathcal{O})$と誘導される収束構造$\phi$について、$TF(X, \mathcal{O})=T(X, \phi)=(X, \mathcal{O}_{\phi})$である。$\mathcal{O}_{\phi}=\mathcal{O}$より対象の間は恒等になる。また$T$も$F$も射の対応は写像として変わらないので忠実であり、$T\circ F$が射の間も恒等になることが分かる。$F$の充満性は連続写像と連続射の同値性より従う。$\square$
+
+__命題__ $(X, \phi)$を収束空間、$(Y, \mathcal{T})$を位相空間とする。$\psi$は$\mathcal{T}$より誘導される収束構造とする。$\mathbf{Conv}$において同型$(X, \phi)\simeq (Y, \psi)$が成り立つなら、$X$の位相$\mathcal{O}$が存在して、$\mathcal{O}_{\phi}=\mathcal{O}$かつ$\mathbf{Top}$において同型$(X, \mathcal{O})\simeq (Y, \mathcal{T})$が成り立つ。
+
+（証明）$f\colon (X, \phi)\rightarrow (Y, \psi)$を同型とする。$U\in\mathcal{O}$を$f(U)\in\mathcal{T}$で定めると位相である。実際$f(X)=Y\in\mathcal{T}$及び$f(\emptyset)=\emptyset\in\mathcal{T}$が成り立つ。また$f(U), f(V)\in\mathcal{T}$なら$f(U\cap V)=f(U)\cap f(V)\in\mathcal{T}$である。$f(U_{\lambda})\in\mathcal{T}$なら$f(\bigcup U_{\lambda})=\bigcup f(U_{\lambda})\in\mathcal{T}$である。
+
+$U\in\mathcal{O}$とする。$f(U)\in\mathcal{T}=\mathcal{O}_{\psi}$だから$f(U)$は$\psi$でopenである。$f$は同型なので$U$も$\phi$でopenである。故に$U\in\mathcal{O}_{\phi}$である。逆も同様だから$\mathcal{O}=\mathcal{O}_{\phi}$である。
+
+$f\colon (X, \mathcal{O})\rightarrow (Y, \mathcal{T})$が$\mathbf{Top}$の同型を与えることは、連続写像と連続射の同値性より従う。$\square$
+
+> 従って$\mathbf{Top}$は$\mathbf{Conv}$の充満部分圏と見なせるだけではなく、isomorphism-closedである。つまり真の意味で$\mathbf{Top}$を$\mathbf{Conv}$の一部として扱うことができる。
