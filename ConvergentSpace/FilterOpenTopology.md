@@ -89,16 +89,3 @@ __定義__ 函手$T\colon\mathbf{Conv}\rightarrow\mathbf{Top}$を以下で定義
 - 連続射$f\colon X\rightarrow Y$について、連続写像$f\colon X\rightarrow Y$を対応させる。
 
 > 対応する射は写像として等しいので、函手$T$は忠実になる。
-
-
-## 例：反射的有向グラフ
-
-反射的有向グラフ$(V, E)$の収束空間を例に取り、上記の概念を求めてみよう。
-
-まず隣接フィルターを考える。フィルター$\mathscr{F}$について$\mathscr{F}\rightarrow v$の定義は$\overrightarrow{v}\in\mathscr{F}$である。このとき$F\supset\overrightarrow{v}$なら$F\in\mathscr{F}$より$\langle \overrightarrow{v} \rangle\subset\mathscr{F}$が成り立つ。特に$\langle \overrightarrow{v} \rangle\rightarrow v$だから、結局$\mathscr{N}_{v}=\langle \overrightarrow{v} \rangle$が分かる。
-
-$U$がopenであるとは任意の$v\in U$について$U\in\langle \overrightarrow v \rangle$つまり$\overrightarrow{v}\subset U$が成り立つことだから、これが全ての$v\in U$で成り立つということは、矢印の先を辿れるところまで$U$が全て含むことを意味する。
-
-連続射でないが連続写像の例を与える。$a, b, c$を頂点として、$a\rightarrow b\rightarrow c\rightarrow a$というサイクルで定まる収束空間を$Y$とする。それぞれ双方向としたものを$X$とする。$f\colon X\rightarrow Y$を頂点上の恒等写像とすると、グラフ準同型でないので連続射でない。しかしopenな部分集合はどちらも$\lbrace a, b, c \rbrace, \emptyset$のみなので、openの逆像はopenであり連続写像である。
-
-> $X$と$Y$は同じ位相（密着位相）を定めるが、収束構造（この場合はグラフ構造）としては異なる。

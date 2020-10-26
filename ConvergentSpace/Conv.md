@@ -20,34 +20,6 @@ __定義__ $X, Y$を収束空間、$f\colon X\rightarrow Y$を写像とする。
 > 始対象は$(X=\emptyset, \phi=\emptyset)$、終対象は$(Y=\lbrace \ast \rbrace, \phi(\ast)=\lbrace\emptyset, \lbrace \ast \rbrace \rbrace=2^{Y})$である。
 
 
-## 収束構造の例（反射的有向グラフ）
-
-**有向グラフ**（directed graph）とは、頂点の集合$V$と、向き付けられた辺の集合$E\subset V\times V$の組$(V, E)$である。（$(v, u)\in E$は始点$v$から終点$u$への有向辺とする。）有向グラフが**反射的**（reflexible）とは、任意の頂点$v\in V$について$(v, v)\in E$が成り立つことをいう。
-
-さて、反射的有向グラフ$(V, E)$において、頂点$v\in V$を始点とする有向辺の終点全体
-
-$$
-\overrightarrow{v}:=\lbrace u\in V : (v, u)\in E \rbrace
-$$
-
-を考える。このとき収束構造$\mathscr{F}\rightarrow v$を$\overrightarrow{v}\in\mathscr{F}$で定めることができる。実際$(v, v)\in E$より$v\in\overrightarrow{v}$だから$\overrightarrow{v}\in\langle v \rangle$故に$\langle v \rangle\rightarrow v$である。$\mathscr{F}\rightarrow v, \mathscr{F}\subset\mathscr{G}$とすれば$\overrightarrow{v}\in\mathscr{F}\subset\mathscr{G}$より$\mathscr{G}\rightarrow v$である。$\overrightarrow{v}\in\mathscr{F}, \mathscr{G}$なら$\overrightarrow{v}\in\mathscr{F}\cap\mathscr{G}$も成り立つ。このようにして反射的有向グラフは収束空間となる。
-
-- 単項フィルター$\langle \overrightarrow{v} \rangle$は$v$に収束する。つまり$\langle \overrightarrow{v} \rangle\rightarrow v$が成り立つ。
-
-__定理__ $(V_{1}, E_{1}), (V_{2}, E_{2})$を反射的有向グラフとする。$f\colon V_{1}\rightarrow V_{2}$を写像とする。$v\in V_{1}$とする。TFAE
-
-1. $f$は$v$で連続である。
-1. $f(\overrightarrow{v})\subset\overrightarrow{f(v)}$が成り立つ。
-
-（証明）$f$が$v$で連続とすると、$\langle \overrightarrow{v} \rangle\rightarrow v$より$f_{\ast}\langle \overrightarrow{v} \rangle\rightarrow f(v)$である。つまり$\overrightarrow{f(v)}\in f_{\ast}\langle \overrightarrow{v} \rangle=\langle f(\overrightarrow{v}) \rangle$だから、$f(\overrightarrow{v})\subset\overrightarrow{f(v)}$となる。
-
-逆に$f(\overrightarrow{v})\subset\overrightarrow{f(v)}$なら、$\mathscr{F}\rightarrow v$について$\overrightarrow{v}\in\mathscr{F}$より$f(\overrightarrow{v})\in f\mathscr{F}\subset f_{\ast}\mathscr{F}$である。従ってフィルターの性質より$\overrightarrow{f(v)}\in f_{\ast}\mathscr{F}$を得る。つまり$f$は$v$で連続となる。$\square$
-
-> 条件$f(\overrightarrow{v})\subset\overrightarrow{f(v)}$は$(v, u)\in E_{1}$なら$(f(v), f(u))\in E_{2}$を意味する。従って$f$が連続であることは、$f$がグラフ準同型であることに他ならない。
-
-半順序集合は反射的有向グラフとみなせる。このとき連続射は順序を保つ写像に他ならない。
-
-
 ## 収束空間の直積
 
 __命題__ $X_{i}$を収束空間とする。$p_{i}\colon X=\prod_{j\in I}X_{j}\rightarrow X_{i}$を射影とする。$X$において関係$\mathscr{F}\rightarrow x$を以下で定める。

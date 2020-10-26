@@ -47,17 +47,20 @@
 
 過去に作ったノートに穴が結構あったので修正しつつ移植中。CCSあたりの証明をもっとシンプルにしたい。
 
-1. フィルターと収束空間の基礎
+1. フィルター付き空間の基礎
 
     1. [フィルターとprefilter](/ConvergentSpace/Filter.md)
-    1. [フィルターの大小（Wedge積とVel積）](/ConvergentSpace/FinerCoarser.md)
-    1. [フィルター射（始フィルターと終フィルター）](/ConvergentSpace/InitialFinal.md)
+    1. [Wedge積とVel積](/ConvergentSpace/WedgeVel.md)
+    1. [始フィルターと終フィルター](/ConvergentSpace/InitialFinal.md)
+
+1. 収束空間の基礎
     1. [収束空間と連続射](/ConvergentSpace/Conv.md)
     1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
-
-1. 収束空間と位相空間
     1. [収束空間の位相構造](/ConvergentSpace/FilterOpenTopology.md)
     1. [位相空間の収束構造](/ConvergentSpace/TopologicalConv.md)
+    1. [例：反射的有向グラフ](/ConvergentSpace/ReflexiveDirectedGraph.md)
+
+1. 収束空間における位相概念
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
 
 # 圏論

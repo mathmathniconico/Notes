@@ -1,5 +1,5 @@
 
-# フィルターの大小（Wedge積とVel積）
+# Wedge積とVel積
 
 __定義__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。関係$\mathscr{A}\dashv\mathscr{B}$を以下で定める。
 
@@ -7,7 +7,7 @@ __定義__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。関係
 
 このとき$\mathscr{B}$は$\mathscr{A}$より **細かい** （finer）、あるいは$\mathscr{A}$は$\mathscr{B}$より **粗い** （coarser）という。
 
-この定義は次の意味で整合的である。
+> この定義は次の意味で整合的である。
 
 __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。TFAE
 
@@ -15,11 +15,6 @@ __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。TFAE
 1. $\langle \mathscr{A} \rangle\subset\langle \mathscr{B} \rangle$である。
 
 関係$\dashv$は反射的（$\mathscr{A}\dashv\mathscr{A}$）かつ推移的（$\mathscr{A}\dashv\mathscr{B}, \mathscr{B}\dashv\mathscr{C}$なら$\mathscr{A}\dashv\mathscr{C}$）である。そこで関係$\mathscr{A}\sim\mathscr{B}$を$\mathscr{A}\dashv\mathscr{B}$かつ$\mathscr{B}\dashv\mathscr{A}$（つまり生成するフィルターが等しい）で定めると$\sim$は同値関係となる。
-
-
-## フィルターのwedge積
-
-フィルターより粗いフィルターの作り方を考える。
 
 __定義__ $\mathscr{G}, \mathscr{G}\subset 2^{X}$をフィルターとする。集合としての共通部分$\mathscr{G}\cap\mathscr{F}$もまたフィルターである。一般に$\mathscr{F}_{\lambda}, \lambda\in\Lambda$をフィルターの族として、$\bigcap_{\lambda\in\Lambda}\mathscr{F}_{\lambda}$もまたフィルターである。このとき
 
@@ -31,10 +26,7 @@ $$
 
 をフィルターの **wedge積** という。
 
-
-## prefilterのvel積
-
-prefilterより細かいprefilterの作り方を考える。
+> フィルターのwedge積は、与えられたフィルターより粗いフィルターとなる。
 
 __命題__ $\mathscr{A}, \mathscr{B}\subset 2^{X}$をprefilterとする。以下が成り立つ。
 
@@ -56,7 +48,7 @@ $A\in\mathscr{A}, B\in\mathscr{B}$として$V=A\cap B\in\mathscr{A}\vee\mathscr{
 
 __定義__ 上記の$\mathscr{A}\vee\mathscr{B}$をprefilterの **vel積**という。
 
-> 集合としての共通部分がwedge積であり粗く、元の共通部分を集めた集合がvel積であり細かい。
+> prefilterのvel積は、与えられたprefilterより細かいprefilterとなる。
 
 __定義__ $\mathscr{S}, \mathscr{T}\subset 2^{X}$を集合族とする。以下が成り立つとき$\mathscr{S}$と$\mathscr{T}$は **mesh** という。
 
