@@ -23,7 +23,13 @@ __定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満た�
 
 __命題__ 集合族$\mathscr{S}\subset 2^{X}$について、$\mathscr{S}$を含む最小のフィルターが存在する。
 
-（証明）有限個の$S_{1}, \dotsc, S_{n}\in\mathscr{S}$について$S_{1}\cap\dotsm\cap S_{n}$を含む集合全体を考えればよい。ただしゼロ個の交叉を全体集合$X$としておく。$\square$
+（証明）任意の$n\in\mathbb{N}$と有限個の$S_{1}, \dotsc, S_{n}\in\mathscr{S}$について$S_{1}\cap\dotsm\cap S_{n}$を含む集合全体を考えればよい。ただし$n=0$の場合は交叉を全体集合$X$としておく。つまり
+
+$$
+\lbrace F\subset X : \exists n\in\mathbb{N}, \exists S_{1}, \dotsc, S_{n}\in\mathscr{S}, S_{1}\cap\dotsb\cap S_{n}\subset F \rbrace
+$$
+
+は$\mathscr{S}$を含む最小のフィルターとなる。$\square$
 
 > $\langle \emptyset \rangle=\lbrace X \rbrace$である。
 
@@ -46,9 +52,9 @@ __定義__ $\mathscr{B}\subset 2^{X}, \neq\emptyset$が以下を満たすとき$
 
 同様に$\emptyset\notin\mathscr{B}$のとき **真prefilter** と呼ぶ。
 
-> ただしフィルターの場合と異なり、$\emptyset\in\mathscr{B}$だからといって自明（$\mathscr{B}=2^{X}$）とは限らない。
+> フィルターの場合と異なり、$\emptyset\in\mathscr{B}$だからといって自明（$\mathscr{B}=2^{X}$）とは限らない。
 
-フィルターはprefilterである。真フィルターは真prefilterである。
+- フィルターはprefilterである。真フィルターは真prefilterである。
 
 __命題__ $\mathscr{B}\subset 2^{X}$をprefilterとする。このとき
 
@@ -58,9 +64,9 @@ $$
 
 が成り立ち、特に右辺は$\mathscr{B}$を含む最小のフィルターである。
 
-$\mathscr{B}$が真prefilterのとき$\langle \mathscr{B} \rangle$は真フィルターである。
+更に$\mathscr{B}$が真prefilterのとき$\langle \mathscr{B} \rangle$は真フィルターである。
 
-（証明）左辺が右辺を含むことは定義より明らか。$F\in\langle \mathscr{B} \rangle$とすると、$B_{1}, \dotsc, B_{n}\in\mathscr{B}$が存在して$B_{1}\cap\dotsm\cap B_{n}\subset F$となる。prefilterの定義から$n$を一つずつ減らすことができて、結局ある$B\in\mathscr{B}$が存在して$B\subset F$となる。
+（証明）左辺が右辺を含むことは定義より明らか。$F\in\langle \mathscr{B} \rangle$とすると、$B_{1}, \dotsc, B_{n}\in\mathscr{B}$が存在して$B_{1}\cap\dotsm\cap B_{n}\subset F$となる。prefilterの定義から$n$を一つずつ減らすことができて、結局ある$B\in\mathscr{B}$が存在して$B\subset F$となる。（$n=0$の場合は$\mathscr{B}\neq\emptyset$より従う。）
 
 $\emptyset\in\langle \mathscr{B} \rangle$とすると、ある$B\in\mathscr{B}$が存在して$B\subset\emptyset$である。故に$B\in\mathscr{B}$が従う。$\square$
 
@@ -87,13 +93,13 @@ __命題__ $\mathscr{A}\subset 2^{X}$を集合族とする。$S\subset X$は$S\n
 
 （証明）上三つは明らか。
 
-$\mathscr{A}$はprefilterとする。$V, W\in\mathscr{A}_{\neg S}$とする。ある$A, B\in\mathscr{A}$が存在して$A\backslash S\subset V, B\backslash S\subset W$である。
+$\mathscr{A}$はprefilterとする。$V, W\in\mathscr{A}_{\neg S}$とする。ある$A, B\in\mathscr{A}$が存在して$A\backslash S\subset V, B\backslash S\subset W$である。prefilterの定義より、ある$C\in\mathscr{A}$が存在して$C\subset A\cap B$である。
 
 $$
-V\cap W\supset (A\backslash S)\cap(B\backslash S)=(A\cap B)\backslash S
+C\backslash S\subset (A\cap B)\backslash S=(A\backslash S)\cap (B\backslash S)\subset  V\cap W
 $$
 
-が成り立つ。prefilterの性質より、ある$C\in\mathscr{A}$が存在して$(A\cap B)\backslash S\supset C\cap S$である。故に$V\cap W\in\mathscr{A}_{\neg S}$を得る。最小性は明らかだろう。
+より$V\cap W\in\mathscr{A}_{\neg S}$を得る。最小性は明らかだろう。
 
 $\mathscr{A}$を真フィルターとする。$\emptyset\in\mathscr{A}_{\neg S}$とすると、ある$A\in\mathscr{A}$が存在して$A\backslash S\subset\emptyset$である。$A\subset S$より$S\in\mathscr{A}$となり矛盾する。故に$\emptyset\notin\mathscr{A}_{\neg S}$である。$\square$
 

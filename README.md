@@ -15,7 +15,7 @@
 
 ## 可換環論
 
-- 群
+- [群](/Algebra/Group.md)
 - [環と加群](/Algebra/Ring.md)
 - 素イデアルと整域
 - ネーター加群
@@ -47,6 +47,9 @@
 
 過去に作ったノートに穴が結構あったので修正しつつ移植中。CCSあたりの証明をもっとシンプルにしたい。
 
+1. 位相空間の基礎
+    1. [位相](/ConvergentSpace/Top.md)
+
 1. フィルター付き空間の基礎
 
     1. [フィルターとprefilter](/ConvergentSpace/Filter.md)
@@ -56,12 +59,14 @@
 1. 収束空間の基礎
     1. [収束空間と連続射](/ConvergentSpace/Conv.md)
     1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
-    1. [収束空間の位相構造](/ConvergentSpace/FilterOpenTopology.md)
-    1. [位相空間の収束構造](/ConvergentSpace/TopologicalConv.md)
+    1. [収束空間の位相構造（隣接位相）](/ConvergentSpace/FilterOpenTopology.md)
+    1. [位相空間の収束構造（位相収束構造）](/ConvergentSpace/TopologicalConv.md)
     1. [例：反射的有向グラフ](/ConvergentSpace/ReflexiveDirectedGraph.md)
 
 1. 収束空間における位相概念
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
+
+
 
 # 圏論
 

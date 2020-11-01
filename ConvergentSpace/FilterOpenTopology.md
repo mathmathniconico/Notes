@@ -1,14 +1,11 @@
-# 収束空間の位相構造
+# 収束空間の位相構造（隣接位相）
 
-以下、収束空間$X$に対し、$X$のフィルター全体を$\Phi(X)$、真フィルター全体を$\Phi_{\lt 1}(X)$で表す。
-
-
-## フィルター開位相（収束近傍、open、closed）
+以下、収束空間$X$に対し、$X$のフィルター全体を$\mathrm{Fil}(X)$、真フィルター全体を$\mathrm{Fil}_{\lt 1}(X)$で表す。
 
 __定義__ $X$を収束空間とする。
 
-- $x\in X$に対し$\mathscr{N}_{x}:=\cap\lbrace \mathscr{F}\in\Phi(X) :  \mathscr{F}\rightarrow x \rbrace$を **隣接フィルター** （nearby filter）と呼ぶ。
-- $A\subset X$について、$\mathrm{pcl}(A):=\lbrace x\in X : \exists\mathscr{F}\in\Phi_{\lt 1}(X), A\in\mathscr{F}, \mathscr{F}\rightarrow x \rbrace$を$A$の **preclosure** と呼ぶ。
+- $x\in X$に対し$\mathscr{N}_{x}:=\cap\lbrace \mathscr{F}\in\mathrm{Fil}(X) :  \mathscr{F}\rightarrow x \rbrace$を **隣接フィルター** （nearby filter）と呼ぶ。
+- $A\subset X$について、$\mathrm{pcl}(A):=\lbrace x\in X : \exists\mathscr{F}\in\mathrm{Fil}_{\lt 1}(X), A\in\mathscr{F}, \mathscr{F}\rightarrow x \rbrace$を$A$の **preclosure** と呼ぶ。
 - $A\subset X$について、$\mathrm{pcl}(A)=A$が成り立つとき、$A$は **closed** であるという。
 
 > 隣接フィルターはフィルターのwedge積だからフィルターである。preclosureは閉包やKatětov閉包、Čech閉包などと呼ばれる。
@@ -32,7 +29,6 @@ __定義__　$X$を収束空間とする。$U\subset X$について、任意の$
 
 - $\lambda\in\Lambda$を添え字として$U_{\lambda}\subset X$がopenのとき、$U:=\bigcup_{\lambda\in\Lambda}U_{\lambda}$もopenである。実際$x\in U$について、$x\in U_{\lambda}$となる$\lambda$が取れるので$U_{\lambda}\subset U$より$U\in\mathscr{N}_{x}$を得る。
 
-
 __補題__ $X$を収束空間、$U\subset X$とする。TFAE
 
 1. $U$はopenである。
@@ -47,19 +43,19 @@ __系__ $X$を収束空間とする。以下が成り立つ。
 - $\emptyset, X$はopenである。
 - $U, V$がopenなら$U\cap V$もopenである。
 
-__定義__ $(X, \phi)$を収束空間とする。openな部分集合全体を$\mathcal{O}_{\phi}$で表すと$(X, \mathcal{O}_{\phi})$は位相空間となる。この位相を **フィルター開位相** （filter open topology）と呼ぶ。
+__定義__ $(X, \phi)$を収束空間とする。openな部分集合全体を$T\phi$で表すと$(X, T\phi)$は位相空間となる。この位相を **隣接位相** （nearby topology）と呼ぶ。
 
 __補題__ $X$を収束空間とする。以下が成り立つ。
 
-- $x\in X$について$\mathfrak{N}_{x}\subset\mathscr{N}_{x}$が成り立つ。ただし$\mathfrak{N}_{x}$はフィルター開位相における$x$の近傍系とする。
-- $A\subset X$について$\mathrm{pcl}(A)\subset\overline{A}$が成り立つ。ただし$\overline{A}$はフィルター開位相における$A$の閉包とする。
+- $x\in X$について$\mathfrak{N}_{x}\subset\mathscr{N}_{x}$が成り立つ。ただし$\mathfrak{N}_{x}$は隣接位相における$x$の近傍系とする。
+- $A\subset X$について$\mathrm{pcl}(A)\subset\overline{A}$が成り立つ。ただし$\overline{A}$は隣接位相における$A$の閉包とする。
 - $N\in\mathscr{N}_{x}\Longleftrightarrow x\notin\mathrm{pcl}(X\backslash N)$が成り立つ。
 
-（証明）$N\in\mathfrak{N}_{x}$とすると、ある開集合$U\in\mathcal{O}_{\phi}$が存在して$x\in U\subset N$を満たす。$U$はopenだから$U\in\mathscr{N}_{x}$である。よって$N\in\mathscr{N}_{x}$である。
+（証明）$N\in\mathfrak{N}_{x}$とすると、ある開集合$U\in T\phi$が存在して$x\in U\subset N$を満たす。$U$はopenだから$U\in\mathscr{N}_{x}$である。よって$N\in\mathscr{N}_{x}$である。
 
 $A\subset\overline{A}$である。$\overline{A}$は閉集合だから$\mathrm{pcl}(A)\subset\mathrm{pcl}(\overline{A})=\overline{A}$を得る。
 
-$N\in\mathscr{N}_{x}$とする。$x\in\mathrm{pcl}(X\backslash N)$なら、真フィルター$\mathscr{F}\rightarrow x$が存在して$X\backslash N\in\mathscr{F}$を満たす。近傍フィルターの定義より$N\in\mathscr{F}$となり矛盾する。逆に$N\notin\mathscr{N}_{x}$とする。あるフィルター$\mathscr{F}\rightarrow x$が存在して$N\notin\mathscr{F}$である。$\mathscr{F}$は真フィルターだから$\mathscr{F}$の$N$による補拡大$\mathscr{F}_{\neg N}$は$\mathscr{F}$と$X\backslash N$を含む真フィルターとなる。このとき$\mathscr{F}_{\neg N}\rightarrow x$より$x\in\mathrm{cl}(X\backslash N)$である。$\square$
+$N\in\mathscr{N}_{x}$とする。$x\in\mathrm{pcl}(X\backslash N)$なら、真フィルター$\mathscr{F}\rightarrow x$が存在して$X\backslash N\in\mathscr{F}$を満たす。近傍フィルターの定義より$N\in\mathscr{F}$となり矛盾する。逆に$N\notin\mathscr{N}_{x}$とする。あるフィルター$\mathscr{F}\rightarrow x$が存在して$N\notin\mathscr{F}$である。$\mathscr{F}$は真フィルターだから$\mathscr{F}$の$N$による補拡大$\mathscr{F}_{\neg N}$は$\mathscr{F}$と$X\backslash N$を含む真フィルターとなる。このとき$\mathscr{F}_{\neg N}\rightarrow x$より$x\in\mathrm{pcl}(X\backslash N)$である。$\square$
 
 > openと開集合、closedと閉集合は同値の概念だが、一般に隣接フィルターは近傍系と一致せず、またpreclosureも閉包と一致しない。
 
@@ -68,7 +64,7 @@ __命題__ $f\colon X\rightarrow Y$は連続射とする。以下が成り立つ
 - $U\subset Y$がopenなら、$f^{-1}(U)\subset X$もopenである。
 - $F\subset Y$がclosedなら、$f^{-1}(F)\subset X$もclosedである。
 
-つまり連続射はフィルター開位相に関して連続である。
+つまり連続射は隣接位相に関して連続である。
 
 （証明）$x\in f^{-1}(U)$とする。フィルター$\mathscr{F}\rightarrow x$について、$f$は連続だから$f_{\ast}\mathscr{F}\rightarrow f(x)$である。$U$はopenなので$U\in f_{\ast}\mathscr{F}$となるが、ある$V\in\mathscr{F}$が存在して$f(V)\subset U$を満たす。$V\subset f^{-1}(f(V))\subset f^{-1}(U)$だから、$f^{-1}(U)\in\mathscr{F}$である。故に$f^{-1}(U)\in\mathscr{N}_{x}$だから$f^{-1}(U)$はopenである。closedに関しては$f^{-1}(Y\backslash F)=X\backslash f^{-1}(F)$より明白。$\square$
 
@@ -85,7 +81,7 @@ $N\in\mathscr{N}_{f(x)}$とする。補題より$f(x)\notin\mathrm{pcl}(Y\backsl
 
 __定義__ 函手$T\colon\mathbf{Conv}\rightarrow\mathbf{Top}$を以下で定義する。
 
-- 収束空間$(X, \phi)$について、位相空間$(X, \mathcal{O}_{\phi})$を対応させる。
+- 収束空間$(X, \phi)$について、位相空間$(X, T\phi)$を対応させる。
 - 連続射$f\colon X\rightarrow Y$について、連続写像$f\colon X\rightarrow Y$を対応させる。
 
 > 対応する射は写像として等しいので、函手$T$は忠実になる。

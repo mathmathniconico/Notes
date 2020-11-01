@@ -101,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-を得る。（どちらも逆の包含も成り立つ。）今$\mathscr{F}\rightarrow x, \mathscr{G}\rightarrow y$だから$\mathscr{F}\rightarrow\prod\mathscr{A}\rightarrow (x, y)$であり、$g$は連続なので$g_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$つまり$\mathrm{eval}_{\ast}(h_{\ast}\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$が従う。$\square$
+を得る。（どちらも逆の包含も成り立つ。）今$\mathscr{F}\rightarrow x, \mathscr{A}\rightarrow y$だから$\mathscr{F}\prod\mathscr{A}\rightarrow (x, y)$であり、$g$は連続なので$g_{\ast}(\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$つまり$\mathrm{eval}_{\ast}(h_{\ast}\mathscr{F}\prod\mathscr{A})\rightarrow g(x, y)$が従う。$\square$
 
 > 上の写像$h$は$\lambda g$とも書かれ、カリー化と呼ばれたりする。
 
