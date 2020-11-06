@@ -16,8 +16,9 @@
 ## 可換環論
 
 - [群](/Algebra/Group.md)
-- [環と加群](/Algebra/Ring.md)
+- [環](/Algebra/Ring.md)
 - 素イデアルと整域
+- [環上の加群](/Algebra/Module.md)
 - ネーター加群
 - 多項式環
 - 自由加群

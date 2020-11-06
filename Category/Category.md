@@ -8,12 +8,12 @@
 - $\mathrm{Mor}(\mathscr{C})$は集合である。この要素を **射** （morphism）と呼ぶ。
 - $\mathrm{dom}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像である。射$f$について$\mathrm{dom}(f)$を$f$の始域（domain）と呼ぶ。
 - $\mathrm{cod}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像である。射$f$について$\mathrm{cod}(f)$を$f$の終域（codomain）と呼ぶ。
-- $\mathrm{cod}(f)=\mathrm{dom}(g)$を満たす射$f, g$について合成（composition）と呼ばれる射$g\circ f$が定義され、$\mathrm{dom}(g\circ f)=\mathrm{dom}(f), \mathrm{cod}(g\circ f)=\mathrm{cod}(g)$を満たす。
+- $\mathrm{dom}(g)=\mathrm{cod}(f)$を満たす射$f, g$について合成（composition）と呼ばれる射$g\circ f$が定義され、$\mathrm{dom}(g\circ f)=\mathrm{dom}(f), \mathrm{cod}(g\circ f)=\mathrm{cod}(g)$を満たす。
 
 集合のファイバー積を用いるなら、$\circ$は然るべき条件を満たす写像
 
 $$
-\circ\colon\mathrm{Mor}(\mathscr{C})\underset{\mathrm{cod}, \mathrm{Ob}(\mathscr{C}), \mathrm{dom}}{\times}\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Mor}(\mathscr{C})
+\circ\colon\mathrm{Mor}(\mathscr{C})\underset{\mathrm{dom}, \mathrm{Ob}(\mathscr{C}), \mathrm{cod}}{\times}\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Mor}(\mathscr{C})
 $$
 
 である。

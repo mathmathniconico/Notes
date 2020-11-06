@@ -1,124 +1,147 @@
 
-# 環と加群
+# 環
 
-## 環とイデアル
+群は数学的オブジェクトの対称性を表すとされるが、環はそこに幾何学を提供する。ある環から出る環の準同型は一種の幾何学的表出であり、それらを束ねることで元の環の幾何学的情報を得ることができるとされる。これによってどの程度元の環を復元できるかは興味のあるところだろう。
 
-__定義__ 次を満たす集合の組$(R, +, \cdot, 0, 1)$を単位的可換環（commutative ring with unit）あるいは単に **環** （ring）と呼ぶ。
+環についても群と同様に部分代数と合同関係という二つの概念を考えることができる。部分代数には部分環が対応し、合同関係にはイデアルが対応する。
 
-- 加法$+\colon R\times R\rightarrow R$及び$0\in R$はアーベル群の構造を定める。
-- 乗法$\cdot\colon R\times R\rightarrow R$及び$1\in R$について以下が成り立つ。
-	- $a, b, c\in R$について$(a\cdot b)\cdot c=a\cdot(b\cdot c)$が成り立つ。
-	- $a\in R$について$a\cdot 1=1\cdot a=a$が成り立つ。
-	- $a, b\in R$について$a\cdot b=b\cdot a$が成り立つ。
-- 乗法は加法について両側分配的である。
-	- $a, b, c\in R$について$a\cdot(b+c)=a\cdot b+a\cdot c$が成り立つ。
-	- $a, b, c\in R$について$(a+b)\cdot c=a\cdot c+b\cdot c$が成り立つ。
+## 環と部分環
 
-環$R$と書くときは上記の組が想定されているものとする。乗法$a\cdot b$は$ab$と略記する。数の$0, 1$と区別するために$0_{R}, 1_{R}$という記号も用いる。$0_{R}, 1_{R}$はそれぞれ加法単位元・乗法単位元と呼ばれるが、ここではゼロ・イチと呼ぶ。
+__定義__ $(R, +, 0)$をアーベル群とする。演算$\cdot\colon R\times R\rightarrow R$は以下を満たすとする。
+
+- 結合的である。つまり$a, b, c\in R$について$(a\cdot b)\cdot c=a\cdot(b\cdot c)$が成り立つ。
+- $+$に関して両側分配的である。つまり$a, b, c\in R$について$a\cdot(b+c)=a\cdot b+a\cdot c$及び$(a+b)\cdot c=a\cdot c+b\cdot c$が成り立つ。
+
+このとき集合の組$(R, +, \cdot, 0)$を **環** （ring）と呼ぶ。
+
+環$R$と書くときは上記の組が想定されているものとする。$+$を加法、$\cdot$を乗法と呼ぶ。$a\in R$の加法逆元を$-a$と表し、乗法$a\cdot b$は$ab$と略記する。数の$0$と区別するために$0_{R}$という記号も用いるが、本文ではゼロと呼ぶ。
+
+- $a\in R$について$a0=0a=0$が成り立つ。
+- $a, b\in R$について$(-a)b=a(-b)=-(ab)$が成り立つ。特に$(-a)(-b)=ab$である。
+
+__定義__ $R$を環とする。
+- 乗法単位元が存在するとき、$R$は **単位元を持つ** （unitary）という。単位元は一意的であり$1_{R}$と表す。本文ではイチと呼ぶ。
+- 乗法が可換のとき、つまり$a, b\in R$について$ab=ba$が成り立つとき、 **可換環** （commutative ring）という。
+- 可換でない環を **非可換環** （non-commutative ring）という。
+- $R$を単位元を持つ可換環とする。$R^{\times}=R\backslash\lbrace 0 \rbrace$について$(R^{\times}, \cdot, 1)$がアーベル群となるとき、$R$は **体** （field）という。
+
+__例__ 以下は全て単位元を持つ環である。
 
 - ゼロとイチが等しいとき$R=\lbrace 0 \rbrace$となるが、これを **ゼロ環** と呼ぶ。
-- 整数全体$\mathbb{Z}$は環であり特に **有理整数環** と呼ばれる。
-- 有理数、実数、複素数の全体$\mathbb{Q}, \mathbb{R}, \mathbb{C}$も環である。これらはゼロ元を除き乗法の逆元が存在し、一般に **体** と呼ばれる。
+- 整数全体$\mathbb{Z}$は可換環である。特に **有理整数環** と呼ばれる。
+- 有理数、実数、複素数の全体$\mathbb{Q}, \mathbb{R}, \mathbb{C}$は体である。
+- 単位元を持つ可換環$R$について$R$係数の多項式全体$R\lbrack x \rbrack$は多項式の和と積で可換環となる。これを多項式環という。
+- 単位元を持つ可換環$R$について$n$次正方行列全体$\mathrm{M}(n; R)$は行列の和と積で環となる。これを全行列環という。特に$n\ge 2$なら非可換である。
+- アーベル群$G$の自己準同型（$G$から$G$への群の準同型）全体$\mathrm{End}(G)$は$(f+g)(x):=f(x)+g(x)$及び$(f\cdot g)(x):=f(g(x))$により環となる。ゼロはゼロ写像$0(x):=0$、イチは恒等写像$1(x):=x$である。これも一般に非可換である。
+- $R$を単位元を持つ可換環、$G$を群とする。$G$の元を基底とした$k$上のベクトル空間$k\lbrack G \rbrack$は環になる。ここで乗法は$a, b\in k$及び$g, h\in G$について$ag\cdot bh:=ab(gh)$で定める。これを **群環** （group ring）という。一般に非可換である。
 
-__定義__ $R$を環とする。$I\subset R$が以下の条件を満たすとき **イデアル** （ideal）と呼ぶ。
+__定義__ $R$を環とする。$S\subset R$が$R$の演算によって環になるとき **部分環** （subring）という。このとき$S\lt R$と表す。
 
-- $a, b\in I$に対し$a+b\in I$が成り立つ。
-- $r\in R$及び$a\in I$に対し$ra\in I$が成り立つ。
+> 環$R$が単位元を持つからといって、その部分環$S\lt R$が単位元を持つとは限らない。例えば$2\mathbb{Z}\lt\mathbb{Z}$は部分環だが、$1\notin 2\mathbb{Z}$である。
 
-> 2番目の条件は「乗法で閉じていること」ではないことに注意したい。
 
-$\lbrace 0 \rbrace$や$R$自身はイデアルになる。これを **自明なイデアル** と呼ぶ。特に$R$でないイデアルを **真イデアル** （proper ideal）という。
+## 合同関係とイデアル
 
-> ざっくり言えば、環の内部構造を知るということは、イデアルを知ることに相当する。この標語に関連して、イデアルは部分構造（部分環）の双対概念であることを最近知った。この意味なら確かにイデアルの重要性が分かるので、いつか別のノートに纏められたらと思う。
+群のときと同様に、環に対しても合同関係を定めることができる。
 
-環$R$のイデアル$I$について、$a+I:=\lbrace a+b : b\in R \rbrace$を集めた集合
+__定義__ $R$を環、$S\subset R$とする。このとき関係$a\theta_{S}b$を$b-a\in S$で定める。
+
+__注意__ この定義はアーベル群$(R, +, 0)$に関する$\theta_{S}$と同等である。従って部分群の場合と比較すると、部分環$S\lt R$に対して$\theta_{S}$は同値関係になることを同様に示せる。一方で$\theta_{S}$が同値関係なら$S$が加法に関して部分群であることは言えるものの、一般に$S$が部分環とは限らない。
+
+__定義__ $R$を環、$\theta$を$R$上の同値関係とする。以下が成り立つとき$\theta$を **合同関係** （congruence relation）といい、全体を$\mathrm{Con}(R)$と表す。
+
+- $a\theta b$なら$(-a)\theta(-b)$である。
+- $a\theta a^{\prime}, b\theta b^{\prime}$なら$(a+b)\theta(a^{\prime}+b^{\prime})$である。
+- $a\theta a^{\prime}, b\theta b^{\prime}$なら$(ab)\theta(a^{\prime}b^{\prime})$である。
+
+__定義__ $R$を環、$I\subset R$は空でないとする。$I$が以下の条件を満たすとき **イデアル** （ideal）と呼ぶ。
+
+- $a, b\in I$に対し$b-a\in I$が成り立つ。
+- $r\in R$及び$a\in I$に対し$ra\in I$及び$ar\in I$が成り立つ。
+
+> イデアルは部分環である。実際、加法について部分群であることは部分群の特徴付けより明らかである。乗法について閉じていることも二番目の条件より従う。
+
+- $\lbrace 0 \rbrace$や$R$自身はイデアルになる。これを **自明なイデアル** と呼ぶ。
+- $R$でないイデアルを **真イデアル** （proper ideal）という。
+
+__補題__ $R$を環、$I\subset R$とする。TFAE
+
+1. $I$はイデアルである。
+1. $\theta_{I}$は合同関係である。
+
+（証明）$I$をイデアルとする。イデアルは部分環だから$\theta_{I}$は同値関係となる。特に加法はアーベル群だから$\theta_{I}$は合同関係における加法に関する条件を満たしている。よって乗法に関する条件を示せばよい。$a\theta_{I}b, c\theta_{I}d$とする。$b-a\in I, d-c\in I$だからイデアルの条件より$(b-a)c, b(d-c)\in I$である。よって
 
 $$
-R/I:=\lbrace a+I : a\in R \rbrace
+bd-ac=b(d-c)+(b-a)c\in I
 $$
 
-に自然な環構造を$a, b\in R$について$(a+I)+(b+I):=(a+b)+I$及び$(a+I)\cdot(b+I):=ab+I$で定めることができる。
+となり$ac\theta_{I}bd$を得る。つまり$\theta_{I}$は合同関係である。
 
-__定義__ 上記の環$R/I$を **剰余環** と呼ぶ。
+$\theta_{I}$を合同関係とする。上の注意より$I$は加法に関して部分群となるから$I$は空でなく、$a, b\in I$に対して$b-a\in I$が成り立つ。$r\in R, a\in I$とすると、$a\in I$より$0\theta_{I}a$である。また$r\theta_{I}r$だから、合同関係の条件より$r0\theta_{I}ra$及び$0r\theta_{I}ar$を得る。故に$ra, ar\in I$である。$\square$
+
+
+## 剰余環と準同型定理
+
+$R$を環、$\theta\in\mathrm{Con}(R)$を合同関係とする。群の場合と同様に$a\in R$の同値類$a/\theta$を考えると、その全体$R/\theta$は
+
+$$
+\begin{aligned}
+(a/\theta)+_{\theta}(b/\theta)&:=(a+b)/\theta \\
+(a/\theta)\cdot_{\theta}(b/\theta)&:=ab/\theta
+\end{aligned}
+$$
+
+によって環となる。
+
+__定理__ $R$を環とする。以下が成り立つ。
+
+- $I\subset R$をイデアルとする。$\theta_{I}$は$R$上の合同関係であり$I=1/\theta_{I}$が成り立つ。
+- $\theta\in\mathrm{Con}(G)$を合同関係とする。$I:=1/\theta$は$R$のイデアルであり、$\theta=\theta_{I}$が成り立つ。
+
+（証明）$I$をイデアルとする。補題より$\theta_{I}$は合同関係である。$I=1/\theta_{I}$は明らか。
+
+$\theta$を合同関係とする。群の場合の結果から、$I$は加法に関して部分群であり$\theta=\theta_{I}$が成り立つ。補題より$I$はイデアルである。$\square$
+
+以上より合同関係とイデアルの間に一対一の対応が成り立つ。この意味で$R/\theta_{I}$のことを$R/I$と表す。また$a/\theta=a+I$であるから、こちらの表記も用いる。
+
+__定義__ $I\subset R$をイデアルとする。上記の環$R/I$を$R$の$I$による **剰余環** （residue class ring）という。
+
+> 群の場合と同様に包含を保つ束としての同型を与えている。対角集合$\Delta=\lbrace (a, a) : a\in R \rbrace$について$1/\Delta=\lbrace 0 \rbrace$であり、全体集合$\nabla=\lbrace (a, b) : a, b\in R \rbrace$について$1/\nabla=R$となる。
 
 __定理__ （イデアル対応定理）$I\subset R$をイデアルとする。このとき$I$を含む$R$のイデアルと$R/I$のイデアルは一対一に対応する。
 
 （証明）$J\subset R$に対し$\Phi(J):=\lbrace a+I : a\in J \rbrace$とする。また$K\subset R/I$に対し$\Psi(K):=\lbrace a\in R : a+I\in K \rbrace$とする。$J, K$がイデアルなら$\Phi(J), \Psi(K)$もイデアルであり、更に$\Psi(\Phi(J))=J$かつ$\Phi(\Psi(K))=K$が成り立つ。$\square$
 
-剰余環$R/I$の構造は$I$より大きい部分の構造を完全に記述する。素朴だがこの対応関係は非常に興味深い。更にこの対応は包含関係を保つ。即ち$J_{1}\subset J_{2}$なら$\Phi(J_{1})\subset\Phi(J_{2})$であり、$K_{1}\subset K_{2}$なら$\Psi(K_{1})\subset\Psi(K_{2})$が成り立つ。
+> 剰余環$R/I$の構造は$I$より大きい部分の構造を完全に記述する。素朴だがこの対応関係は非常に興味深い。更にこの対応は包含関係を保つ。即ち$J_{1}\subset J_{2}$なら$\Phi(J_{1})\subset\Phi(J_{2})$であり、$K_{1}\subset K_{2}$なら$\Psi(K_{1})\subset\Psi(K_{2})$が成り立つ。
 
+__定義__ $R, R^{\prime}$を環とする。写像$f\colon R\rightarrow R^{\prime}$が以下を満たすとき **準同型** （homomorphism）という。
 
-## 環上の加群と準同型
+- $a, b\in R$について$f(a+b)=f(a)+f(b)$が成り立つ。
+- $a, b\in R$について$f(ab)=f(a)f(b)$が成り立つ。
 
-__定義__ $R$を環とする。次を満たす集合の組$(M, +, \cdot, 0)$を$R$上の **加群** （module）あるいは単に$R$加群という。
+> 準同型の合成は準同型であり、恒等写像も準同型である。これらは射の条件を満たすため、環の圏$\mathbf{Ring}$が定まる。
 
-- 加法$+\colon M\times M\rightarrow M$及び$0\in M$はアーベル群の構造を定める。
-- スカラー倍$\cdot R\times M\rightarrow M$は以下を満たす。
-	- $a\in R$及び$x, y\in M$について$a\cdot(x+y)=a\cdot x+a\cdot y$が成り立つ。
-	- $a, b\in R$及び$x\in M$について$(a+b)\cdot x=a\cdot x+b\cdot x$が成り立つ。
-	- $a, b\in R$及び$x\in M$について$(ab)\cdot x=a\cdot(b\cdot x)$が成り立つ。
-	- $x\in M$について$1\cdot x=x$が成り立つ。
+__定義__ $R, R^{\prime}$を環とする。二つの準同型$f\colon R\rightarrow R^{\prime}, g\colon R^{\prime}\rightarrow R$が存在して$g\circ f=\mathrm{id}_{R}$かつ$f\circ g=\mathrm{id}_{R^{\prime}}$を満たすとき$R$と$R^{\prime}$は **同型** （isomorphic）であるといい、$R\simeq R^{\prime}$と表す。
 
-$R$加群$M$と書くときは上記の組が想定されているものとする。スカラー倍$a\cdot x$は$ax$と略記する。一般に$(-a)\cdot x=-(ax)$が成り立つので$-ax$と略記する。
+- 環の準同型$f$について、同型を与えることと$f$が全単射であることは同値である。
 
-> 厳密には左加群と呼ばれるものの定義である。$(ab)x=a(bx)$を$(ab)x=b(ax)$に変えた場合は右加群と呼ばれるが、今は乗法について可換な環を考えているので同等になる。右加群の場合は、スカラー倍を$\cdot\colon M\times R\rightarrow M$として$x\cdot (ab)=(x\cdot a)\cdot b$とする方が一般的かもしれない。
+__定義__ $f\colon R\rightarrow R^{\prime}$を環の準同型とする。次を定義する。
 
-- 環$R$自身は$R$加群である。より一般に$R$のイデアル$I$も$R$加群である。
-- $\alpha\in\mathbb{Z}$について$\alpha\mathbb{Z}$は$\mathbb{Z}$のイデアルである。
-- ベクトル空間、あるいは線型空間は体上の加群のことである。ただし性質は大きく異なるので別に扱う方が筋は良い。
+- $\mathrm{Ker}f:=\lbrace a\in R : f(a)=0 \rbrace$を$f$の **核** （kernel）という。
+- $\mathrm{Im}f:=f(R)=\lbrace f(a) : a\in R \rbrace$を$f$の **像** （image）という。
 
-__定義__ $M, N$を$R$加群とする。写像$f\colon M\rightarrow N$が以下を満たすとき **準同型** （homomorphism）という。
+__命題__ $f\colon R\rightarrow R^{\prime}$を環の準同型とする。$\Delta_{f}:=\lbrace (x, y) : f(x)=f(y) \rbrace$は$R$上の合同関係であり、$0/\Delta_{f}=\mathrm{Ker}f$が成り立つ。
 
-- $x, y\in M$について$f(x+y)=f(x)+f(y)$が成り立つ。
-- $a\in R, x\in M$について$f(ax)=af(x)$が成り立つ。
+（証明）合同関係であることは明らか。$x\in 0/\Delta_{f}$なら$0\Delta_{f}x$より$f(x)=f(0)=0$である。故に$x\in\mathrm{Ker}f$となる。逆も同様である。$\square$
 
-また準同型$f\colon M\rightarrow N$に対し以下を定める。
+$\mathrm{Ker}f\subset R, \mathrm{Im}f\subset R^{\prime}$はそれぞれ部分環である。特に$\mathrm{Ker}f$はイデアルである。
 
-- $\mathrm{Ker}f:=\lbrace x\in M : f(x)=0 \rbrace$を$f$の核（kernel）という。
-- $\mathrm{Im}f:=\lbrace f(x) : x\in M$を$f$の像（image）という。
-
-特に$f(0)=0$だから$\mathrm{Ker}f, \mathrm{Im}f\neq\emptyset$である。$\mathrm{Ker}f=\lbrace 0 \rbrace$と$f$が単射であることは同値であり、$\mathrm{Im}f=N$と$f$が全射であることは同値となる。
-
-> 環$R$上の加群と準同型は加群の圏$\mathbf{Mod}_{R}$を作る。これはアーベル圏の代表例であり重要な圏である。$\mathbf{Mod}_{R}$は環$R$を完全に決定することが知られており、この意味で加群は環の外部表現といえる。なお非可換環の場合にはもっと深い理論がある。
-
-__定義__ $M, N$を$R$加群とする。二つの準同型$f\colon M\rightarrow N, g\colon N\rightarrow M$が存在して$g\circ f=\mathrm{id}_{M}$かつ$f\circ g=\mathrm{id}_{N}$を満たすとき$M$と$N$は **同型** （isomorphic）であるといい、$M\simeq N$と表す。
-
-- 準同型について同型と全単射であることは同値である。
-
-__定義__ $R$加群$M$の部分集合が$M$の演算で$R$加群となるとき、部分加群という。
-
-- 準同型$f\colon M\rightarrow N$について$\mathrm{Ker}f\subset M, \mathrm{Im}f\subset N$は部分加群である。
-- 単射準同型$f\colon M\rightarrow N$について同型$M\simeq f(M)\subset N$によって$M$を$N$の部分加群とみなすことがある。
-- 環$R$の$R$加群としての部分加群はイデアルのことに他ならない。
-
-$R$加群$M$の部分加群$N$について$x+N:=\lbrace x+y : y\in N \rbrace$を集めた集合
+__定理__ （準同型定理）$f\colon R\rightarrow R^{\prime}$を環の準同型とする。このとき環としての同型
 
 $$
-M/N:=\lbrace x+N : x\in M \rbrace
+R/\mathrm{Ker}f\simeq\mathrm{Im}f
 $$
 
-に自然な$R$加群の構造を$(x+N)+(y+N):=(x+y)+N$及び$a\cdot(x+N):=ax+N$で定めることができる。
+が成り立つ。
 
-__定義__ 上記の$R$加群$M/N$を **剰余加群** と呼ぶ。
-
-__定理__ （準同型定理）$f\colon M\rightarrow N$を$R$加群の間の準同型とする。$M/\mathrm{Ker}f\simeq\mathrm{Im}f$が成り立つ。
-
-（証明）$\overline{f}\colon M/\mathrm{Ker}f\rightarrow\mathrm{Im}f$を$f(x+M):=f(x)$で定める。このとき$\overline{f}$は準同型かつ全単射である。$\square$
-
-- $\mathrm{Cok}f:=N/\mathrm{Im}f$を$f$の **余核** （cokernel）という。
-- $\mathrm{Coim}f:=M/\mathrm{Ker}f$を$f$の **余像** （coimage）という。
-
-> 準同型定理は$\mathrm{Coim}f\simeq\mathrm{Im}f$と表せる。
-
-__定義__ $R$加群$M_{i}$及び準同型$f_{i}\colon M_{i}\rightarrow M_{i+1}$の組を加群の **系列** （sequence）と呼ぶ。
-
-$$
-\dotsb\rightarrow M_{i-1}\xrightarrow{f_{i-1}}M_{i}\xrightarrow{f_{i}}M_{i+1}\rightarrow\dotsb
-$$
-
-この系列において$\mathrm{Im}f_{i}=\mathrm{Ker}f_{i+1}$が常に成り立つとき、系列は **完全** （exact）であるという。
-
-準同型$f\colon M\rightarrow N$について以下が成り立つ。
-
-- $f$が単射であるとは$0\rightarrow M\xrightarrow{f}N$が完全であることに他ならない。
-- $f$が全射であるとは$M\xrightarrow{f}N\rightarrow 0$が完全であることに他ならない。
+（証明）$a/\mathrm{Ker}f$に対して$f(a)$を対応させる写像はwell-definedな準同型であり、全単射である。$\square$
