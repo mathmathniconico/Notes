@@ -87,7 +87,7 @@ $R$を環、$\theta\in\mathrm{Con}(R)$を合同関係とする。群の場合と
 $$
 \begin{aligned}
 (a/\theta)+_{\theta}(b/\theta) &:=(a+b)/\theta \\
-a & b
+(a/\theta)\cdot (b/\theta) &:=ab/\theta
 \end{aligned}
 $$
 
