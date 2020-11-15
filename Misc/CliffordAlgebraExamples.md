@@ -196,7 +196,7 @@ $$
 となる。まず可換性より$e_{-2, -1, 0}\mapsto G$が分かる。全ての符号が正で揃っているので、$e_{-1, 0}\mapsto A$と仮定しよう。$e_{-1, 0}e_{-2}=e_{-2, -1, 0}$より$AX=D$を解いて$X=E$を得る。従って$e_{-2}\mapsto E$とする。$e_{-2, -1, 0}$との積でマイナスの符号が付くのは$e_{-2}, e_{-2, -1}, e_{-2, 0}, e_{-2, -1, 0}$であり、$D$との積でマイナスの符号が付くのは$E, F, G, D$である。よって$F, G$は$e_{-2, -1}, e_{-2, 0}$のいずれかである。対角成分を見ると$e_{-2, -1}\mapsto F, e_{-2, 0}\mapsto G$でなければならない。同様に$e_{-1}\mapsto C, e_{0}\mapsto B$が分かる。この対応が正しいことは、ちゃんと計算してみれば分かる。
 
 | $e_{-2}$ | $e_{-1}$ | $e_{0}$ | $e_{-2, -1}$ | $e_{-2, 0}$ | $e_{-1, 0}$ | $e_{-2, -1, 0}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | $\left( \begin{matrix} h & \\ & -h \end{matrix} \right)$ | $\left( \begin{matrix} & 1 \\ -1 & \end{matrix} \right)$ | $\left( \begin{matrix} & 1 \\ 1 & \end{matrix} \right)$ | $\left( \begin{matrix} & h \\ h & \end{matrix} \right)$ | $\left( \begin{matrix} & h \\ -h & \end{matrix} \right)$ | $\left( \begin{matrix} & 1 \\ -1 & \end{matrix} \right)$ | $\left( \begin{matrix} h & \\ & h \end{matrix} \right)$ |
 
 従って$\mathrm{Clif}( \mathbb{R} )_{2, 1}\cong\mathbb{C}( 2 )$が成り立つ。
