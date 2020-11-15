@@ -54,7 +54,7 @@ $$
 $( X, \le )$を半順序集合とする。$I, J\in\mathbb{F}$に対し、
 
 $$
-\tau( I, J ):=\#\lbrace ( i, j ) \in I\times J : i\gt j \rbrace
+\tau( I, J ):=\# \lbrace ( i, j ) \in I\times J : i\gt j \rbrace
 $$
 
 と置く。このとき$\mod{2}$で
