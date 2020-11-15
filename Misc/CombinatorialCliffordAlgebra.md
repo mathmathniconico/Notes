@@ -54,7 +54,7 @@ $$
 $( X, \le )$を半順序集合とする。$I, J\in\mathbb{F}$に対し、
 
 $$
-\tau( I, J ):=\# \lbrace ( i, j ) \in I\times J : i\gt j \rbrace
+\tau( I, J ):=\vert \lbrace ( i, j ) \in I\times J : i\gt j \rbrace \vert
 $$
 
 と置く。このとき$\mod{2}$で
@@ -175,7 +175,7 @@ $$
 
 **定義** クリフォード代数上の三種類の対称性を次を線型に拡張して定める。
 
-- $e_{I}^{\mathrm{inv}}:=( -1 )^{\# I}e_{I}$をinvolutionという。
+- $e_{I}^{\mathrm{inv}}:=( -1 )^{\vert I \vert}e_{I}$をinvolutionという。
 - $e_{I}^{\mathrm{rev}}:=( -1 )^{\tau( I, I )}e_{I}$をreversionという。
 - $e_{I}^{\mathrm{conj}}:=( e_{I}^{\mathrm{inv}} )^{\mathrm{rev}}=( e_{I}^{\mathrm{rev}} )^{\mathrm{inv}}$をconjugationと呼ぶ。
 
@@ -199,7 +199,7 @@ $$
 （証明）involutionについては
 
 $$
-\begin{aligned} ( e_{I}e_{J} )^{\mathrm{inv}} &= ( \sigma( I, J )e_{I\triangle J} )^{\mathrm{inv}}=( -1 )^{\# I\triangle J}\sigma( I, J )e_{I\triangle J} \\ &= ( -1 )^{\# I+\# J-2\# I\cap J}e_{I}e_{J} \\ &= ( -1 )^{\# I}e_{I}( -1 )^{\# J}e_{J} \\ &= e_{I}^{\mathrm{inv}}e_{J}^{\mathrm{inv}} \end{aligned}
+\begin{aligned} ( e_{I}e_{J} )^{\mathrm{inv}} &= ( \sigma( I, J )e_{I\triangle J} )^{\mathrm{inv}}=( -1 )^{\vert I\triangle J \vert}\sigma( I, J )e_{I\triangle J} \\ &= ( -1 )^{\vert I \vert+\vert J \vert-2\vert I\cap J\vert}e_{I}e_{J} \\ &= ( -1 )^{\vert I \vert}e_{I}( -1 )^{\vert J \vert}e_{J} \\ &= e_{I}^{\mathrm{inv}}e_{J}^{\mathrm{inv}} \end{aligned}
 $$
 
 より分かる。また定義より$e_{x}^{\mathrm{inv}}=( -1 )e_{x}=-e_{x}$である。
