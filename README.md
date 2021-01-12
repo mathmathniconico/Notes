@@ -11,6 +11,21 @@
     数式をプレビューできる多機能で強力なプラグイン。
 
 
+
+# 数理論理学
+
+- [順序数](/Logic/Ordinal.md)
+
+
+# 圏論
+
+- [圏論について](/Category/AboutMyCat.md)
+- [圏と函手](/Category/Category.md)
+- [忠実充満函手と部分圏](/Category/Subcategory.md)
+- [普遍性](/Category/Univarsal.md)
+- [米田の補題](/Category/YonedaLemma.md)
+
+
 # 代数学
 
 ## 可換環論
@@ -68,14 +83,15 @@
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
 
 
+# その他
 
-# 圏論
+- [Microfacet理論](/Misc/Microfacet.md)
+- [組合せ論的クリフォード代数](/Misc/CombinatorialCliffordAlgebra.md)
+- [クリフォード代数の例](/Misc/CliffordAlgebraExamples.md)
+- [ワイエルシュトラスのペー函数](/Misc/WeierstrassP.md)
 
-- [圏と函手](/Category/Category.md)
-- [忠実充満函手と部分圏](/Category/Subcategory.md)
-- [米田の補題](/Category/YonedaLemma.md)
 
-# 多様体ノート
+# 多様体のノート
 
 志賀浩二「多様体論」（岩波基礎数学選書）を底本とした多様体のノート。序章で多様体論の概要について述べ、精密な議論は後の章で行う。底本はファイバーバンドルからドラーム理論、サードの定理まで書いてある。
 
@@ -88,18 +104,6 @@
     1. [接ベクトルと接バンドル](/Manifold/Tangent.md)
 
 1. 多様体論
-
-# 数理論理学
-
-- [順序数](/Logic/Ordinal.md)
-
-
-# 未分類
-
-- [Microfacet理論](/Misc/Microfacet.md)
-- [組合せ論的クリフォード代数](/Misc/CombinatorialCliffordAlgebra.md)
-- [クリフォード代数の例](/Misc/CliffordAlgebraExamples.md)
-- [ワイエルシュトラスのペー函数](/Misc/WeierstrassP.md)
 
 
 # このリポジトリについて
