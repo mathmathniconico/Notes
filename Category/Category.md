@@ -1,100 +1,125 @@
-# 圏と函手
+# 圏
 
-## 圏の定義
+小説やドラマの人物相関図を思い浮かべて欲しい。物語の主人公からは多くの矢印が出ているだろう。ヒロインとは相互に矢印があるはずだ。矢印を辿った先の結末には悪役が控えているかもしれない。一方で誰からも矢印のない謎の人物がいる。彼はきっと重要な役割を演じるはずだ。また続編では異なる相関図が描かれるだろう。あるいは別の物語では？　色々な図があれば、似ているかそうでないかを議論することができる。そこには幾何学が存在する。
+
+圏論とは、私の感覚で言えば「点と矢印の幾何学」である。点は考えている「何か」を表しており、矢印は点と点の間にある関連性を表している。矢印は関連性を模式的に表したものだが、もちろん何でもよいという訳ではない。$A$が$B$と関連し、$B$が$C$と関連するなら、$A$が$C$に関連していなければならない。考え方は非常にシンプルであり、だからこそ応用範囲は幅広く、豊かな数学理論を展開することができる。
+
+以下ではまず圏を定義し、最も基本的な概念である同型について述べる。抽象論が続くため例と一緒に紹介するべきだが、煩雑になってしまうので別に纏める。適宜参照して欲しい。
+
+
+
+
+## 圏の定義、対象の同型
 
 以下で構成される組$\mathscr{C}=(\mathrm{Ob}(\mathscr{C}), \mathrm{Mor}(\mathscr{C}), \mathrm{dom}, \mathrm{cod}, \circ )$を考える。
 
-- $\mathrm{Ob}(\mathscr{C})$は集合である。この要素を **対象** （object）と呼ぶ。
-- $\mathrm{Mor}(\mathscr{C})$は集合である。この要素を **射** （morphism）と呼ぶ。
-- $\mathrm{dom}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像である。射$f$について$\mathrm{dom}(f)$を$f$の始域（domain）と呼ぶ。
-- $\mathrm{cod}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像である。射$f$について$\mathrm{cod}(f)$を$f$の終域（codomain）と呼ぶ。
-- $\mathrm{dom}(g)=\mathrm{cod}(f)$を満たす射$f, g$について合成（composition）と呼ばれる射$g\circ f$が定義され、$\mathrm{dom}(g\circ f)=\mathrm{dom}(f), \mathrm{cod}(g\circ f)=\mathrm{cod}(g)$を満たす。
+- $\mathrm{Ob}(\mathscr{C})$は **対象** （object）からなる集まりである。
+- $\mathrm{Mor}(\mathscr{C})$は **射** （morphism）からなる集まりである。
+- 射$f$について、$f$の **始域** （domain）と呼ばれる対象$\mathrm{dom}(f)$が唯一つ定まっている。
+- 射$f$について、$f$の **終域** （codomain）と呼ばれる対象$\mathrm{cod}(f)$が唯一つ定まっている。
+- 射$f, g$について、$\mathrm{cod}(f)=\mathrm{dom}(g)$のとき **合成** （composition）と呼ばれる射$g\circ f$が定義され、$\mathrm{dom}(g\circ f)=\mathrm{dom}(f), \mathrm{cod}(g\circ f)=\mathrm{cod}(g)$を満たす。
 
-集合のファイバー積を用いるなら、$\circ$は然るべき条件を満たす写像
+ここで記法に関するいくつかの注意点を述べる。
+
+- $X$が$\mathscr{C}$の対象であることを$X\in\mathscr{C}$と略記する。
+- 射$f$について、$\mathrm{dom}(f)=X, \mathrm{cod}(f)=Y$のとき$f\colon X\rightarrow Y$と書き、$f$は$X$から$Y$への射という。
+- 対象$X, Y\in\mathscr{C}$について、$X$から$Y$への射全体を$\mathrm{Mor}_{\mathscr{C}}(X, Y)$で表す。添え字の$\mathscr{C}$は適宜省略される。
+
+> $\mathrm{Mor}_{\mathscr{C}}(X, Y)$は$\mathscr{C}(X, Y)$と書く場合もある。この$\mathrm{Mor}_{\mathscr{C}}(X, Y)$たちは非交叉である。
+
+__定義__ 上記の組$\mathscr{C}$が以下を満たすとき **圏**（category）と呼ぶ。何れも合成が定義される状況を考えている。
+
+- 任意の対象$X$に対して恒等射$\mathrm{id}_{X}\in\mathrm{Mor}(X, X)$が存在し、射$f, g$について$\mathrm{id}_{X}\circ f=f, g\circ\mathrm{id}_{X}=g$が成り立つ。
+- 射$f, g, h$について$(f\circ g)\circ h=f\circ(g\circ h)$が成り立つ。
+
+> 「集まり」とやや曖昧な表現をしたのは、上記の定義は通常の数学、すなわち集合論の範疇に収まらないものだからである。数理論理的には$\mathrm{Ob}(\mathscr{C})$も$\mathrm{Mor}(\mathscr{C})$も真クラスであり、$\mathrm{dom}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$や$\mathrm{cod}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$はクラス間の写像となる。更に言えば対象や射そのものも集合である必要はない。もちろん「宇宙」を定義し、その中で圏論を展開することも可能（というよりもそれが正統）だが、このノートでは（私が分からないので）深入りせず、概念的な理解に留めることにする。
+
+圏を集合論の範疇で考えることは有益である。
+
+> 写像$f\colon B\rightarrow A, g\colon C\rightarrow A$について、ファイバー積$B\underset{f, A, g}{\times}C$とは、集合$\lbrace ( b, c )\in B\times C : f(b)=g(c) \rbrace$のことである。
+
+__定義__ $\mathrm{Ob}(\mathscr{C}), \mathrm{Mor}(\mathscr{C})$を集合、$\mathrm{dom}, \mathrm{cod}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像とする。更に$\circ$は然るべき条件を満たす写像
 
 $$
 \circ\colon\mathrm{Mor}(\mathscr{C})\underset{\mathrm{dom}, \mathrm{Ob}(\mathscr{C}), \mathrm{cod}}{\times}\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Mor}(\mathscr{C})
 $$
 
-である。
+とする。このとき集合の組$\mathscr{C}$を **小さい圏** （small category）と呼ぶ。
 
-- $X$が$\mathscr{C}$の対象であること（$X\in\mathrm{Ob}(\mathscr{C})$）を、省略して$X\in\mathscr{C}$と書く。
-- 射$f\in\mathrm{Mor}(\mathscr{C})$について$\mathrm{dom}(f)=X, \mathrm{cod}(f)=Y$のとき、$f$は$X$から$Y$への射であるといい$f\colon X\rightarrow Y$と書く。
-- 対象$X, Y\in\mathscr{C}$について、$X$から$Y$への射全体を$\mathrm{Mor}_{\mathscr{C}}(X, Y)$で表す。添え字の$\mathscr{C}$は適宜省略される。
+> 小さい圏においては全てが集合なので、心が落ち着くかと思う。従って基本的には小さい圏を考えればよいが、「言葉としての圏論」を目指すにはやや不足がある。例えば集合を対象、写像を射とする圏$\mathbf{Set}$を考える。集合全体は集合でないため、$\mathrm{Ob}(\mathbf{Set})$やそれを含む$\mathrm{Mor}(\mathbf{Set})$は集合でない。$\mathbf{Set}$を扱えないのは余りにも不便だ。しかし我々は対象全体には興味がなく、点と点の関連性、すなわち射に興味があることを思い出そう。であるならば、射について語ることが可能なら十分である。
 
-- $\mathrm{Mor}(\mathscr{C})=\bigsqcup_{X, Y\in\mathscr{C}}\mathrm{Mor}(X, Y)$は非交叉和である。
+__定義__ $\mathscr{C}$を圏とする。任意の対象$X, Y$に対して$\mathrm{Mor}_{\mathscr{C}}(X, Y)$が集合のとき、$\mathscr{C}$は **局所的に小さい** （locally small）という。そうでないときは **大きい** （big）という。
 
-> 圏の定義も色々あって、最後の非交叉性が成り立たない場合もあるが、それだと問題が起こるらしい。詳しくは知らない。
+圏を定義したので、次にその圏における「等しい」という概念について考える。射つまり関連性によって対象を記述するというのが圏論的な考え方である。故にどのような対象を同じものとしてみなすか、もまた射の言葉で記述される。
 
-__定義__ 上記の組$\mathscr{C}$が以下を満たすとき **圏**（category）と呼ぶ。
+__命題__ 恒等射$\mathrm{id}_{X}$は一意的である。
 
-- 任意の対象$X$について恒等射$\mathrm{id}_{X}\in\mathrm{Mor}(X, X)$が存在し、合成を定義できる射$f, g$について$\mathrm{id}_{X}\circ f=f, g\circ\mathrm{id}_{X}=g$が常に成り立つ。
-- 合成を定義できる射$f, g, h$について$(f\circ g)\circ h=f\circ(g\circ h)$が成り立つ。
+（証明）$i, j\colon X\rightarrow X$が恒等射の性質を満たすなら、$i=i\circ j=j$より等しい。$\square$
 
-> 上の定義は一般に「小さい圏」と呼ばれるものの定義である。$\mathrm{Ob}(\mathscr{C})$が真クラス（従って$\mathrm{Mor}(\mathscr{C})$も真クラス）でも同様な概念を考察できるが、これは「大きな圏」と呼ばれる。その中でも任意の対象$X, Y$について$\mathrm{Mor}(X, Y)$が集合である場合は「局所的に小さい圏」と呼ぶ。しかし「大きな圏」を考慮すると「大きな圏の集まり」を議論する必要があり、それは数理論理学の範疇であり筆者も詳しくない。従って以下やこれ以外のノートにおいて単に「圏」と呼ぶときは基本的に「小さい圏」を考え、そうでない場合も記述を簡単にするための「言葉としての圏論」を扱う。あるいは「大きな圏」をリストとして挙げてしまうこともできる。例えば集合の圏$\mathbf{Sets}$、アーベル群の圏$\mathbf{Ab}$といったように、必要に応じて「大きな圏」をリストに加えてしまう。
-
-- $\mathrm{id}_{X}$は一意的である。
-
-__例__ 群$G$について圏$\circlearrowright^{G}$を以下で定める。
-
-- $\mathrm{Ob}(\circlearrowright^{G})=\lbrace \ast \rbrace$として$\mathrm{Mor}(\ast, \ast)=G$とする。
-- 射の合成は$g\circ f=gf$とする。
-
-単位元は恒等射であり、演算の結合性より合成の結合性も成り立つ。この圏には名前は付いていないが、単対象圏の一種である。
-
-次に同型を定義する。「何を等しいと思うか」は数学の様々な場面で重要な概念だが、圏論においては恒等射によって特徴付けられる。
-
-__定義__ 射$f\colon X\rightarrow Y$が **同型** （isomorphism）であるとは、ある$g\colon Y\rightarrow X$が存在して$g\circ f=\mathrm{id}_{X}, f\circ g=\mathrm{id}_{Y}$が成り立つことをいう。このとき$X$と$Y$は同型といい、$X\simeq Y$と表す。
-
-- $f$が同型のとき、上の$g$もまた同型であり、更に$g$は一意に定まる。これを$f^{-1}$と表し、$f$の逆（inverse）と呼ぶ。
-- 全ての射が同型であるときgroupoid（群っぽい）という。群$G$について$\circlearrowright^{G}$はgroupoidである。
-
-__定義__ 圏$\mathscr{A}, \mathscr{B}$について、$\mathscr{A}$と$\mathscr{B}$の積という圏$\mathscr{A}\times\mathscr{B}$を以下で定める。
-
-- 対象の集合は$\mathrm{Ob}(\mathscr{A}\times\mathscr{B}):=\mathrm{Ob}(\mathscr{A})\times\mathrm{Ob}(\mathscr{B})$とする。
-- 射の集合は$\mathrm{Mor}_{\mathscr{A}\times\mathscr{B}}((X, Y), (Z, W)):=\mathrm{Mor}_{\mathscr{A}}(X, Z)\times\mathrm{Mor}_{\mathscr{B}}(Y, W)$とする。
+__定義__ 射$f\colon X\rightarrow Y$が **同型** （isomorphism）であるとは、ある$g\colon Y\rightarrow X$が存在して$g\circ f=\mathrm{id}_{X}, f\circ g=\mathrm{id}_{Y}$が成り立つことをいう。このとき$X$と$Y$は同型といい、$X\simeq Y$と表す。このとき$g$もまた同型であり、更に一意的である。そこで$g$を$f^{-1}$と表し$f$の **逆** （inverse）と呼ぶ。
 
 
-## 函手、自然変換、圏同値
 
-__定義__ $\mathscr{A}, \mathscr{B}$は圏とする。$\mathscr{A}$から$\mathscr{B}$への **函手** （functor）$F\colon\mathscr{A}\rightarrow\mathscr{B}$は以下で構成される。
 
-- 対象$X\in\mathscr{A}$について対象$FX\in\mathscr{B}$が定義されている。
-- 対象$X, Y\in\mathscr{A}$及び射$f\colon X\rightarrow Y$について射$Ff\colon FX\rightarrow FY$が定義されている。写像$f\mapsto Ff$を$F_{X, Y}$で表す。
-- 以上は全て射の合成と恒等射に関してcompatibleである。つまり$F(f\circ g)=Ff\circ Fg$であり、$F\mathrm{id}_{X}=\mathrm{id}_{FX}$である。
+## 反対圏、積の圏、スライス圏
 
-> 函手は、対象の間の写像と射の間の写像の組として書くこともできる。
+ここでは与えられた圏から別の圏を作る方法を3つ紹介する。これらは基本的なものだが、圏論において重要な役割を担う。
 
-- 函手は同型を保存する。つまり$X\simeq Y$なら$FX\simeq FY$である。
+__定義__ $\mathscr{C}$を圏とする。圏$\mathscr{C}^{\mathrm{op}}$を以下で定める。これを$\mathscr{C}$の **反対圏** （opposite category）と呼ぶ。
 
-例えば対象も射も同じものを対応させることで恒等函手$\mathrm{id}_{\mathscr{C}}\colon\mathscr{C}\rightarrow\mathscr{C}$を定義できる。また函手$F\colon\mathscr{A}\rightarrow\mathscr{B}$と函手$G\colon\mathscr{B}\rightarrow\mathscr{C}$について、函手の合成$G\circ F\colon\mathscr{A}\rightarrow\mathscr{C}$を定義することができる。これらは圏の定義の恒等射の性質や合成の結合性を満たす。つまり厳密には圏ではないものの、圏を対象とみなし函手を射とみなした、いわば「圏の圏」を考えることができる。ここでの「同型」について考えてみよう。
+- 対象は$\mathscr{C}$の対象とする。つまり$\mathrm{Ob}(\mathscr{C}^{\mathrm{op}})=\mathrm{Ob}(\mathscr{C})$である。
+- $X, Y\in\mathscr{C}$とする。$f\colon X\leftarrow Y$が$\mathscr{C}$における射のとき、$f^{\mathrm{op}}\colon X\rightarrow Y$と表して$\mathscr{C}^{\mathrm{op}}$における$X$から$Y$への射とする。つまり$\mathrm{Mor}_{\mathscr{C}^{\mathrm{op}}}(X, Y)=\mathrm{Mor}_{\mathscr{C}}(Y, X)$である。
 
-__定義__ 圏$\mathscr{A}, \mathscr{B}$について、函手$F\colon\mathscr{A}\rightarrow\mathscr{B}$及び函手$G\colon\mathscr{B}\rightarrow\mathscr{A}$が$G\circ F=\mathrm{id}_{\mathscr{A}}$及び$F\circ G=\mathrm{id}_{\mathscr{B}}$を満たすとき、$\mathscr{A}$と$\mathscr{B}$は圏同型といい、$\mathscr{A}\simeq\mathscr{B}$と表す。
+__定義__ $\mathscr{A}, \mathscr{B}$を圏とする。圏$\mathscr{A}\times\mathscr{B}$を以下で定める。これを$\mathscr{A}$と$\mathscr{B}$の **積の圏** （product of categories）と呼ぶ。
 
-> しかし圏同型は条件として強すぎる。というのも圏同型は、対象と対象の間に完全な一対一の対応を要請し、また函手の間にも完全な一対一の対応を要請する。これは射の中身は別として合成という名の操作が恒等射でさえあれば良いという対象間の同型とは異なり、集合において全単射を構成するようなものであり、とても窮屈な概念である。実際に実用上も圏同型が言えることは殆ど無く、一方で同型でない圏が「同じように見える」ことに真の価値がある。
+- 対象はそれぞれの対象の組とする。つまり$A\in\mathscr{A}, B\in\mathscr{B}$について$(A, B)\in\mathscr{A}\times\mathscr{B}$とする。
+- 射もそれぞれの射の組とする。つまり$\mathscr{A}$の射$f\colon A\rightarrow X$と$\mathscr{B}$の射$g\colon B\rightarrow Y$によって$(f, g)\colon (A, B)\rightarrow (X, Y)$を$\mathscr{A}\times\mathscr{B}$の射とする。
 
-__定義__ $F, G\colon \mathscr{A}\rightarrow\mathscr{B}$を函手とする。$F$から$G$への **自然変換** （natural transformation）$t\colon F\rightarrow G$は以下で構成される。
+__定義__ $\mathscr{C}$を圏、$X\in\mathscr{C}$とする。圏$\mathscr{C}/X$を以下で定める。これを$\mathscr{C}$の$X$上の **スライス圏** （slice of category）と呼ぶ。
 
-- 対象$X\in\mathscr{A}$について射$t_{X}\colon FX\rightarrow GX$が定義されている。
-- 対象$X, Y\in\mathscr{A}$及び射$\rho\colon X\rightarrow Y$に対し$G\rho\circ t_{X}=t_{Y}\circ F\rho$が成り立つ。つまり以下の図式は可換となる。
+- 対象は$A\in\mathscr{C}$と$f\colon A\rightarrow X$の組$(A, f)$である。
+- $f\colon A\rightarrow X, g\colon B\rightarrow X$とする。射$h\colon A\rightarrow B$が$g\circ h=f$を満たすとき、これをスライス圏における射$h\colon (A, f)\rightarrow (B, g)$とする。
 
 <p align=center><img src="pics/category_01.svg" height="100"></p>
 
-この図式が成り立つとき$t=(t_{X})_{X\in\mathscr{A}}$は自然であるという。圏論の文脈で「自然」というときは、だいたいこの意味である。
+> $X$上のスライス圏は$X$への射全体のことであり、「$X$の上方の対象から成る圏」とも言われる。同様に$X$から出る射を考えることで「下方の対象から成る圏」を考えることもできるが、これは反対圏のスライス圏$\mathscr{C}^{\mathrm{op}}/X$のことである。
 
-函手$F$に対して$(\mathrm{id}_{F})_{X}=\mathrm{id}_{FX}\colon FX\rightarrow FX$と定めると恒等自然変換$\mathrm{id}_{F}\colon F\rightarrow F$を定義することができる。また自然変換$t\colon F\rightarrow G, s\colon G\rightarrow H$に対し、$(s\circ t)_{X}=s_{X}\circ t_{X}\colon FX\rightarrow GX\rightarrow HX$と定めることで、自然変換の合成$s\circ t$を定義することができる。これらは圏の定義の恒等射の性質や合成の結合性を満たす。つまり函手を対象として自然変換を射とする圏を考えることができる。
 
-__定義__ $\mathscr{A}, \mathscr{B}$は圏とする。以下で構成される圏を$\mathscr{A}$から$\mathscr{B}$への **函手圏** と呼び$\mathbf{Funct}(\mathscr{A}, \mathscr{B})$で表す。
-- 対象は$\mathscr{A}$から$\mathscr{B}$への函手とする。
-- 函手$F, G\colon\mathscr{A}\rightarrow\mathscr{B}$について、$F$から$G$への射は$F$から$G$への自然変換とする。
 
-> 圏論の動機の一つに、元の概念を廃し、射によって対象間を記述するというものがある。この観点からすれば、二つの圏を測るのは「圏の圏」において同型を定める一つの函手ではなく、圏の間の函手全体つまり函手圏である。
 
-__定義__ $\mathscr{A}, \mathscr{B}$は圏とする。函手$F\colon\mathscr{A}\rightarrow\mathscr{B}$が **圏同値** （equivalence）であるとは、ある函手$G\colon\mathscr{B}\rightarrow\mathscr{A}$が存在して$G\circ F\simeq\mathrm{id}_{\mathscr{A}}$と$F\circ G\simeq\mathrm{id}_{\mathscr{B}}$がそれぞれの函手圏において成り立つことをいう。このとき$\mathscr{A}$と$\mathscr{B}$は圏同値であるといい、$\mathscr{A}\approx\mathscr{B}$と表す。
+## 射のみを用いた圏の定義
 
-$G\circ F\simeq\mathrm{id}_{\mathscr{A}}$は函手圏$\mathbf{Funct}(\mathscr{A}, \mathscr{A})$における同型である。即ち同型となる自然変換$t\colon G\circ F\rightarrow\mathrm{id}_{\mathscr{A}}$が存在する。言い換えると対象$X\in\mathscr{A}$に対して同型射$t_{X}\colon GFX\xrightarrow{\simeq} X$が存在して、$\rho\colon X\rightarrow Y$について$\rho\circ t_{X}=t_{Y}\circ GF\rho$が成り立つ。つまり以下の図式は可換である。
+> 参考：[single-sorted definition of a category](https://ncatlab.org/nlab/show/single-sorted+definition+of+a+category) in nLab.
 
-<p align=center><img src="pics/category_02.svg" height="100"></p>
+対象$X$を恒等射$\mathrm{id}_{X}$と同一視することで、圏を射の言葉で記述することができる。まず次の状況を考える。
+
+- $\mathscr{A}$は射からなる集まりである。
+- $s, t\colon\mathscr{A}\rightarrow\mathscr{A}$は対応とする。それぞれsource、targetと呼ぶ。
+- 射の合成$g\circ f$は$sg=tf$のときのみ定義される。
+
+以下を満たす組$(\mathscr{A}, s, t, \circ)$を考える。$f, g, h$は射とする。合成は等式の一方が定義されるなら他方も定義されることに注意する。
+
+- $ssf=sf=tsf, ttf=tf=stf$が成り立つ。
+- $s(g\circ f)=sf, t(g\circ f)=tg$が成り立つ。
+- $f\circ sf=f, tf\circ f=f$が成り立つ。
+- $(h\circ g)\circ f=h\circ(g\circ f)$が成り立つ。
+
+このとき上記は圏と同等である。
+
+まず射$x$に対して$sx=x$と$tx=x$は同値である。実際$sx=x$なら$tx=t(sx)=sx=x$であり、逆も同様である。このとき$x\in\mathrm{Ob}$と書く。
+
+__命題__ $x$を射とする。TFAE
+
+- $x\in\mathrm{Ob}$である。
+- 任意の射$f, g$に対し、合成が定義できるなら$f\circ x=f$及び$x\circ g=g$が成り立つ。
+
+（証明）$x\in\mathrm{Ob}$とする。$f\circ x$が定義できるなら$sf=tx=x$となる。故に$f\circ x=f\circ sf=f$となる。$x\circ g$に対しても同様に$x=sx=tg$より$x\circ g=tg\circ g=g$を得る。
+
+逆に$x$が下の条件を満たすとする。$sx=t(sx)$より$x\circ sx$は定義できるので$x\circ sx=x$が成り立つ。仮定より$x\circ sx=sx$だから$sx=x$である。$\square$
+
+下は恒等射としての性質であり、この意味で対象と恒等射は同一視される。
+
+
 
 
 <details>
@@ -109,16 +134,8 @@ $G\circ F\simeq\mathrm{id}_{\mathscr{A}}$は函手圏$\mathbf{Funct}(\mathscr{A}
 ```latex
 % category_01.svg
 \begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
-X \arrow[d, "\rho"'] & FX \arrow[r, "t_{X}"] \arrow[d, "F\rho"'] \arrow[dr, phantom, "\circlearrowright"] & GX \arrow[d, "G\rho"] \\
-Y & FY \arrow[r, "t_{Y}"'] & GY
-\end{tikzcd}
-```
-
-```latex
-% category_02.svg
-\begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
-X \arrow[d, "\rho"'] & GFX \arrow[r, "t_{X}", "\simeq"'] \arrow[d, "GF\rho"'] \arrow[dr, phantom, "\circlearrowright"] & X \arrow[d, "\rho"] \\
-Y & GFY \arrow[r, "\simeq", "t_{Y}"'] & Y
+A \arrow[dr, "f"'] \arrow[rr, "h"] &  \arrow[d, phantom, "\circlearrowright"] & B \arrow[dl, "g"] \\
+& X &
 \end{tikzcd}
 ```
 

@@ -20,9 +20,12 @@
 # 圏論
 
 - [圏論について](/Category/AboutMyCat.md)
-- [圏と函手](/Category/Category.md)
+- [圏](/Category/Category.md)
+- [圏の例](/Category/Category_Ex.md)
+- [普遍性](/Category/Universality.md)
+- [函手](/Category/Functor.md)
 - [忠実充満函手と部分圏](/Category/Subcategory.md)
-- [普遍性](/Category/Univarsal.md)
+- [前層の圏](/Category/Presheaf.md)
 - [米田の補題](/Category/YonedaLemma.md)
 
 
@@ -116,7 +119,13 @@
 
 - [arXiv探訪](https://arxiv.hatenablog.com) ブログ
 - [マストドン](https://mathtod.online/@mathmathniconico) 数式が書けるツイッターみたいなSNS
-- [エッセイ2020](/Essay/Essay2020.md)
+
+### エッセイ
+
+主にマストドンでトゥートした一部を抜粋
+
+- 2020年 [その1](/Essay/Essay2020_1.md)、[その2](/Essay/Essay2020_2.md)
+- 2021年 [その1](/Essay/Essay2021_1.md)
 
 ## 執筆環境
 
