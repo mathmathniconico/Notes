@@ -36,7 +36,7 @@ __定義__ 上記の組$\mathscr{C}$が以下を満たすとき **圏**（catego
 
 圏を集合論の範疇で考えることは有益である。
 
-> 写像$f\colon B\rightarrow A, g\colon C\rightarrow A$について、ファイバー積$B\underset{f, A, g}{\times}C$とは、集合$\lbrace ( b, c )\in B\times C : f(b)=g(c) \rbrace$のことである。
+> 写像$f\colon A\rightarrow C, g\colon B\rightarrow C$について、ファイバー積$A\underset{f, C, g}{\times}B$とは、集合$\lbrace ( a, b )\in A\times B : f(a)=g(b) \rbrace$のことである。
 
 __定義__ $\mathrm{Ob}(\mathscr{C}), \mathrm{Mor}(\mathscr{C})$を集合、$\mathrm{dom}, \mathrm{cod}\colon\mathrm{Mor}(\mathscr{C})\rightarrow\mathrm{Ob}(\mathscr{C})$は写像とする。更に$\circ$は然るべき条件を満たす写像
 
@@ -49,6 +49,7 @@ $$
 > 小さい圏においては全てが集合なので、心が落ち着くかと思う。従って基本的には小さい圏を考えればよいが、「言葉としての圏論」を目指すにはやや不足がある。例えば集合を対象、写像を射とする圏$\mathbf{Set}$を考える。集合全体は集合でないため、$\mathrm{Ob}(\mathbf{Set})$やそれを含む$\mathrm{Mor}(\mathbf{Set})$は集合でない。$\mathbf{Set}$を扱えないのは余りにも不便だ。しかし我々は対象全体には興味がなく、点と点の関連性、すなわち射に興味があることを思い出そう。であるならば、射について語ることが可能なら十分である。
 
 __定義__ $\mathscr{C}$を圏とする。任意の対象$X, Y$に対して$\mathrm{Mor}_{\mathscr{C}}(X, Y)$が集合のとき、$\mathscr{C}$は **局所的に小さい** （locally small）という。そうでないときは **大きい** （big）という。
+
 
 
 ## 同型、終対象と始対象
@@ -72,9 +73,12 @@ __定義__ $\mathscr{C}$を圏、$T, I\in\mathscr{C}$を対象とする。以下
 
 終対象と始対象は必ずしも存在するとは限らないが、その存在非存在は圏を説明する一つの要素となる。特に両者が（同型の意味で）一致する場合があり、このとき零対象（zero object）と呼ぶ。
 
-__命題__ 終対象と始対象は同型を除いて一意的である。
+__命題__ 終対象と始対象はそれぞれ同型を除いて一意的である。
 
 （証明）$T, T^{\prime}$を終対象とする。定義より$t\colon T^{\prime}\rightarrow T$と$t^{\prime}\colon T\rightarrow T^{\prime}$が唯一つ存在する。ところで$t\circ t^{\prime}\colon T\rightarrow T$は$T$から$T$への唯一の射だから、これは$\mathrm{id}_{T}$に他ならない。同様に$t^{\prime}\circ t=\mathrm{id}_{T^{\prime}}$も成り立つから$T$と$T^{\prime}$は同型である。始対象についても同様である。$\square$
+
+> 同型の定義は人工的に思えるかもしれない。しかし終対象や始対象を一意的にするための定義だと思うとしっくりくる。後で普遍性について述べるが、相互に射が存在して合成がそれぞれの恒等射を与えるという同型の定義は、まさに普遍性より自然に従い、普遍性を持つ対象が本質的に一意であることを導く。
+
 
 
 ## 反対圏、積の圏、スライス圏
@@ -101,6 +105,7 @@ __定義__ $\mathscr{C}$を圏、$X\in\mathscr{C}$とする。圏$\mathscr{C}/X$
 > $X$上のスライス圏は$X$への射全体のことであり、「$X$の上方の対象から成る圏」とも言われる。同様に$X$から出る射を考えることで「下方の対象から成る圏」を考えることもできるが、これは反対圏のスライス圏$\mathscr{C}^{\mathrm{op}}/X$のことである。
 
 __演習__ 上記三つの圏において、始対象と終対象はどのような対象であるか考察せよ。
+
 
 
 ## 射のみを用いた圏の定義
@@ -156,22 +161,4 @@ A \arrow[dr, "f"'] \arrow[rr, "h"] &  \arrow[d, phantom, "\circlearrowright"] & 
 ```
 
 </details>
-
-<!--
-```latex {cmd}
-\documentclass{standalone}
-\usepackage{amsmath, amssymb, mathrsfs}
-\usepackage{tikz-cd}
-\begin{document}
-
-\begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
-X \arrow[d, "\rho"'] & GFX \arrow[r, "t_{X}", "\simeq"'] \arrow[d, "GF\rho"'] \arrow[dr, phantom, "\circlearrowright"] & X \arrow[d, "\rho"] \\
-Y & GFY \arrow[r, "\simeq", "t_{Y}"'] & Y &
-\end{tikzcd}
-
-\end{document}
-```
--->
-
-
 
