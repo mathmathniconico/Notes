@@ -130,20 +130,3 @@ R\otimes C & C \arrow[u, "\Delta"] \arrow[l, "\simeq"] \arrow[r, "\simeq"'] & C\
 </details>
 
 
-
-
-```latex {cmd}
-\documentclass{standalone}
-\usepackage{amsmath, amssymb, mathrsfs}
-\usepackage{tikz-cd}
-\begin{document}
-
-\begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
-& A\otimes A \arrow[d, "\overline{m}"] & \\
-R\otimes A \arrow[ru, "u\otimes\mathrm{id}_{A}"] \arrow[r, "\simeq"'] & A & A\otimes R \arrow[lu, "\mathrm{id}_{A}\otimes u"'] \arrow[l, "\simeq"]
-\end{tikzcd}
-
-\end{document}
-```
-
-
