@@ -7,7 +7,6 @@
 
 ## 見出し1
 
-<p align=center><img src="pics/category_01.svg" height="100"></p>
 
 あああ
 
@@ -24,6 +23,8 @@
 
 
 ## 見出し2
+
+<p align=center><img src="pics/category_01.svg" height="100"></p>
 
 ```latex {cmd}
 \documentclass{standalone}
