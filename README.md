@@ -56,7 +56,7 @@
 
 ## 余代数
 
-- [代数と余代数](/Algebra/Coalgebra/Coalgera.md)
+- [代数と余代数](/Algebra/Coalgebra/Coalgebra.md)
 - 余代数の基礎
 - [余代数の例](/Algebra/Coalgebra/Coalgebra_Ex.md)
 - [余代数のイデアルと剰余余代数](/Algebra/Coalgebra/QuotientCoalgebra.md)
