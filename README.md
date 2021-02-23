@@ -38,8 +38,9 @@
 
 - [群](/Algebra/Group.md)
 - [環](/Algebra/Ring.md)
-- 素イデアルと整域
+- [素イデアルと整域](/Algebra/PrimeIdeal.md)
 - [環上の加群](/Algebra/Module.md)
+- [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
 - ネーター加群
 - 多項式環
 - 自由加群
@@ -57,8 +58,8 @@
 ## 余代数
 
 - [代数と余代数](/Algebra/Coalgebra/Coalgebra.md)
-- 余代数の基礎
-- [余代数の例](/Algebra/Coalgebra/Coalgebra_Ex.md)
+- [例示：余代数](/Algebra/Coalgebra/Coalgebra_Ex.md)
+- 余代数の準同型
 - [余代数のイデアルと剰余余代数](/Algebra/Coalgebra/QuotientCoalgebra.md)
 - [Incidence余代数](/Algebra/Coalgebra/IncidenceCoalgebra.md)
 - [半順序集合のIncidence Algebra](/Algebra/Coalgebra/PosetIncidenceAlgebra.md)

@@ -1,5 +1,5 @@
 
-# 余代数の例
+# 例示：余代数
 
 ここでは余代数$(C, \Delta\colon C\rightarrow C\otimes C, \epsilon\colon C\rightarrow R)$の例をいくつか挙げる。
 
