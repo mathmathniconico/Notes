@@ -12,39 +12,27 @@
 
 __定義__ $G$を空でない集合とする。演算$\cdot\colon G\times G\rightarrow G$は以下を満たすとする。
 
-- 結合的である。つまり$a, b, c\in G$について$(a\cdot b)\cdot c=a\cdot(b\cdot c)$が成り立つ。
-- 単位元が存在する。ある$1\in G$が存在して、どの$a\in G$についても$a\cdot 1=1\cdot a=a$が成り立つ。この$1$を **単位元** （unit element）と呼ぶ。
-- 逆元が存在する。$a\in G$について、ある$b\in G$が存在して$a\cdot b=b\cdot a=1$が成り立つ。この$b$を$a$の **逆元** （inverse element）と呼ぶ。
+- $a, b, c\in G$について$(a\cdot b)\cdot c=a\cdot(b\cdot c)$が成り立つ。（結合律）
+- ある$1\in G$が存在して、どの$a\in G$についても$a\cdot 1=1\cdot a=a$が成り立つ。（単位元の存在）
+- $a\in G$について、ある$b\in G$が存在して$a\cdot b=b\cdot a=1$が成り立つ。（逆元の存在）
 
 このとき集合の組$(G, \cdot, 1)$を **群** （group）と呼ぶ。
 
 群$G$と書くときは上記の組が想定されているものとする。演算$\cdot$は$\cdot_{G}$と表すこともあるが、明らかな場合は$a\cdot b$を$ab$と略記する。
 
-- 単位元は一意的である。実際$e\in G$も単位元の条件を満たすなら、$e=1e=1$である。この意味で単位元を$1_{G}$と表す。
-- 逆元は一意的である。実際$c\in G$も逆元の条件を満たすなら、$c=c1=cab=1b=b$である。この意味で$a$の逆元を$a^{-1}$と表す。
-- $1^{-1}=1$であり、$(ab)^{-1}=b^{-1}a^{-1}$である。
-
+- $1\in G$は一意的である。この意味で$1_{G}$と表し$G$の **単位元** （unit element）と呼ぶ。
+- 上記の$b\in G$は一意的である。この意味で$a^{-1}$と表し$a$の **逆元** （inverse element）と呼ぶ。
 
 __定義__ $G$を群とする。
 
-- $Z(G)=\lbrace a\in G : \forall x\in G, ax=xa \rbrace$を$G$の **中心** （center）と呼ぶ。
-- $Z(G)=G$のとき$G$は **アーベル群** （arbelian group）と呼ぶ。
-
-> アーベル群の場合、演算$\cdot$と単位元$1$は$+$と$0$で表されることが多い。
+- $Z(G)=\lbrace z\in G : \forall a\in G, az=za \rbrace$を$G$の **中心** （center）と呼ぶ。
+- $Z(G)=G$のとき$G$を **アーベル群** （abelian group）と呼ぶ。このとき演算$\cdot$と単位元$1$は$+$と$0$で表される。
 
 __定義__ $G$を群とする。$H\subset G$が$G$の演算によって群になるとき **部分群** （subgroup）と呼ぶ。このとき$H\lt G$と表す。
 
-- $\lbrace 1 \rbrace$と$G$自身は部分群である。これらを **自明** （trivial）な部分群と呼ぶ。
-- $G$の中心$Z(G)$は部分群である。
+__命題__ $H\lt G$を部分群とする。$H$の単位元および逆元は、$G$の単位元および逆元と一致する。
 
-__命題__ $H\lt G$を部分群とする。以下が成り立つ。
-
-- $H$の単位元は$G$の単位元と一致する。
-- $a\in H$のとき、$H$における$a$の逆元は、$G$における$a$の逆元と一致する。
-
-（証明）$1_{H}$の$G$における逆元を$x$とする。$1_{G}=1_{H}x=x1_{H}$だから、$1_{H}=(x1_{H})1_{H}=x(1_{H}1_{H})=x1_{H}=1_{G}$を得る。
-
-$a\in H$の$H$での逆元を$b$、$G$における逆元を$c$とする。$b=b(ac)=(ba)c=c$より従う。$\square$
+（証明）$1_{H}$の$G$における逆元を$x$とすると$1_{H}=(x1_{H})1_{H}=x(1_{H}1_{H})=x1_{H}=1_{G}$を得る。$a\in H$の$H$での逆元を$b$、$G$における逆元を$c$とすると、$b=b(ac)=(ba)c=c$を得る。$\square$
 
 __定理__ （部分群の特徴付け）$G$を群、$H\subset G$は空でないとする。TFAE
 
@@ -52,7 +40,7 @@ __定理__ （部分群の特徴付け）$G$を群、$H\subset G$は空でない
 1. $a, b\in H$に対し、$ab\in H$かつ$a^{-1}\in H$である。
 1. $a, b\in H$に対し、$ba^{-1}\in H$である。
 
-（証明）上から下は明らか。一番下を仮定して一番上を示そう。$H$は空でないから$a\in H$が取れる。$1=aa^{-1}\in H$より$1\in H$である。よって$b\in H$に対して$b^{-1}=1b^{-1}\in H$である。故に$a, b\in H$に対して$ab=a(b^{-1})^{-1}\in H$を得る。$H$は$G$の演算で閉じていて、単位元を持ち、逆元が存在する。以上より$H$は$G$の部分群である。$\square$
+（証明）上から下は明らか。一番下を仮定して一番上を示そう。$a\in H$を取る。$1=aa^{-1}\in H$より$1\in H$である。よって$b\in H$に対して$b^{-1}=1b^{-1}\in H$である。故に$a, b\in H$に対して$ab=a(b^{-1})^{-1}\in H$を得る。$H$は$G$の演算で閉じていて、単位元を持ち、逆元が存在する。以上より$H$は$G$の部分群である。$\square$
 
 
 
@@ -63,11 +51,11 @@ __定義__ $S$を空でない集合とする。$\theta\subset S\times S$を$S$�
 
 __定義__ 空でない関係$\theta$が以下を満たすとき$\theta$を **同値関係** （equivaliance relation）と呼ぶ。
 
-- 反射的である。つまり$a\theta a$である。
-- 対称的である。つまり$a\theta b$なら$b\theta a$である。
-- 推移的である。つまり$a\theta b, b\theta c$なら$a\theta c$である。
+- $a\in S$について$a\theta a$である。（反射律）
+- $a, b\in S$について$a\theta b$なら$b\theta a$である。（対称律）
+- $a, b, c\in S$について$a\theta b, b\theta c$なら$a\theta c$である。（推移律）
 
-> 同値関係は等号の性質の一部を抜き出したものである。従って「等しい」という関係$=$も同値関係である。ただし等号はどのような操作でも等しいという強い性質を持つので、同値関係はそれより弱い概念である。
+> 同値関係は等号「$=$」の性質の一部を抜き出したものだが、どんな操作に対しても不変な等号よりは弱い概念である。
 
 __定義__ $G$を群、$H\subset G$とする。このとき関係$a\theta_{H}b$を$ba^{-1}\in H$で定める。
 
@@ -76,21 +64,21 @@ __命題__ $G$を群、$H\subset G$とする。TFAE
 1. $H$は$G$の部分群である。
 1. $\theta_{H}$は同値関係である。
 
-（証明）$H$を部分群とする。$a\in G$に対し、$aa^{-1}=1\in H$より$a\theta_{H}a$を得る。また$a\theta_{H}b$なら$ba^{-1}\in H$だから$ab^{-1}=(ba^{-1})^{-1}\in H$より$b\theta_{H}a$を得る。更に$a\theta_{H}b, b\theta_{H}c$なら$ba^{-1}, cb^{-1}\in H$だから$ca^{-1}=(cb^{-1})(ba^{-1})\in H$より$a\theta_{H}c$を得る。
+（証明）$H$を部分群とする。$H$は空でないから$\theta_{H}$も空でない。$a\in G$について$aa^{-1}=1\in H$より$a\theta_{H}a$を得る。また$a\theta_{H}b$なら$ba^{-1}\in H$だから$ab^{-1}=(ba^{-1})^{-1}\in H$より$b\theta_{H}a$を得る。更に$a\theta_{H}b, b\theta_{H}c$なら$ba^{-1}, cb^{-1}\in H$だから$ca^{-1}=(cb^{-1})(ba^{-1})\in H$より$a\theta_{H}c$を得る。
 
 逆に$\theta_{H}$を同値関係とする。$1\in G$について反射性より$1\theta_{H}1$である。よって$1\in H$だから$H$は空でない。次に$a, b\in H$とする。$1\theta_{H}a, 1\theta_{H}b$より対称性と推移性から$a\theta_{H}b$を得る。故に$ba^{-1}\in H$である。特徴付けより$H$は$G$の部分群である。$\square$
 
 __定義__ $G$を群、$\theta$を$G$上の同値関係とする。以下が成り立つとき$\theta$を **合同関係** （congruence relation）と呼び、全体を$\mathrm{Con}(G)$と表す。
 
-- $a\theta b$なら$a^{-1}\theta b^{-1}$である。
-- $a\theta a^{\prime}, b\theta b^{\prime}$なら$ab\theta a^{\prime}b^{\prime}$である。
+- $a, b\in G$について、$a\theta b$なら$a^{-1}\theta b^{-1}$である。
+- $a, b, c, d\in G$について、$a\theta b, c\theta d$なら$ac\theta bd$である。
 
-__定義__ $N\lt G$を部分群とする。全ての$x\in G$に対して$x^{-1}Nx\subset N$が成り立つとき **正規部分群** （normal subgroup）と呼ぶ。
+__定義__ $N\lt G$を部分群とする。どの$x\in G$に対しても$x^{-1}Nx\subset N$であるとき$N$を **正規部分群** （normal subgroup）と呼び$N\lhd G$と表す。
 
-> 正規部分群の定義は等号（$x^{-1}Nx=N$）でも良い。実際$N$が正規部分群なら$x^{-1}$について$xNx^{-1}\subset N$より$N\subset x^{-1}Nx$が成り立つ。
+> この定義は等号（$x^{-1}Nx=N$）でも良い。実際$N$が正規部分群なら$x^{-1}$について$xNx^{-1}\subset N$より$N\subset x^{-1}Nx$が成り立つ。
 
-- $\lbrace 1 \rbrace$や$G$自身は正規部分群になる。これを **自明な正規部分群** と呼ぶ。
-- アーベル群において、部分群は正規部分群である。
+- $Z(G)$は$G$の正規部分群である。
+- アーベル群の部分群は常に正規部分群である。
 
 __補題__ $G$を群、$N\subset G$とする。TFAE
 
@@ -118,7 +106,7 @@ $$
 (a/\theta)\cdot_{\theta}(b/\theta):=ab/\theta
 $$
 
-で定めることができる。実際、合同関係の定義よりwell-definedである。このとき$G/\theta$は群となる。単位元は$1/\theta$であり、$a/\theta$の逆元は$a^{-1}/\theta$である。
+で定める。（合同関係の定義よりwell-definedである。）このとき$G/\theta$は群となる。単位元は$1/\theta$であり、$a/\theta$の逆元は$a^{-1}/\theta$である。
 
 __定理__ $G$を群とする。以下が成り立つ。
 
@@ -141,8 +129,6 @@ $$
 
 __定義__ $N\lhd G$を正規部分群とする。上記の群$G/N$を$G$の$N$による **剰余群** （residue class group）と呼ぶ。
 
-- 剰余群$G/N$の単位元は$N$で、$aN$の逆元は$a^{-1}N$である。
-
 
 
 
@@ -152,14 +138,7 @@ __定義__ $G, G^{\prime}$を群とする。写像$f\colon G\rightarrow G^{\prim
 
 - $a, b\in G$について$f(ab)=f(a)f(b)$が成り立つ。
 
-__命題__ 準同型$f\colon G\rightarrow G^{\prime}$について以下が成り立つ。
-
-- $f(1)=1$である。
-- $f(a^{-1})=f(a)^{-1}$である。
-
-（証明）$f(1)=f(1\cdot 1)=f(1)f(1)$より、左から$f(1)^{-1}$を掛ければよい。
-
-$1=f(1)=f(aa^{-1})=f(a)f(a^{-1})$より、逆元の一意性から従う。$\square$
+> 準同型$f$について$f(1)=1$及び$f(a^{-1})=f(a)^{-1}$が成り立つ。このように準同型は演算の構造を保存する。
 
 __定義__ $G, G^{\prime}$を群とする。二つの準同型$f\colon G\rightarrow G^{\prime}, g\colon G^{\prime}\rightarrow G$が存在して$g\circ f=\mathrm{id}_{G}$かつ$f\circ g=\mathrm{id}_{G^{\prime}}$を満たすとき$G$と$G^{\prime}$は **同型** （isomorphic）であるといい、$G\simeq G^{\prime}$と表す。
 
@@ -170,9 +149,9 @@ __定義__ $f\colon G\rightarrow G^{\prime}$を群の準同型とする。次を
 - $\mathrm{Ker}f:=\lbrace a\in G : f(a)=1 \rbrace$を$f$の **核** （kernel）と呼ぶ。
 - $\mathrm{Im}f:=f(G)=\lbrace f(a) : a\in G \rbrace$を$f$の **像** （image）と呼ぶ。
 
-> $\mathrm{Ker}f\subset G, \mathrm{Im}f\subset G^{\prime}$はそれぞれ部分群である。
+> $\mathrm{Ker}f\subset G, \mathrm{Im}f\subset G^{\prime}$はそれぞれ部分群だが、次の命題より特に核は正規部分群であることが分かる。
 
-__命題__ $f\colon G\rightarrow G^{\prime}$を群の準同型とする。$\Delta_{f}:=\lbrace (x, y) : f(x)=f(y) \rbrace$は$G$上の合同関係であり、$1/\Delta_{f}=\mathrm{Ker}f$が成り立つ。つまり核は正規部分群である。
+__命題__ $f\colon G\rightarrow G^{\prime}$を群の準同型とする。$\Delta_{f}:=\lbrace (x, y) : f(x)=f(y) \rbrace$は$G$上の合同関係であり、$1/\Delta_{f}=\mathrm{Ker}f$が成り立つ。
 
 （証明）合同関係であることは明らか。$x\in 1/\Delta_{f}$なら$1\Delta_{f}x$より$f(x)=f(1)=1$である。故に$x\in\mathrm{Ker}f$となる。逆も同様である。$\square$
 
@@ -186,4 +165,4 @@ $$
 
 （証明）$a/\Delta_{f}$に対して$f(a)$を対応させる写像はwell-definedな準同型であり、全単射である。$\square$
 
-> 準同型の合成は準同型であり、恒等写像も準同型である。これらは射の条件を満たすため、群の圏$\mathbf{Grp}$が定まる。対象としてアーベル群に制限することでアーベル群の圏$\mathbf{Ab}$も定まる。アーベル群の部分群は正規部分群だから、準同型$f\colon G\rightarrow G^{\prime}$に対して、核や余核$\mathrm{Cok}f:=G^{\prime}/\mathrm{Im}f$が常に定義できる。更に準同型定理より余像$\mathrm{Coim}f:=G/\mathrm{Ker}f$と像の同型が成り立つ。これらは圏論的な意味を持ち、$\mathbf{Ab}$はアーベル圏の代表例となる。
+> 準同型の合成は準同型であり、恒等写像も準同型である。これらは射の条件を満たし群の圏$\mathbf{Grp}$を定める。対象のクラスをアーベル群に制限することでアーベル群の圏$\mathbf{Ab}$も定まる。$\mathbf{Ab}$はアーベル圏の代表例である。
