@@ -6,25 +6,6 @@
 
 
 
-## 群と部分群の例
-
-__例__ 以下は群の例である。
-
-- $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$は、加法に関してアーベル群となる。単位元は$0$で、$a$の逆元は$-a$である。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$から原点を除いた集合$k^{\times}$は、乗法に関してアーベル群となる。単位元は$1$で、$a$の逆元は$1/a$である。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$について$n$次正則行列全体$\mathrm{GL}(n; k)$は、行列の積に関して群となる。このような群を一般線型群という。
-- 相異な$n$文字の置換（全単射）全体$S_{n}$は、写像の合成に関して群となる。これを$n$次対称群という。
-
-__例__ 以下は部分群の例である。
-
-- $\mathbb{Z}\lt\mathbb{Q}\lt\mathbb{R}\lt\mathbb{C}$である。
-- $\mathbb{T}_{1}=\lbrace z\in\mathbb{C} : \vert z \vert=1 \rbrace$は$\mathbb{C}^{\times}$の部分群である。これを$1$次元トーラスという。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$について$\mathrm{SL}(n; k):=\lbrace A\in\mathrm{GL}(n; k) : \mathrm{det}A=1 \rbrace$は$\mathrm{GL}(n; k)$の部分群である。これを特殊線型群という。
-- 正方形でない長方形$R$を$R$自身に写す変換は$4$頂点の置換で表され、その全体$V$は$S_{4}$の部分群となる。これをクラインの$4$群という。
-
-> TODO 合同関係と正規部分群の例、準同型と同型の例
-
-
 
 
 ## 環とイデアルの例

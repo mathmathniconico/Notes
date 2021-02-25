@@ -37,8 +37,9 @@
 ## 可換環論
 
 - [群](/Algebra/Group.md)
+- [例示：群](Algebra/Group_Ex.md)
 - [環](/Algebra/Ring.md)
-- [素イデアルと整域](/Algebra/PrimeIdeal.md)
+- [素イデアルと整環](/Algebra/PrimeIdeal.md)
 - [環上の加群](/Algebra/Module.md)
 - [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
 - ネーター加群
@@ -47,6 +48,8 @@
 - ヒルベルトの基底定理
 - 環上の代数と次数付き環
 - 斉次イデアルとクルルの交叉定理
+- [群の作用](/Algebra/GroupAction.md)
+
 
 ## ガロア理論入門
 
