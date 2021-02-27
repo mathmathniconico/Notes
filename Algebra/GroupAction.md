@@ -13,33 +13,34 @@ __定義__ $G$を群、$X$を集合とする。演算$\cdot\colon G\times X\righ
 
 このとき$\cdot$を$G$の$X$への **作用** （action）と呼び、$G\curvearrowright X$と書く。作用が明らかなときは$a\cdot x$を$ax$と略記する。
 
+> 作用は群の準同型$G\rightarrow\mathrm{Sym}X$とみなせる。実際$a\in G$について等式$\phi_{a}(x)=a\cdot x$により作用と準同型$\phi\colon G\rightarrow\mathrm{Sym}X$は一対一に対応する。
 
+__定義__ $G\curvearrowright X$を群の作用とする。$x\in X$とする。
 
-> $X$の置換（$X$から$X$への全単射）全体$\mathrm{Sym}X$は合成に関して群となる。
-
-作用は群の準同型$G\rightarrow\mathrm{Sym}X$のことである。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-__定義__ $G\curvearrowright X$を群の作用とする。$x\in X, S\subset G$とする。
-
-- $\mathrm{Orb}_{x}:=\lbrace ax : a\in G \rbrace$を$x$の **軌道** （orbit）と呼ぶ。
+- $\mathrm{Orb}_{x}:=\lbrace ax : a\in G \rbrace$を$x$の **軌道** （orbit）と呼ぶ。軌道全体を$X/G$で表す。
 - $\mathrm{Stab}_{x}:=\lbrace a\in G : ax=x \rbrace$を$x$の **固定群** （stabilizer）と呼ぶ。これは$G$の部分群となる。
-- $\mathrm{Fix}_{S}X:=\lbrace x\in X : \forall s\in S, sx=x \rbrace$を$S$の **不変集合** （invariable set）と呼ぶ。
+
+__例__ 作用の例をいくつか挙げる。
+
+- $a, x\in G$に対し$a\cdot x:=ax$は作用$G\curvearrowright G$を定める。$x\in G$について$\mathrm{Orb}_{x}=G, \mathrm{Stab}_{x}=\lbrace 1_{G} \rbrace$である。
+- $a, x\in G$に対し$a\cdot x:=axa^{-1}$も作用$G\curvearrowright G$を定める。$x\in G$について$\mathrm{Orb}_{x}=Hx, \mathrm{Stab}_{x}=Z(x)$である。
+
+
+
+
+
+
+
+
+
+
+
+$a\theta_{Z(G)}b$なら$b^{-1}a\in Z(G)$だから$x\in G$について$xb^{-1}a=b^{-1}ax$となる。よって$axa^{-1}=bxb^{-1}$を得る。逆も同様なので$a\theta_{Z(G)}b$は$axa^{-1}=bxb^{-1}$と同値になる。
+
+
+
+__定義__ $G\curvearrowright X$を群の作用とする。$S\subset X$について$X^{S}:=\lbrace x\in X : \forall s\in S, sx=x \rbrace$を$S$の **不変集合** （invariable set）と呼ぶ。$S=\lbrace a \rbrace$のときは$X^{a}$と書く。
+
 
 
 
@@ -48,9 +49,9 @@ __定義__ $G\curvearrowright X$を群の作用とする。$x\in X, S\subset G$�
 
 以下$G$は有限群とする。
 
-> 部分群$H\lt G$に対し、同値関係$a\theta_{H}b$を$b^{-1}a\in H$で定めた。このとき$a\in G$を含む同値類は$\overline{a}=\lbrace b\in G : b\theta_{H}a \rbrace=aH$で与えられる。
+> 部分群$H\lt G$に対し同値関係$a\theta_{H}b$を$b^{-1}a\in H$で定めた。このとき$a\in G$の同値類は$\overline{a}:=\lbrace b\in G : a\theta_{H}b \rbrace=aH$である。
 
-__定義__ $H\lt G$を部分群とする。同値関係$\theta_{H}$による同値類を **左剰余類** （left coset）と呼び、その個数を$(G : H)$と表す。
+__定義__ $H\lt G$を部分群とする。同値関係$\theta_{H}$による同値類の個数を$(G : H)$と表す。
 
 各剰余類は非交叉であり、その元の個数はちょうど$\vert H \vert$に等しい。従って
 
@@ -112,7 +113,7 @@ $$
 \sum_{x\in X}\vert \mathrm{Stab}_{x} \vert=\sum_{x\in X}\frac{\vert G \vert}{\vert \mathrm{Orb}_{x} \vert}=\vert G \vert\sum_{x\in X}\frac{1}{\vert \mathrm{Orb}_{x} \vert}
 $$
 
-となる。ところで右辺の和の部分は、各起動毎に$1$を取るので$\vert G \vert\cdot r$と等しい。$\square$
+となる。ところで右辺の和の部分は、各軌道上で$1$を取るので$r$と等しい。$\square$
 
 
 <!--
