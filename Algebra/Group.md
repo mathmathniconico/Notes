@@ -49,17 +49,15 @@ __命題__ $G$を群、$S\subset G$とする。$S$の中心$Z(S)$は$G$の部分
 
 
 
-## 正規部分群と合同関係
+## 合同関係と正規部分群
 
-__定義__ $S$を空でない集合とする。$\theta\subset S\times S$を$S$上の **関係** （relation）と呼ぶ。$(a, b)\in\theta$のことを$a\theta b$と表す。
+__定義__ $S$を空でない集合とする。$\theta\subset S\times S$を$S$上の **関係** （relation）と呼び、$(a, b)\in\theta$のことを$a\theta b$と表す。
 
 __定義__ 空でない関係$\theta$が以下を満たすとき$\theta$を **同値関係** （equivaliance relation）と呼ぶ。
 
 - $a\in S$について$a\theta a$である。（反射律）
 - $a, b\in S$について$a\theta b$なら$b\theta a$である。（対称律）
 - $a, b, c\in S$について$a\theta b, b\theta c$なら$a\theta c$である。（推移律）
-
-> 同値関係は等号「$=$」の性質の一部を抜き出したものだが、どんな操作に対しても不変な等号よりは弱い概念である。
 
 __定義__ $G$を群、$H\subset G$とする。このとき関係$a\theta_{H}b$を$b^{-1}a\in H$で定める。
 
@@ -71,6 +69,8 @@ __命題__ $G$を群、$H\subset G$とする。TFAE
 （証明）$H$を部分群とする。$1=1^{-1}1\in H$より$\theta_{H}$は空でない。$a\in G$について$a^{-1}a=1\in H$より$a\theta_{H}a$を得る。また$a\theta_{H}b$なら$a^{-1}b=(b^{-1}a)^{-1}\in H$より$b\theta_{H}a$を得る。更に$a\theta_{H}b, b\theta_{H}c$なら$c^{-1}a=(c^{-1}b)(b^{-1}a)\in H$より$a\theta_{H}c$を得る。
 
 逆に$\theta_{H}$を同値関係とする。$1\in G$について反射性より$1\theta_{H}1$である。よって$1=1^{-1}1\in H$だから$H$は空でない。次に$a, b\in H$とする。$a\theta_{H}1, b\theta_{H}1$だから、対称律と推移律より$a\theta_{H}b$を得る。従って特徴付けより$H$は$G$の部分群である。$\square$
+
+__定義__ $G$を群、$H\lt G$を部分群とする。$\theta_{H}$による同値類を **左剰余類** （left coset）と呼び全体を$G/H$で表す。$a\in G$の同値類は$\overline{a}:=\lbrace b\in G : a\theta_{H}b \rbrace=aH$である。
 
 __定義__ $G$を群、$\theta$を$G$上の同値関係とする。以下が成り立つとき$\theta$を **合同関係** （congruence relation）と呼び、全体を$\mathrm{Con}(G)$と表す。
 
@@ -92,6 +92,8 @@ __補題__ $G$を群、$N\subset G$とする。TFAE
 （証明）$N$を正規部分群とする。$\theta_{N}$が同値関係であることは良い。$a\theta_{N}b$とする。反射律より$b\theta_{N}a$だから$ba^{-1}=a(a^{-1}b)a^{-1}\in aNa^{-1}\subset N$より$a^{-1}\theta_{N}b^{-1}$が従う。次に$a\theta_{N}b, c\theta_{N}d$とすると、$c^{-1}(b^{-1}a)c\in c^{-1}Nc\subset N$だから、$d^{-1}c\in N$を左から掛けて$d^{-1}b^{-1}ac\in N$を得る。故に$ac\theta_{N}bd$である。
 
 逆に$\theta_{N}$を合同関係とする。$N$が部分群であることは良い。$y\in N$とすると$y\theta_{N}1$である。一方$x^{-1}\theta_{N}x^{-1}$だから合同関係の定義より$yx^{-1}\theta_{N}x^{-1}$である。つまり$xyx^{-1}\in N$より$N$は正規部分群である。$\square$
+
+> $Z(G)$に対応する合同関係$a\theta_{Z(G)}b$は、任意の$x\in G$について$axa^{-1}=bxb^{-1}$であることと同値となる。
 
 
 
@@ -115,17 +117,11 @@ __定理__ $G$を群とする。以下が成り立つ。
 
 $\theta$を合同関係とする。$a\theta b$とすると$b^{-1}\theta b^{-1}$と$b\theta a$より$1\theta b^{-1}a$である。故に$b^{-1}a\in 1/\theta=N$だから$a\theta_{N}b$を得る。逆も同様なので$\theta=\theta_{N}$が成り立つ。補題より$N$は正規部分群である。$\square$
 
-以上より正規部分群と合同関係の間に一対一の対応が成り立つ。この意味で$G/\theta_{N}$のことを$G/N$と表す。また$a/\theta_{N}=aN$であるから、こちらの表記も用いる。つまり
-
-$$
-G/N=G/\theta_{N}=\lbrace a/\theta_{N} : a\in G \rbrace=\lbrace aN : a\in G \rbrace
-$$
-
-である。
+以上より正規部分群と合同関係の間に一対一の対応が成り立つ。特に$G/\theta_{N}=G/N$である。従って$a/\theta_{N}=aN$である。
 
 > 更にこの対応は、包含を保つ束としての同型を与えている。対角集合$\Delta=\lbrace (a, a) : a\in G \rbrace$について$1/\Delta=\lbrace 1 \rbrace$であり、全体集合$\nabla=\lbrace (a, b) : a, b\in G \rbrace$について$1/\nabla=G$となる。
 
-__定義__ $N\lhd G$を正規部分群とする。上記の群$G/N$を$G$の$N$による **剰余群** （residue class group）と呼ぶ。
+__定義__ $N\lhd G$を正規部分群とする。群$G/N$を$G$の$N$による **剰余群** （residue class group）と呼ぶ。
 
 
 
