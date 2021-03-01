@@ -99,6 +99,7 @@
 - [組合せ論的クリフォード代数](/Misc/CombinatorialCliffordAlgebra.md)
 - [クリフォード代数の例](/Misc/CliffordAlgebraExamples.md)
 - [ワイエルシュトラスのペー函数](/Misc/WeierstrassP.md)
+- [距離空間とリプシッツ写像](/Misc/LipschitzMap.md)
 
 
 # 多様体のノート
