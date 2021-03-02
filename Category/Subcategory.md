@@ -92,14 +92,20 @@ __定義__ $\mathscr{B}$を圏とする。$\mathrm{Ob}(\mathscr{A})\subset\mathr
 
 このとき$\mathscr{A}=(\mathrm{Ob}(\mathscr{A}), \mathrm{Mor}(\mathscr{A}), \mathrm{dom}, \mathrm{cod}, \circ)$は圏であり **部分圏** （subcategory）と呼び$\mathscr{A}\subset\mathscr{B}$と表す。
 
+> TODO: $f, g\circ f\in\mathrm{Mor}(\mathscr{A})$であっても$g\in\mathrm{Mor}(\mathscr{A})$を要請しない？
+
+
 部分圏$\mathscr{A}\subset\mathscr{B}$に対して対象と射をそのまま対応させることで、包含函手$\mathrm{incl}\colon\mathscr{A}\rightarrow\mathscr{B}$が定まる。
 
 > 「言葉としての圏論」なら、部分圏の概念を用いれば「大きな圏」について記述することも可能である。部分圏としての「小さな圏」を考え、必要に応じて広げて行けばよい。例えば函手$F\colon\mathscr{A}\rightarrow\mathscr{B}$について$\mathscr{B}$が「大きな圏」である場合、$F$の値域は集合なので$F$は数学的対象となる。
 
 __定義__ 部分圏$\mathscr{A}\subset\mathscr{B}$について以下を定める。
 
-- 任意の$X, Y\in\mathscr{A}$について$\mathrm{Mor}_{\mathscr{A}}(X, Y)=\mathrm{Mor}_{\mathscr{B}}(X, Y)$が成り立つとき、**充満部分圏** （full subcategory）という。
-- 任意の$X\in\mathscr{B}$と$Y\in\mathscr{A}$について、$A\simeq_{\mathscr{B}}B$なら$A\in\mathscr{A}$が成り立つとき、**isomorphism-closed** という。
+- 任意の$X, Y\in\mathscr{A}$について$\mathrm{Mor}_{\mathscr{A}}(X, Y)=\mathrm{Mor}_{\mathscr{B}}(X, Y)$が成り立つとき **充満** （full）という。
+- 任意の$\mathscr{B}$での同型$f\colon A\xrightarrow{\simeq_{\mathscr{B}}}B$について、$A\in\mathscr{A}$なら$B\in\mathscr{A}$であり$f, f^{-1}\in\mathrm{Mor}(\mathscr{A})$であるとき **isomorphism-closed**という。
+- 充満かつisomorphism-closedのとき **strictly full** という。
+
+
 
 
 <details>

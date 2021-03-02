@@ -13,7 +13,7 @@ __定義__ $G$を群、$X$を集合とする。演算$\cdot\colon G\times X\righ
 
 このとき$\cdot$を$G$の$X$への **作用** （action）と呼び、$G\curvearrowright X$と書く。作用が明らかなときは$a\cdot x$を$ax$と略記する。
 
-> 作用は群の準同型$G\rightarrow\mathrm{Sym}X$とみなせる。実際$a\in G$について等式$\phi_{a}(x)=a\cdot x$により作用と準同型$\phi\colon G\rightarrow\mathrm{Sym}X$は一対一に対応する。
+> 作用は群の準同型$G\rightarrow\mathrm{Sym}X$とみなせる。実際$a\in G$について等式$\phi_{a}(x)=a\cdot x$により作用と準同型$\phi\colon G\rightarrow\mathrm{Sym}X$は一対一に対応する。この意味で$\phi\colon G\curvearrowright X$と表す。
 
 __定義__ $G\curvearrowright X$を群の作用とする。
 
@@ -73,20 +73,14 @@ $$
 __定理__ （バーンサイドの補題）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
 
 $$
-r=\frac{1}{\vert G \vert}\sum_{a\in G}\vert \mathrm{Fix}_{a}X \vert
+r=\frac{1}{\vert G \vert}\sum_{a\in G}\vert X^{a} \vert
 $$
 
 が成り立つ。
 
 > Burnsideは著書に掲載しただけで、実際の結果はCauchy及びFrobeniusによるものらしい。
 
-（証明）$\lbrace (a, x)\in G\times X : ax=x \rbrace$を二通りで数え上げる。まず$a\in G$を固定すると$x$として$\mathrm{Fix}_{a}X$の元が取れる。よって濃度は
-
-$$
-\sum_{a\in G}\vert \mathrm{Fix}_{a}X \vert
-$$
-
-となる。一方で$x\in X$を固定すると$a$として$\mathrm{Stab}_{x}$の元が取れる。よって濃度は
+（証明）$\lbrace (a, x)\in G\times X : ax=x \rbrace$を二通りで数え上げる。まず$a\in G$を固定すると$x$として$X^{a}$の元が取れるので濃度は$\sum_{a\in G}\vert X^{a} \vert$となる。一方で$x\in X$を固定すると$a$として$\mathrm{Stab}_{x}$の元が取れる。よって濃度は
 
 $$
 \sum_{x\in X}\vert \mathrm{Stab}_{x} \vert=\sum_{x\in X}\frac{\vert G \vert}{\vert \mathrm{Orb}_{x} \vert}=\vert G \vert\sum_{x\in X}\frac{1}{\vert \mathrm{Orb}_{x} \vert}

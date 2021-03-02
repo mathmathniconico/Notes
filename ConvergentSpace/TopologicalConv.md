@@ -56,4 +56,4 @@ $U\in\mathcal{O}$とする。$f(U)\in\mathcal{O}_{Y}=TF\mathcal{O}_{Y}$だから
 
 $f\colon (X, \mathcal{O}_{X})\rightarrow (Y, \mathcal{O}_{Y})$が$\mathbf{Top}$の同型を与えることは、連続写像と連続射の同値性より従う。$\square$
 
-> 従って$\mathbf{Top}$は$\mathbf{Conv}$の充満部分圏と見なせるだけではなく、isomorphism-closedである。つまり真の意味で$\mathbf{Top}$を$\mathbf{Conv}$の一部として扱うことができる。
+> 従って$\mathbf{Top}$を$\mathbf{Conv}$のstrictly full subcategoryとみなせる。つまり真の意味で$\mathbf{Top}$を$\mathbf{Conv}$の一部として扱うことができる。
