@@ -1,11 +1,6 @@
 
 # 群の作用
 
-
-
-
-## 群の作用
-
 __定義__ $G$を群、$X$を集合とする。演算$\cdot\colon G\times X\rightarrow X$は以下を満たすとする。
 
 - $a, b\in G, x\in X$について$(ab)\cdot x = a\cdot (b\cdot x)$が成り立つ。
@@ -32,13 +27,17 @@ __命題__ （Cayley）群$G$は対称群$\mathrm{Sym}G$の部分群に同型で
 
 （証明）作用$G\curvearrowright G$を$g\cdot a=ga$で定める。対応する準同型$\phi\colon G\rightarrow\mathrm{Sym}G$が単射であることを示せばよい。そこで任意の$a\in G$について$ga=a$が成り立つとする。特に$g=g1_{G}=1_{G}$より$g$は単位元となる。$\square$
 
+__定義__ $G\curvearrowright X$を群の作用とする。
+
+- $G\rightarrow\mathrm{Sym}X$が単射のとき、$G\curvearrowright X$は **効果的** （effective）という。
+- 任意の$x, y\in X$に対して、ある$a\in G$が存在して$ax=y$が成り立つとき、$G\curvearrowright X$は **推移的** （transitive）という。
+
 
 
 
 ## 有限群と作用
 
 以下$G$は有限群とする。
-
 
 __定義__ $H\lt G$を部分群とする。左剰余類の個数を$(G : H):=\vert G/H \vert$で表す。
 
@@ -87,47 +86,3 @@ $$
 $$
 
 となる。右辺の和の部分は、各軌道上で$1$を取るので$r$と等しい。$\square$
-
-
-<!--
-__例__ フェルマーの小定理をやや一般的な条件で示そう。$a$を整数、$m$を正の整数とする。このとき
-
-$$
-\sum_{k=1}^{m}a^{(k, m)}\equiv 0 \mod{m}
-$$
-
-が成り立つ。
-
-（証明）まず$a\gt 0$に対して証明する。
-
-
-
-
-
-
-
-まず$ a\gt 0 $に対して証明する。一般の群$ G $に対し、$ G $から$ \lbrace 1, 2, \dotsc, a \rbrace $への写像全体を$ X $と置く。
-このとき$ \phi\in X $に対し$ g\cdot\phi(h):=\phi(hg^{-1}) $と定めると$ g\cdot\phi\in X $が定まり、$ G $の$ X $への作用を定める。
-$ g\phi=\phi $は任意の$ h\in G $に対し$ \phi(hg^{-1})=\phi(h) $となることと同値になる。故に$ \phi $は$ h\langle g \rangle $上定数となる。
-即ち$ \phi $として$ (G:\langle g \rangle)=\frac{\sharp G}{\mathrm{ord}g} $個の自由度があることが分かる。従って
-\[ \sharp\mathrm{Fix}_{g}X=a^{\frac{\sharp G}{\mathrm{ord}g}} \]
-を得る。定理より
-\[ \frac{1}{\sharp G}\sum_{g\in G}a^{\frac{\sharp G}{\mathrm{ord}g}} \]
-は定数となるから、
-\[ \sum_{g\in G}a^{\frac{\sharp G}{\mathrm{ord}g}}\equiv 0\mod{\sharp G} \]
-が従う。この式は$ a\mod{\sharp G} $で成立するから$ a\gt 0 $である必要はない。
-
-特に$ G=\mathbb{Z}/m\mathbb{Z} $を加法群と見なせば$ k\in G $の位数は$ \frac{m}{(k, m)} $となり系が証明される。$ \square $
-
-
-
-## 推移的な作用
-
-
-
-__定義__ $G\curvearrowright X$を群の作用とする。
-
-- $G\rightarrow\mathrm{Sym}X$が単射のとき、$G\curvearrowright X$は **効果的** （effective）という。
-- 任意の$x, y\in X$に対して、ある$a\in G$が存在して$ax=y$が成り立つとき、$G\curvearrowright X$は **推移的** （transitive）という。
-
--->

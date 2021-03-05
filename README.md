@@ -34,10 +34,21 @@
 
 # 代数学
 
+## 群とその表現
+
+- [群](/Algebra/Group/Group.md)
+- 巡回群
+- [対称群](/Algebra/Group/SymmetricGroup.md)
+- [群の作用](/Algebra/Group/GroupAction.md)
+- [群の表現](/Algebra/Group/Representation.md)
+- [三次対称群](/Algebra/Group/S3.md)
+- [フェルマーの小定理](/Algebra/Group/FermatLittleTheorem.md)
+- [例示：その他の群](Algebra/Group/Group_Ex.md)
+
+
+
 ## 可換環論
 
-- [群](/Algebra/Group.md)
-- [例示：群](Algebra/Group_Ex.md)
 - [環](/Algebra/Ring.md)
 - [素イデアルと整環](/Algebra/PrimeIdeal.md)
 - [環上の加群](/Algebra/Module.md)
@@ -48,7 +59,6 @@
 - ヒルベルトの基底定理
 - 環上の代数と次数付き環
 - 斉次イデアルとクルルの交叉定理
-- [群の作用](/Algebra/GroupAction.md)
 
 
 ## ガロア理論入門

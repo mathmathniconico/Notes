@@ -1,25 +1,14 @@
 
-# 例示：群
-
-
-
-
-## 巡回群
-
-> TODO
-
-
-
-
-## 対称群
+# 対称群
 
 __定義__ $X$を集合とする。写像$\sigma\colon X\rightarrow X$が全単射のとき、$\sigma$を$X$上の **置換** （permutation）と呼び、その全体を$\mathrm{Sym}X$と表す。
 
 $\mathrm{Sym}X$は写像の合成によって群となる。
 
-> このとき作用$\mathrm{Sym}X\curvearrowright X$が$\sigma\cdot x:=\sigma(x)$により定まる。群演算は$(\tau\sigma)\cdot x=(\tau\circ\sigma)(x)=\tau(\sigma(x))=\tau\cdot(\sigma\cdot x)$であり左から作用している。
+> $\sigma\in\mathrm{Sym}X, x\in X$について$\sigma\cdot x:=\sigma(x)$と定めると、$(\tau\sigma)\cdot x=(\tau\circ\sigma)(x)=\tau(\sigma(x))=\tau\cdot(\sigma\cdot x)$であり、左からの作用$\mathrm{Sym}X\curvearrowright X$を定める。
 
 __定義__ $S_{n}:=\mathrm{Sym}\lbrace 1, \dotsc, n \rbrace$を$n$次の **対称群** （symmetric group）と呼ぶ。
+
 
 対称群の元の記法はいくつか流儀があるが、上の行を下の行に対応させる写像としての記法を採用する。つまり$\sigma\in S_{n}$は
 
@@ -85,83 +74,9 @@ $$
 
 
 
-### 三次対称群$S_{3}$
-
-三次対称群$S_{3}:=\mathrm{Sym}\lbrace 1, 2, 3 \rbrace$の元を具体的に書き下してみよう。写像としての記法の下段を並べると全部で6種類あり
-
-$$
-123, 132, 213, 231, 312, 321
-$$
-
-から成る。それぞれを巡回置換で表せば
-
-$$
-(1), (2\enspace 3), (1\enspace 2), (1\enspace 2\enspace 3), (1\enspace 3\enspace 2), (1\enspace 3)
-$$
-
-となる。
-
-次に乗積表を求めてみる。乗積表とは1列目を$\tau$、1行目を$\sigma$としたときの$\tau\sigma=\tau\circ\sigma$を表にしたものである。
-
-$$
-\begin{matrix}
-(1) & (2\enspace 3) & (1\enspace 2) & (1\enspace 2\enspace 3) & (1\enspace 3\enspace 2) & (1\enspace 3) \\
-(2\enspace 3) & (1) & (1\enspace 3\enspace 2) & (1\enspace 3) & (1\enspace 2) & (1\enspace 2\enspace 3) \\
-(1\enspace 2) & (1\enspace 2\enspace 3) & (1) & (2\enspace 3) & (1\enspace 3) & (1\enspace 3\enspace 2) \\
-(1\enspace 2\enspace 3) & (1\enspace 2) & (1\enspace 3) & (1\enspace 3\enspace 2) & (1) & (2\enspace 3) \\
-(1\enspace 3\enspace 2) & (1\enspace 3) & (2\enspace 3) & (1) & (1\enspace 2\enspace 3) & (1\enspace 2) \\
-(1\enspace 3) & (1\enspace 3\enspace 2) & (1\enspace 2\enspace 3) & (1\enspace 2) & (2\enspace 3) & (1) \\
-\end{matrix}
-$$
-
-部分群の構造は次のようになる。$(1)$と$S_{3}$の他に、位数$2$の部分群が$3$つと、位数$3$の部分群が$1$つある。
-
-<p align=center><img src="pics/sym3_subgroups.svg" height="200"></p>
 
 
 
 
-### 四次対称群$S_{4}$
-
-- 正方形でない長方形$R$を$R$自身に写す変換は$4$頂点の置換で表され、その全体$V$は$S_{4}$の部分群となる。これをクラインの$4$群という。
-
-## 自己同型群
-
-Aut G
-
-内部自己同型群 Inn G
-
-
-## その他の基本的な例
-
-- $\mathbb{Z}\lt\mathbb{Q}\lt\mathbb{R}\lt\mathbb{C}$は加法に関してアーベル群である。単位元は$0$で、$a$の逆元は$-a$である。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$から原点を除いた集合$k^{\times}$は、乗法に関してアーベル群となる。単位元は$1$で、$a$の逆元は$1/a$である。
-- $\mathbb{T}_{1}=\lbrace z\in\mathbb{C} : \vert z \vert=1 \rbrace\lt\mathbb{C}^{\times}$は部分群であり、これを$1$次元トーラスという。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$について$n$次正則行列全体$\mathrm{GL}(n; k)$は、行列の積に関して群となる。このような群を一般線型群という。
-- $k=\mathbb{Q}, \mathbb{R}, \mathbb{C}$について$\mathrm{SL}(n; k):=\lbrace A\in\mathrm{GL}(n; k) : \mathrm{det}A=1 \rbrace$は$\mathrm{GL}(n; k)$の部分群である。これを特殊線型群という。
-
-
-
-<details>
-<summary>LaTeXソース</summary>
-
-```latex
-% プリアンブル
-\usepackage{amsmath, amssymb, mathrsfs}
-\usepackage{tikz-cd}
-```
-
-```latex
-% sym3_subgroups.svg
-\begin{tikzcd}[contains/.style = {phantom, "\ni", sloped}]
-& & S_{3} & \\
-& & & (1\enspace 2\enspace 3), (1\enspace 3\enspace 2) \arrow[lu, dash] \\
-(2\enspace 3) \arrow[rruu, dash] & (1\enspace 2) \arrow[ruu, dash] & (1\enspace 3) \arrow[uu, dash] & \\
-& & (1) \arrow[llu, dash] \arrow[lu, dash] \arrow[u, dash] \arrow[ruu, dash] &
-\end{tikzcd}
-```
-
-
-</details>
 
 
