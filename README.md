@@ -148,15 +148,15 @@
 ## 執筆環境
 
 - VSCodeでmarkdownを書く。
-- Markdown+Mathでインライン数式をハイライトする。
-- Markdown Preview Enhancedでプレビューする。図式のプレビューとしても用いる。
+- <del>Markdown+Mathでインライン数式をハイライトする。</del>
+- Markdown Preview Enhanced（MPE）でプレビューする。図式のプレビューとしても用いる。
 - [Tex2img](https://tex2img.tech)で図式等のsvgを生成。
 - GitHub Desktopで公開。
 
 Markdown Preview Enhancedは数式をプレビューできるVSCodeのプラグイン。
 
 - `enableScriptExecution`を`true`に設定すればmarkdown内のコードを実行できる。
-- 可換図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
+- 図式の描画にはLaTeXエンジン（[TeXLive](https://www.tug.org/texlive/)）と[pdf2svg](https://github.com/jalios/pdf2svg-windows)が必要。
 - 環境変数の編集前に必ずバックアップを取ること。
 - 出力された一時ファイルのsvgを保存する方法が分からない。
-- 微妙に動作が不安定で、表示が更新されずVSCodeを閉じないと復活しないときがある。
+- Markdown+Mathと合わせると時々フリーズするので編集時のハイライトは諦めた。

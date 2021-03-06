@@ -41,7 +41,7 @@ __定義__ $G\curvearrowright X$を群の作用とする。
 
 __定義__ $H\lt G$を部分群とする。左剰余類の個数を$(G : H):=\vert G/H \vert$で表す。
 
-__命題__ （ラグランジュの定理）$H\lt G$を部分群とする。$\vert G \vert=( G : H )\vert H \vert$が成り立つ。
+__命題__ （ラギランジュの定理）$H\lt G$を部分群とする。$\vert G \vert=( G : H )\vert H \vert$が成り立つ。
 
 （証明）左剰余類たちは非交叉であり、それぞれの元の個数はちょうど$\vert H \vert$に等しい。$\square$
 
@@ -69,7 +69,7 @@ $$
 
 となる。$\square$
 
-__定理__ （バーンサイドの補題）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
+__定理__ （Caughy-Frobenius counting）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
 
 $$
 r=\frac{1}{\vert G \vert}\sum_{a\in G}\vert X^{a} \vert
@@ -77,7 +77,7 @@ $$
 
 が成り立つ。
 
-> Burnsideは著書に掲載しただけで、実際の結果はCauchy及びFrobeniusによるものらしい。
+> バーンサイドの補題とも呼ばれるが、Burnsideは著書に掲載しただけらしい。
 
 （証明）$\lbrace (a, x)\in G\times X : ax=x \rbrace$を二通りで数え上げる。まず$a\in G$を固定すると$x$として$X^{a}$の元が取れるので濃度は$\sum_{a\in G}\vert X^{a} \vert$となる。一方で$x\in X$を固定すると$a$として$\mathrm{Stab}_{x}$の元が取れる。よって濃度は
 
