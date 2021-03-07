@@ -44,7 +44,7 @@
 - [三次対称群](/Algebra/Group/S3.md)
 - [フェルマーの小定理](/Algebra/Group/FermatLittleTheorem.md)
 - [例示：その他の群](Algebra/Group/Group_Ex.md)
-
+- [数論的函数](/Algebra/Group/ArithmeticFunction.md)
 
 
 ## 可換環論
@@ -59,6 +59,8 @@
 - ヒルベルトの基底定理
 - 環上の代数と次数付き環
 - 斉次イデアルとクルルの交叉定理
+
+
 
 
 ## ガロア理論入門
@@ -77,6 +79,7 @@
 - [Incidence余代数](/Algebra/Coalgebra/IncidenceCoalgebra.md)
 - [半順序集合のIncidence Algebra](/Algebra/Coalgebra/PosetIncidenceAlgebra.md)
 - [メビウス函数の計算](/Algebra/Coalgebra/MobiusFunction.md)
+
 
 
 # 収束空間論
