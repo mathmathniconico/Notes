@@ -37,7 +37,7 @@
 ## 群とその表現
 
 - [群](/Algebra/Group/Group.md)
-- 巡回群
+- [巡回群](/Algebra/Group/CyclicGroup.md)
 - [対称群](/Algebra/Group/SymmetricGroup.md)
 - [群の作用](/Algebra/Group/GroupAction.md)
 - [群の表現](/Algebra/Group/Representation.md)
