@@ -39,12 +39,6 @@ __定義__ $G\curvearrowright X$を群の作用とする。
 
 以下$G$は有限群とする。
 
-__定義__ $H\lt G$を部分群とする。左剰余類の個数を$(G : H):=\vert G/H \vert$で表す。
-
-__命題__ （ラギランジュの定理）$H\lt G$を部分群とする。$\vert G \vert=( G : H )\vert H \vert$が成り立つ。
-
-（証明）左剰余類たちは非交叉であり、それぞれの元の個数はちょうど$\vert H \vert$に等しい。$\square$
-
 __補題__ $G\curvearrowright X$を作用とする。$x, y\in X$に対して関係$x\sim y$を、ある$a\in G$が存在して$ax=y$のとき定める。以下が成り立つ。
 
 - 関係$\sim$は$X$上の同値関係であり、$x\in X$の同値類は$\mathrm{Orb}_{x}$である。
@@ -69,7 +63,7 @@ $$
 
 となる。$\square$
 
-__定理__ （Caughy-Frobenius counting）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
+__定理__ （orbit counting）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
 
 $$
 r=\frac{1}{\vert G \vert}\sum_{a\in G}\vert X^{a} \vert
@@ -77,7 +71,7 @@ $$
 
 が成り立つ。
 
-> バーンサイドの補題とも呼ばれるが、Burnsideは著書に掲載しただけらしい。
+> バーンサイドの補題とも呼ばれるがBurnsideは著書に掲載しただけらしい。実際はCauchyとFrobeniusに依るので、コーシー・フロベニウスの数え上げとも呼ぶ。
 
 （証明）$\lbrace (a, x)\in G\times X : ax=x \rbrace$を二通りで数え上げる。まず$a\in G$を固定すると$x$として$X^{a}$の元が取れるので濃度は$\sum_{a\in G}\vert X^{a} \vert$となる。一方で$x\in X$を固定すると$a$として$\mathrm{Stab}_{x}$の元が取れる。よって濃度は
 

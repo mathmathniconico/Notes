@@ -67,7 +67,7 @@ $$
 \vert X^{g} \vert=a^{\vert G/\langle g \rangle \vert}=a^{(G : \langle g \rangle)}=a^{\vert G \vert/\mathrm{ord}g}
 $$
 
-となる。Cauchy-Frobenius countingより
+となる。orbit countingより
 
 $$
 \frac{1}{\vert G \vert}\sum_{g\in G}\vert X^{g} \vert

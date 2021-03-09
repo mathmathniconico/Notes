@@ -70,7 +70,11 @@ __命題__ $G$を群、$H\subset G$とする。TFAE
 
 逆に$\theta_{H}$を同値関係とする。$1\in G$について反射性より$1\theta_{H}1$である。よって$1=1^{-1}1\in H$だから$H$は空でない。次に$a, b\in H$とする。$a\theta_{H}1, b\theta_{H}1$だから、対称律と推移律より$a\theta_{H}b$を得る。従って特徴付けより$H$は$G$の部分群である。$\square$
 
-__定義__ $G$を群、$H\lt G$を部分群とする。$\theta_{H}$による同値類を **左剰余類** （left coset）と呼び全体を$G/H$で表す。$a\in G$の同値類は$\overline{a}:=\lbrace b\in G : a\theta_{H}b \rbrace=aH$である。
+__定義__ $G$を群、$H\lt G$を部分群とする。$\theta_{H}$による同値類を **左剰余類** （left coset）と呼び全体を$G/H$で表す。$a\in G$の同値類は$\overline{a}:=\lbrace b\in G : a\theta_{H}b \rbrace=aH$である。左剰余類の濃度を$(G : H):=\vert G/H \vert$で表す。
+
+__命題__ （ラグランジュの定理）$H\lt G$を部分群とする。$\vert G \vert=( G : H )\vert H \vert$が成り立つ。
+
+（証明）左剰余類たちは非交叉であり、それぞれの濃度はちょうど$\vert H \vert$に等しい。$\square$
 
 __定義__ $G$を群、$\theta$を$G$上の同値関係とする。以下が成り立つとき$\theta$を **合同関係** （congruence relation）と呼び、全体を$\mathrm{Con}(G)$と表す。
 

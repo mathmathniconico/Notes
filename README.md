@@ -34,9 +34,11 @@
 
 # 代数学
 
+
 ## 群とその表現
 
 - [群](/Algebra/Group/Group.md)
+- [整数](Algebra/Group/Integers.md)
 - [巡回群](/Algebra/Group/CyclicGroup.md)
 - [対称群](/Algebra/Group/SymmetricGroup.md)
 - [群の作用](/Algebra/Group/GroupAction.md)
