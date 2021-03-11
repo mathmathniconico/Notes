@@ -34,10 +34,11 @@
 
 # 代数学
 
+- [群](/Algebra/Group.md)
+- [環](/Algebra/Ring.md)
 
 ## 群とその表現
 
-- [群](/Algebra/Group/Group.md)
 - [整数](Algebra/Group/Integers.md)
 - [巡回群](/Algebra/Group/CyclicGroup.md)
 - [対称群](/Algebra/Group/SymmetricGroup.md)
@@ -51,7 +52,6 @@
 
 ## 可換環論
 
-- [環](/Algebra/Ring.md)
 - [素イデアルと整環](/Algebra/PrimeIdeal.md)
 - [環上の加群](/Algebra/Module.md)
 - [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
