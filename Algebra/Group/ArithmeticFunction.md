@@ -11,9 +11,9 @@
 __定義__ $f\colon\mathbb{N}_{1}\rightarrow\mathbb{C}$を **数論的函数** （arithmetic function）と呼び、全体を$\mathbb{A}$と表す。
 
 - 定数函数を対応させることで$\mathbb{C}\subset\mathbb{A}$とみなせる。特に恒等的に$1$を取る数論的函数を$\mathfrak{z}$と表す。
-- $\varepsilon(1):=1$及び$n\neq 1$について$\varepsilon(n):=0$とする。このとき$\varepsilon$は数論的函数である。
+- $\delta_{k}(k)=1$、$n\neq k$のとき$\delta_{k}(n)=0$とする。特に$k=1$のとき$\varepsilon:=\delta_{1}$と表す。
 
-__命題__ $f, g\in\mathbb{A}$とする。これらの和$f+g$と **畳み込み積** （convolution product）$f\ast g$を$n\in\mathbb{N}_{1}$に対して
+__命題__ $f, g\in\mathbb{A}$とする。これらの和$f+g$と **畳み込み** （convolution）$f\ast g$を$n\in\mathbb{N}_{1}$に対して
 
 $$
 \begin{aligned}
@@ -24,7 +24,7 @@ $$
 
 と定める。このとき$(\mathbb{A}, +, \ast)$は$0$をゼロ、$\varepsilon$をイチとする単位的可換環である。
 
-（証明）和に関してアーベル群となることは明らか。畳み込み積は可換であり、また$\varepsilon$が乗法単位元であることも明白。
+（証明）和に関してアーベル群となることは明らか。畳み込みは可換であり、また$\varepsilon$が乗法単位元であることも明白。
 
 結合律を示す。$f, g, h$を数論的函数とする。$n\in\mathbb{N}_{1}$について
 
@@ -50,6 +50,8 @@ $$
 
 より左分配性が従う。右分配性も同様である。$\square$
 
+- $\delta_{k}\ast\delta_{l}=\delta_{kl}$が成り立つ。
+
 __命題__ $\mathbb{A}$は整域である。
 
 （証明）ゼロでない数論的函数$f, g$が$f\ast g=0$を満たすとする。$f, g\neq 0$より$f(a), g(b)\neq 0$となるような最小の自然数$a, b$が取れる。$d\lt a$のとき$f(d)=0$であり、$d\gt a$のとき$g(ab/d)=0$より
@@ -60,7 +62,7 @@ $$
 
 より矛盾する。$\square$
 
-__定義__ 数論的函数$f$が畳み込み積に関して可逆のとき、その逆元を$f^{(-1)}$と表す。
+__定義__ 数論的函数$f$が畳み込みに関して可逆のとき、その逆元を$f^{(-1)}$と表す。
 
 > 可逆な元全体は乗法により群をなし、$\mathbb{A}^{\times}$と表すのであった。
 
@@ -91,7 +93,7 @@ __定義__ $f$をゼロでない数論的函数とする。互いに素な$m, n$
 - $\mathfrak{z}$と$\varepsilon$は乗法的である。
 - $f$が乗法的なら$f(1)=1$である。従って先の命題より$f$は可逆である。
 
-__命題__ $f, g\in\mathbb{A}$が乗法的なら$f\ast g$も乗法的である。特に$\mathrm{Mul}(\mathbb{A})\lt\mathbb{A}^{\times}$は部分群である。
+__命題__ $f, g\in\mathbb{A}$が乗法的なら$f\ast g$も乗法的である。
 
 （証明）互いに素な$m, n$に対し、$d\vert mn$のとき唯一つの$d_{1}\vert m, d_{2}\vert n$が存在して$d=d_{1}d_{2}$となる。特に$d_{1}, d_{2}$は互いに素なので
 
@@ -105,6 +107,8 @@ $$
 $$
 
 となる。$\square$
+
+> 実は$\ast$を「和」とする環構造があることが知られている。
 
 __定義__ 以下で定まる数論的函数$\mu$を **メビウス函数** と呼ぶ。
 
@@ -145,12 +149,78 @@ $$
 
 が成り立つ。
 
-（証明）上は$g:=f\ast\mathfrak{z}$と定め、下は$f:=g\ast\mu$と定めた。$\mu\ast\mathfrak{z}=\varepsilon$より従う。$\square$
+（証明）$G=f\ast\mathfrak{z}, F=g\ast\mu$なので$\mu=\mathfrak{z}^{(-1)}$より従う。$\square$
+
+> $\mathfrak{z}, \mu$が乗法的なので、$f$が乗法的なら$G$も乗法的であり、$g$が乗法的なら$F$も乗法的である。
 
 
 
-__例__ 以下に数論的函数の例を挙げる。
 
-- 約数函数$d$
-- $\phi(n)$は$n$と互いに素な$1$以上$n$以下の整数の個数とする。（オイラーの **totient函数** と呼ぶ。）
-- $L(n):=\log{n}$とする。
+## 各論
+
+### 約数の個数と総和
+
+$n$の約数の個数を$d(n)$と表す。
+
+$$
+\mathfrak{z}\ast\mathfrak{z}(n)=\sum_{d\vert n}1=d(n)
+$$
+
+より$d=\mathfrak{z}\ast\mathfrak{z}$である。
+
+__定義__ $k\in\mathbb{Z}$に対し$d_{k}$を以下で定める。
+
+- $d_{0}:=\varepsilon$とする。
+- $k\gt 0$について$d_{k}:=\mathfrak{z}\ast\dotsb\ast\mathfrak{z}$を$k$個の畳み込みとする。
+- $k\gt 0$について$d_{-k}:=\mu\ast\dotsb\ast\mu$を$k$個の畳み込みとする。
+
+$n$の約数の和を$\sigma(n)$と表す。
+
+$\sigma(n)=\sum_{d\vert n}d=\mathrm{id}\ast\mathfrak{z}(n)$より$\sigma=\mathrm{id}\ast\mathfrak{z}$が成り立つ。
+
+
+
+
+### 対数函数
+
+$L(n):=\mathrm{Log}(n)$を対数函数と呼ぶ。これは完全加法的であり、任意の$n, m\in\mathbb{N}_{1}$に対して$L(mn)=L(m)+L(n)$が成り立つ。完全加法的な函数のpointwiseな積は、畳み込みに関する微分として特徴付けられる。
+
+__命題__ $F\in\mathbb{A}$とする。TFAE
+
+- $F$は完全加法的である。
+- $g, h\in\mathbb{A}$について$F\cdot(g\ast h)=(F\cdot g)\ast h+g\ast(F\cdot h)$が成り立つ。
+
+（証明）$F$は完全加法的とする。$g, h\in\mathbb{A}$について
+
+$$
+\begin{aligned}
+( F\cdot(g\ast h) )(n) &=F(n)(g\ast h)(n)=\sum_{ab=n}F(n)g(a)h(b) \\
+&=\sum_{ab=n}(F(a)+F(b))g(a)h(b) \\
+&=\sum_{ab=n}(F\cdot g)(a)h(b)+\sum_{ab=n}g(a)(F\cdot h)(b) \\
+&=( (F\cdot g)\ast h )(n)+( g\ast(F\cdot h) )(n)
+\end{aligned}
+$$
+
+より従う。
+
+逆に下を仮定する。$\delta_{m}, \delta_{n}$に対して
+
+$$
+\begin{aligned}
+(F\cdot(\delta_{m}\ast\delta_{n}))(mn) &=F(mn)\delta_{mn}(mn)=F(mn), \\
+((F\cdot\delta_{m})\ast\delta_{n})(mn)+(\delta_{m}\ast(F\cdot\delta_{n}))(mn)&=F(m)+F(n)
+\end{aligned}
+$$
+
+より$F$は完全加法的である。
+
+__命題__ （ライプニッツ則）
+
+> TODO
+
+
+### その他
+
+__定義__ $n$と互いに素な$1$以上$n$以下の整数の個数を$\phi(n)$で表し、オイラーの **totient函数** と呼ぶ。
+
+> von Mangoldt函数$\Lambda$
