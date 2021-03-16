@@ -62,9 +62,9 @@ $$
 
 より矛盾する。$\square$
 
-__定義__ 数論的函数$f$が畳み込みに関して可逆のとき、その逆元を$f^{(-1)}$と表す。
+__定義__ 数論的函数$f$が畳み込みに関して可逆のとき、その逆元を$\neg f$と表す。
 
-> 可逆な元全体は乗法により群をなし、$\mathbb{A}^{\times}$と表すのであった。
+> 可逆な元全体$\mathbb{A}^{\times}$は乗法により群となるのであった。
 
 __命題__ $f$を数論的函数とする。TFAE
 
@@ -81,7 +81,7 @@ $$
 
 と帰納的に定める。このとき$f\ast g=\varepsilon$が成り立つ。$\square$
 
-> 素数を小さい順に並べて$p_{i}$とする。$n\in\mathbb{N}_{1}$に対して、$n$の$p_{i}$の指数部を$\nu_{i}(n)$で表し数列$\nu_{n}:=( \nu_{i}(n) )_{i}$を取る。このとき$f\in\mathbb{A}$に対して$\sum f(n)t^{\nu_{n}}=\sum f(n)\prod t_{i}^{\nu_{i}(n)}$を対応させる写像は形式的冪級数環$\mathbb{C}\lbrack\lbrack t_{1}, t_{2}, \dotsc \rbrack\rbrack$との同型を与える。従って$\mathbb{A}$はUFDである。
+> 素数を小さい順に並べて$p_{i}$とする。$n\in\mathbb{N}_{1}$に対して、$n$の$p_{i}$の指数部を$\nu_{i}(n)$で表し数列$\nu_{n}:=( \nu_{i}(n) )_{i}$を取る。このとき$f\in\mathbb{A}$に対して$\sum f(n)t^{\nu_{n}}=\sum f(n)\prod t_{i}^{\nu_{i}(n)}$を対応させる写像は形式的冪級数環$\mathbb{C}\llbracket t_{1}, t_{2}, \dotsc \rrbracket$との同型を与える。従って$\mathbb{A}$はUFDである。
 
 
 
@@ -92,8 +92,9 @@ __定義__ $f$をゼロでない数論的函数とする。互いに素な$m, n$
 
 - $\mathfrak{z}$と$\varepsilon$は乗法的である。
 - $f$が乗法的なら$f(1)=1$である。従って先の命題より$f$は可逆である。
+- 乗法的な数論的函数は素数の冪$p^{e}$での値により決まる。つまり$f(1)=1$及び$f(\prod p^{e}):=\prod f(p^{e})$により定まる。
 
-__命題__ $f, g\in\mathbb{A}$が乗法的なら$f\ast g$も乗法的である。
+__命題__ $\mathrm{Mul}(\mathbb{A})\lt\mathbb{A}^{\times}$は部分群である。特に$f, g\in\mathbb{A}$が乗法的なら$f\ast g$及び$\neg f$は乗法的である。
 
 （証明）互いに素な$m, n$に対し、$d\vert mn$のとき唯一つの$d_{1}\vert m, d_{2}\vert n$が存在して$d=d_{1}d_{2}$となる。特に$d_{1}, d_{2}$は互いに素なので
 
@@ -106,7 +107,15 @@ $$
 \end{aligned}
 $$
 
-となる。$\square$
+となる。
+
+$h(1):=1$として、$h$の素数の冪に対する値を
+
+$$
+\sum_{ab=p^{e}}f(a)h(b)=0
+$$
+
+から帰納的に定める。このとき乗法的な数論的函数$h$が定まる。先の議論より$f\ast h\in\mathrm{Mul}(\mathbb{A})$である。定義より$(f\ast h)(1)=1$かつ素数の冪$p^{e}$について$(f\ast h)(p^{e})=0$である。$\varepsilon$も乗法的で$\varepsilon(1)=1, \varepsilon(p^{e})=0$を満たす。従って両者は一致し$f\ast h=\varepsilon$を得る。$\square$
 
 > 実は$\ast$を「和」とする環構造があることが知られている。
 
@@ -121,7 +130,7 @@ __定義__ 以下で定まる数論的函数$\mu$を **メビウス函数** と�
 __命題__ メビウス函数$\mu$について以下が成り立つ。
 
 - メビウス函数は乗法的である。
-- $\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。つまり$\mu=\mathfrak{z}^{(-1)}$である。
+- $\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。つまり$\mu=\neg\mathfrak{z}$である。
 
 （証明）$m, n$は互いに素とする。このとき$mn$がsquare-freeであることと$m$と$n$がsquare-freeであることは同値である。$m, n$が相異な$s, t$個の素数の積とすると$\mu(mn)=(-1)^{s+t}=(-1)^{s}(-1)^{t}=\mu(m)\mu(n)$を得る。
 
@@ -149,7 +158,7 @@ $$
 
 が成り立つ。
 
-（証明）$G=f\ast\mathfrak{z}, F=g\ast\mu$なので$\mu=\mathfrak{z}^{(-1)}$より従う。$\square$
+（証明）$G=f\ast\mathfrak{z}, F=g\ast\mu$なので$\mu=\neg\mathfrak{z}$より従う。$\square$
 
 > $\mathfrak{z}, \mu$が乗法的なので、$f$が乗法的なら$G$も乗法的であり、$g$が乗法的なら$F$も乗法的である。
 
