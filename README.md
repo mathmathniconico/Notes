@@ -48,6 +48,7 @@
 - [フェルマーの小定理](/Algebra/Group/FermatLittleTheorem.md)
 - [例示：その他の群](Algebra/Group/Group_Ex.md)
 - [数論的函数](/Algebra/Group/ArithmeticFunction.md)
+- [乗法的な数論的函数](/Algebra/Group/Multiplicative.md)
 
 
 ## 可換環論
