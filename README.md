@@ -37,9 +37,15 @@
 - [群](/Algebra/Group.md)
 - [環](/Algebra/Ring.md)
 
+## 初等整数論
+
+- [整数](Algebra/Integers/Integers.md)
+- [数論的函数](/Algebra/Integers/ArithmeticFunction.md)
+- [乗法的な数論的函数](/Algebra/Integers/Multiplicative.md)
+
+
 ## 群とその表現
 
-- [整数](Algebra/Group/Integers.md)
 - [巡回群](/Algebra/Group/CyclicGroup.md)
 - [対称群](/Algebra/Group/SymmetricGroup.md)
 - [群の作用](/Algebra/Group/GroupAction.md)
@@ -47,8 +53,6 @@
 - [三次対称群](/Algebra/Group/S3.md)
 - [フェルマーの小定理](/Algebra/Group/FermatLittleTheorem.md)
 - [例示：その他の群](Algebra/Group/Group_Ex.md)
-- [数論的函数](/Algebra/Group/ArithmeticFunction.md)
-- [乗法的な数論的函数](/Algebra/Group/Multiplicative.md)
 
 
 ## 可換環論

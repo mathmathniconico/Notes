@@ -1,7 +1,15 @@
 
 # 数論的函数
 
-自然数から複素数への写像を数論的函数と呼ぶ。一見するとつまらない概念に思えるかもしれないが、自然数の整除関係を通して多くの興味深い事実を得ることができる。
+自然数から複素数への写像を数論的函数と呼ぶ。数をひとまとめに扱うというアイディアは、自然数の整除関係を通して多くの興味深い事実の宝庫である。
+
+| ここで扱う函数 | 記号 | 定義 |
+|-|-|-|
+| 定数函数 | $c$ | 恒等的に$c\in\mathbb{C}$ |
+| z函数 | $\mathfrak{z}$ | 定数函数$1$ |
+| デルタ函数（$k\ge 1$） | $\delta_{k}(n)$ | $n=k$のとき$1$、$n\neq k$のとき$0$ |
+| 畳み込み単位元 | $\varepsilon$ | $\delta_{1}$ |
+| 重複込みの素因数函数 | $\Omega(n)$ | $n$の素因数を重複込みで数えた個数。ただし$\Omega(1)=0$ |
 
 
 
@@ -86,5 +94,32 @@ $$
 
 
 
-## $\mathbb{A}$上の作用素
+## 位数と次数
 
+__定義__ ゼロでない数論的函数$f$に対して、以下を定める。
+
+- $\mathrm{supp}(f):=\lbrace k : f(k)\neq 0 \rbrace$を$f$の **台** （support）と呼ぶ。
+- $\mathrm{ord}(f):=\mathrm{min}( \mathrm{supp}(f) )$を$f$の **位数** （order）と呼ぶ。
+- $\mathrm{deg}(f):=\mathrm{min}\lbrace \Omega(k) : k\in\mathrm{supp}(f) \rbrace$を$k$の **次数** （degree）と呼ぶ。
+
+$f=0$に対しては$\mathrm{ord}0=\infty, \mathrm{deg}0=-1$と定めておく。
+
+__命題__ 数論的函数$f, g$及び$c\in\mathbb{C}^{\times}$に対して以下が成り立つ。
+
+- $\mathrm{ord}(f+g)\ge\mathrm{min}\lbrace \mathrm{ord}(f), \mathrm{ord}(g) \rbrace$が成り立つ。
+- $\mathrm{ord}(cf)=\mathrm{ord}f$が成り立つ。
+- $\mathrm{ord}(f)=1\Longleftrightarrow f\in\mathbb{A}^{\times}$である。
+- $\mathrm{ord}(f\ast g)=\mathrm{ord}(f)\mathrm{ord}(g)$が成り立つ。
+- $\mathrm{deg}(f+g)\ge\mathrm{min}\lbrace \mathrm{deg}(f), \mathrm{deg}(g) \rbrace$が成り立つ。
+- $\mathrm{deg}(cf)=\mathrm{deg}(f)$が成り立つ。
+- $\mathrm{deg}(f)=0\Longleftrightarrow f\in\mathbb{A}^{\times}$である。
+- $\mathrm{deg}(f\ast g)=\mathrm{deg}(f)+\mathrm{deg}(g)$が成り立つ。
+
+（証明）
+
+
+
+$\square$
+
+
+__定義__ $\vert f \vert:=1/\mathrm{ord}f$を$f$の **ノルム** （norm）と呼ぶ。$\vert 0 \vert=0$
