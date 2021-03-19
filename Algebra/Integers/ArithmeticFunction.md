@@ -3,14 +3,6 @@
 
 自然数から複素数への写像を数論的函数と呼ぶ。数をひとまとめに扱うというアイディアは、自然数の整除関係を通して多くの興味深い事実の宝庫である。
 
-| ここで扱う函数 | 記号 | 定義 |
-|-|-|-|
-| 定数函数 | $c$ | 恒等的に$c\in\mathbb{C}$ |
-| z函数 | $\mathfrak{z}$ | 定数函数$1$ |
-| デルタ函数（$k\ge 1$） | $\delta_{k}(n)$ | $n=k$のとき$1$、$n\neq k$のとき$0$ |
-| 畳み込み単位元 | $\varepsilon$ | $\delta_{1}$ |
-| 重複込みの素因数函数 | $\Omega(n)$ | $n$の素因数を重複込みで数えた個数。ただし$\Omega(1)=0$ |
-
 
 
 
@@ -94,32 +86,94 @@ $$
 
 
 
-## 位数と次数
 
-__定義__ ゼロでない数論的函数$f$に対して、以下を定める。
+## メビウス函数
 
-- $\mathrm{supp}(f):=\lbrace k : f(k)\neq 0 \rbrace$を$f$の **台** （support）と呼ぶ。
-- $\mathrm{ord}(f):=\mathrm{min}( \mathrm{supp}(f) )$を$f$の **位数** （order）と呼ぶ。
-- $\mathrm{deg}(f):=\mathrm{min}\lbrace \Omega(k) : k\in\mathrm{supp}(f) \rbrace$を$k$の **次数** （degree）と呼ぶ。
+__定義__ ゼロでない数論的函数$f$が以下を満たすとき、**乗法的** （multiplicative）であるという。
 
-$f=0$に対しては$\mathrm{ord}0=\infty, \mathrm{deg}0=-1$と定めておく。
+- 互いに素な$m, n$について$f(mn)=f(m)f(n)$が成り立つ。
 
-__命題__ 数論的函数$f, g$及び$c\in\mathbb{C}^{\times}$に対して以下が成り立つ。
+乗法的な数論的函数全体を$\mathrm{Mul}(\mathbb{A})$と表す。
 
-- $\mathrm{ord}(f+g)\ge\mathrm{min}\lbrace \mathrm{ord}(f), \mathrm{ord}(g) \rbrace$が成り立つ。
-- $\mathrm{ord}(cf)=\mathrm{ord}f$が成り立つ。
-- $\mathrm{ord}(f)=1\Longleftrightarrow f\in\mathbb{A}^{\times}$である。
-- $\mathrm{ord}(f\ast g)=\mathrm{ord}(f)\mathrm{ord}(g)$が成り立つ。
-- $\mathrm{deg}(f+g)\ge\mathrm{min}\lbrace \mathrm{deg}(f), \mathrm{deg}(g) \rbrace$が成り立つ。
-- $\mathrm{deg}(cf)=\mathrm{deg}(f)$が成り立つ。
-- $\mathrm{deg}(f)=0\Longleftrightarrow f\in\mathbb{A}^{\times}$である。
-- $\mathrm{deg}(f\ast g)=\mathrm{deg}(f)+\mathrm{deg}(g)$が成り立つ。
+- $\mathfrak{z}$と$\varepsilon$は乗法的である。
+- $f$が乗法的なら$f(1)=1$である。従って先の命題より$f$は可逆である。
+- 乗法的な数論的函数は素数の冪$p^{e}$での値により決まる。つまり$f(1)=1$及び$f(\prod p^{e}):=\prod f(p^{e})$により定まる。
 
-（証明）
+__命題__ $\mathrm{Mul}(\mathbb{A})\lt\mathbb{A}^{\times}$は部分群である。特に$f, g\in\mathbb{A}$が乗法的なら$f\ast g$及び$\neg f$は乗法的である。
+
+（証明）互いに素な$m, n$に対し、$d\vert mn$のとき唯一つの$d_{1}\vert m, d_{2}\vert n$が存在して$d=d_{1}d_{2}$となる。特に$d_{1}, d_{2}$は互いに素なので
+
+$$
+\begin{aligned}
+(f\ast g)(mn) &=\sum_{ab=mn}f(a)g(b)=\sum_{a_{1}b_{1}=m}\sum_{a_{2}b_{2}=n}f(a_{1}a_{2})g(b_{1}b_{2}) \\
+&=\sum_{a_{1}b_{1}=m}\sum_{a_{2}b_{2}=n}f(a_{1})f(a_{2})g(b_{1})g(b_{2}) \\
+&=\left( \sum_{a_{1}b_{1}=m}f(a_{1})g(b_{1}) \right)\left( \sum_{a_{2}b_{2}=m}f(a_{2})g(b_{2}) \right) \\
+&=(f\ast g)(m)(f\ast g)(n)
+\end{aligned}
+$$
+
+となる。
+
+$h(1):=1$として、$h$の素数の冪に対する値を
+
+$$
+\sum_{ab=p^{e}}f(a)h(b)=0
+$$
+
+から帰納的に定める。このとき乗法的な数論的函数$h$が定まる。先の議論より$f\ast h\in\mathrm{Mul}(\mathbb{A})$である。定義より$(f\ast h)(1)=1$かつ素数の冪$p^{e}$について$(f\ast h)(p^{e})=0$である。$\varepsilon$も乗法的で$\varepsilon(1)=1, \varepsilon(p^{e})=0$を満たす。従って両者は一致し$f\ast h=\varepsilon$を得る。$\square$
+
+> 実は$\ast$を「和」とする環構造があることが知られている。
+
+__定義__ 以下で定まる数論的函数$\mu$を **メビウス函数** と呼ぶ。
+
+- $\mu(1)=1$とする。
+- $n$の素因数分解が$2$次以上の素因子を持つとき$\mu(n)=0$とする。
+- $n$が相異な$s$個の素数の積のとき$\mu(n)=(-1)^{s}$とする。（このとき$n$はsquare-freeという。$n=1$のときは$s=0$と思って良い。）
+
+> 例えば$15=3\times 5$より$\mu(15)=(-1)^{2}=1$である。一方で$12=2^{2}\times 3$はsquare-freeでないから$\mu(12)=0$である。
+
+__命題__ メビウス函数$\mu$について以下が成り立つ。
+
+- メビウス函数は乗法的である。
+- $\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。つまり$\mu=\neg\mathfrak{z}$である。
+
+（証明）$m, n$は互いに素とする。このとき$mn$がsquare-freeであることと$m$と$n$がsquare-freeであることは同値である。$m, n$が相異な$s, t$個の素数の積とすると$\mu(mn)=(-1)^{s+t}=(-1)^{s}(-1)^{t}=\mu(m)\mu(n)$を得る。
+
+定義より$\mu(1)=\varepsilon(1)$である。$n\gt 1$のとき$p_{1}^{e_{1}}\dotsm p_{r}^{e_{r}}$を$n$の素因数分解とする。
+
+$$
+\sum_{d\vert n}\mu(d)=\sum_{d\vert p_{1}\dotsm p_{r}}\mu(d)=\sum_{i=0}^{r}\left( \begin{matrix} r \\ i \end{matrix} \right)(-1)^{i}=(1-1)^{r}=0
+$$
+
+より$\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。$\square$
+
+__系__ （メビウス反転）$f\in\mathbb{A}$とする。このとき$G(n):=\sum_{d\vert n}f(d)$と定めると
+
+$$
+f(n)=\sum_{ab=n}\mu(a)G(b)
+$$
+
+が成り立つ。
+
+逆に$g\in\mathbb{A}$とする。このとき$F(n):=\sum_{ab=n}\mu(a)g(b)$と定めると
+
+$$
+g(n)=\sum_{d\vert n}F(d)
+$$
+
+が成り立つ。
+
+（証明）$G=f\ast\mathfrak{z}, F=g\ast\mu$なので$\mu=\neg\mathfrak{z}$より従う。$\square$
+
+> $\mathfrak{z}, \mu$が乗法的なので、$f$が乗法的なら$G$も乗法的であり、$g$が乗法的なら$F$も乗法的である。
 
 
+## 函数まとめ
 
-$\square$
-
-
-__定義__ $\vert f \vert:=1/\mathrm{ord}f$を$f$の **ノルム** （norm）と呼ぶ。$\vert 0 \vert=0$
+| 名称 | 記号 | 定義 |
+|-|-|-|
+| 定数函数 | $c$ | 恒等的に$c\in\mathbb{C}$ |
+| z函数 | $\mathfrak{z}$ | 定数函数$1$ |
+| デルタ函数（$k\ge 1$） | $\delta_{k}(n)$ | $n=k$のとき$1$、$n\neq k$のとき$0$ |
+| 畳み込み単位元 | $\varepsilon$ | $\delta_{1}$ |
+| メビウス函数 | $\mu(n)$ | $\mu(1)=1$、$n$が相異な$s$個の素数の積なら$\mu(n)=(-1)^{s}$、それ以外は$0$ |
