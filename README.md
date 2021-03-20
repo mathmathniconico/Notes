@@ -41,7 +41,8 @@
 
 - [整数](Algebra/Integers/Integers.md)
 - [数論的函数](/Algebra/Integers/ArithmeticFunction.md)
-- [乗法的な数論的函数](/Algebra/Integers/Multiplicative.md)
+- [ネックレス合同](/Algebra/Integers/Necklace.md)
+- [数論的函数のノルム](/Algebra/Integers/Norm.md)
 
 
 ## 群とその表現

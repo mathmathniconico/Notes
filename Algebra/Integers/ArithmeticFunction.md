@@ -120,15 +120,13 @@ $$
 \sum_{ab=p^{e}}f(a)h(b)=0
 $$
 
-から帰納的に定める。このとき乗法的な数論的函数$h$が定まる。先の議論より$f\ast h\in\mathrm{Mul}(\mathbb{A})$である。定義より$(f\ast h)(1)=1$かつ素数の冪$p^{e}$について$(f\ast h)(p^{e})=0$である。$\varepsilon$も乗法的で$\varepsilon(1)=1, \varepsilon(p^{e})=0$を満たす。従って両者は一致し$f\ast h=\varepsilon$を得る。$\square$
-
-> 実は$\ast$を「和」とする環構造があることが知られている。
+から帰納的に定める。このとき乗法的な数論的函数$h$が定まる。先の議論より$f\ast h\in\mathrm{Mul}(\mathbb{A})$もまた乗法的である。定義より$(f\ast h)(1)=1$かつ素数の冪$p^{e}$について$(f\ast h)(p^{e})=0$である。$\varepsilon$も乗法的で$\varepsilon(1)=1, \varepsilon(p^{e})=0$を満たす。従って両者は一致し$f\ast h=\varepsilon$を得る。$\square$
 
 __定義__ 以下で定まる数論的函数$\mu$を **メビウス函数** と呼ぶ。
 
 - $\mu(1)=1$とする。
-- $n$の素因数分解が$2$次以上の素因子を持つとき$\mu(n)=0$とする。
 - $n$が相異な$s$個の素数の積のとき$\mu(n)=(-1)^{s}$とする。（このとき$n$はsquare-freeという。$n=1$のときは$s=0$と思って良い。）
+- それ以外のとき、つまり$n$の素因数分解が$2$次以上の素因子を持つとき$\mu(n)=0$とする。
 
 > 例えば$15=3\times 5$より$\mu(15)=(-1)^{2}=1$である。一方で$12=2^{2}\times 3$はsquare-freeでないから$\mu(12)=0$である。
 
@@ -137,15 +135,15 @@ __命題__ メビウス函数$\mu$について以下が成り立つ。
 - メビウス函数は乗法的である。
 - $\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。つまり$\mu=\neg\mathfrak{z}$である。
 
-（証明）$m, n$は互いに素とする。このとき$mn$がsquare-freeであることと$m$と$n$がsquare-freeであることは同値である。$m, n$が相異な$s, t$個の素数の積とすると$\mu(mn)=(-1)^{s+t}=(-1)^{s}(-1)^{t}=\mu(m)\mu(n)$を得る。
+（証明）$m, n$は互いに素とする。このとき$mn$がsquare-freeであることと$m$と$n$がsquare-freeであることは同値である。$m, n$が相異な$s, t$個の素数の積とすると$\mu(mn)=(-1)^{s+t}=(-1)^{s}(-1)^{t}=\mu(m)\mu(n)$を得る。つまり$\mu$は乗法的である。
 
-定義より$\mu(1)=\varepsilon(1)$である。$n\gt 1$のとき$p_{1}^{e_{1}}\dotsm p_{r}^{e_{r}}$を$n$の素因数分解とする。
+$\mathfrak{z}$も乗法的なので$\mu\ast\mathfrak{z}$は乗法的である。定義より$(\mu\ast\mathfrak{z})(1)=1=\varepsilon(1)$である。素数の冪$p^{e}$に対して
 
 $$
-\sum_{d\vert n}\mu(d)=\sum_{d\vert p_{1}\dotsm p_{r}}\mu(d)=\sum_{i=0}^{r}\left( \begin{matrix} r \\ i \end{matrix} \right)(-1)^{i}=(1-1)^{r}=0
+(\mu\ast\mathfrak{z})(p^{e})=\sum_{i=0}^{r}\mu(p^{i})=\mu(1)+\mu(p)=1-1=0
 $$
 
-より$\mu\ast\mathfrak{z}=\varepsilon$が成り立つ。$\square$
+より$\varepsilon(p^{e})$と一致する。故に$\mu\ast\mathfrak{z}=\varepsilon$である。$\square$
 
 __系__ （メビウス反転）$f\in\mathbb{A}$とする。このとき$G(n):=\sum_{d\vert n}f(d)$と定めると
 
@@ -168,12 +166,23 @@ $$
 > $\mathfrak{z}, \mu$が乗法的なので、$f$が乗法的なら$G$も乗法的であり、$g$が乗法的なら$F$も乗法的である。
 
 
-## 函数まとめ
 
-| 名称 | 記号 | 定義 |
-|-|-|-|
-| 定数函数 | $c$ | 恒等的に$c\in\mathbb{C}$ |
-| z函数 | $\mathfrak{z}$ | 定数函数$1$ |
-| デルタ函数（$k\ge 1$） | $\delta_{k}(n)$ | $n=k$のとき$1$、$n\neq k$のとき$0$ |
-| 畳み込み単位元 | $\varepsilon$ | $\delta_{1}$ |
-| メビウス函数 | $\mu(n)$ | $\mu(1)=1$、$n$が相異な$s$個の素数の積なら$\mu(n)=(-1)^{s}$、それ以外は$0$ |
+
+
+
+
+
+## まとめ
+
+- 数論的函数全体$\mathbb{A}$は和と畳み込みにより環となる。
+- $f$が畳み込みで可逆なことと$f(1)\neq 0$は同値である。
+- 乗法的なら可逆であり、全体$\mathrm{Mul}(\mathbb{A})\lt\mathbb{A}^{\times}$は部分群である。
+- 恒等的に$1$を取る函数$\mathfrak{z}$の逆元がメビウス函数$\mu$である。
+
+| 名称 | 記号 | 定義 | 性質 |
+|-|-|-|-|
+| 定数函数 | $c$ | 恒等的に$c\in\mathbb{C}$ |  |
+| z函数 | $\mathfrak{z}$ | 定数函数$1$ | 乗法的 |
+| デルタ函数（$k\ge 1$） | $\delta_{k}(n)$ | $n=k$のとき$1$、$n\neq k$のとき$0$ | $\delta_{k}\ast\delta_{l}=\delta_{kl}$ |
+| 畳み込み単位元 | $\varepsilon$ | $\delta_{1}$ | 乗法的 |
+| メビウス函数 | $\mu(n)$ | $\mu(1)=1$、$n$が相異な$s$個の素数の積なら$\mu(n)=(-1)^{s}$、それ以外は$0$ | 乗法的、$\mu=\neg\mathfrak{z}$ |

@@ -63,7 +63,7 @@ $$
 
 となる。$\square$
 
-__定理__ （orbit counting）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
+__定理__ （orbit counting lemma）群の作用$G\curvearrowright X$が軌道を$r$個持つとする。このとき
 
 $$
 r=\frac{1}{\vert G \vert}\sum_{a\in G}\vert X^{a} \vert
