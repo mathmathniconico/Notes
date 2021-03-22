@@ -65,8 +65,8 @@ $L(n):=\mathrm{Log}(n)$を対数函数と呼ぶ。これは完全加法的であ
 
 __命題__ $F\in\mathbb{A}$とする。TFAE
 
-- $F$は完全加法的である。
-- $g, h\in\mathbb{A}$について$F\cdot(g\ast h)=(F\cdot g)\ast h+g\ast(F\cdot h)$が成り立つ。
+1. $F$は完全加法的である。
+1. $g, h\in\mathbb{A}$について$F\cdot(g\ast h)=(F\cdot g)\ast h+g\ast(F\cdot h)$が成り立つ。
 
 （証明）$F$は完全加法的とする。$g, h\in\mathbb{A}$について
 
@@ -109,6 +109,7 @@ __定義__ $n$と互いに素な$1$以上$n$以下の整数の個数を$\varphi(
 
 | 名称 | 記号 | 定義 | 性質 |
 |-|-|-|-|
+| $p$冪指数 | $\nu_{p}(n)$ | $n$の素因数分解における素数$p$の指数部 | 完全加法的 |
 | 重複込みの素因数函数 | $\Omega(n)$ | $n$の素因数を重複込みで数えた個数。ただし$\Omega(1)=0$ | 完全加法的 |
 | 素因数函数 | $\omega(n)$ | $n$の互いに異なる素因数の個数。ただし$\omega(1)=0$ | 加法的 |
 | Liouville函数 | $\lambda(n)$ | $\lambda(n):=(-1)^{\Omega(n)}$ | 完全乗法的 |

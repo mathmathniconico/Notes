@@ -68,8 +68,8 @@ __定義__ 数論的函数$f$が畳み込みに関して可逆のとき、その
 
 __命題__ $f$を数論的函数とする。TFAE
 
-- $f$は可逆である。
-- $f(1)\neq 0$である。
+1. $f$は可逆である。
+1. $f(1)\neq 0$である。
 
 （証明）$f\ast g=\varepsilon$とする。$(f\ast g)(1)=f(1)g(1)=\varepsilon(1)=1$より$f(1)\neq 0$である。
 
@@ -145,7 +145,7 @@ $$
 
 より$\varepsilon(p^{e})$と一致する。故に$\mu\ast\mathfrak{z}=\varepsilon$である。$\square$
 
-__系__ （メビウス反転）$f\in\mathbb{A}$とする。このとき$G(n):=\sum_{d\vert n}f(d)$と定めると
+__系__ （メビウス反転公式）$f\in\mathbb{A}$とする。このとき$G(n):=\sum_{d\vert n}f(d)$と定めると
 
 $$
 f(n)=\sum_{ab=n}\mu(a)G(b)
