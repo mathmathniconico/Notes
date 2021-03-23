@@ -37,13 +37,12 @@
 - [群](/Algebra/Group.md)
 - [環](/Algebra/Ring.md)
 
-## 初等整数論
+## 整数と群
 
 - [整数](Algebra/Integers/Integers.md)
 - [数論的函数](/Algebra/Integers/ArithmeticFunction.md)
 - [ネックレス合同](/Algebra/Integers/Necklace.md)
 - [数論的函数のノルム](/Algebra/Integers/Norm.md)
-
 
 ## 群とその表現
 

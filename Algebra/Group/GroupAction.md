@@ -14,7 +14,7 @@ __定義__ $G\curvearrowright X$を群の作用とする。
 
 - $x\in X$について$\mathrm{Orb}_{x}:=\lbrace ax : a\in G \rbrace$を$x$の **軌道** （orbit）と呼ぶ。軌道全体を$X/G$で表す。
 - $x\in X$について$\mathrm{Stab}_{x}:=\lbrace a\in G : ax=x \rbrace$を$x$の **固定群** （stabilizer）と呼ぶ。これは$G$の部分群となる。
-- $S\subset X$について$X^{S}:=\lbrace y\in X : \forall s\in S, sy=y \rbrace$を$S$の **不変集合** （invariable set）と呼ぶ。$S=\lbrace a \rbrace$のときは$X^{a}$と書く。
+- $S\subset G$について$X^{S}:=\lbrace y\in X : \forall s\in S, sy=y \rbrace$を$S$の **不変集合** （invariable set）と呼ぶ。$S=\lbrace a \rbrace$のときは$X^{a}$と書く。
 
 __例__ 作用の例をいくつか挙げる。$G$を群、$H, K\lt G$を部分群とする。
 
