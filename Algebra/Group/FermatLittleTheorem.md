@@ -75,7 +75,7 @@ $$
 
 は定数だから命題の式が従う。先程と同様に$a\le 0$でも成り立つ。$\square$
 
-__系__ （coloringによる拡張）$a$を整数、$m$を正の整数とする。このとき
+__系__ （totient函数によるフェルマーの小定理B）$a$を整数、$m$を正の整数とする。このとき
 
 $$
 \sum_{d\vert m}\varphi\left(\frac{m}{d}\right)a^{d}=\sum_{k=1}^{m}a^{(k, m)}\equiv 0 \mod{m}

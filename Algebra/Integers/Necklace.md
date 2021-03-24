@@ -3,10 +3,6 @@
 
 有限体の理論で有用らしいが、数が何らかの組合せで表せるというのは純粋に楽しい。
 
-
-
-## ネックレス合同
-
 数論的函数のうち整数値を取るもの全体を$\mathbb{A}_{\mathbb{Z}}$とする。和や畳み込みは整数値であることを変えず、また$0$や$\varepsilon$も整数値なので、$\mathbb{A}_{\mathbb{Z}}$は$\mathbb{A}$の部分環となる。
 
 __命題__ $f\in\mathbb{A}_{\mathbb{Z}}$とする。TFAE
@@ -26,24 +22,36 @@ __定義__ $n\in\mathbb{N}_{1}$に対し$\mathbb{Z}/n\mathbb{Z}$の元を対応�
 
 このとき$f\mapsto\overline{f}$は全射である。また$\mathbb{A}_{\equiv}$において成分毎の和と積を定義でき、$\overline{f+g}=\overline{f}+\overline{g}$や$\overline{f\cdot g}=\overline{f}\cdot \overline{g}$を満たす。
 
-> 畳み込みは定義できないので、どのように振舞うかを調べることには価値がある。
-
 __命題__ $f, g\in\mathbb{A}_{\mathbb{Z}}$とする。以下が成り立つ。
 
 - $\overline{f}=0, \overline{g}=0$なら$\overline{f\ast g}=0$が成り立つ。
-- $u\in\mathbb{A}_{\mathbb{Z}}^{\times}$は$\overline{u}=0$とする。$\overline{f\ast u}=0$なら$\overline{f}=0$が成り立つ。
+- $u\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆かつ$\overline{u}=0$を満たすとする。$\overline{f\ast u}=0$なら$\overline{f}=0$が成り立つ。
 
 （証明）$(f\ast g)(n)=\sum_{ab=n}f(a)g(b)$である。仮定より$a\vert f(a), b\vert g(b)$だから$n\vert f(a)g(b)$となり、$(f\ast g)(n)\equiv_{n}0$を得る。
 
-$\overline{f}\neq 0$とする。$f(n)\not\equiv_{n}0$となる最小の$n$を取り$(f\ast u)(n)=\sum_{ab=n}f(a)u(b)$を考える。仮定より$b\vert u(b)$かつ$a\lt n$について$a\vert f(n)$であり、$u$は可逆なので$(f\ast u)(n)\equiv_{n}f(n)u(1)=\pm f(n)\not\equiv_{n}0$を得る。$\square$
+$\overline{f}\neq 0$とする。$f(n)\not\equiv_{n}0$となる最小の$n$を取り$(f\ast u)(n)=\sum_{ab=n}f(a)u(b)$を考える。仮定より$b\vert u(b)$かつ$a\lt n$について$a\vert f(a)$であり、$u$は可逆なので$(f\ast u)(n)\equiv_{n}f(n)u(1)=\pm f(n)\not\equiv_{n}0$を得る。$\square$
 
-__命題__ $f\in\mathbb{A}_{\mathbb{Z}}$とする。TFAE
+<!--
+__命題__ $u, z\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆かつ$\overline{u\ast z}=0$を満たすとする。
+
+- $f\in\mathbb{A}_{\mathbb{Z}}$について$\overline{f\ast\neg z}=0$なら$\overline{f\ast u}=0$が成り立つ。
+- $\overline{f\ast u}=0$が成り立つ。
+
+（証明）$\overline{f\ast g}=\overline{(f\ast\mu)\ast(\mathfrak{z}\ast g)}=0$
+
+-->
+
+__注意__ $\overline{f\ast\mu}=0$とする。このとき$\overline{g\ast\mathfrak{z}}=0$なら命題より$\overline{f\ast g}=\overline{(f\ast\mu)\ast(\mathfrak{z}\ast g)}=0$となる。
+
+> 逆が成り立つには$g$が可逆である必要がある。
+
+__命題__ $f\in\mathbb{A}_{\mathbb{Z}}$とする。$u\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆で$\overline{u\ast\mathfrak{z}}=0$を満たすとする。TFAE
 
 1. $\overline{f\ast\mu}=0$が成り立つ。
-1. $\overline{g\ast\mathfrak{z}}=0$を満たす$g\in\mathbb{A}_{\mathbb{Z}}$について$\overline{f\ast g}=0$が成り立つ。
+1. $\overline{f\ast u}=0$が成り立つ。
 1. $k, m\in\mathbb{N}_{1}$とする。素数$p$は$m$と互いに素とする。このとき$f(p^{k}m)\equiv_{p^{k}}f(p^{k-1}m)$が成り立つ。
 
-（証明）1と2の同値性を示す。$\overline{f\ast\mu}=0$とする。$\overline{g\ast\mathfrak{z}}=0$なら先の命題より$\overline{f\ast g}=\overline{(f\ast\mu)\ast(\mathfrak{z}\ast g)}=0$を得る。逆は$g$として$\mu$を取れば$\overline{\mu\ast\mathfrak{z}}=\overline{\varepsilon}=0$より$\overline{f\ast\mu}=0$を得る。
+（証明）1から2は上の注意より明白。2から1も$u\ast\mathfrak{z}$は可逆かつ$\overline{u\ast\mathfrak{z}}=0$であり$\overline{(f\ast\mu)\ast(u\ast\mathfrak{z})}=\overline{f\ast u}=0$だから、命題より$\overline{f\ast\mu}=0$を得る。
 
 1から3を示す。$\overline{f\ast\mu}=0$とする。メビウス反転公式より$f=(f\ast\mu)\ast\mathfrak{z}$、従って
 
@@ -107,3 +115,22 @@ $$
 
 を得る。$\square$
 
+> 例えば$X$が有限集合なら常に補題の条件を満たす。
+
+__定理__ （necklace theorem、メビウス函数によるフェルマーの小定理B）$a$を整数、$m$を正の整数とする。このとき
+
+$$
+\sum_{d\vert m}\mu(m/d)a^{d}\equiv_{m}0
+$$
+
+が成り立つ。
+
+（証明）合同式なので$a\gt 0$としてよい。$N=\mathrm{lcm}(1, \dotsc, m)$として、$X=\lbrace \nu\colon\mathbb{Z}/N\mathbb{Z}\rightarrow\lbrace 1, \dotsc, a \rbrace \rbrace$とする。これは番号の振られた輪状に並ぶ$N$個の玉の$a$色での塗り分けである。ここで輪の回転$f\colon\nu(x)\mapsto\nu(x+1)$を考える。このとき$d\vert m$について$\nu\in\mathrm{Fix}f^{d}$は$\nu(0), \dotsc, \nu(d-1)$で決まるので$a^{d}$通り存在する。故に$\vert \mathrm{Fix}f^{d} \vert=a^{d}$が$d\vert m$で成り立つ。ところでnecklace counting lemmaより
+
+$$
+\sum_{d\vert n}\mu(n/d)\vert \mathrm{Fix}f^{d} \vert\equiv_{n}0
+$$
+
+が任意の$n$で成り立つから、特に$n=m$とすれば定理の式を得る。$\square$
+
+> 定理より$f(d):=a^{d}$がネックレス合同と分かる。totient函数$\varphi$は$\varphi(1)=1$より可逆で、$\varphi\ast\mathfrak{z}=\angle$だから$\overline{\varphi\ast\mathfrak{z}}=0$である。故にネックレス合同の同値条件より$\overline{f\ast\varphi}=0$が従う。これはtotient函数によるフェルマーの小定理Bに他ならない。
