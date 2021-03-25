@@ -31,29 +31,29 @@ __命題__ $f, g\in\mathbb{A}_{\mathbb{Z}}$とする。以下が成り立つ。
 
 $\overline{f}\neq 0$とする。$f(n)\not\equiv_{n}0$となる最小の$n$を取り$(f\ast u)(n)=\sum_{ab=n}f(a)u(b)$を考える。仮定より$b\vert u(b)$かつ$a\lt n$について$a\vert f(a)$であり、$u$は可逆なので$(f\ast u)(n)\equiv_{n}f(n)u(1)=\pm f(n)\not\equiv_{n}0$を得る。$\square$
 
-<!--
-__命題__ $u, z\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆かつ$\overline{u\ast z}=0$を満たすとする。
+__定義__ $f, z\in\mathbb{A}_{\mathbb{Z}}$とする。$f$は$\overline{f\ast z}=0$を満たすとき$z$自明という。
 
-- $f\in\mathbb{A}_{\mathbb{Z}}$について$\overline{f\ast\neg z}=0$なら$\overline{f\ast u}=0$が成り立つ。
-- $\overline{f\ast u}=0$が成り立つ。
+- $z$が可逆のとき$\neg z$は$z$自明である。
 
-（証明）$\overline{f\ast g}=\overline{(f\ast\mu)\ast(\mathfrak{z}\ast g)}=0$
+__命題__ $z\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆とする。$f, g\in\mathbb{A}_{\mathbb{Z}}$について以下が成り立つ。
 
--->
+- $f$は$\neg z$自明、$g$は$z$自明とする。このとき$f$は$g$自明である。
+- $f$は$g$自明、$g$は$z$自明とする。更に$g$が可逆なら$f$は$\neg z$自明である。
 
-__注意__ $\overline{f\ast\mu}=0$とする。このとき$\overline{g\ast\mathfrak{z}}=0$なら命題より$\overline{f\ast g}=\overline{(f\ast\mu)\ast(\mathfrak{z}\ast g)}=0$となる。
+（証明）$\overline{f\ast\neg z}=0$とする。$\overline{g\ast z}=0$なので先の命題より$\overline{f\ast g}=\overline{(f\ast\neg z)\ast(g\ast z)}=0$となる。逆に$\overline{f\ast g}=0$かつ$\overline{g\ast z}=0$とする。$g$が可逆より$z\ast g$も可逆である。故に同じく先の命題より$\overline{f\ast\neg z}=0$を得る。$\square$
 
-> 逆が成り立つには$g$が可逆である必要がある。
+可逆な$z$について、$z$自明な函数$g$について$g$自明という概念は、可逆な$g$について考える限り同じものとなる。
 
-__命題__ $f\in\mathbb{A}_{\mathbb{Z}}$とする。$u\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆で$\overline{u\ast\mathfrak{z}}=0$を満たすとする。TFAE
+__定義__ $z\in\mathbb{A}_{\mathbb{Z}}^{\times}$は可逆とする。$f\in\mathbb{A}_{\mathbb{Z}}$が$\neg z$自明のとき、$z$と **ネックレス合同** （necklace congruence）であるという。
 
-1. $\overline{f\ast\mu}=0$が成り立つ。
-1. $\overline{f\ast u}=0$が成り立つ。
+> $z=\mathfrak{z}$の場合は、メビウス反転公式より具体的な条件が分かる。
+
+__命題__ $f\in\mathbb{A}_{\mathbb{Z}}$とする。TFAE
+
+1. $f$は$\mathfrak{z}$とネックレス合同である。
 1. $k, m\in\mathbb{N}_{1}$とする。素数$p$は$m$と互いに素とする。このとき$f(p^{k}m)\equiv_{p^{k}}f(p^{k-1}m)$が成り立つ。
 
-（証明）1から2は上の注意より明白。2から1も$u\ast\mathfrak{z}$は可逆かつ$\overline{u\ast\mathfrak{z}}=0$であり$\overline{(f\ast\mu)\ast(u\ast\mathfrak{z})}=\overline{f\ast u}=0$だから、命題より$\overline{f\ast\mu}=0$を得る。
-
-1から3を示す。$\overline{f\ast\mu}=0$とする。メビウス反転公式より$f=(f\ast\mu)\ast\mathfrak{z}$、従って
+（証明）$\overline{f\ast\mu}=0$とする。メビウス反転公式より$f=(f\ast\mu)\ast\mathfrak{z}$、従って
 
 $$
 \begin{aligned}
@@ -64,7 +64,7 @@ $$
 
 が成り立つ。ここで$(f\ast\mu)(p^{k}d)\equiv_{p^{k}d}0$だから特に$p^{k}$の倍数である。故に$f(p^{k}m)\equiv_{p^{k}}f(p^{k-1}m)$を得る。
 
-3から1を示す。$n\in\mathbb{N}_{1}$の一つの素因数を$p$として、$p$と互いに素な$m$により$n=p^{k}m$と表す。このとき
+逆を示す。$n\in\mathbb{N}_{1}$の一つの素因数を$p$として、$p$と互いに素な$m$により$n=p^{k}m$と表す。このとき
 
 $$
 \begin{aligned}
@@ -76,9 +76,8 @@ $$
 
 となる。これが全ての素因数に対して言えるので$(f\ast\mu)(n)\equiv_{n}0$を得る。$\square$
 
-> 同値条件に$f(n)\equiv_{n}f(n/p)$がある資料もあったが強すぎて1,2,3から示せなかった。$f(p^{k})\equiv_{p^{k}}f(p^{k-1})$がある資料もあったが弱すぎて1,2,3を示せなかった。
+> 同値条件に$f(n)\equiv_{n}f(n/p)$がある資料もあったが強すぎるように思う。$f(p^{k})\equiv_{p^{k}}f(p^{k-1})$がある資料もあったが弱すぎるように思う。
 
-__定義__ $f\in\mathbb{A}_{\mathbb{Z}}$が上の3条件の何れかを満たすとき、$f$は **ネックレス合同** （necklace congruence）であるという。
 
 写像$f\colon X\rightarrow X$に対して以下を定める。
 
@@ -93,7 +92,7 @@ $$
 \vert C_{n}(f) \vert=\frac{1}{n}\sum_{d\vert n}\mu(n/d)\vert \mathrm{Fix}f^{d} \vert
 $$
 
-が成り立つ。特に$n\mapsto\vert \mathrm{Fix}f^{n} \vert$はネックレス合同である。
+が成り立つ。特に$n\mapsto\vert \mathrm{Fix}f^{n} \vert$は$\mathfrak{z}$とネックレス合同である。
 
 （証明）$x\in X$について$f^{n}(x)=x$とする。$f^{d}(x)=x$となる最小の$1\le d\le n$が取れる。ある$q, 0\le r\lt d$が存在して$n=qd+r$となるが
 
@@ -133,4 +132,4 @@ $$
 
 が任意の$n$で成り立つから、特に$n=m$とすれば定理の式を得る。$\square$
 
-> 定理より$f(d):=a^{d}$がネックレス合同と分かる。totient函数$\varphi$は$\varphi(1)=1$より可逆で、$\varphi\ast\mathfrak{z}=\angle$だから$\overline{\varphi\ast\mathfrak{z}}=0$である。故にネックレス合同の同値条件より$\overline{f\ast\varphi}=0$が従う。これはtotient函数によるフェルマーの小定理Bに他ならない。
+> 定理より$f(d):=a^{d}$が$\mathfrak{z}$とネックレス合同である。totient函数$\varphi$は$\varphi(1)=1$より可逆で、$\varphi\ast\mathfrak{z}=\angle$だから$\overline{\varphi\ast\mathfrak{z}}=0$である。故に$\varphi$もまた$\mathfrak{z}$自明であり、故に$f$は$\varphi$自明でもあり$\overline{f\ast\varphi}=0$が成り立つ。これはtotient函数によるフェルマーの小定理Bに他ならない。
