@@ -40,18 +40,18 @@
 ## 整数と群
 
 - [整数](Algebra/Integers/Integers.md)
+- [巡回群](/Algebra/Integers/CyclicGroup.md)
+- [群の作用](/Algebra/Integers/GroupAction.md)
+- [フェルマーの小定理](/Algebra/Integers/FermatLittleTheorem.md)
 - [数論的函数](/Algebra/Integers/ArithmeticFunction.md)
 - [ネックレス合同](/Algebra/Integers/Necklace.md)
 - [数論的函数のノルム](/Algebra/Integers/Norm.md)
 
-## 群とその表現
+## 群の表現
 
-- [巡回群](/Algebra/Group/CyclicGroup.md)
 - [対称群](/Algebra/Group/SymmetricGroup.md)
-- [群の作用](/Algebra/Group/GroupAction.md)
 - [群の表現](/Algebra/Group/Representation.md)
 - [三次対称群](/Algebra/Group/S3.md)
-- [フェルマーの小定理](/Algebra/Group/FermatLittleTheorem.md)
 - [例示：その他の群](Algebra/Group/Group_Ex.md)
 
 
