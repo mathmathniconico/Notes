@@ -44,8 +44,9 @@
 - [群の作用](/Algebra/Integers/GroupAction.md)
 - [フェルマーの小定理](/Algebra/Integers/FermatLittleTheorem.md)
 - [数論的函数](/Algebra/Integers/ArithmeticFunction.md)
-- [ネックレス合同](/Algebra/Integers/Necklace.md)
 - [数論的函数のノルム](/Algebra/Integers/Norm.md)
+- [ネックレス合同](/Algebra/Integers/Necklace.md)
+- [ディリクレ級数](/Algebra/Integers/DirichletSeries.md)
 
 ## 群の表現
 
