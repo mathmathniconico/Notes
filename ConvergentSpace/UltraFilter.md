@@ -7,7 +7,7 @@ __定義__ $X$の真フィルターに関して、包含順序で極大なもの
 
 __定理__ 真フィルター$\mathscr{F}\subset 2^{X}$について、$\mathscr{F}$を含む超フィルターが存在する。
 
-（証明）$X$のフィルター全体を$\Phi(X)$とする。$\Psi:=\lbrace \mathscr{G}\in\Phi(X) : \mathscr{F}\subset\mathscr{G}\neq 2^{X} \rbrace$の全順序部分集合$\tau$を考える。このとき$\bigcup_{\mathscr{A}\in\tau}\mathscr{A}$は真フィルターであり、$\tau$の$\Psi$における上界を与えている。故に$\Psi$は帰納的で、Zornの補題おり極大元$\mathscr{U}$を持つ。これは$\mathscr{F}$を含む超フィルターである。$\square$
+（証明）$X$のフィルター全体を$\Phi(X)$とする。$\Psi:=\lbrace \mathscr{G}\in\Phi(X) : \mathscr{F}\subset\mathscr{G}\neq 2^{X} \rbrace$の全順序部分集合$\tau$を考える。このとき$\bigcup_{\mathscr{A}\in\tau}\mathscr{A}$は真フィルターであり、$\tau$の$\Psi$における上界を与えている。故に$\Psi$は帰納的で、Zornの補題より極大元$\mathscr{U}$が存在する。これは$\mathscr{F}$を含む超フィルターである。$\square$
 
 超フィルターは次の特徴付けを持つ。
 
@@ -20,7 +20,7 @@ __補題__ $\mathscr{U}\subset 2^{X}$をフィルターとする。TFAE
 
 $\mathscr{U}$を超フィルターとする。$A\notin\mathscr{U}$について$\mathscr{U}_{\neg A}$は$\mathscr{U}, X\backslash A$を含む真フィルターである。極大性より$\mathscr{U}=\mathscr{U}_{\neg A}$となり$X\backslash A\in\mathscr{U}$を得る。$\square$
 
-> 真フィルター$\mathscr{F}$に対して、$S\notin\mathscr{F}$の補集合$X\backslash S$を次々と添加していくことができた。この操作はどこまで可能だろうか。補題によれば、その疑問に対する解答が超フィルターである。
+> 真フィルター$\mathscr{F}$に対して、$S\notin\mathscr{F}$の補集合$X\backslash S$を次々と添加していくことができた。この操作はどこまで可能だろうか。この補題はその疑問に対する解答が超フィルターであることを表している。
 
 __命題__ 以下が成り立つ。
 
@@ -55,14 +55,13 @@ __命題__ $\mathscr{U}\subset 2^{X}$を超フィルターとする。$\mathscr{
 
 > 有限集合$X$において、真フィルターは単項フィルターだから、これを$\langle A \rangle$とすれば$A=\lbrace a_{1}, \dotsc, a_{n} \rbrace$と表せる。このとき$\langle A \rangle=\langle a_{1} \rangle\cap\dotsb\cap\langle a_{n} \rangle$が成り立ち、右辺の点フィルターは超フィルターである。
 
-超フィルターと像フィルターの関係が興味深い。
-
 __命題__ $f\colon X\rightarrow Y$を写像とする。以下が成り立つ。
 
-- $\mathscr{U}\subset 2^{X}$をの超フィルターとすると、$f_{\ast}\mathscr{U}\subset 2^{Y}$も超フィルターである。
+- $\mathscr{U}\subset 2^{X}$を超フィルターとすると、$f_{\ast}\mathscr{U}\subset 2^{Y}$も超フィルターである。
 - $\mathscr{F}\subset 2^{X}$を真フィルターとする。$f_{\ast}\mathscr{F}$を含む超フィルター$\mathscr{V}\subset 2^{Y}$について、ある$X$の超フィルター$\mathscr{U}\subset 2^{X}$が存在して$\mathscr{F}\subset\mathscr{U}$かつ$f_{\ast}\mathscr{U}=\mathscr{V}$を満たす。
 
 （証明）$W\notin f_{\ast}\mathscr{U}$とする。$f(f^{-1}(W))\subset W$より$f^{-1}(W)\notin\mathscr{U}$である。超フィルターの特徴付けより$X\backslash f^{-1}(W)\in\mathscr{U}$を得る。$f(X\backslash f^{-1}(W))\subset Y\backslash W$より$Y\backslash W\in f_{\ast}\mathscr{U}$である。
 
 $V\in\mathscr{V}$について$X\in\mathscr{F}$より$f(X)\subset Y\backslash V$なら$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$より矛盾する。故に$f^{-1}(V)\neq\emptyset$であり、従って$f^{\ast}\mathscr{V}$は真フィルターである。更に$\mathscr{F}$と$f^{\ast}\mathscr{V}$はmeshである。実際$F\in\mathscr{F}$及び$V\in\mathscr{V}$について$f(F)\cap V=\emptyset$なら$f(F)\subset Y\backslash V$より$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$となり矛盾する。以上より$\mathscr{F}\vee f^{\ast}\mathscr{V}$は真フィルターである。これを含む超フィルター$\mathscr{U}$を取れば、$\mathscr{F}\subset\mathscr{U}$であり、$\mathscr{V}\subset f_{\ast}(f^{\ast}\mathscr{V})\subset f_{\ast}\mathscr{U}$と極大性より$\mathscr{V}=f_{\ast}\mathscr{U}$を得る。$\square$
 
+> このように超フィルターは像についてよく振舞う。

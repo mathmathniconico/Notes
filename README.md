@@ -106,12 +106,13 @@
 1. 収束空間の基礎
     1. [収束空間と連続射](/ConvergentSpace/Conv.md)
     1. [Continuous Convergence Structure](/ConvergentSpace/CCS.md)
-    1. [収束空間の位相構造（隣接位相）](/ConvergentSpace/FilterOpenTopology.md)
+    1. [収束空間の位相構造（隣接位相）](/ConvergentSpace/NearbyTopology.md)
     1. [位相空間の収束構造（位相収束構造）](/ConvergentSpace/TopologicalConv.md)
     1. [例：反射的有向グラフ](/ConvergentSpace/ReflexiveDirectedGraph.md)
 
 1. 収束空間における位相概念
     1. [超フィルター](/ConvergentSpace/UltraFilter.md)
+    1. [準コンパクトとチコノフの定理](/ConvergentSpace/Quasi-compact.md)
 
 
 # その他

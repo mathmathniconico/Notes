@@ -1,7 +1,5 @@
 # 収束空間の位相構造（隣接位相）
 
-以下、収束空間$X$に対し、$X$のフィルター全体を$\mathrm{Fil}(X)$、真フィルター全体を$\mathrm{Fil}_{\lt 1}(X)$で表す。
-
 __定義__ $X$を収束空間とする。
 
 - $x\in X$に対し$\mathscr{N}_{x}:=\cap\lbrace \mathscr{F}\in\mathrm{Fil}(X) :  \mathscr{F}\rightarrow x \rbrace$を **隣接フィルター** （nearby filter）と呼ぶ。

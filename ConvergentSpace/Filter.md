@@ -3,7 +3,7 @@
 
 ## フィルター
 
-__定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満たすとき$X$の **フィルター** と呼ぶ。
+__定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満たすとき$X$の **フィルター** と呼び、全体を$\mathrm{Fil}(X)$と表す。
 
 - $X\in\mathscr{F}$である。
 - $V\in\mathscr{F}, V\subset W$なら$W\in\mathscr{F}$である。
@@ -12,7 +12,7 @@ __定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満た�
 フィルター$\mathscr{F}$について、$\emptyset\in\mathscr{F}$と$\mathscr{F}=2^{X}$は同値になる。
 
 - $\emptyset\in\mathscr{F}$のとき、 **自明フィルター** と呼ぶ。
-- $\emptyset\notin\mathscr{F}$のとき、 **真フィルター** と呼ぶ。
+- $\emptyset\notin\mathscr{F}$のとき、 **真フィルター** と呼び、全体を$\mathrm{Fil}_{\lt 1}(X)$と表す。
 
 > 基本的には真フィルターが本質的であり、自明フィルターは理論的な完備さに対応している。
 
