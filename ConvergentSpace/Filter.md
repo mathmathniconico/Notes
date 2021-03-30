@@ -9,17 +9,12 @@ __定義__ $X$を集合とする。$\mathscr{F}\subset 2^{X}$が以下を満た�
 - $V\in\mathscr{F}, V\subset W$なら$W\in\mathscr{F}$である。
 - $V, W\in\mathscr{F}$なら$V\cap W\in\mathscr{F}$である。
 
-フィルター$\mathscr{F}$について、$\emptyset\in\mathscr{F}$と$\mathscr{F}=2^{X}$は同値になる。
+例えば$\lbrace X \rbrace$は$X$のフィルターである。一方で$2^{X}$も$X$のフィルターである。
 
-- $\emptyset\in\mathscr{F}$のとき、 **自明フィルター** と呼ぶ。
-- $\emptyset\notin\mathscr{F}$のとき、 **真フィルター** と呼び、全体を$\mathrm{Fil}_{\lt 1}(X)$と表す。
+- $\mathscr{F}=2^{X}$を **自明フィルター** と呼ぶ。$\mathscr{F}$が自明であることと$\emptyset\in\mathscr{F}$は同値である。
+- フィルターが自明でないとき、つまり$\emptyset\notin\mathscr{F}$のとき **真フィルター** と呼ぶ。真フィルター全体を$\mathrm{Fil}_{\lt 1}(X)$と表す。
 
 > 基本的には真フィルターが本質的であり、自明フィルターは理論的な完備さに対応している。
-
-例えば次のようなものがある。
-
-- $\lbrace X \rbrace$は$X$のフィルターである。$2^{X}$も$X$のフィルターである。
-- 集合$X$において$X\backslash S$が有限となる$S\subset X$全体はフィルターである。このようなフィルターを補有限フィルターという。$X$が有限集合のときは自明フィルターであり、無限集合のときは真フィルターである。
 
 __命題__ 集合族$\mathscr{S}\subset 2^{X}$について、$\mathscr{S}$を含む最小のフィルターが存在する。
 
@@ -31,15 +26,18 @@ $$
 
 は$\mathscr{S}$を含む最小のフィルターとなる。$\square$
 
-> $\langle \emptyset \rangle=\lbrace X \rbrace$である。
-
 __定義__ $\mathscr{S}$を含む最小のフィルターを$\langle \mathscr{S} \rangle$と表し、$\mathscr{S}$が **生成するフィルター** と呼ぶ。
+
+> $\langle \emptyset \rangle=\lbrace X \rbrace$である。
 
 - 最小性より、フィルター$\mathscr{F}$について$\langle \mathscr{F} \rangle=\mathscr{F}$である。
 
-$A\subset X$について$\lbrace A \rbrace$が生成するフィルターを **単項フィルター** と呼び、誤解の恐れが無い場合は$\langle A \rangle$と表す。特に$x\in X$について$A=\lbrace x \rbrace$が生成するフィルターを **点フィルター** と呼び、同様に$\langle x \rangle$と表す。
+フィルターの基本的なクラスを以下に列挙する。
 
-> フィルターは素朴な概念なので、これ以上のことは何も言えない。しかしその素朴さから数学の様々な場面で用いられ、豊富な付加構造を伴うことが重要である。
+- $A\subset X$について$\lbrace A \rbrace$が生成するフィルターを **単項フィルター** と呼び、誤解の恐れが無い場合は$\langle A \rangle$と表す。特に$x\in X$について$A=\lbrace x \rbrace$が生成するフィルターを **点フィルター** と呼び、同様に$\langle x \rangle$と表す。
+- 集合$A\subset X$について、$\lbrace A\backslash F\subset A : \vert F \vert\lt\infty \rbrace$が生成するフィルターを$A$の **補有限フィルター** （cofinite filter）と呼ぶ。特に$A$が有限集合のとき自明であり、無限集合のときは真フィルターとなる。
+- 点列$(x_{n})$について$\lbrace \lbrace x_{n} : n\ge m \rbrace : m\in\mathbb{N}_{1} \rbrace$が生成するフィルターを **点列フィルター** （sequential filter）と呼び、$\langle (x_{n}) \rangle$と表す。
+
 
 
 ## prefilter

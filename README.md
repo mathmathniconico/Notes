@@ -111,8 +111,8 @@
     1. [例：反射的有向グラフ](/ConvergentSpace/ReflexiveDirectedGraph.md)
 
 1. 収束空間における位相概念
-    1. [超フィルター](/ConvergentSpace/UltraFilter.md)
-    1. [準コンパクトとチコノフの定理](/ConvergentSpace/Quasi-compact.md)
+    1. [超フィルターと準コンパクト](/ConvergentSpace/UltraFilter.md)
+    1. [分離公理](/ConvergentSpace/Separability.md)
 
 
 # その他

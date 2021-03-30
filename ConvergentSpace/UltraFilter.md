@@ -1,5 +1,8 @@
 
-# 超フィルター
+# 超フィルターと準コンパクト
+
+
+## 超フィルター
 
 __定義__ $X$の真フィルターに関して、包含順序で極大なものを **超フィルター** （ultra filter）と呼ぶ。
 
@@ -65,3 +68,40 @@ __命題__ $f\colon X\rightarrow Y$を写像とする。以下が成り立つ。
 $V\in\mathscr{V}$について$X\in\mathscr{F}$より$f(X)\subset Y\backslash V$なら$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$より矛盾する。故に$f^{-1}(V)\neq\emptyset$であり、従って$f^{\ast}\mathscr{V}$は真フィルターである。更に$\mathscr{F}$と$f^{\ast}\mathscr{V}$はmeshである。実際$F\in\mathscr{F}$及び$V\in\mathscr{V}$について$f(F)\cap V=\emptyset$なら$f(F)\subset Y\backslash V$より$Y\backslash V\in f_{\ast}\mathscr{F}\subset\mathscr{V}$となり矛盾する。以上より$\mathscr{F}\vee f^{\ast}\mathscr{V}$は真フィルターである。これを含む超フィルター$\mathscr{U}$を取れば、$\mathscr{F}\subset\mathscr{U}$であり、$\mathscr{V}\subset f_{\ast}(f^{\ast}\mathscr{V})\subset f_{\ast}\mathscr{U}$と極大性より$\mathscr{V}=f_{\ast}\mathscr{U}$を得る。$\square$
 
 > このように超フィルターは像についてよく振舞う。
+
+__命題__ $f\colon X\rightarrow Y$は全射とする。$Y$の超フィルター$\mathscr{V}\subset 2^{Y}$について、ある$X$の超フィルター$\mathscr{U}\subset 2^{X}$が存在して$f\mathscr{U}=\mathscr{V}$が成り立つ。
+
+（証明）$f^{-1}\mathscr{V}$は真prefilterだから、それを含む真フィルターが存在し、さらにそれを含む超フィルター$\mathscr{U}$が存在する。このとき$f\mathscr{U}\supset f(f^{-1}\mathscr{V})=\mathscr{V}$より$f\mathscr{U}=\mathscr{V}$となる。$\square$
+
+
+
+
+
+## 準コンパクト
+
+__定義__ 収束空間$X$において、任意の超フィルターが収束するとき$X$は **準コンパクト** （quasi-compact）であるという。
+
+> 収束空間$X$が有限集合なら準コンパクトである。実際有限集合において超フィルターは点フィルターなので、その点に収束する。
+
+__命題__ 連続射$f\colon X\rightarrow Y$は全射とする。$X$が準コンパクトなら$Y$も準コンパクトである。
+
+（証明）$\mathscr{V}\subset 2^{Y}$を$Y$の超フィルターとする。ある$X$の超フィルター$\mathscr{U}$が存在して$f\mathscr{U}=\mathscr{V}$である。$X$は準コンパクトだから$\mathscr{U}\rightarrow x$であり、$f$は連続なので$\mathscr{V}=f\mathscr{U}\rightarrow f(x)$となる。$\square$
+
+__定理__ （チコノフの定理）$X_{i}$を収束空間、$X=\prod_{i\in I}X_{i}$をその直積とする。TFAE
+
+1. $X_{i}$は準コンパクトである。
+1. $X$は準コンパクトである。
+
+（証明）$X$の超フィルター$\mathscr{U}$を取る。射影$p_{i}$は全射だから$p_{i}\mathscr{U}$は像フィルターであり、故に超フィルターである。$X_{i}$が準コンパクトとすると、ある$x_{i}\in X_{i}$が存在して$p_{i}\mathscr{U}\rightarrow x_{i}$となる。従って$x=(x_{i})$と置くと、$\mathscr{U}\rightarrow x$を得る。逆は$p_{i}$が全射かつ連続射であることから従う。$\square$
+
+> このように収束空間においてはチコノフの定理を簡単に示せるが、もちろんこの準コンパクト性の概念が位相的なものと一致していることを示すべきだろう。
+
+__命題__ 以下が成り立つ。
+
+- 収束空間$(X, \phi)$が準コンパクトなら、位相空間$(X, T\phi)$は位相的準コンパクトである。
+- 位相空間$(X, \mathcal{O})$が位相的準コンパクトなら、収束空間$(X, F\mathcal{O})$は準コンパクトである。
+
+（証明）$(X, T\phi)$が位相的準コンパクトでないとする。つまりopenな$U_{i}$（$i\in I$）による被覆が存在して、有限個では覆えないとする。有限部分集合$J\subset I$について$A_{J}:=X\setminus\bigcup_{j\in J}U_{j}\neq\emptyset$と定める。$\lbrace A_{J} \rbrace$が生成するフィルターを$\mathscr{F}$とすると真フィルターとなる。よって$\mathscr{F}$を含む超フィルター$\mathscr{U}$が存在する。もし$(X, \phi)$が準コンパクトなら$\mathscr{U}\rightarrow x$となる$x\in X$が存在するが、$\lbrace U_{i} : i\in I \rbrace$は被覆なので$x\in U_{k}$となる$k\in I$が存在する。$U_{k}$はopenより$U_{k}\in\mathscr{U}$だが、$A_{\lbrace k \rbrace}=X\setminus U_{k}\in\mathscr{U}$より矛盾する。
+
+$(X, F\mathcal{O})$が準コンパクトでないとする。位相収束構造において、収束しない超フィルター$\mathscr{U}$が存在する。任意の$x\in X$について$\mathfrak{N}(x)\not\subset\mathscr{U}$だから、ある$U_{x}\in\mathfrak{N}(x)$が存在して$U_{x}\notin\mathscr{U}$を満たす。更にある開集合$V_{x}\in\mathcal{O}$が存在して$x\in V_{x}\subset U_{x}$となる。特に$V_{x}\notin\mathscr{U}$だから超フィルターの特徴付けより$X\setminus V_{x}\in\mathscr{U}$が分かる。$(X, \mathcal{O})$が位相的準コンパクトなら$X=\bigcup_{x\in X}V_{x}$より、有限個を選んで$X=V_{x_{1}}\cup\dotsb\cup V_{x_{n}}$とできる。ところが$(X\setminus V_{x_{1}})\cap\dotsb\cap(X\setminus V_{x_{n}})=\emptyset\in\mathscr{U}$より矛盾する。$\square$
+
