@@ -122,6 +122,7 @@
 - [クリフォード代数の例](/Misc/CliffordAlgebraExamples.md)
 - [ワイエルシュトラスのペー函数](/Misc/WeierstrassP.md)
 - [距離空間とリプシッツ写像](/Misc/LipschitzMap.md)
+- [整数の分割](/Misc/Partition.md)
 
 
 # 多様体のノート
