@@ -114,6 +114,10 @@
     1. [超フィルターと準コンパクト](/ConvergentSpace/UltraFilter.md)
     1. [分離公理](/ConvergentSpace/Separability.md)
 
+1. その他の収束構造
+
+    1. [前位相空間](/ConvergentSpace/Pretopology.md)
+
 
 # その他
 
