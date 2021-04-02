@@ -20,6 +20,25 @@ __定義__ $X, Y$を収束空間、$f\colon X\rightarrow Y$を写像とする。
 > 始対象は$(X=\emptyset, \phi=\emptyset)$、終対象は$(Y=\lbrace \ast \rbrace, \phi(\ast)=\lbrace\emptyset, \lbrace \ast \rbrace \rbrace=2^{Y})$である。
 
 
+
+
+## 始収束構造
+
+フィルター付き集合の場合と同様に、収束空間に対しても始構造を定めることができる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 収束空間の直積
 
 __命題__ $X_{i}$を収束空間とする。$p_{i}\colon X=\prod_{j\in I}X_{j}\rightarrow X_{i}$を射影とする。$X$において関係$\mathscr{F}\rightarrow x$を以下で定める。
