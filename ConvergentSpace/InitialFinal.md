@@ -14,6 +14,8 @@ __定義__ フィルター付き集合$(X, \mathscr{F}), (Y, \mathscr{G})$につ
 > フィルター射の合成はフィルター射になる。よってフィルター付き集合とフィルター射は圏を為す。圏としては始対象$(\emptyset, \lbrace \emptyset \rbrace)$と終対象$(\lbrace \ast \rbrace, \lbrace\lbrace \ast \rbrace\rbrace)$がある。
 
 
+
+
 ## 始フィルター
 
 __定義__ $X$を集合とする。添え字$i\in I$について、$(Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。
@@ -24,7 +26,7 @@ $$
 
 が生成する$X$のフィルターを、$\lbrace f_{i} \rbrace$による **始フィルター** と呼ぶ。
 
-- 上で定義した始フィルターは各$f_{i}$をフィルター射とする最小のフィルターである。
+> 上で定義した始フィルターは各$f_{i}$をフィルター射とする最小のフィルターである。実際始フィルターを$\mathscr{I}$、$f_{i}\colon(X, \mathscr{F})\rightarrow(Y_{i}, \mathscr{G}_{i})$をフィルター射とすると、$F\in\mathscr{I}$なら、ある$G_{i}\in\mathscr{G}_{i}$が存在して$f_{i}^{-1}(G_{i})\subset F$である。$f_{i}$はフィルター射なので$f_{i}^{-1}(G_{i})\in\mathscr{F}$だから$F\in\mathscr{F}$を得る。故に$\mathscr{I}\subset\mathscr{F}$である。
 
 始フィルターは次の普遍性を満たす。
 
