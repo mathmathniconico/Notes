@@ -36,21 +36,25 @@ $X$において$\mathscr{F}, \mathscr{G}\rightarrow x$とする。$i\in I$につ
 
 __定義__ 上で定まる$X$の収束構造を$\lbrace f_{i} \rbrace$による **始収束構造** （initial convergent structure）と呼び、$X$を始収束空間と呼ぶ。
 
-> 始収束構造は各$f_{i}$を連続射とする最大の収束構造である。実際$(X, \iota)$を始収束構造、$f_{i}\colon(X, \lambda)\rightarrow (Y_{i}, \phi_{i})$を連続射とすると、$\mathscr{F}\in\lambda(x)$なら$(f_{i})_{\ast}\mathscr{F}\in\phi_{i}(f_{i}(x))$であり、故に$\mathscr{F}\in\iota(x)$を得る。従って$\lambda(x)\subset\iota(x)$が成り立つ。
+- 始収束構造は各$f_{i}$を連続射とする最大の収束構造である。実際$(X, \iota)$を始収束構造、$f_{i}\colon(X, \lambda)\rightarrow (Y_{i}, \phi_{i})$を連続射とすると、$\mathscr{F}\in\lambda(x)$なら$(f_{i})_{\ast}\mathscr{F}\in\phi_{i}(f_{i}(x))$であり、故に$\mathscr{F}\in\iota(x)$を得る。従って$\lambda(x)\subset\iota(x)$が成り立つ。
 
 始収束構造は次の普遍性を満たす。
 
-__命題__ $X, Y_{i}$を収束空間とする。$f_{i}\colon X\rightarrow Y_{i}$を写像とする。TFAE
+__命題__ $(X, \lambda), (Y_{i}, \phi_{i})$を収束空間、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。TFAE
 
-1. 任意の収束空間$Z$及び写像$h\colon Z\rightarrow X$について、$f_{i}\circ h$が連続射であることと$h$が連続射であることは同値である。
+1. 任意の収束空間$(Z, \psi)$及び写像$h\colon Z\rightarrow X$について、$f_{i}\circ h$が連続射であることと$h$が連続射であることは同値である。
 1. $X$は$\lbrace f_{i} \rbrace$による始収束空間である。
 
-（証明）
+（証明）上から下を示す。$(Z, \psi)$として$(X, \lambda)$を取ると$h:=\mathrm{id}_{X}$は連続射だから仮定より$f_{i}=f_{i}\circ h$も連続射である。故に始収束構造の最大製より$\lambda(x)\subset\iota(x)$を得る。逆は$(Z, \psi)$として$\lbrace f_{i} \rbrace$による始収束構造$(X, \iota)$を取り、$h(x):=x$と定める。始収束構造の定義より$\mathscr{F}\in\iota(x)$なら$(f_{i})_{\ast}\mathscr{F}\in\phi_{i}(f_{i}(x))$だが、$(f_{i})_{\ast}\mathscr{F}=(h\circ f_{i})_{\ast}\mathscr{F}$より$h\circ f_{i}$が連続と分かる。従って仮定より$h$は連続である。このとき$\mathscr{F}\in\iota(x)$なら$\mathscr{F}=h_{\ast}\mathscr{F}\in\lambda(x)$より$\iota(x)\subset\lambda(x)$を得る。以上より$\lambda(x)=\iota(x)$である。
 
+$(X, \lambda)=(X, \iota)$は$\lbrace f_{i} \rbrace$による始収束構造だから以下は同値である。
 
+1. $f_{i}\circ h\colon (Z, \psi)\rightarrow (Y_{i}, \phi_{i})$が連続射である。
+1. $\mathscr{F}\in\psi(z)$について$(f_{i})_{\ast}(h_{\ast}\mathscr{F})=(f_{i}\circ h)_{\ast}\mathscr{F}\in\phi_{i}(f_{i}(h(z)))$である。
+1. $\mathscr{F}\in\psi(z)$について$h_{\ast}\mathscr{F}\in \iota(h(z))$である。
+1. $h\colon (Z, \psi)\rightarrow (X, \iota)$は連続射である。
 
-
-$\square$
+以上より下から上が成り立つ。$\square$
 
 > TODO: 推移性
 

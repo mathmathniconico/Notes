@@ -26,11 +26,11 @@ $$
 
 が生成する$X$のフィルターを、$\lbrace f_{i} \rbrace$による **始フィルター** と呼ぶ。
 
-> 上で定義した始フィルターは各$f_{i}$をフィルター射とする最小のフィルターである。実際始フィルターを$\mathscr{I}$、$f_{i}\colon(X, \mathscr{F})\rightarrow(Y_{i}, \mathscr{G}_{i})$をフィルター射とすると、$F\in\mathscr{I}$なら、ある$G_{i}\in\mathscr{G}_{i}$が存在して$f_{i}^{-1}(G_{i})\subset F$である。$f_{i}$はフィルター射なので$f_{i}^{-1}(G_{i})\in\mathscr{F}$だから$F\in\mathscr{F}$を得る。故に$\mathscr{I}\subset\mathscr{F}$である。
+- 始フィルターは各$f_{i}$をフィルター射とする最小のフィルターである。実際始フィルターを$\mathscr{I}$、$f_{i}\colon(X, \mathscr{F})\rightarrow(Y_{i}, \mathscr{G}_{i})$をフィルター射とすると、$F\in\mathscr{I}$なら、ある$G_{i}\in\mathscr{G}_{i}$が存在して$f_{i}^{-1}(G_{i})\subset F$である。$f_{i}$はフィルター射なので$f_{i}^{-1}(G_{i})\in\mathscr{F}$だから$F\in\mathscr{F}$を得る。故に$\mathscr{I}\subset\mathscr{F}$である。
 
 始フィルターは次の普遍性を満たす。
 
-__定理__ $(X, \mathscr{F}), (Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$f_{i}\colon X\rightarrow Y_{i}$とする。TFAE
+__定理__ $(X, \mathscr{F}), (Y_{i}, \mathscr{G}_{i})$をフィルター付き集合、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。TFAE
 
 1. 任意のフィルター付き集合$(Z, \mathscr{H})$及び$h\colon Z\rightarrow X$について、$f_{i}\circ h$がフィルター射であることと$h$がフィルター射であることは同値である。
 1. $\mathscr{F}$は$\lbrace f_{i} \rbrace$による始フィルターである。
