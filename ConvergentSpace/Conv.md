@@ -40,7 +40,7 @@ __定義__ 上で定まる$X$の収束構造を$\lbrace f_{i} \rbrace$による 
 
 始収束構造は次の普遍性を満たす。
 
-__命題__ $(X, \lambda), (Y_{i}, \phi_{i})$を収束空間、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。TFAE
+__定理__ $(X, \lambda), (Y_{i}, \phi_{i})$を収束空間、$f_{i}\colon X\rightarrow Y_{i}$を写像とする。TFAE
 
 1. 任意の収束空間$(Z, \psi)$及び写像$h\colon Z\rightarrow X$について、$f_{i}\circ h$が連続射であることと$h$が連続射であることは同値である。
 1. $X$は$\lbrace f_{i} \rbrace$による始収束空間である。
@@ -56,12 +56,25 @@ $(X, \lambda)=(X, \iota)$は$\lbrace f_{i} \rbrace$による始収束構造だ�
 
 以上より下から上が成り立つ。$\square$
 
-> TODO: 推移性
+__系__ $X$を集合、$\lbrace Y_{i} : i\in I \rbrace$を集合族、$\lbrace (Z_{ij}, \phi_{ij}) : i\in I, j\in J_{i} \rbrace$を収束空間とする。$f_{i}\colon X\rightarrow Y_{i}, g_{ij}\colon Y_{i}\rightarrow Z_{ij}$を写像とする。$Y_{i}$は$\lbrace g_{ij} : j\in J_{i} \rbrace$による始収束構造$\iota_{i}$で収束空間とみなせる。このとき$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始収束構造と、$\lbrace f_{i} : i\in I \rbrace$による始収束構造は一致する。
+
+（証明）$\lbrace g_{ij}\circ f_{i} : i\in I, j\in J_{i} \rbrace$による始収束構造を$\alpha$、$\lbrace f_{i} : i\in I \rbrace$による始収束構造を$\beta$とする。定理より以下は同値である。
+
+1. $h\colon (Z, \psi)\rightarrow (X, \alpha)$が連続射である。
+1. 任意の$i\in I, j\in J_{i}$について$(g_{ij}\circ f_{i})\circ h=g_{ij}\circ(f_{i}\circ h)\colon (Z, \psi)\rightarrow (Z_{ij}, \phi_{ij})$が連続射である。
+1. 任意の$i\in I$について$f_{i}\circ h\colon (Z, \psi)\rightarrow(Y_{i}, \iota_{i})$が連続射である。
+1. $h\colon (Z, \psi)\rightarrow (X, \beta)$が連続射である。
+
+$(Z, \psi)=(X, \alpha)$として$h(x)=x$を取れば上から下を辿って$\alpha(x)\subset\beta(x)$を得る。同様に$\psi=\beta$とすれば下から上を辿って$\beta(x)\subset\alpha(x)$を得る。故に$\alpha(x)=\beta(x)$である。$\square$
+
+
+
 
 ### 収束空間の逆像、部分収束空間
 
-> TODO
+__定義__ $(Y, \lambda)$を収束空間、$f\colon X\rightarrow Y$を写像とする。$\lbrace f \rbrace$による始収束構造を収束空間の **逆像** と呼び、$f^{\ast}\lambda$と表す。
 
+> 特に部分集合$X\subset Y$に対して、$X$上の収束構造を入射$X\rightarrow Y$より定めることができる。
 
 
 
@@ -70,10 +83,8 @@ $(X, \lambda)=(X, \iota)$は$\lbrace f_{i} \rbrace$による始収束構造だ�
 
 __定義__ $Y_{i}$を収束空間、$X=\prod Y_{i}$として$p_{i}\colon X\rightarrow Y_{i}$を射影とする。$\lbrace p_{i} \rbrace$による始収束空間を収束空間$Y_{i}$の直積と呼ぶ。
 
-> 収束空間の直積は圏$\mathbf{Conv}$における直積対象である。
-
 __命題__ $X_{i}$を収束空間、$X=\prod X_{i}$をその直積、$p_{i}\colon X\rightarrow X_{i}$を射影とする。収束空間$Z$と連続射$f_{i}\colon Z\rightarrow X_{i}$に対し、ある唯一つの連続射$h\colon Z\rightarrow X$が存在して$f_{i}=p_{i}\circ h$を満たす。
 
-<!-- 
 （証明）$h(z):=(f_{i}(z))$が連続射となることを示せばよい。$Z$において$\mathscr{H}\rightarrow z$とする。$f_{i}$は連続射なので$(f_{i})_{\ast}\mathscr{H}\rightarrow f_{i}(z)$が成り立つ。推移性より$(f_{i})_{\ast}=p_{i}\circ h_{\ast}$だから$p_{i}(h_{\ast}\mathscr{H})=( f_{i} )_{\ast}\mathscr{H}\rightarrow f_{i}(z)=p_{i}( h(z) )$が成り立つ。故に$h_{\ast}\mathscr{H}\rightarrow h(z)$を得る。$\square$
--->
+
+> 収束空間の直積は圏$\mathbf{Conv}$における直積対象である。
