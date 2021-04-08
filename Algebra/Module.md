@@ -1,24 +1,69 @@
 
 # 環上の加群
 
-## 環上の加群と準同型
+以下、$R$を単位的可換環とする。
 
-__定義__ $R$を環とする。次を満たす集合の組$(M, +, \cdot, 0)$を$R$上の **加群** （module）あるいは単に$R$加群という。
+__定義__ $(M, +, 0)$をアーベル群とする。演算$\colon R\times M\rightarrow M$は以下を満たすとする。
 
-- 加法$+\colon M\times M\rightarrow M$及び$0\in M$はアーベル群の構造を定める。
-- スカラー倍$\cdot R\times M\rightarrow M$は以下を満たす。
-	- $a\in R$及び$x, y\in M$について$a\cdot(x+y)=a\cdot x+a\cdot y$が成り立つ。
-	- $a, b\in R$及び$x\in M$について$(a+b)\cdot x=a\cdot x+b\cdot x$が成り立つ。
-	- $a, b\in R$及び$x\in M$について$(ab)\cdot x=a\cdot(b\cdot x)$が成り立つ。
-	- $x\in M$について$1\cdot x=x$が成り立つ。
+- $a\in R, x, y\in M$について$a\cdot(x+y)=a\cdot x+a\cdot y$が成り立つ。
+- $a, b\in R, x\in M$について$(a+b)\cdot x=a\cdot x+b\cdot x$が成り立つ。
+- $a, b\in R, x\in M$について$(ab)\cdot x=a\cdot(b\cdot x)$が成り立つ。
+- $x\in M$について$1_{R}\cdot x=x$が成り立つ。
 
-$R$加群$M$と書くときは上記の組が想定されているものとする。スカラー倍$a\cdot x$は$ax$と略記する。一般に$(-a)\cdot x=-(ax)$が成り立つので$-ax$と略記する。
+このとき$M$を$R$上の **加群** （module）、あるいは$R$加群や単に加群と呼ぶ。
 
-> 厳密には左加群と呼ばれるものの定義である。$(ab)x=a(bx)$を$(ab)x=b(ax)$に変えた場合は右加群と呼ばれるが、今は乗法について可換な環を考えているので同等になる。右加群の場合は、スカラー倍を$\cdot\colon M\times R\rightarrow M$として$x\cdot (ab)=(x\cdot a)\cdot b$とする方が一般的かもしれない。
+$a\cdot x$は$ax$と略記する。一般に$(-a)\cdot x=-(ax)$が成り立つので$-ax$と略記する。$0_{R}\cdot x=0$である。
 
+> 上記は$R$の可換性を除いた場合に左加群を定める。$(ab)x=a(bx)$を$(ab)x=b(ax)$に変えた場合は右加群と呼ばれるが、今は乗法について可換な環を考えているので同等になる。右加群の場合は演算を$\cdot\colon M\times R\rightarrow M$として$x\cdot (ab)=(x\cdot a)\cdot b$とする方が標準的だが、左右の違いは$R$の元が作用する順番が本質である。
+
+- $\lbrace 0 \rbrace$は常に$R$加群となる。これを単に$0$と表す。
 - 環$R$自身は$R$加群である。より一般に$R$のイデアル$I$も$R$加群である。
-- $\alpha\in\mathbb{Z}$について$\alpha\mathbb{Z}$は$\mathbb{Z}$のイデアルである。
-- ベクトル空間、あるいは線型空間は体上の加群のことである。ただし性質は大きく異なるので別に扱う方が筋は良い。
+- ベクトル空間、あるいは線型空間は体上の加群のことである。ただしその性質は大きく異なる。
+
+
+
+
+## 部分加群と合同関係
+
+__定義__ $M$を$R$加群とする。部分群$N\subset M$が$M$の演算で$R$加群となるとき **部分加群** （submodule）と呼ぶ。このとき$N\lt M$と表す。
+
+$R$加群はアーベル群だから、群としての同値関係や合同関係が同様に定義される。加群としての合同関係は$R$の作用を反映した形で定義される。
+
+__定義__ $M$を$R$加群とする。$M$上の群としての合同関係$\theta$は以下を満たすとする。
+
+- $a\in R, x, y\in M$について$x\theta y$なら$ax\theta ay$である。
+
+このとき$\theta$を加群としての合同関係と呼び、全体を$\mathrm{Con}(M)$と表す。
+
+__補題__ $M$を$R$加群、$N\subset M$とする。TFAE
+
+1. $N$は部分加群である。
+1. $\theta_{N}$は加群としての合同関係である。
+
+（証明）$N\lt M$とする。$\theta_{N}$は群としての合同関係だから、$R$の作用に関する条件を示せば良い。$x\theta_{N}y$とする。$a\in R$について$ax-ay=a(x-y)$である。ここで$x-y\in N$かつ$N$は部分加群なので$a(x-y)\in N$となる。故に$ax\theta_{N}ay$を得る。
+
+逆に$\theta_{N}$が加群としての合同関係とする。既に群の場合に示した通り、$N$は加法に関して$M$の部分群である。よって$R$の作用で閉じていることを示せば良い。$x\in N$とする。$x\theta_{N}0$だから、$a\in R$について仮定より$ax\theta_{N}0$となる。よって$ax\in N$を得る。$\square$
+
+
+
+
+## 剰余加群と準同型定理
+
+$M$を$R$加群、$\theta\in\mathrm{Con}(M)$を合同関係とする。$x\in M$の同値類$x/\theta$の全体$M/\theta$は
+
+$$
+\begin{aligned}
+(x/\theta)+_{\theta}(y/\theta) &:=(x+y)/\theta \\
+(a/\theta)\cdot_{\theta}(x/\theta) &:=(ax)/\theta
+\end{aligned}
+$$
+
+により$R$加群となる。
+
+> TODO
+
+
+
 
 __定義__ $M, N$を$R$加群とする。写像$f\colon M\rightarrow N$が以下を満たすとき **準同型** （homomorphism）という。
 

@@ -31,11 +31,13 @@
 - 極限と余極限
 - 随伴
 - [モノ射とエピ射](/Category/MonoEpi.md)
+- アーベル圏
 
 # 代数学
 
 - [群](/Algebra/Group.md)
 - [環](/Algebra/Ring.md)
+- [環上の加群](/Algebra/Module.md)
 
 ## 整数と群
 
@@ -59,7 +61,6 @@
 ## 可換環論
 
 - [素イデアルと整環](/Algebra/PrimeIdeal.md)
-- [環上の加群](/Algebra/Module.md)
 - [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
 - ネーター加群
 - 多項式環
