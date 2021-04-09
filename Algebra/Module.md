@@ -49,21 +49,29 @@ __補題__ $M$を$R$加群、$N\subset M$とする。TFAE
 
 ## 剰余加群と準同型定理
 
-$M$を$R$加群、$\theta\in\mathrm{Con}(M)$を合同関係とする。$x\in M$の同値類$x/\theta$の全体$M/\theta$は
+$M$を$R$加群、$\theta\in\mathrm{Con}(M)$を合同関係とする。$x\in M$の同値類$x/\theta$を考えると、その全体$M/\theta$は
 
 $$
 \begin{aligned}
 (x/\theta)+_{\theta}(y/\theta) &:=(x+y)/\theta \\
-(a/\theta)\cdot_{\theta}(x/\theta) &:=(ax)/\theta
+a\cdot_{\theta}(x/\theta) &:=(ax)/\theta
 \end{aligned}
 $$
 
 により$R$加群となる。
 
+__定理__ $M$を$R$加群とする。以下が成り立つ。
+
+- $N\lt M$を部分加群とする。$\theta_{N}$は$M$上の加群としての合同関係であり$N=0/\theta_{N}$が成り立つ。
+- $\theta\in\mathrm{Con}(M)$を加群としての合同関係とする。$N:=0/\theta$は$M$の部分加群であり$\theta=\theta_{N}$が成り立つ。
+
+（証明）補題より従う。$\square$
+
+以上より合同関係と部分加群の間に一対一の対応が成り立つ。この意味で$M/\theta_{N}$のことを$M/N$と表す。また$x/\theta_{N}=x+N$であるから、こちらの表記も用いる。
+
+__定義__ $N\lt M$を部分加群とする。上記の$M/N$を$M$の$N$による **剰余加群** （residue module）と呼ぶ。
+
 > TODO
-
-
-
 
 __定義__ $M, N$を$R$加群とする。写像$f\colon M\rightarrow N$が以下を満たすとき **準同型** （homomorphism）という。
 
