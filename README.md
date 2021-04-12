@@ -60,7 +60,7 @@
 
 ## 可換環論
 
-- [素イデアルと整環](/Algebra/PrimeIdeal.md)
+- [素イデアルと域](/Algebra/PrimeIdeal.md)
 - [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
 - ネーター加群
 - 多項式環
