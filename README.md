@@ -58,9 +58,12 @@
 - [例示：その他の群](Algebra/Group/Group_Ex.md)
 
 
+## イデアル論
+
+- [素イデアルと域](/Algebra/IdealTheory/PrimeIdeal.md)
+
 ## 可換環論
 
-- [素イデアルと域](/Algebra/PrimeIdeal.md)
 - [例示：群・環・加群](/Algebra/AlgebraBasic_Ex.md)
 - ネーター加群
 - 多項式環
