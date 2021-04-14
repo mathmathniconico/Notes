@@ -123,6 +123,12 @@
     1. [前位相空間](/ConvergentSpace/Pretopology.md)
 
 
+# 距離空間
+
+- [基本被覆定理](/MetricSpace/BasicCoveringTheorem.md)
+
+
+
 # その他
 
 - [Microfacet理論](/Misc/Microfacet.md)
