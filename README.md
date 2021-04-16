@@ -123,6 +123,13 @@
     1. [前位相空間](/ConvergentSpace/Pretopology.md)
 
 
+
+# 測度論
+
+- [可測空間と測度空間](/Measure/MeasurableSpace.md)
+
+
+
 # 距離空間
 
 - [基本被覆定理](/MetricSpace/BasicCoveringTheorem.md)
