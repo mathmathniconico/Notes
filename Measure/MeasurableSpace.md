@@ -30,7 +30,7 @@ __命題__ 写像$f\colon S\rightarrow T$について以下が成り立つ。
 
 __定義__ $( S, \mathscr{A} ), ( T, \mathscr{B} )$を可測空間とする。写像$f\colon S\rightarrow T$が$f^{\flat}\mathscr{B}\subset\mathscr{A}$を満たすとき、つまり任意の$B\in\mathscr{B}$について$f^{-1}( B )\in\mathscr{A}$を満たすとき、$f$は$(\mathscr{A}, \mathscr{B})$可測、あるいは単に **可測** （measurable）であるという。
 
-> 可測空間と可測写像は圏を為す。これを$\mathbf{Meas}$と記す。
+> 可測空間と可測写像は圏を為す。これを$\mathbf{meas}$と記す。
 
 
 
@@ -54,7 +54,7 @@ __命題__ $( S, \mathscr{A} ), ( T, \sigma\lbrack \mathscr{G} \rbrack )$を可�
 
 __定義__ $(\mathscr{A}\times T)\cup (S\times\mathscr{B})=\lbrace A\times T, S\times B : A\in\mathscr{A}, B\in\mathscr{B} \rbrace$により生成される$S\times T$上の$\sigma$加法族を$\mathscr{A}\prod\mathscr{B}$と記し、積$\sigma$加法族という。また組$( S\times T, \mathscr{A}\prod\mathscr{B} )$を積可測空間という。
 
-積可測空間は圏$\mathbf{Meas}$における積対象である。実際次のように普遍性が成り立つ。
+積可測空間は圏$\mathbf{meas}$における積対象である。実際次のように普遍性が成り立つ。
 
 __命題__ $( P, \mathscr{F} )$を可測空間、$f\colon P\rightarrow S, g\colon P\rightarrow T$を可測写像とする。このとき唯一つの可測写像$h\colon P\rightarrow S\times T$が存在して、図式を可換にする。
 
@@ -66,7 +66,7 @@ $$
 
 より$f, g$の可測性から従う。逆に図式を可換にする$h$はこのような形をしていなければならない。$\square$
 
-三つ以上の積についても普遍性を示すことが出来る。つまり圏$\mathbf{Meas}$は有限積を持つ圏である。
+三つ以上の積についても普遍性を示すことが出来る。つまり圏$\mathbf{meas}$は有限積を持つ圏である。
 
 __命題__ $\mathscr{G}\subset 2^{S}, \mathscr{H}\subset 2^{T}$に対し、$\sigma\lbrack \mathscr{G} \rbrack\otimes\sigma\lbrack \mathscr{H} \rbrack = \sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack$が成り立つ。
 
@@ -108,3 +108,43 @@ $$
 
 が分かる。故に最小性より$\sigma\lbrack \mathscr{G} \rbrack\otimes\sigma\lbrack \mathscr{H} \rbrack \subset \sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack$が従う。$\square$
 
+
+
+
+## 測度空間
+
+測度とは、長さや面積、体積といった概念の抽象化あるいは精密化である。$\sigma$加法族と違い簡単には作ることができないため、適切な集合族の上で定義された「前測度」を拡張して構成されることが多い。ここでは単純に$\lbrack 0, \infty \rbrack$値のものを考える。
+
+$S$を空でない集合とする。一般に集合族$\emptyset\in\mathscr{G}\subset 2^{S}$から$\lbrack 0, \infty \rbrack$への写像$\mu$のことを集合函数という。
+
+集合$A, B$は$A\cap B=\emptyset$のとき **互いに素** （coprime）であるという。
+
+__定義__ 集合函数に関して以下を定める。
+
+- $\mu( \emptyset )=0$のとき$\mu$は **正値** （positive）であるという。
+- 互いに素な$A_{1}, \dotsc, A_{m}\in\mathscr{G}$に対し、
+$$
+A:=\bigsqcup_{i=1}^{m}A_{i}\in\mathscr{G} \Rightarrow \mu( A )=\sum_{i=1}^{m}\mu( A_{i} )
+$$
+が成り立つとき$\mu$は **有限加法的** （finite-additive）であるという。
+- 互いに素な$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{G}$に対し、
+$$
+A:=\bigsqcup_{n\in\mathbb{N}} A_{n}\in\mathscr{G} \Rightarrow \mu( A )=\sum_{n\in\mathbb{N}}\mu( A_{n} )
+$$
+が成り立つとき$\mu$は **可算加法的** （countable-additive）であるという。
+
+__定義__ $\mathscr{A}\subset 2^{S}$を$\sigma$加法族とする。集合函数$\mu\colon\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ可算加法的とする。このとき$\mu$は$\mathscr{A}$上の **測度** （measure）あるいは可測空間$( S, \mathscr{A} )$上の測度と呼び、組$( S, \mathscr{A}, \mu )$を **測度空間** （measure space）と呼ぶ。
+
+例えば次のようなものがある。
+
+- 可測な集合に対して$0$を対応させる写像は測度になる。これを自明測度と呼ぶ。
+- $A\in\mathscr{A}$が有限集合なら元の個数を対応させ、無限集合のときは$\infty$を対応させると測度になる。これを **数え上げ測度** （counting measure）と呼ぶ。
+- $x\in S$に対して写像$\delta_{x}\colon\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$を、$x\in A$なら$\delta_{x}( A )=1$と定め、$x\notin A$なら$\delta_{x}( A )=0$と定めると測度になる。これを **ディラック測度** （Dirac's measure）と呼ぶ。
+
+圏$\mathbf{meas}$に替わるものを考えるとき、測度空間を対象とするものは当然その候補となる。射に関して言うと、圏$\mathbf{meas}$への忘却函手の存在という観点からすれば、可測写像であることはもちろん前提となるだろう。ここで問題となるのはその範囲をどうするかである。以下$( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$を測度空間、$f\colon S\rightarrow T$を可測写像としよう。測度の情報をなるべく取り入れるのであれば、測度保存$\mu_{S}( f^{-1}( B ) )=\mu_{T}( B )$（$B\in\mathscr{B}$）を仮定すると良く、実際いくつかの論文ではこれが仮定されている。ただこれでは射が少なすぎる気がしなくもない。そこで測度空間を対象とする3つの圏を定める。
+
+- 任意の$B\in\mathscr{B}$について$\mu_{S}( f^{-1}( B ) )=\mu_{T}( B )$を満たす（測度保存な）可測写像を射とする圏を$\mathbf{Meas}_{=}$と記す。
+- 任意の$B\in\mathscr{B}$について$\mu_{S}( f^{-1}( B ) )\le\mu_{T}( B )$を満たす（測度増大な）可測写像を射とする圏を$\mathbf{Meas}_{\le}$と記す。
+- 任意の可測写像を射とする圏を$\mathbf{Meas}$と記す。
+
+これらの圏は可測空間の圏$\mathbf{meas}$よりずっと複雑な構造を持つ。そのため与えられた2つの測度空間が積対象を持つかどうかでさえ簡単には述べることができない。
