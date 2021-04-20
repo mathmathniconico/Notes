@@ -127,6 +127,7 @@
 # 測度論
 
 - [可測空間と測度空間](/Measure/MeasurableSpace.md)
+- [外測度](/Measure/OuterMeasure.md)
 
 
 
