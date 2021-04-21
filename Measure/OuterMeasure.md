@@ -82,87 +82,125 @@ $$
 以上より$\lbrace A_{n} \rbrace\subset\sigma\lbrack \mathscr{E} \rbrack$を$B\subset A_{n}$かつ$\mu( A_{n} )\searrow\mu( B )$を満たすように取れる。このとき$A:=\bigcap_{n\in\mathbb{N}}A_{n}\in\sigma\lbrack \mathscr{E} \rbrack$とすれば$B\subset A\subset A_{n}$より単調性から$\mu( B )\le\mu( A )\le\mu( A_{n} )$を得る。特に右辺は$\mu( B )$へ収束するから$\mu( B )=\mu( A )$となる。$\square$
 
 
-<!--
 
-\subsection{外測度による測度の構成}
-次の定義を導入したことこそ、カラテオドリの偉大なところであろう。私自身はこの定義についてよく理解していないのだが。
 
-\begin{Def}{}{}
-外測度$\mu$に対し、$A\subset S$がカラテオドリ可測、あるいは$\mu$-可測であるとは、任意の$E\subset S$について$\mu( E )=\mu( E\cap A )+\mu( E\backslash A )$が成り立つことをいう。
-\end{Def}
+## 外測度による測度の構成
 
-根源的な着想はルベーグに依るらしい。ルベーグ自身は$E$として矩形を考えていた。
+次の定義を導入したことが、カラテオドリの偉大なところだと思う。私自身はこの定義についてよく理解していないのだが。
 
-ところで$E=( E\cap A )\cup( E\backslash A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\backslash A )$は常に成り立つ。
-つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\backslash A )$を示せば十分である。
+__定義__ $\mu$を外測度とする。$A\subset S$が以下を満たすときカラテオドリ可測、あるいは$\mu$可測であるという。
 
-\begin{Lem}{}{}
-$A, B\subset S$とする。$A$がカラテオドリ可測なら、任意の$E\subset S$について
-\[ \mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B ) \]
+- 任意の$E\subset S$について$\mu( E )=\mu( E\cap A )+\mu( E\backslash A )$が成り立つ。
+
+> 根源的な着想はルベーグに依るらしい。ルベーグ自身は$E$として矩形を考えていた。
+
+ところで$E=( E\cap A )\cup( E\backslash A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\backslash A )$が常に成り立つ。つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\backslash A )$を示せば十分である。
+
+__補題__ $A, B\subset S$とする。$A$がカラテオドリ可測なら、任意の$E\subset S$について
+
+$$
+\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
+$$
+
 が成り立つ。特に$A$と$B$が互いに素なら
-\[ \mu( E\cap( A\sqcup B ) ) = \mu( E\cap A )+\mu( E\cap B ) \]
-が成り立つ。
-\end{Lem}
 
-\begin{proof}{}{}
-（証明）$A$がカラテオドリ可測なら、任意の$E\subset S$について
-\begin{align*}
+$$
+\mu( E\cap( A\sqcup B ) ) = \mu( E\cap A )+\mu( E\cap B )
+$$
+
+が成り立つ。
+
+（証明）$A$をカラテオドリ可測とする。$E\subset S$とすると
+
+$$
+\begin{aligned}
 \mu( E\cap( A\cup B ) ) &= \mu( ( E\cap( A\cup B ) )\cap A ) + \mu( ( E\cap( A\cup B ) )\backslash A ) \\
 &= \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
-\end{align*}
-が従う。$\square$
-\end{proof}
+\end{aligned}
+$$
 
-\begin{Thm}{}{}
-外測度$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$について、$\mathscr{M}_{\mu}$をカラテオドリ可測な集合全体とする。
-このとき$\mathscr{M}_{\mu}$は$\sigma$加法族であり、$\mu$の$\mathscr{M}_{\mu}$への制限は可測空間$( S, \mathscr{M}_{\mu} )$上の測度となる。
-\end{Thm}
+より従う。$\square$
 
-\begin{proof}
-（証明）まず$E\subset S$について$\mu( E\cap\emptyset )+\mu( E\backslash\emptyset )=\mu( \emptyset )+\mu( E )=\mu( E )$より$\emptyset$はカラテオドリ可測である。
+__定理__ 外測度$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$について$\mathscr{M}_{\mu}$をカラテオドリ可測な集合全体とする。このとき$\mathscr{M}_{\mu}$は$\sigma$加法族であり、$\mu$の$\mathscr{M}_{\mu}$への制限は可測空間$( S, \mathscr{M}_{\mu} )$上の測度となる。
 
-また$A$がカラテオドリ可測なら
-\[ \mu( E\cap( S\backslash A ) )+\mu( E\backslash( S\backslash A ) ) = \mu( E\backslash A )+\mu( E\cap A )=\mu( E ) \]
+（証明）まず$E\subset S$について$\mu( E\cap\emptyset )+\mu( E\backslash\emptyset )=\mu( \emptyset )+\mu( E )=\mu( E )$より$\emptyset$はカラテオドリ可測である。また$A$がカラテオドリ可測なら
+
+$$
+\mu( E\cap( S\backslash A ) )+\mu( E\backslash( S\backslash A ) ) = \mu( E\backslash A )+\mu( E\cap A )=\mu( E )
+$$
+
 より$S\backslash A$もカラテオドリ可測となる。
 
 次に$\mathscr{M}_{\mu}$が有限和に関して閉じていることを述べる。$A, B$をカラテオドリ可測とすると、補題より任意の$E\subset S$について
-\[ \mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B ) \]
-が成り立つ。一方$E\backslash( A\cup B )=(E\backslash A )\backslash B$であるから、
-\[ \mu( E\cap ( A\cup B ) )+\mu( E\backslash( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )+\mu( ( E\backslash A )\backslash B ) \]
-となる。右辺は$B$の$\mu$-可測性より$\mu( E\cap A )+\mu( E\backslash A)$となり、これは再び$A$の$\mu$-可測性より$\mu( E )$と一致する。
-従って$A\cup B$はカラテオドリ可測となる。あとはこれを繰り返せば良い。
 
-ここまでの議論で、$\mathscr{M}_{\mu}$は有限加法族と呼ばれる集合族になることが分かる。（有限加法族についてはまた改めて議論するが、$\sigma$加法族の条件で可算和の代わりに有限和としたもの。）
-有限加法族$\mathscr{A}$に対しては、有限交叉や差集合で閉じている。実際$A, B\in\mathscr{A}$に対して$S=S\backslash \emptyset\in\mathscr{A}$であり、
-$A\cap B=A\backslash( S\backslash B )\in\mathscr{A}$であり、$A\backslash B=S\backslash( ( S\backslash A )\cup B )\in\mathscr{A}$である。
+$$
+\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
+$$
 
-ここで$\mu$の$\mathscr{M}_{\mu}$への制限を$\nu$と書くことにする。$\nu\colon\mathscr{M}_{\mu}\rightarrow\lbrack 0, \infty \rbrack$は有限加法的である。
-実際$A, B\in\mathscr{M}_{\mu}$について、補題より任意の$E\subset S$について
-\[ \mu( E\cap( A\sqcup B ) ) = \mu( E\cap A )+\mu( E\cap B ) \]
-が成り立つ。特に$E= S$と置けば
-\[ \nu( A\sqcup B )=\mu( A\sqcup B )=\mu( A )+\mu( B )=\nu( A )+\nu( B ) \]
-が分かる。$\mathscr{M}_{\mu}$は有限加法族なので$m$個の和を$2$個ずつ考えれば$\nu$が有限加法的であることも分かる。
+が成り立つ。$E\backslash( A\cup B )=(E\backslash A )\backslash B$及び$A, B$が$\mu$可測であることを用いると
 
-さて$\mathscr{M}_{\mu}$が$\sigma$加法族であることを示すために$\lbrace A_{n} \rbrace\subset\mathscr{M}_{\mu}$を取る。
-$B_{m}:=\bigcup_{n=1}^{m}A_{n}$と置けば、$B_{m}$はカラテオドリ可測であり$B_{m}\nearrow\bigcup_{n\in\mathbb{N}}A_{n}=\colon B$である。ここで
-\[ C_{1}:=B_{1}, C_{n}:=B_{n}\backslash B_{n-1} \]
-と定めれば$C_{n}$もカラテオドリ可測であり、$B_{m}=\bigsqcup_{n=1}^{m}C_{n}$と非交叉和で書ける。補題より任意の$E\subset S$に対して
-\[ \mu( E\cap B_{m} )=\sum_{n=1}^{m}\mu( E\cap C_{n} ) \]
-が成り立つ。単調性より$\mu( E\backslash B )\le\mu( E\backslash B_{m} )$が成り立つので、$B_{m}$の$\mu$-可測性より
-\[ \mu( E )=\mu( E\cap B_{m} )+\mu( E\backslash B_{m} )\ge\sum_{n=1}^{m}\mu( E\cap C_{n} )+\mu( E\backslash B ) \]
+$$
+\begin{aligned}
+\mu( E\cap ( A\cup B ) )+\mu( E\backslash( A\cup B ) ) &= \mu( E\cap A )+\mu( ( E\backslash A )\cap B )+\mu( ( E\backslash A )\backslash B ) \\
+&= \mu(E\cap A)+\mu(E\backslash A) \\
+&= \mu(E)
+\end{aligned}
+$$
+
+を得る。従って$A\cup B$はカラテオドリ可測となる。
+
+> 以上より$\mathscr{M}_{\mu}$は後述する有限加法族であることが分かる。特に有限加法族$\mathscr{A}$は有限交叉や差集合で閉じている。実際$A, B\in\mathscr{A}$に対して$S=S\backslash \emptyset\in\mathscr{A}$であり、$A\cap B=A\backslash( S\backslash B )\in\mathscr{A}$であり、$A\backslash B=S\backslash( ( S\backslash A )\cup B )\in\mathscr{A}$である。
+
+さて$\mu$の$\mathscr{M}_{\mu}$への制限を$\nu$とする。このとき$\nu\colon\mathscr{M}_{\mu}\rightarrow\lbrack 0, \infty \rbrack$は有限加法的である。実際、互いに素な$A, B\in\mathscr{M}_{\mu}$について、補題より任意の$E\subset S$について
+
+$$
+\mu( E\cap( A\sqcup B ) ) = \mu( E\cap A )+\mu( E\cap B )
+$$
+
+が成り立つ。特に$E=S$と置けば
+
+$$
+\nu( A\sqcup B )=\mu( A\sqcup B )=\mu( A )+\mu( B )=\nu( A )+\nu( B )
+$$
+
+を得る。$\mathscr{M}_{\mu}$は有限加法族なので二つずつ考えれば$\nu$が有限加法的であることも分かる。
+
+ここで$\mathscr{M}_{\mu}$が$\sigma$加法族であることを示そう。$\lbrace A_{n} \rbrace\subset\mathscr{M}_{\mu}$とする。$B_{m}:=\bigcup_{n=1}^{m}A_{n}$と置けば、$B_{m}$はカラテオドリ可測であり$B_{m}\nearrow\bigcup_{n\in\mathbb{N}}A_{n}=\colon B$である。ここで
+
+$$
+C_{1}:=B_{1}, C_{n}:=B_{n}\backslash B_{n-1}
+$$
+
+と定めれば$C_{n}$もカラテオドリ可測であり、$B_{m}=\bigsqcup_{n=1}^{m}C_{n}$と非交叉和で表せる。補題より任意の$E\subset S$に対して
+
+$$
+\mu( E\cap B_{m} )=\sum_{n=1}^{m}\mu( E\cap C_{n} )
+$$
+
+が成り立つ。単調性より$\mu( E\backslash B )\le\mu( E\backslash B_{m} )$だから、$B_{m}$の$\mu$可測性より
+
+$$
+\mu( E )=\mu( E\cap B_{m} )+\mu( E\backslash B_{m} )\ge\sum_{n=1}^{m}\mu( E\cap C_{n} )+\mu( E\backslash B )
+$$
+
 となる。$m$は任意だから$\mu( E )\ge\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )+\mu( E\backslash B )$となる。ここで
-\[ E\cap B=\bigcup_{n\in\mathbb{N}}( E\cap C_{n} ) \]
-だから、外測度の可算劣加法性より$\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )\ge\mu( E\cap B )$が成り立つ。
-従って$\mu( E )\ge\mu( E\cap B )+\mu( E\backslash B )$となり、これは$B$がカラテオドリ可測であることを意味している。
 
-最後に$\nu$が可算加法的であることを示すために、互いに素な$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{M}_{\mu}$を取る。
-$\mathscr{M}_{\mu}$は$\sigma$加法族であるから$A:=\bigsqcup_{n\in\mathbb{N}}A_{n}\in\mathscr{M}_{\mu}$である。外測度の可算劣加法性より
-\[ \nu(A)=\mu\left( \bigsqcup_{n\in\mathbb{N}}A_{n} \right)\le\sum_{n\in\mathbb{N}}\mu( A_{n} )=\sum_{n\in\mathbb{N}}\nu( A_{n} ) \]
+$$
+E\cap B=\bigcup_{n\in\mathbb{N}}( E\cap C_{n} )
+$$
+
+だから、外測度の可算劣加法性より$\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )\ge\mu( E\cap B )$を得る。従って$\mu( E )\ge\mu( E\cap B )+\mu( E\backslash B )$となり、これは$B$がカラテオドリ可測であることを意味している。
+
+最後に$\nu$が可算加法的であることを示そう。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{M}_{\mu}$は互いに素とする。$\mathscr{M}_{\mu}$は$\sigma$加法族であるから$A:=\bigsqcup_{n\in\mathbb{N}}A_{n}\in\mathscr{M}_{\mu}$である。外測度の可算劣加法性より
+
+$$
+\nu(A)=\mu\left( \bigsqcup_{n\in\mathbb{N}}A_{n} \right)\le\sum_{n\in\mathbb{N}}\mu( A_{n} )=\sum_{n\in\mathbb{N}}\nu( A_{n} )
+$$
+
 である。また単調性及び$\nu$が有限加法的であることから
-\[ \nu( A )=\mu\left( \bigsqcup_{n\in\mathbb{N}}A_{n} \right)\ge\mu\left( \bigsqcup_{n=1}^{m}A_{n} \right)=\nu\left( \bigsqcup_{n=1}^{m}A_{n} \right)=\sum_{n=1}^{m}\nu( A_{n} ) \]
-が分かる。$m$は任意だから$\nu( A )\ge\sum_{n\in\mathbb{N}}\nu( A_{n} )$を得る。$\square$
-\end{proof}
 
-\end{document}
+$$
+\nu( A )=\mu\left( \bigsqcup_{n\in\mathbb{N}}A_{n} \right)\ge\mu\left( \bigsqcup_{n=1}^{m}A_{n} \right)=\nu\left( \bigsqcup_{n=1}^{m}A_{n} \right)=\sum_{n=1}^{m}\nu( A_{n} )
+$$
 
--->
+である。$m$は任意だから$\nu( A )\ge\sum_{n\in\mathbb{N}}\nu( A_{n} )$を得る。$\square$
