@@ -58,8 +58,8 @@ __定義__ $\mathscr{G}\subset 2^{S}$について、$\mathscr{G}$を含む$S$上
 
 __命題__ $( S, \mathscr{A} ), ( T, \sigma\lbrack \mathscr{G} \rbrack )$を可測空間、$f\colon S\rightarrow T$を写像とする。TFAE
 
-- $f$は可測である。
-- 任意の$G\in\mathscr{G}$について$f^{-1}( G )\in\mathscr{A}$である。
+1. $f$は可測である。
+1. 任意の$G\in\mathscr{G}$について$f^{-1}( G )\in\mathscr{A}$である。
 
 （証明）$f$を$(\mathscr{A}, \sigma\lbrack \mathscr{G} \rbrack)$可測とする。$f^{\flat}\sigma\lbrack \mathscr{G} \rbrack\subset\mathscr{A}$より、任意の$B\in\sigma\lbrack \mathscr{G} \rbrack$について$f^{-1}(B)\in\mathscr{A}$である。特に$G\in\mathscr{G}\subset\sigma\lbrack \mathscr{G} \rbrack$より$f^{-1}(G)\in\mathscr{A}$である。
 
