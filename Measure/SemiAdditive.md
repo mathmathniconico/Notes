@@ -10,65 +10,47 @@ __定義__ $\mathscr{G}\subset 2^{S}$とする。$\mathscr{G}$を含む$S$上の
 
 > 特に$\sigma_{0}\lbrack \mathscr{G} \rbrack$は$\mathscr{G}$を含む最小の有限加法族となる。
 
+__定義__ $\mathscr{S}\subset 2^{S}$は次の3条件を満たすとする。
+
+- $\emptyset\in\mathscr{S}$である。
+- $A, B\in\mathscr{S}$なら$A\cap B\in\mathscr{S}$である。
+- $A\in\mathscr{S}$なら有限個の互いに素な元$A_{1}, \dotsc, A_{n}\in\mathscr{S}$を用いて$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
+
+このとき$\mathscr{S}$を$S$上の **半加法族** （semi-additive family of sets）と呼ぶ。
+
+この定義の出処は拡張定理の証明にある。証明の中で$\lbrace C\cap A \rbrace, \lbrace C\backslash A \rbrace$が$E\cap A, E\backslash A$の被覆であることを示すのに有限加法族の性質を用いた。そこで$C\backslash A=C\cap( S\backslash A )$に注意しつつ、有限加法族の条件を緩めたのが上の定義になる。被覆となるためには$S\backslash A$自身が$\mathscr{A}$の元である必要はなく、$\mathscr{A}$による有限和で表せれば良い。
+
+> 半加法族も名前が安定しない。集合半代数などと呼ばれたこともある。
+
+$\mathscr{S}\subset 2^{S}$を半加法族とする。$A, B\in\mathscr{S}$について、半加法族の定義より$S\backslash B=\bigsqcup_{i=1}^{m}B_{i}$と表せる。従って
+
+$$
+A\backslash B=A\cap( S\backslash B )=A\cap\bigsqcup_{i=1}^{m}B_{i}=\bigsqcup_{i=1}^{m}( A\cap B_{i} )
+$$
+
+となるが、右辺は$A\backslash B$が$\mathscr{S}$による非交叉有限和で表せることを意味している。（この性質は後で半環の節で述べる。）これより半加法族において、非自明だが面白い性質を示すことができる。
+
+__補題__ $\mathscr{S}\subset 2^{S}$を半加法族とする。任意の$A\in\mathscr{S}$及び$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、互いに素な$B_{1}, \dotsc, B_{m}\in\mathscr{S}$が存在して
+
+$$
+A\backslash\bigcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}B_{j}
+$$
+
+と表せる。
+
+（証明）上の議論より$A\backslash A_{1}=\bigsqcup_{j=1}^{m}C_{j}$なる互いに素な$\lbrace C_{j} \rbrace\subset\mathscr{S}$が取れる。$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}( C_{j}\backslash A_{2} )$より、再び$C_{j}\backslash A_{2}=\bigsqcup_{k=1}^{m_{j}}D_{j, k}$なる互いに素な$\lbrace D_{j, k} : k=1, \dotsc, m_{j} \rbrace\subset\mathscr{S}$が取れて、$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}\bigsqcup_{k=1}^{m_{j}}D_{j, k}$を満たす。このとき$\lbrace D_{j, k} \rbrace\subset\mathscr{S}$は互いに素である。以上を繰り返せば良い。$\square$
+
+半加法族の生成する有限加法族は、形が良く分かる集合になっている。
+
+__命題__ $\mathscr{S}\subset 2^{S}$を半加法族とする。このとき$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和で表される集合全体である。
+
+（証明）$\mathscr{S}$の元の非交叉有限和で表される集合全体を$\mathscr{A}$とする。$\mathscr{A}\subset\sigma_{0}\lbrack \mathscr{S} \rbrack$は明らかなので逆を示そう。$\mathscr{S}\subset\mathscr{A}$より$\mathscr{A}$が有限加法族であることを示せば良い。
+
+$\emptyset\in\mathscr{A}$は明白。$A_{i}, B_{j}\in\mathscr{S}$について$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}\in\mathscr{A}$とする。$A\cap B=\bigsqcup_{i, j}A_{i}\cap B_{j}$となるが、$\mathscr{S}$は半加法族なので$A_{i}\cap B_{j}\in\mathscr{S}$である。故に$A\cap B\in\mathscr{A}$を得る。また$S\backslash A=\bigcap_{i=1}^{n}( S\backslash A_{i} )$となるが、$A_{i}\in\mathscr{S}$より$S\backslash A_{i}$は$\mathscr{S}$の元の非交叉有限和で表せる。つまり$S\backslash A_{i}\in\mathscr{A}$であり、$\mathscr{A}$は有限交叉で閉じているから$S\backslash A\in\mathscr{A}$を得る。以上より$\mathscr{A}$は有限加法族であり、生成の最小性から$\sigma_{0}\lbrack \mathscr{S} \rbrack=\mathscr{A}$を得る。$\square$
+
 
 
 <!--
-
-
-\subsection{半加法族}
-\begin{Def}{}{}
-集合$S$において$\mathscr{S}\subset 2^{S}$が次の3条件を満たすとき、$\mathscr{S}$は$S$上の半加法族であるという。
-\begin{EnumCond}
-\item$\emptyset\in\mathscr{S}$である。
-\item$A, B\in\mathscr{S}$なら$A\cap B\in\mathscr{S}$である。
-\item$A\in\mathscr{S}$なら有限個の互いに素な元$A_{1}, \dotsc, A_{n}\in\mathscr{S}$を用いて$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
-\end{EnumCond}
-\end{Def}
-
-この定義がどこから来るのか疑問に思うかもしれないが、一つの理由としては拡張定理の証明にある。
-証明では有限加法族の性質を、まず$\lbrace C\cap A \rbrace, \lbrace C\backslash A \rbrace$が$E\cap A, E\backslash A$の被覆であることを示すのに用いた。
-そこで$C\backslash A=C\cap( S\backslash A )$に注意しつつ、有限加法族の2番目の条件を緩めたのが上の定義になる。
-被覆となるためには$S\backslash A$自身が$\mathscr{A}$の元である必要はなく、$\mathscr{A}$による有限和で表せればよいという発想である。
-
-半加法族も名前が安定しない。集合半代数などと呼ばれたこともある。
-
-$\mathscr{S}\subset 2^{S}$を半加法族とする。$A, B\in\mathscr{S}$に対し、半加法族の定義より$S\backslash B=\bigsqcup_{i=1}^{m}B_{i}$と表せる。従って
-\[ A\backslash B=A\cap( S\backslash B )=A\cap\bigsqcup_{i=1}^{m}B_{i}=\bigsqcup_{i=1}^{m}( A\cap B_{i} ) \]
-となるが、右辺は$A\backslash B$が$\mathscr{S}$による非交叉有限和で表せることを意味している。（この性質は後で半環の節で述べる。）これより半加法族において、非自明だが面白い性質を示すことができる。
-
-\begin{Lem}{}{}
-$\mathscr{S}\subset 2^{S}$を半加法族とする。任意の$A\in\mathscr{S}$及び$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、互いに素な$B_{1}, \dotsc, B_{m}\in\mathscr{S}$が存在して
-\[ A\backslash\bigcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}B_{j} \]
-と表せる。
-\end{Lem}
-
-\begin{proof}
-（証明）上の議論より$A\backslash A_{1}=\bigsqcup_{j=1}^{m}C_{j}$なる互いに素な$\lbrace C_{j} \rbrace\subset\mathscr{S}$が取れる。
-$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}( C_{j}\backslash A_{2} )$より、
-再び$C_{j}\backslash A_{2}=\bigsqcup_{k=1}^{m_{j}}D_{j, k}$なる互いに素な$\lbrace D_{j, k} : k=1, \dotsc, m_{j} \rbrace\subset\mathscr{S}$が取れて、
-$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}\bigsqcup_{k=1}^{m_{j}}D_{j, k}$を満たす。
-このとき$\lbrace D_{j, k} \rbrace\subset\mathscr{S}$は互いに素である。以上を繰り返せば良い。$\square$
-\end{proof}
-
-半加法族の生成する有限加法族は、元の形が良く分かる集合になっている。
-
-\begin{Prop}{}{}
-$\mathscr{S}\subset 2^{S}$を半加法族とする。このとき$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和で表される集合全体である。
-\end{Prop}
-
-\begin{proof}
-（証明）$\mathscr{S}$の元の非交叉有限和で表される集合全体を$\mathscr{A}$と書く。$\sigma_{0}\lbrack \mathscr{S} \rbrack\supset\mathscr{A}$は明らかなので逆を示そう。
-$\mathscr{G}\subset\mathscr{A}$なので、$\mathscr{A}$が有限加法族であることを示せば良い。$\emptyset\in\mathscr{A}$は明白。
-$A, B\in\mathscr{A}$に対して$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}$（$A_{i}, B_{j}\in\mathscr{S}$）と表せば、
-$A\cap B=\bigsqcup_{i, j}A_{i}\cap B_{j}$であり、$\mathscr{S}$は半加法族だから$A_{i}\cap B_{j}\in\mathscr{S}$である。
-従って$A\cap B\in\mathscr{A}$が分かる。$S\backslash A=\bigcap_{i=1}^{n}( S\backslash A_{i} )$だが、
-$A_{i}\in\mathscr{S}$より$S\backslash A_{i}$は$\mathscr{S}$の元の非交叉有限和で表せる。つまり$S\backslash A_{i}\in\mathscr{A}$である。
-既に示したように$\mathscr{A}$は有限交叉で閉じているから$S\backslash A\in\mathscr{A}$である。
-以上により$\mathscr{A}$は有限加法族であり、生成の最小性から$\sigma_{0}\lbrack \mathscr{S} \rbrack=\mathscr{A}$を得る。$\square$
-\end{proof}
-
-
-
 
 \subsection{半加法族上の前測度}
 \begin{Def}{}{}
