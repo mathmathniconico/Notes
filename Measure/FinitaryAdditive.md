@@ -46,6 +46,8 @@ __注意__ $\mu\colon\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$を有限�
 
 __定義__ $\mathscr{A}\subset 2^{S}$を有限加法族とする。集合函数$\mu\colon\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、$\mu$は有限加法族$\mathscr{A}$上の前測度（premeasure）あるいはジョルダン測度という。
 
+> 有限加法性は「互いに素な$A, B\in\mathscr{S}$に対して$\mu( A\sqcup B )=\mu( A )+\mu( B )$が成り立つ」と置き換えることができる。
+
 有限加法族上の前測度は単調かつ有限劣加法的である。実際$A, B\in\mathscr{A}$について、$A\subset B$なら
 
 $$

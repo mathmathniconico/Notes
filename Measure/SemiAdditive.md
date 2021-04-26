@@ -50,49 +50,45 @@ $\emptyset\in\mathscr{A}$は明白。$A_{i}, B_{j}\in\mathscr{S}$について$A=
 
 
 
-<!--
 
-\subsection{半加法族上の前測度}
-\begin{Def}{}{}
-$\mathscr{S}\subset 2^{S}$を半加法族とする。集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、
-$\mu$は半加法族$\mathscr{S}$上の前測度という。
-\end{Def}
+## 半加法族上の前測度
 
-有限加法族上の前測度のときとは違い、有限加法性は「互いに素な$A, B\in\mathscr{S}$に対して$\mu( A\sqcup B )=\mu( A )+\mu( B )$が成り立つ」を条件にすることはできない。
+__定義__ $\mathscr{S}\subset 2^{S}$を半加法族とする。集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、$\mu$を半加法族$\mathscr{S}$上の前測度という。
 
-半加法族上の前測度は単調かつ有限劣加法的であるが、少し一般的な形で述べておくと便利である。
+> 有限加法族上の前測度のときとは違い、有限加法性は「互いに素な$A, B\in\mathscr{S}$に対して$\mu( A\sqcup B )=\mu( A )+\mu( B )$が成り立つ」と置き換えることはできない。
 
-\begin{Prop}{}{}
-$\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。次が成り立つ。
-\begin{EnumCond}
-\item$A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、
-\[ \bigsqcup_{i=1}^{n}A_{i}\subset A \Rightarrow \sum_{i=1}^{n}\mu( A_{i} )\le\mu( A ) \]
-が成り立つ。
-\item$B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$に対し、
-\[ B\subset\bigcup_{i=1}^{n}B_{i} \Rightarrow \mu( B ) \le\sum_{i=1}^{n}\mu( B_{i} ) \]
-が成り立つ。
-\end{EnumCond}
+__命題__ $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。次が成り立つ。
+
+- $A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、$\bigsqcup_{i=1}^{n}A_{i}\subset A$なら$\sum_{i=1}^{n}\mu( A_{i} )\le\mu( A )$が成り立つ。
+- $B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$に対し、$B\subset\bigcup_{i=1}^{n}B_{i}$なら$\mu( B ) \le\sum_{i=1}^{n}\mu( B_{i} )$が成り立つ。
 
 特に$\mu$は単調かつ有限劣加法的である。
-\end{Prop}
 
-\begin{proof}
-（証明）補題より互いに素な$D_{1}, \dotsc, D_{m}\in\mathscr{S}$が存在して$A\backslash\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}D_{j}$と表せる。
-$\bigsqcup_{i=1}^{n}A_{i}\subset A$とする。このとき$A=\bigsqcup_{i=1}^{n}A_{i}\sqcup\bigsqcup_{j=1}^{m}D_{j}$であり、$\mu$は有限加法的であるから
-\[ \mu( A )=\sum_{i=1}^{n}\mu( A_{i} )+\sum_{j=1}^{m}\mu( D_{j} )\ge\sum_{i=1}^{n}\mu( A_{i} ) \]
+（証明）補題より互いに素な$D_{1}, \dotsc, D_{m}\in\mathscr{S}$が存在して$A\backslash\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}D_{j}$と表せる。$\bigsqcup_{i=1}^{n}A_{i}\subset A$とする。このとき$A=\bigsqcup_{i=1}^{n}A_{i}\sqcup\bigsqcup_{j=1}^{m}D_{j}$であり、$\mu$は有限加法的であるから
+
+$$
+\mu( A )=\sum_{i=1}^{n}\mu( A_{i} )+\sum_{j=1}^{m}\mu( D_{j} )\ge\sum_{i=1}^{n}\mu( A_{i} )
+$$
+
 が成り立つ。
 
 $B\subset\bigcup_{i=1}^{n}B_{i}$とする。$B=\bigcup_{i=1}^{n}( B\cap B_{i} )$なので、
-\[ C_{i}:=( B\cap B_{i} )\backslash\bigcup_{j=1}^{i-1}( B\cap B_{j} ) \]
-と置けば、$B=\bigsqcup_{i=1}^{n}C_{i}$と互いに素な和で表せる。ここで$B\cap B_{j}\in\mathscr{S}$だから、
-補題より互いに素な$\lbrace D_{i, j} : j=1, \dotsc, n_{i} \rbrace\subset\mathscr{S}$が存在して$C_{i}=\bigsqcup_{j=1}^{n_{i}}D_{i, j}$と表せる。
-$\mu$は有限加法的であり、$\bigsqcup_{j=1}^{n_{i}}D_{i, j}=C_{i}\subset B_{i}$であるから、上の結果より
-\[ \mu( B )=\mu\left( \bigsqcup_{i=1}^{n}\bigsqcup_{j=1}^{n_{i}}D_{i, j} \right)=\sum_{i=1}^{n}\sum_{j=1}^{n_{i}}\mu( D_{i, j} )\le\sum_{i=1}^{n}\mu( B_{i} ) \]
-が成り立つ。$\square$
-\end{proof}
 
-半加法族$\mathscr{S}\subset 2^{S}$について$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和として表される集合全体だったことを思い出そう。
-つまり$A\in\sigma_{0}\lbrack \mathscr{S} \rbrack$について互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
+$$
+C_{i}:=( B\cap B_{i} )\backslash\bigcup_{j=1}^{i-1}( B\cap B_{j} )
+$$
+
+と置けば、$B=\bigsqcup_{i=1}^{n}C_{i}$と互いに素な和で表せる。ここで$B\cap B_{j}\in\mathscr{S}$だから、補題より互いに素な$\lbrace D_{i, j} : j=1, \dotsc, n_{i} \rbrace\subset\mathscr{S}$が存在して$C_{i}=\bigsqcup_{j=1}^{n_{i}}D_{i, j}$と表せる。$\mu$は有限加法的であり、$\bigsqcup_{j=1}^{n_{i}}D_{i, j}=C_{i}\subset B_{i}$であるから、上の結果より
+
+$$
+\mu( B )=\mu\left( \bigsqcup_{i=1}^{n}\bigsqcup_{j=1}^{n_{i}}D_{i, j} \right)=\sum_{i=1}^{n}\sum_{j=1}^{n_{i}}\mu( D_{i, j} )\le\sum_{i=1}^{n}\mu( B_{i} )
+$$
+
+が成り立つ。$\square$
+
+<!--
+
+半加法族$\mathscr{S}\subset 2^{S}$について$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和として表される集合全体だったことを思い出そう。つまり$A\in\sigma_{0}\lbrack \mathscr{S} \rbrack$について互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
 
 \begin{Prop}{}{}
 $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。
