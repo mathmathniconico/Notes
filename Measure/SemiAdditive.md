@@ -53,7 +53,7 @@ $\emptyset\in\mathscr{A}$は明白。$A_{i}, B_{j}\in\mathscr{S}$について$A=
 
 ## 半加法族上の前測度
 
-__定義__ $\mathscr{S}\subset 2^{S}$を半加法族とする。集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、$\mu$を半加法族$\mathscr{S}$上の前測度という。
+__定義__ $\mathscr{S}\subset 2^{S}$を半加法族とする。集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$は正値かつ有限加法的とする。このとき$\mu$を半加法族$\mathscr{S}$上の前測度という。
 
 > 有限加法族上の前測度のときとは違い、有限加法性は「互いに素な$A, B\in\mathscr{S}$に対して$\mu( A\sqcup B )=\mu( A )+\mu( B )$が成り立つ」と置き換えることはできない。
 

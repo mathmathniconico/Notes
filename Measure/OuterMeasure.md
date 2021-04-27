@@ -1,13 +1,13 @@
 
 # 外測度
 
-__定義__ $S$を空でない集合とする。$\emptyset\in\mathscr{G}\subset 2^{S}$とし、$\mu\colon\mathscr{G}\rightarrow\lbrack 0, \infty \rbrack$を集合函数とする。
+__定義__ $\emptyset\in\mathscr{G}\subset 2^{S}$とする。集合函数$\mu\colon\mathscr{G}\rightarrow\lbrack 0, \infty \rbrack$について以下を定める。
 
-- $A, B\in\mathscr{G}$について$A\subset B$なら$\mu( A )\le\mu( B )$であるとき$\mu$は **単調** （monotone）という。
-- $A_{1}, \dotsc, A_{m}\in\mathscr{G}$に対し、$A:=\bigcup_{i=1}^{m}A_{i}\in\mathscr{G}$なら$\mu( A )\le\sum_{i=1}^{m}\mu( A_{i} )$であるとき$\mu$は **有限劣加法的** （finite-subadditive）という。
-- $\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{G}$に対し、$A:=\bigcup_{n\in\mathbb{N}} A_{n}\in\mathscr{G}$なら$mu( A )\le\sum_{n\in\mathbb{N}}\mu( A_{n} )$であるとき$\mu$は **可算劣加法的** （countable-subadditive）という。
+- $A, B\in\mathscr{G}$について$A\subset B$なら$\mu( A )\le\mu( B )$のとき **単調** （monotone）という。
+- $A_{1}, \dotsc, A_{m}\in\mathscr{G}$について$A:=\bigcup_{i=1}^{m}A_{i}\in\mathscr{G}$なら$\mu( A )\le\sum_{i=1}^{m}\mu( A_{i} )$のとき **有限劣加法的** （finite-subadditive）という。
+- $\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{G}$について$A:=\bigcup_{n\in\mathbb{N}} A_{n}\in\mathscr{G}$なら$\mu( A )\le\sum_{n\in\mathbb{N}}\mu( A_{n} )$のとき **可算劣加法的** （countable-subadditive）という。
 
-$\sigma$加法族上の測度は上記の性質を全て満たしている。
+> $\sigma$加法族上の測度は上記の性質を全て満たしている。
 
 __定義__ 集合函数$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$は正値、単調、可算劣加法的とする。このとき$\mu$を **外測度** （outer measure）と呼ぶ。
 
@@ -17,7 +17,7 @@ __定義__ 集合函数$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$は�
 
 __定義__ $\emptyset\in\mathscr{E}\subset 2^{S}$とする。$A\subset S$について、$\mathscr{C}\subset\mathscr{E}$が可算かつ$A\subset\bigcup_{C\in\mathscr{C}}C$を満たすとき、$\mathscr{C}$を$A$の **被覆** （covering）と呼ぶ。
 
-__補題__ $\emptyset\in\mathscr{E}\subset 2^{S}$とする。$\mathscr{E}$上の集合函数$\mu_{0}\colon\mathscr{E}\rightarrow\lbrack 0, \infty \rbrack$は正値とする。このとき集合函数$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$を以下で定める。
+__補題__ $\emptyset\in\mathscr{E}\subset 2^{S}$とする。集合函数$\mu_{0}\colon\mathscr{E}\rightarrow\lbrack 0, \infty \rbrack$は正値とする。更に集合函数$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$を以下で定める。
 
 - $A\subset S$が$\mathscr{E}$の可算個の元で覆えないとき$\mu(A):=\infty$とする。
 - $A\subset S$が被覆を持つとき、被覆$\mathscr{C}$に関する$\sum_{C\in\mathscr{C}}\mu_{0}(C)$の下限を$\mu(A)$とする。
@@ -45,7 +45,7 @@ $$
 
 となる。$\varepsilon$は任意だから$\mu( A )\le\sum_{n\in\mathbb{N}}\mu( A_{n} )$を得る。$\square$
 
-- 一般に$E\in\mathscr{E}$なら$\lbrace E \rbrace$が$E$の被覆となるので$\mu( E )\le\mu_{0}( E )$が成り立つ。
+__注意__ 一般に$E\in\mathscr{E}$なら$\lbrace E \rbrace$が$E$の被覆となるので$\mu( E )\le\mu_{0}( E )$が成り立つ。
 
 補題の方法で定義された外測度を$\mu_{0}\colon\mathscr{E}\rightarrow\lbrack 0, \infty \rbrack$から誘導された外測度と呼ぶこともある。この値については次の特徴付けがある。
 
@@ -86,15 +86,15 @@ $$
 
 ## 外測度による測度の構成
 
-次の定義を導入したことが、カラテオドリの偉大なところだと思う。私自身はこの定義についてよく理解していないのだが。
-
-__定義__ $\mu$を外測度とする。$A\subset S$が以下を満たすときカラテオドリ可測、あるいは$\mu$可測であるという。
+__定義__ $\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$を外測度とする。$A\subset S$は以下を満たすとする。
 
 - 任意の$E\subset S$について$\mu( E )=\mu( E\cap A )+\mu( E\backslash A )$が成り立つ。
 
-> 根源的な着想はルベーグに依るらしい。ルベーグ自身は$E$として矩形を考えていた。
+このとき$A$はカラテオドリ可測、あるいは$\mu$可測であるという。
 
-ところで$E=( E\cap A )\cup( E\backslash A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\backslash A )$が常に成り立つ。つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\backslash A )$を示せば十分である。
+> 次の定義を導入したことがカラテオドリの偉大さだろう。元の着想はルベーグに依るらしく、ルベーグ自身は$E$として矩形を考えていたそうだ。私自身はこの定義についてよく理解していない。
+
+ところで$E=( E\cap A )\cup( E\backslash A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\backslash A )$は常に成り立つ。つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\backslash A )$を示せば十分である。
 
 __補題__ $A, B\subset S$とする。$A$がカラテオドリ可測なら、任意の$E\subset S$について
 
@@ -102,7 +102,7 @@ $$
 \mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
 $$
 
-が成り立つ。特に$A$と$B$が互いに素なら
+が成り立つ。特に$A, B$が互いに素なら
 
 $$
 \mu( E\cap( A\sqcup B ) ) = \mu( E\cap A )+\mu( E\cap B )
@@ -121,7 +121,7 @@ $$
 
 より従う。$\square$
 
-__定理__ 外測度$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$について$\mathscr{M}_{\mu}$をカラテオドリ可測な集合全体とする。このとき$\mathscr{M}_{\mu}$は$\sigma$加法族であり、$\mu$の$\mathscr{M}_{\mu}$への制限は可測空間$( S, \mathscr{M}_{\mu} )$上の測度となる。
+__定理__ 外測度$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$について$\mathscr{M}_{\mu}$をカラテオドリ可測な集合全体とする。このとき$\mathscr{M}_{\mu}$は$\sigma$加法族であり、$\mu$の$\mathscr{M}_{\mu}$への制限は可測空間$( S, \mathscr{M}_{\mu} )$上の測度である。
 
 （証明）まず$E\subset S$について$\mu( E\cap\emptyset )+\mu( E\backslash\emptyset )=\mu( \emptyset )+\mu( E )=\mu( E )$より$\emptyset$はカラテオドリ可測である。また$A$がカラテオドリ可測なら
 
