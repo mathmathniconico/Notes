@@ -59,8 +59,8 @@ __定義__ $\mathscr{S}\subset 2^{S}$を半加法族とする。集合函数$\mu
 
 __命題__ $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。次が成り立つ。
 
-- $A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、$\bigsqcup_{i=1}^{n}A_{i}\subset A$なら$\sum_{i=1}^{n}\mu( A_{i} )\le\mu( A )$が成り立つ。
-- $B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$に対し、$B\subset\bigcup_{i=1}^{n}B_{i}$なら$\mu( B ) \le\sum_{i=1}^{n}\mu( B_{i} )$が成り立つ。
+- $A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$について$\bigsqcup_{i=1}^{n}A_{i}\subset A$なら$\sum_{i=1}^{n}\mu( A_{i} )\le\mu( A )$が成り立つ。
+- $B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$について$B\subset\bigcup_{i=1}^{n}B_{i}$なら$\mu( B ) \le\sum_{i=1}^{n}\mu( B_{i} )$が成り立つ。
 
 特に$\mu$は単調かつ有限劣加法的である。
 
@@ -86,94 +86,99 @@ $$
 
 が成り立つ。$\square$
 
-<!--
+半加法族$\mathscr{S}\subset 2^{S}$について$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和として表される集合全体であった。すなわち$A\in\sigma_{0}\lbrack \mathscr{S} \rbrack$は互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$により$A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
 
-半加法族$\mathscr{S}\subset 2^{S}$について$\sigma_{0}\lbrack \mathscr{S} \rbrack$は$\mathscr{S}$の元の非交叉有限和として表される集合全体だったことを思い出そう。つまり$A\in\sigma_{0}\lbrack \mathscr{S} \rbrack$について互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
+$\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。このとき$\sum_{i=1}^{n}\mu(A_{i})$は上記の表示に依らず決まる。実際$A=\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}B_{j}$とすると、$\mu$は有限加法的であるから
 
-\begin{Prop}{}{}
-$\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。
-集合函数$\mu_{0}\colon\sigma_{0}\lbrack \mathscr{S} \rbrack\rightarrow\lbrack 0, \infty \rbrack$を
-$A=\bigsqcup_{i=1}^{n}A_{i}\in\sigma_{0}\lbrack \mathscr{S} \rbrack$に対し、
-\[ \sigma_{0}( A )=\sigma_{0}\left( \bigsqcup_{i=1}^{n}A_{i} \right):=\sum_{i=1}^{n}\mu( A_{i} ) \]
-で定める。このとき$\mu_{0}$は有限加法族$\sigma_{0}\lbrack \mathscr{S} \rbrack$上の前測度となる。
-\end{Prop}
+$$
+\sum_{i=1}^{n}\mu( A_{i} )=\sum_{i=1}^{n}\sum_{j=1}^{m}\mu( A_{i}\cap B_{j} )=\sum_{j=1}^{m}\mu(B_{j})
+$$
 
-\begin{proof}
-（証明）$\mu_{0}$がwell-definedであることを示そう。すなわち$\mu_{0}( A )$が$A$の表示に依らないことを示す。
-$A=\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}A^{\prime}_{j}$とする。$\mu$は有限加法的であるから
-\[ \sum_{i=1}^{n}\mu( A_{i} )=\sum_{i=1}^{n}\sum_{j=1}^{m}\mu( A_{i}\cap A^{\prime}_{j} )=\sum_{j=1}^{m}A^{\prime}_{j} \]
-となり、表示に依らないことが分かる。
+となる。従って集合函数$\mu_{0}\colon\sigma_{0}\lbrack \mathscr{S} \rbrack\rightarrow\lbrack 0, \infty \rbrack$を$\mu_{0}(A):=\sum_{i=1}^{n}\mu(A_{i})$により定めることができる。
 
-$\mu_{0}( \emptyset )=0$は明白。$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}$は互いに素であるとする。$\lbrace A_{i}, B_{j} \rbrace$も互いに素だから、
-\[ \mu_{0}( A\sqcup B )=\sum_{i=1}^{n}\mu( A_{i} )+\sum_{j=1}^{m}\mu( B_{j} )=\mu_{0}( A )+\mu_{0}( B ) \]
+__命題__ $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。上記の$\mu_{0}$は有限加法族$\sigma_{0}\lbrack \mathscr{S} \rbrack$上の前測度となる。
+
+（証明）$\mu_{0}( \emptyset )=0$は明白。互いに素な$A, B\in\sigma_{0}\lbrack \mathscr{S} \rbrack$について、$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}$を$\mathscr{S}$の元による非交叉有限和による表示とする。$\lbrace A_{i}, B_{j} \rbrace$も互いに素なので$A\sqcup B=\bigsqcup_{i=1}^{n}A_{i}\sqcup\bigsqcup_{j=1}^{m}B_{j}$も$\mathscr{S}$の元による非交叉有限和による表示を与える。従って
+
+$$
+\mu_{0}( A\sqcup B )=\sum_{i=1}^{n}\mu( A_{i} )+\sum_{j=1}^{m}\mu( B_{j} )=\mu_{0}( A )+\mu_{0}( B )
+$$
+
 を得る。$\square$
-\end{proof}
 
-上記命題において、定義から明らかに$\mu$の拡張となる$\sigma_{0}\lbrack \mathscr{S} \rbrack$上の前測度は一意的であることが分かる。
+> $\mu$の拡張となる$\sigma_{0}\lbrack \mathscr{S} \rbrack$上の前測度は一意的である。
 
-\begin{Lem}{}{}
-$\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度、その拡張を$\mu_{0}\colon\sigma_{0}\lbrack \mathscr{S} \rbrack\rightarrow\lbrack 0, \infty \rbrack$とする。このとき以下は同値である。
-\begin{EnumEquiv}
-\item$\mu_{0}$は可算加法的である。
-\item$\mu$は弱可算劣加法的である。
-\end{EnumEquiv}
-\end{Lem}
+__補題__ $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度、その拡張を$\mu_{0}\colon\sigma_{0}\lbrack \mathscr{S} \rbrack\rightarrow\lbrack 0, \infty \rbrack$とする。TFAE
 
-\begin{proof}
-（証明）上から下は明らかなので逆を示そう。互いに素な$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\sigma_{0}\lbrack \mathscr{S} \rbrack$を取り、
-$B:=\bigsqcup_{n\in\mathbb{N}}A_{n}\in\sigma_{0}\lbrack \mathscr{S} \rbrack$とする。
-このときある有限集合$\mathscr{A}_{n}, \mathscr{B}\subset\mathscr{S}$が存在して
-\begin{align*}
-A_{n}&=\bigsqcup_{G\in\mathscr{A}_{n}}G, & B&=\bigsqcup_{H\in\mathscr{B}}H
-\end{align*}
+1. $\mu_{0}$は可算加法的である。
+1. $\mu$は弱可算劣加法的である。
+
+（証明）上から下は明らかなので逆を示そう。互いに素な$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\sigma_{0}\lbrack \mathscr{S} \rbrack$について$B:=\bigsqcup_{n\in\mathbb{N}}A_{n}\in\sigma_{0}\lbrack \mathscr{S} \rbrack$とする。$A_{n}, B\in\sigma_{0}\lbrack \mathscr{S} \rbrack$は有限集合$\mathscr{A}_{n}, \mathscr{B}\subset\mathscr{S}$により
+
+$$
+\begin{aligned}
+A_{n}&=\bigsqcup_{G_{n}\in\mathscr{A}_{n}}G_{n}, & B&=\bigsqcup_{H\in\mathscr{B}}H
+\end{aligned}
+$$
+
 と表せる。
 
-まず$\mathscr{A}:=\bigcup_{n\in\mathbb{N}}\mathscr{A}_{n}=\bigsqcup_{n\in\mathbb{N}}\mathscr{A}_{n}$だから、
-\[ \bigsqcup_{H\in\mathscr{B}}H=B=\bigsqcup_{n\in\mathbb{N}}A_{n}=\bigsqcup_{n\in\mathbb{N}}\bigsqcup_{G\in\mathscr{A}_{n}}G=\bigsqcup_{G\in\mathscr{A}}G \]
-が成り立つ。ここで$H\in\mathscr{B}$について$H=\bigsqcup_{G\in\mathscr{A}}( G\cap H )$である。$\mathscr{S}$は半加法族だから$G\cap H\in\mathscr{S}$であり、従って仮定より
-\[ \mu( H )\le\sum_{G\in\mathscr{A}}\mu( G\cap H ) \]
-を得る。同様に$G\in\mathscr{A}$について$G=\bigsqcup_{H\in\mathscr{B}}( H\cap G )$であり、$\mu$は有限加法的だから$\mu( G )=\sum_{H\in\mathscr{B}}\mu( H\cap G )$を得る。以上より
-\begin{align*}
+さて$\mathscr{A}:=\bigcup_{n\in\mathbb{N}}\mathscr{A}_{n}\subset\mathscr{S}$は互いに素である。更に
+
+$$
+\bigsqcup_{H\in\mathscr{B}}H=B=\bigsqcup_{n\in\mathbb{N}}A_{n}=\bigsqcup_{n\in\mathbb{N}}\bigsqcup_{G_{n}\in\mathscr{A}_{n}}G_{n}=\bigsqcup_{G\in\mathscr{A}}G
+$$
+
+が成り立つ。よって$H\in\mathscr{B}$は$H=\bigsqcup_{G\in\mathscr{A}}( G\cap H )$と表せる。$\mathscr{S}$は半加法族だから$G\cap H\in\mathscr{S}$であり、仮定より$\mu( H )\le\sum_{G\in\mathscr{A}}\mu( G\cap H )$を得る。同様に$G\in\mathscr{A}$は$G=\bigsqcup_{H\in\mathscr{B}}( G\cap H )$と表せる。$\mathscr{B}$は有限集合なので$\mu$の有限加法性から$\mu( G )=\sum_{H\in\mathscr{B}}\mu( H\cap G )$を得る。以上より
+
+$$
+\begin{aligned}
 \mu_{0}( B )&=\sum_{H\in\mathscr{B}}\mu( H )\le\sum_{H\in\mathscr{B}}\sum_{G\in\mathscr{A}}\mu( G\cap H ) \\
 &=\sum_{G\in\mathscr{A}}\mu( G )=\sum_{n\in\mathbb{N}}\sum_{G\in\mathscr{A}_{n}}\mu( G ) \\
 &=\sum_{n\in\mathbb{N}}\mu_{0}( A_{n} )
-\end{align*}
+\end{aligned}
+$$
+
 となる。（ここで非負実数に関する和の順序の交換可能性を用いた。）つまり$\mu_{0}$は弱可算劣加法的である。$\mu_{0}$は有限加法族上の前測度だから、これは可算加法的であることと同値である。$\square$
-\end{proof}
 
-補題より半加法族上の前測度について、可算加法性、可算劣加法性、弱可算劣加法性は全て同値となる。
+> 補題より半加法族上の前測度についても可算加法性、可算劣加法性、弱可算劣加法性は全て同値となる。
 
-\begin{Thm}{半加法族上の前測度に対する拡張定理}{}
-$\mu$は半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。以下は同値である。
-\begin{EnumEquiv}
-\item$\sigma\lbrack \mathscr{S} \rbrack=\sigma\lbrack \sigma_{0}\lbrack \mathscr{S} \rbrack \rbrack$上の
-測度$\widehat{\mu}$が存在して$\widehat{\mu}|_{\mathscr{S}}=\mu$を満たす。つまり$A\in\mathscr{S}$なら$\widehat{\mu}( A )=\mu( A )$が成り立つ。
-\item$\mu$は弱可算劣加法的である。
-\end{EnumEquiv}
-\end{Thm}
+__定理__ （半加法族上の前測度に対する拡張定理）$\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とする。TFAE
 
-\begin{proof}
+1. $\sigma\lbrack \mathscr{S} \rbrack=\sigma\lbrack \sigma_{0}\lbrack \mathscr{S} \rbrack \rbrack$上の測度$\widehat{\mu}$が存在して$\widehat{\mu}|_{\mathscr{S}}=\mu$を満たす。つまり$A\in\mathscr{S}$なら$\widehat{\mu}( A )=\mu( A )$が成り立つ。
+1. $\mu$は弱可算劣加法的である。
+
 （証明）ホップの拡張定理の証明に沿って示すことが出来る。$ \mu_{0}\colon\sigma_{0}\lbrack \mathscr{S} \rbrack\rightarrow\lbrack 0, \infty \rbrack$を$\mu$の拡張とする。
 
-まず外測度$\widehat{\mu}$の構成に関しては、$\mu$から誘導される外測度も$\mu_{0}$から誘導される外測度も等しい。
-これは$\sigma_{0}\lbrack \mathscr{S} \rbrack$の元が$\mathscr{S}$の元の非交叉有限和で書けることに依る。
+まず外測度$\widehat{\mu}$の構成に関して、$\sigma_{0}\lbrack \mathscr{S} \rbrack$の元が$\mathscr{S}$の元の非交叉有限和で書けるので、$\mu$から誘導される外測度も$\mu_{0}$から誘導される外測度も等しい。
 
-次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\in\mathscr{S}$及び$E\subset S$を取る。
-$\mathscr{S}$は半加法族なので$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
-$E$の被覆$\mathscr{C}\subset\mathscr{S}$を取れば、$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。また$C\in\mathscr{C}$について
-\[ C\backslash A=C\cap( S\backslash A )=C\cap\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{i=1}^{n}( C\cap A_{i} ) \]
-より$\lbrace C\cap A_{i} : C\in\mathscr{C}, i=1, \dotsc, n \rbrace\subset\mathscr{S}$は$E\backslash A$の被覆となる。故に
-\begin{align*}
+次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\in\mathscr{S}$及び$E\subset S$とする。$\mathscr{S}$は半加法族なので$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。$\mathscr{C}\subset\mathscr{S}$を$E$の被覆とすると$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。また$C\in\mathscr{C}$について
+
+$$
+C\backslash A=C\cap( S\backslash A )=C\cap\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{i=1}^{n}( C\cap A_{i} )
+$$
+
+より$\lbrace C\cap A_{i} : C\in\mathscr{C}, i=1, \dotsc, n \rbrace\subset\mathscr{S}$は$E\backslash A$の被覆となる。よって
+
+$$
+\begin{aligned}
 \widehat{\mu}( E\cap A )+\widehat{\mu}( E\backslash A ) &\le \sum_{C\in\mathscr{C}}\mu( C\cap A )+\sum_{C\in\mathscr{C}}\sum_{i=1}^{n}\mu( C\cap A_{i} ) \\
 &=\sum_{C\in\mathscr{C}}\left( \mu( C\cap A )+\sum_{i=1}^{n}\mu( C\cap A_{i} ) \right)
-\end{align*}
-となる。このとき
-\[ C=( C\cap A )\sqcup ( C\backslash A )=( C\cap A )\sqcup( C\cap A_{1} )\sqcup\dotsb\sqcup( C\cap A_{n} ) \]
-であるから、$C\in\mathscr{C}$より$\mu$の有限加法性が使えて結局
-\[ \mu( C\cap A )+\sum_{i=1}^{n}\mu( C\cap A_{i} )=\mu( C ) \]
+\end{aligned}
+$$
+
+となる。ところで
+$$
+C=( C\cap A )\sqcup ( C\backslash A )=( C\cap A )\sqcup( C\cap A_{1} )\sqcup\dotsb\sqcup( C\cap A_{n} )
+$$
+
+より$C\in\mathscr{C}$より$\mu$の有限加法性から
+
+$$
+\mu( C\cap A )+\sum_{i=1}^{n}\mu( C\cap A_{i} )=\mu( C )
+$$
+
 が従う。
 
-残りの部分はホップの拡張定理と同様に従う。ただし補題より半加法族上でも$\mu$の弱可算劣加法性が可算加法性と同値であることを用いる。$\square$
-\end{proof}
+残りの部分はホップの拡張定理と同様に従う。ただし、補題より半加法族上でも$\mu$の弱可算劣加法性が可算加法性と同値であることを用いる。$\square$
 
--->
