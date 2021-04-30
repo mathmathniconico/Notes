@@ -3,30 +3,39 @@
 
 
 
+## 積可測空間上の測度
 
-<!--
+測度空間$( S, \mathscr{A}, \mu_{S} )$及び$( T, \mathscr{B}, \mu_{T} )$に対して、積可測空間$( S\times T, \mathscr{A}\otimes\mathscr{B} )$上の測度を構成しよう。積$\sigma$加法族は
 
-\subsection{積可測空間上の測度}
-測度空間$( S, \mathscr{A}, \mu_{S} )$及び$( T, \mathscr{B}, \mu_{T} )$に対して、
-積可測空間$( S\times T, \mathscr{A}\otimes\mathscr{B} )$上の測度を構成しよう。積$\sigma$加法族は
-\[ \mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times T\cup S\times\mathscr{B} \rbrack \]
+$$
+\mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times T\cup S\times\mathscr{B} \rbrack
+$$
+
 と定義されるが、基となる集合族$\mathscr{A}\times T\cup S\times\mathscr{B}$はやや扱い難い。
 
-\begin{Prop}{}{}
-$S\in\mathscr{G}\subset 2^{S}, T\in\mathscr{H}\subset 2^{T}$とする。このとき
-\[ \sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack = \sigma\lbrack \mathscr{G}\times\mathscr{H} \rbrack \]
+__命題__ $S\in\mathscr{G}\subset 2^{S}, T\in\mathscr{H}\subset 2^{T}$とする。このとき
+
+$$
+\sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack = \sigma\lbrack \mathscr{G}\times\mathscr{H} \rbrack
+$$
+
 が成り立つ。特に$( S, \mathscr{A} ), ( T, \mathscr{B} )$が可測空間のとき
-\[ \sigma\lbrack \mathscr{A}\times T\cup S\times\mathscr{B} \rbrack = \sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack \]
+
+$$
+\sigma\lbrack \mathscr{A}\times T\cup S\times\mathscr{B} \rbrack = \sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack
+$$
+
 が成り立つ。
-\end{Prop}
 
-\begin{proof}
-（証明）$S\in\mathscr{G}, T\in\mathscr{H}$より$\mathscr{G}\times T\cup S\times\mathscr{H} \subset \mathscr{G}\times\mathscr{H}$である。
-故に左辺は右辺を含む。$G\times H\in\mathscr{G}\times\mathscr{H}$を取る。このとき
-\[ G\times H=G\times T\cap S\times H\in\sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack \]
-より、逆も成り立つ。$\square$
-\end{proof}
+（証明）$S\in\mathscr{G}, T\in\mathscr{H}$より$\mathscr{G}\times T\cup S\times\mathscr{H} \subset \mathscr{G}\times\mathscr{H}$となるため左辺は右辺を含む。$G\times H\in\mathscr{G}\times\mathscr{H}$について
 
+$$
+G\times H=G\times T\cap S\times H\in\sigma\lbrack \mathscr{G}\times T\cup S\times\mathscr{H} \rbrack
+$$
+
+より逆も成り立つ。$\square$
+
+<!--
 $\mathscr{A}\times\mathscr{B}$は次の意味で都合が良い。
 
 \begin{Prop}{}{}
