@@ -35,32 +35,33 @@ $$
 
 より逆も成り立つ。$\square$
 
-<!--
-$\mathscr{A}\times\mathscr{B}$は次の意味で都合が良い。
+__命題__ $( S, \mathscr{A} ), ( T, \mathscr{B} )$は可測空間とする。このとき$\mathscr{A}\times\mathscr{B}$は半加法族である。
 
-\begin{Prop}{}{}
-$( S, \mathscr{A} ), ( T, \mathscr{B} )$は可測空間とする。このとき$\mathscr{A}\times\mathscr{B}$は半加法族である。
-\end{Prop}
-
-\begin{proof}
 （証明）まず$\emptyset=\emptyset\times\emptyset\in\mathscr{A}\times\mathscr{B}$である。次に$A\times B, C\times D\in\mathscr{A}\times\mathscr{B}$に対し、
-\[ A\times B\cap C\times D=( A\cap C )\times( B\times D )\in\mathscr{A}\times\mathscr{B} \]
+
+$$
+A\times B\cap C\times D=( A\cap C )\times( B\times D )\in\mathscr{A}\times\mathscr{B}
+$$
+
 である。また
-\[ ( S\times T )\backslash( A\times B )=( S\backslash A )\times B\sqcup( S\backslash A )\times( T\backslash B )\sqcup( A\times( T\backslash B ) \]
+
+$$
+( S\times T )\backslash( A\times B )=( S\backslash A )\times B\sqcup( S\backslash A )\times( T\backslash B )\sqcup( A\times( T\backslash B )
+$$
+
 より、$\mathscr{A}\times\mathscr{B}$の元の非交叉有限和で書ける。従って$\mathscr{A}\times\mathscr{B}$は半加法族である。$\square$
-\end{proof}
 
-さて、$\mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack$上の測度を構成するために拡張定理を用いることを考えたい。
-そのためにはまず、半加法族$\mathscr{A}\times\mathscr{B}$上の前測度を与えなければならない。
+$\mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack$上の測度を構成するために拡張定理を用いる。そのためにはまず、半加法族$\mathscr{A}\times\mathscr{B}$上の前測度を与えなければならない。
 
-\begin{Lem}{}{}
-$( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$を測度空間とする。
-このとき集合函数$\mu\colon\mathscr{A}\times\mathscr{B}\rightarrow\lbrack 0, \infty \rbrack$を、$A\times B\in\mathscr{A}\times\mathscr{B}$に対し
-\[ \mu( A\times B ):=\mu_{S}( A )\mu_{T}( B ) \]
-で定めると、$\mu$は半加法族$\mathscr{A}\times\mathscr{B}$上の前測度となる。
-\end{Lem}
+__補題__ $( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$を測度空間とする。このとき集合函数$\mu\colon\mathscr{A}\times\mathscr{B}\rightarrow\lbrack 0, \infty \rbrack$を、$A\times B\in\mathscr{A}\times\mathscr{B}$に対し
 
-\begin{proof}
+$$
+\mu( A\times B ):=\mu_{S}( A )\mu_{T}( B )
+$$
+
+で定める。このとき$\mu$は半加法族$\mathscr{A}\times\mathscr{B}$上の前測度となる。
+
+<!--
 （証明）正値であることは明らかなので、有限加法的であることを示す。$A_{1}\times B_{1}, \dotsc, A_{n}\times B_{n}\in\mathscr{A}\times\mathscr{B}$に対し、
 $\bigsqcup_{i=1}^{n}A_{i}\times B_{i}=A\times B\in\mathscr{A}\times\mathscr{B}$であるとする。このとき
 \[ \mu( A\times B )=\sum_{i=1}^{n}\mu( A_{i}\times B_{i} ) \]
