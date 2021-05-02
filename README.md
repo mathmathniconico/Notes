@@ -71,6 +71,7 @@
 - ヒルベルトの基底定理
 - 環上の代数と次数付き環
 - 斉次イデアルとクルルの交叉定理
+- [単項イデアルの生成元が単元で移り合わない例](/Algebra/PrimeIdeal_Ex.md)
 - [ユークリッド整域](/Algebra/EuclideanDomain.md)
 
 
