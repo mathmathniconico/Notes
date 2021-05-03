@@ -23,9 +23,23 @@
 
 ## 主張の反例
 
-$K$を体とする。$R=K\lbrack X \rbrack/(X^{3})$において$\alpha=X, \beta=X^{2}$を考える。このとき$(X)=(X^{2})$であることは$X\cdot X=X^{2}$及び$X^{2}\cdot X^{2}=X$より分かる。
+$(\alpha)=(\beta)$なら$\alpha=s\beta, \beta=t\alpha$と表せるから、これらが不定元となるような環を考える。つまり$\alpha, t, s$を不定元として、$\beta:=t\alpha$と定義する。すると$\alpha=s\beta=st\alpha$となるので、これが常に成り立っていればよい。
 
-さて$X=sX^{2}, X^{2}=tX$を解くと、$s=X^{2}+c$及び$t=aX^{2}+X$が一般解となる。しかし$ts=(aX^{2}+X)(X^{2}+c)=(a+c)X+acX^{2}\neq 1$だから$X$と$X^{2}$は単元で移り合わない。
+$K$を体として、$R=K\lbrack \alpha, s, t \rbrack/(\alpha-st\alpha)$と定める。このとき$\beta:=t\alpha$とすると$\alpha=st\alpha=s\beta$となる。また$(\alpha)=(st\alpha)=(s\beta)\subset(\beta)=(t\alpha)\subset(\alpha)$より$(\alpha)=(\beta)$が成り立つ。
+
+__主張__ $\alpha, \beta$は単元で移り合わない。
+
+ある$u$が存在して$\alpha=u\beta$が$R$において成り立つとする。このとき$\alpha-u\beta\in (\alpha-st\alpha)$より、ある$f$が存在して$\alpha-ut\alpha=f(\alpha-st\alpha)$を満たす。このとき$\alpha(1-ut-f+fst)=0$だから多項式環の整域性より$1-ut-f+fst=0$である。$u$について解きたいが$t$が邪魔なのでなんとかしたい。
+
+$f=1-t(u-fs)$なので$g:=u-fs$とおくと$f=1-tg$となる。すると$u=(1-tg)s+g=(1-ts)g+s$を得る。ここでもし$u$が$R$において単元なら、ある$p, q$が存在して
+
+$$
+p\lbrack (1-ts)g+s \rbrack+q\lbrack \alpha-st\alpha \rbrack=1
+$$
+
+と表せる。$\alpha=0$を代入すると特に$p(s, t)\lbrack (1-ts)g(s, t)+s\rbrack=1$が成り立つ。しかし全次数を考えると左辺が$0$次になることはないので矛盾する。
+
+また、ある$v$が存在して$\beta=v\alpha$が$R$において成り立つとする。このとき$t\alpha-v\alpha\in (\alpha-st\alpha)$より、ある$h$が存在して$t\alpha-v\alpha=h(\alpha-st\alpha)$を満たす。同様に$t-v=h(1-st)$だから、$v=-h(1-st)+t$を得る。残りの議論も同様に従う。
 
 
 ## 所感
