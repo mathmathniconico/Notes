@@ -61,36 +61,62 @@ $$
 
 で定める。このとき$\mu$は半加法族$\mathscr{A}\times\mathscr{B}$上の前測度となる。
 
-<!--
-（証明）正値であることは明らかなので、有限加法的であることを示す。$A_{1}\times B_{1}, \dotsc, A_{n}\times B_{n}\in\mathscr{A}\times\mathscr{B}$に対し、
-$\bigsqcup_{i=1}^{n}A_{i}\times B_{i}=A\times B\in\mathscr{A}\times\mathscr{B}$であるとする。このとき
-\[ \mu( A\times B )=\sum_{i=1}^{n}\mu( A_{i}\times B_{i} ) \]
+（証明）正値であることは明らかなので、有限加法的であることを示す。$A_{1}\times B_{1}, \dotsc, A_{n}\times B_{n}\in\mathscr{A}\times\mathscr{B}$に対し、$\bigsqcup_{i=1}^{n}A_{i}\times B_{i}=A\times B\in\mathscr{A}\times\mathscr{B}$であるとする。このとき
+
+$$
+\mu( A\times B )=\sum_{i=1}^{n}\mu( A_{i}\times B_{i} )
+$$
+
 が成り立つことを$n$に関する帰納法で示そう。
 
 $n=1$のときは$\mu( A\times B )=\mu( A_{1}\times B_{1} )$より正しい。
 
 $n=k$に対して成り立つとして、$n=k+1$を考える。このとき
-\[ ( A_{k+1}\times B_{k+1} )\sqcup\bigsqcup_{i=1}^{k}( A_{i}\times B_{i} )=A\times B \]
+
+$$
+( A_{k+1}\times B_{k+1} )\sqcup\bigsqcup_{i=1}^{k}( A_{i}\times B_{i} )=A\times B
+$$
+
 だから、
-\[ (A\backslash A_{k+1} )\times( B\backslash B_{k+1} )=\bigsqcup_{i=1}^{k}( A_{i}\backslash A_{k+1} )\times( B_{i}\backslash B_{k+1} ) \]
+
+$$
+(A\backslash A_{k+1} )\times( B\backslash B_{k+1} )=\bigsqcup_{i=1}^{k}( A_{i}\backslash A_{k+1} )\times( B_{i}\backslash B_{k+1} )
+$$
+
 が成り立つ。帰納法の仮定より
-\[ \mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\backslash B_{k+1} )=\sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\backslash B_{k+1} ) \]
+
+$$
+\mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\backslash B_{k+1} )=\sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\backslash B_{k+1} )
+$$
+
 が成り立つ。同様にして
+
+$$
 \begin{align*}
-\mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\cap B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} ) \\
+\mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\cap B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} ), \\
 \mu_{S}( A\cap A_{k+1} )\mu_{T}( B\backslash B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\backslash B_{k+1} )
 \end{align*}
+$$
+
 も成り立つ。ここで$i=1, \dotsc, k$について$\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} )\gt 0$と仮定すると、
-\[ ( A_{i}\cap A_{k+1} )\times( B_{i}\cap B_{k+1} )=( A_{i}\times B_{i} )\cap( A_{k+1}\times B_{k+1} )\neq\emptyset \]
+
+$$
+( A_{i}\cap A_{k+1} )\times( B_{i}\cap B_{k+1} )=( A_{i}\times B_{i} )\cap( A_{k+1}\times B_{k+1} )\neq\emptyset
+$$
+
 となり矛盾する。故に$\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} )=0$であり、
+
+$$
 \begin{align*} \mu( A\times B ) &= \mu_{S}( A )\mu_{T}( B ) \\
 &= ( \mu_{S}( A\backslash A_{k+1} )+\mu_{S}( A\cap A_{k+1} ) )( \mu_{T}( B\backslash B_{k+1} )+\mu_{T}( B\cap B_{k+1} ) ) \\
-&=\sum_{i=1}^{k}( \mu_{S}( A_{i}\backslash A_{k+1} )+\mu_{S}( A_{i}\cap A_{k+1} ) )( \mu_{T}( B_{i}\backslash B_{k+1} )+\mu_{T}( B_{i}\cap B_{k+1} ) ) \\
-&+\mu_{S}( A_{k+1} )\mu_{T}( B_{k+1} ) \\ &= \sum_{i=1}^{k+1}\mu_{S}( A_{i} )\mu_{T}( B_{i} )
+&=\left( \sum_{i=1}^{k}( \mu_{S}( A_{i}\backslash A_{k+1} )+\mu_{S}( A_{i}\cap A_{k+1} ) )( \mu_{T}( B_{i}\backslash B_{k+1} )+\mu_{T}( B_{i}\cap B_{k+1} ) ) \right) +\mu_{S}( A_{k+1} )\mu_{T}( B_{k+1} ) \\
+ &= \sum_{i=1}^{k+1}\mu_{S}( A_{i} )\mu_{T}( B_{i} )
 \end{align*}
-を得る。$\square$
-\end{proof}
+$$
 
+を得る。$\square$
+
+<!--
 \begin{Thm}{}{}
 上記補題の$\mu$は弱可算劣加法的である。
 \end{Thm}
