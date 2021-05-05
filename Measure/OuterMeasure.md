@@ -88,18 +88,18 @@ $$
 
 __定義__ $\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$を外測度とする。$A\subset S$は以下を満たすとする。
 
-- 任意の$E\subset S$について$\mu( E )=\mu( E\cap A )+\mu( E\backslash A )$が成り立つ。
+- 任意の$E\subset S$について$\mu( E )=\mu( E\cap A )+\mu( E\setminus A )$が成り立つ。
 
 このとき$A$はカラテオドリ可測、あるいは$\mu$可測であるという。
 
 > 次の定義を導入したことがカラテオドリの偉大さだろう。元の着想はルベーグに依るらしく、ルベーグ自身は$E$として矩形を考えていたそうだ。私自身はこの定義についてよく理解していない。
 
-ところで$E=( E\cap A )\cup( E\backslash A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\backslash A )$は常に成り立つ。つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\backslash A )$を示せば十分である。
+ところで$E=( E\cap A )\cup( E\setminus A )$であるから、外測度の可算劣加法性より$\mu( E )\le\mu( E\cap A )+\mu( E\setminus A )$は常に成り立つ。つまりカラテオドリ可測であることを示すには$\mu( E )\ge\mu( E\cap A )+\mu( E\setminus A )$を示せば十分である。
 
 __補題__ $A, B\subset S$とする。$A$がカラテオドリ可測なら、任意の$E\subset S$について
 
 $$
-\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
+\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\setminus A )\cap B )
 $$
 
 が成り立つ。特に$A, B$が互いに素なら
@@ -114,8 +114,8 @@ $$
 
 $$
 \begin{aligned}
-\mu( E\cap( A\cup B ) ) &= \mu( ( E\cap( A\cup B ) )\cap A ) + \mu( ( E\cap( A\cup B ) )\backslash A ) \\
-&= \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
+\mu( E\cap( A\cup B ) ) &= \mu( ( E\cap( A\cup B ) )\cap A ) + \mu( ( E\cap( A\cup B ) )\setminus A ) \\
+&= \mu( E\cap A )+\mu( ( E\setminus A )\cap B )
 \end{aligned}
 $$
 
@@ -123,33 +123,33 @@ $$
 
 __定理__ 外測度$\mu\colon 2^{S}\rightarrow\lbrack 0, \infty \rbrack$について$\mathscr{M}_{\mu}$をカラテオドリ可測な集合全体とする。このとき$\mathscr{M}_{\mu}$は$\sigma$加法族であり、$\mu$の$\mathscr{M}_{\mu}$への制限は可測空間$( S, \mathscr{M}_{\mu} )$上の測度である。
 
-（証明）まず$E\subset S$について$\mu( E\cap\emptyset )+\mu( E\backslash\emptyset )=\mu( \emptyset )+\mu( E )=\mu( E )$より$\emptyset$はカラテオドリ可測である。また$A$がカラテオドリ可測なら
+（証明）まず$E\subset S$について$\mu( E\cap\emptyset )+\mu( E\setminus\emptyset )=\mu( \emptyset )+\mu( E )=\mu( E )$より$\emptyset$はカラテオドリ可測である。また$A$がカラテオドリ可測なら
 
 $$
-\mu( E\cap( S\backslash A ) )+\mu( E\backslash( S\backslash A ) ) = \mu( E\backslash A )+\mu( E\cap A )=\mu( E )
+\mu( E\cap( S\setminus A ) )+\mu( E\setminus( S\setminus A ) ) = \mu( E\setminus A )+\mu( E\cap A )=\mu( E )
 $$
 
-より$S\backslash A$もカラテオドリ可測となる。
+より$S\setminus A$もカラテオドリ可測となる。
 
 次に$\mathscr{M}_{\mu}$が有限和に関して閉じていることを述べる。$A, B$をカラテオドリ可測とすると、補題より任意の$E\subset S$について
 
 $$
-\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\backslash A )\cap B )
+\mu( E\cap( A\cup B ) ) = \mu( E\cap A )+\mu( ( E\setminus A )\cap B )
 $$
 
-が成り立つ。$E\backslash( A\cup B )=(E\backslash A )\backslash B$及び$A, B$が$\mu$可測であることを用いると
+が成り立つ。$E\setminus( A\cup B )=(E\setminus A )\setminus B$及び$A, B$が$\mu$可測であることを用いると
 
 $$
 \begin{aligned}
-\mu( E\cap ( A\cup B ) )+\mu( E\backslash( A\cup B ) ) &= \mu( E\cap A )+\mu( ( E\backslash A )\cap B )+\mu( ( E\backslash A )\backslash B ) \\
-&= \mu(E\cap A)+\mu(E\backslash A) \\
+\mu( E\cap ( A\cup B ) )+\mu( E\setminus( A\cup B ) ) &= \mu( E\cap A )+\mu( ( E\setminus A )\cap B )+\mu( ( E\setminus A )\setminus B ) \\
+&= \mu(E\cap A)+\mu(E\setminus A) \\
 &= \mu(E)
 \end{aligned}
 $$
 
 を得る。従って$A\cup B$はカラテオドリ可測となる。
 
-> 以上より$\mathscr{M}_{\mu}$は後述する有限加法族であることが分かる。特に有限加法族$\mathscr{A}$は有限交叉や差集合で閉じている。実際$A, B\in\mathscr{A}$に対して$S=S\backslash \emptyset\in\mathscr{A}$であり、$A\cap B=A\backslash( S\backslash B )\in\mathscr{A}$であり、$A\backslash B=S\backslash( ( S\backslash A )\cup B )\in\mathscr{A}$である。
+> 以上より$\mathscr{M}_{\mu}$は後述する有限加法族であることが分かる。特に有限加法族$\mathscr{A}$は有限交叉や差集合で閉じている。実際$A, B\in\mathscr{A}$に対して$S=S\setminus \emptyset\in\mathscr{A}$であり、$A\cap B=A\setminus( S\setminus B )\in\mathscr{A}$であり、$A\setminus B=S\setminus( ( S\setminus A )\cup B )\in\mathscr{A}$である。
 
 さて$\mu$の$\mathscr{M}_{\mu}$への制限を$\nu$とする。このとき$\nu\colon\mathscr{M}_{\mu}\rightarrow\lbrack 0, \infty \rbrack$は有限加法的である。実際、互いに素な$A, B\in\mathscr{M}_{\mu}$について、補題より任意の$E\subset S$について
 
@@ -168,7 +168,7 @@ $$
 ここで$\mathscr{M}_{\mu}$が$\sigma$加法族であることを示そう。$\lbrace A_{n} \rbrace\subset\mathscr{M}_{\mu}$とする。$B_{m}:=\bigcup_{n=1}^{m}A_{n}$と置けば、$B_{m}$はカラテオドリ可測であり$B_{m}\nearrow\bigcup_{n\in\mathbb{N}}A_{n}=\colon B$である。ここで
 
 $$
-C_{1}:=B_{1}, C_{n}:=B_{n}\backslash B_{n-1}
+C_{1}:=B_{1}, C_{n}:=B_{n}\setminus B_{n-1}
 $$
 
 と定めれば$C_{n}$もカラテオドリ可測であり、$B_{m}=\bigsqcup_{n=1}^{m}C_{n}$と非交叉和で表せる。補題より任意の$E\subset S$に対して
@@ -177,19 +177,19 @@ $$
 \mu( E\cap B_{m} )=\sum_{n=1}^{m}\mu( E\cap C_{n} )
 $$
 
-が成り立つ。単調性より$\mu( E\backslash B )\le\mu( E\backslash B_{m} )$だから、$B_{m}$の$\mu$可測性より
+が成り立つ。単調性より$\mu( E\setminus B )\le\mu( E\setminus B_{m} )$だから、$B_{m}$の$\mu$可測性より
 
 $$
-\mu( E )=\mu( E\cap B_{m} )+\mu( E\backslash B_{m} )\ge\sum_{n=1}^{m}\mu( E\cap C_{n} )+\mu( E\backslash B )
+\mu( E )=\mu( E\cap B_{m} )+\mu( E\setminus B_{m} )\ge\sum_{n=1}^{m}\mu( E\cap C_{n} )+\mu( E\setminus B )
 $$
 
-となる。$m$は任意だから$\mu( E )\ge\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )+\mu( E\backslash B )$となる。ここで
+となる。$m$は任意だから$\mu( E )\ge\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )+\mu( E\setminus B )$となる。ここで
 
 $$
 E\cap B=\bigcup_{n\in\mathbb{N}}( E\cap C_{n} )
 $$
 
-だから、外測度の可算劣加法性より$\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )\ge\mu( E\cap B )$を得る。従って$\mu( E )\ge\mu( E\cap B )+\mu( E\backslash B )$となり、これは$B$がカラテオドリ可測であることを意味している。
+だから、外測度の可算劣加法性より$\sum_{n\in\mathbb{N}}\mu( E\cap C_{n} )\ge\mu( E\cap B )$を得る。従って$\mu( E )\ge\mu( E\cap B )+\mu( E\setminus B )$となり、これは$B$がカラテオドリ可測であることを意味している。
 
 最後に$\nu$が可算加法的であることを示そう。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{M}_{\mu}$は互いに素とする。$\mathscr{M}_{\mu}$は$\sigma$加法族であるから$A:=\bigsqcup_{n\in\mathbb{N}}A_{n}\in\mathscr{M}_{\mu}$である。外測度の可算劣加法性より
 

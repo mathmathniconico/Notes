@@ -19,14 +19,14 @@ __定義__ $\emptyset\in\mathscr{G}\subset 2^{S}$とする。集合函数$\mu\co
 __定義__ $S$を集合とする。$\mathscr{A}\subset 2^{S}$は以下を満たすとする。
 
 - $\emptyset\in\mathscr{A}$である。
-- $A\in\mathscr{A}$なら$S\backslash A\in\mathscr{A}$である。
+- $A\in\mathscr{A}$なら$S\setminus A\in\mathscr{A}$である。
 - $A, B\in\mathscr{A}$なら$A\cup B\in\mathscr{A}$である。
 
 このとき$\mathscr{A}$は$S$上の **有限加法族** （finitary additive class）であるという。
 
 > 有限加法族も歴史的経緯から名前が安定しない。集合代数や集合体とも呼ばれている。
 
-- $\mathscr{A}\subset 2^{S}$を有限加法族とする。このとき$A, B\in\mathscr{A}$について$A\cap B, A\backslash B\in\mathscr{A}$が成り立つ。
+- $\mathscr{A}\subset 2^{S}$を有限加法族とする。このとき$A, B\in\mathscr{A}$について$A\cap B, A\setminus B\in\mathscr{A}$が成り立つ。
 
 
 
@@ -50,13 +50,13 @@ __注意__ $\mu\colon\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$を有限�
 有限加法族上の前測度は単調かつ有限劣加法的である。実際$A, B\in\mathscr{A}$について、$A\subset B$なら
 
 $$
-\mu( B )=\mu( A\sqcup( B\backslash A ) )=\mu( A )+\mu( B\backslash A )\ge\mu( A )
+\mu( B )=\mu( A\sqcup( B\setminus A ) )=\mu( A )+\mu( B\setminus A )\ge\mu( A )
 $$
 
 であり、
 
 $$
-\mu( A\cup B )=\mu( A\sqcup( B\backslash A ) )=\mu( A )+\mu( B\backslash A )\le\mu( A )+\mu( B )
+\mu( A\cup B )=\mu( A\sqcup( B\setminus A ) )=\mu( A )+\mu( B\setminus A )\le\mu( A )+\mu( B )
 $$
 
 である。
@@ -87,13 +87,13 @@ __定理__ （ホップの拡張定理）$\mu$は有限加法族$\mathscr{A}\sub
 まず$\sigma\lbrack \mathscr{A} \rbrack\subset\mathscr{M}_{\widehat{\mu}}$を示す。生成の最小性より$\mathscr{A}\subset\mathscr{M}_{\widehat{\mu}}$を示せば良いので、$A\in\mathscr{A}$がカレテオドリ可測であることを示そう。$E\subset S$と$E$の被覆$\mathscr{C}\subset\mathscr{A}$を取れば、$\mathscr{A}$は有限加法族なので
 
 $$
-\lbrace C\cap A : C\in\mathscr{C} \rbrace, \lbrace C\backslash A : C\in\mathscr{C} \rbrace\subset\mathscr{C}
+\lbrace C\cap A : C\in\mathscr{C} \rbrace, \lbrace C\setminus A : C\in\mathscr{C} \rbrace\subset\mathscr{C}
 $$
 
-はそれぞれ$E\cap A, E\backslash A$の被覆となる。更に$\mu$は有限加法的だから
+はそれぞれ$E\cap A, E\setminus A$の被覆となる。更に$\mu$は有限加法的だから
 
 $$
-\widehat{\mu}( E\cap A )+\widehat{\mu}( E\backslash A ) \le \sum_{C\in\mathscr{C}}( \mu( C\cap A )+\mu( C\backslash A ) ) = \sum_{C\in\mathscr{C}}\mu( C )
+\widehat{\mu}( E\cap A )+\widehat{\mu}( E\setminus A ) \le \sum_{C\in\mathscr{C}}( \mu( C\cap A )+\mu( C\setminus A ) ) = \sum_{C\in\mathscr{C}}\mu( C )
 $$
 
 となる。右辺の下限を取れば$\widehat{\mu}( E )$となるため、$A$はカラテオドリ可測である。
@@ -124,16 +124,16 @@ __命題__ $\mu$は有限加法族$\mathscr{A}\subset 2^{S}$上の前測度と�
     - $A_{n}\nearrow A\in\mathscr{A}, \mu( A )=\infty$なら$\lim_{n\rightarrow\infty}\mu( A_{n} )=\infty$である。
     - $A_{n}\searrow \emptyset, \mu( A_{1} )\lt\infty$なら$\lim_{n\rightarrow\infty}\mu( A_{n} )=0$である。
 
-（証明）一番上から真ん中が成り立つことを示そう。まず増大列連続であることを示す。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{A}$が$A_{n}\nearrow A\in\mathscr{A}$を満たすとする。$A=A_{1}\sqcup\bigsqcup_{n\in\mathbb{N}}( A_{n+1}\backslash A_{n} )$だから、$\mu$の可算加法性より$\mu( A )=\mu( A_{1} )+\sum_{n\in\mathbb{N}}\mu( A_{n+1}\backslash A_{n} )$となる。一方$A_{n}=A_{1}\sqcup\bigsqcup_{k=1}^{n}( A_{k+1}\backslash A_{k} )$だから
+（証明）一番上から真ん中が成り立つことを示そう。まず増大列連続であることを示す。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{A}$が$A_{n}\nearrow A\in\mathscr{A}$を満たすとする。$A=A_{1}\sqcup\bigsqcup_{n\in\mathbb{N}}( A_{n+1}\setminus A_{n} )$だから、$\mu$の可算加法性より$\mu( A )=\mu( A_{1} )+\sum_{n\in\mathbb{N}}\mu( A_{n+1}\setminus A_{n} )$となる。一方$A_{n}=A_{1}\sqcup\bigsqcup_{k=1}^{n}( A_{k+1}\setminus A_{k} )$だから
 
 $$
-\lim_{n\rightarrow\infty}\mu( A_{n} )=\mu( A_{1} )+\sum_{k=1}^{\infty}\mu( A_{k+1}\backslash A_{k} )=\mu( A )
+\lim_{n\rightarrow\infty}\mu( A_{n} )=\mu( A_{1} )+\sum_{k=1}^{\infty}\mu( A_{k+1}\setminus A_{k} )=\mu( A )
 $$
 
-を得る。次に減少列連続であることを示そう。$\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{A}$が$B_{n}\searrow B\in\mathscr{A}, \mu( B_{1} )\lt\infty$を満たすとする。$B_{n}=B\sqcup\bigsqcup_{k\ge n}( B_{k}\backslash B_{k+1} )$だから、可算加法性より特に$n=1$として$\infty\gt\mu( B_{1} )\ge\sum_{n\in\mathbb{N}}\mu( B_{n}\backslash B_{n+1} )$となる。つまり$\lim_{n\rightarrow\infty}\sum_{k\ge n}\mu( B_{k}\backslash B_{k+1} )=0$だから
+を得る。次に減少列連続であることを示そう。$\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{A}$が$B_{n}\searrow B\in\mathscr{A}, \mu( B_{1} )\lt\infty$を満たすとする。$B_{n}=B\sqcup\bigsqcup_{k\ge n}( B_{k}\setminus B_{k+1} )$だから、可算加法性より特に$n=1$として$\infty\gt\mu( B_{1} )\ge\sum_{n\in\mathbb{N}}\mu( B_{n}\setminus B_{n+1} )$となる。つまり$\lim_{n\rightarrow\infty}\sum_{k\ge n}\mu( B_{k}\setminus B_{k+1} )=0$だから
 
 $$
-\lim_{n\rightarrow\infty}\mu( B_{n} )=\mu( B )+\lim_{n\rightarrow\infty}\sum_{k\ge n}\mu( B_{k}\backslash B_{k+1} )=\mu( B )
+\lim_{n\rightarrow\infty}\mu( B_{n} )=\mu( B )+\lim_{n\rightarrow\infty}\sum_{k\ge n}\mu( B_{k}\setminus B_{k+1} )=\mu( B )
 $$
 
 を得る。
@@ -146,7 +146,7 @@ $$
 \mu( A )=\infty=\lim_{m\rightarrow\infty}\mu( B_{m} )=\lim_{m\rightarrow\infty}\sum_{n=1}^{m}\mu( A_{n} )=\sum_{n\in\mathbb{N}}\mu( A_{n} )
 $$
 
-となる。$\mu( A )\lt\infty$のときは、$C_{1}:=A, C_{m+1}:=A\backslash B_{m}$とすると$C_{m}\searrow\emptyset$かつ$\mu( C_{1} )=\mu( A )\lt\infty$である。特に$B_{m}\subset A$なので$\mu( C_{m+1} )=\mu( A )-\mu( B_{m} )$が成り立つ。仮定より$\lim_{m\rightarrow\infty}\mu( C_{m} )=0$だから
+となる。$\mu( A )\lt\infty$のときは、$C_{1}:=A, C_{m+1}:=A\setminus B_{m}$とすると$C_{m}\searrow\emptyset$かつ$\mu( C_{1} )=\mu( A )\lt\infty$である。特に$B_{m}\subset A$なので$\mu( C_{m+1} )=\mu( A )-\mu( B_{m} )$が成り立つ。仮定より$\lim_{m\rightarrow\infty}\mu( C_{m} )=0$だから
 
 $$
 \sum_{n\in\mathbb{N}}\mu( A_{n} )=\lim_{m\rightarrow\infty}\mu( B_{m} )=\mu( A )-\lim_{m\rightarrow\infty}\mu( C_{m+1} )=\mu( A )

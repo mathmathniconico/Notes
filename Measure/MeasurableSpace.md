@@ -8,7 +8,7 @@
 __定義__ $S$を集合とする。$\mathscr{A}\subset 2^{S}$は以下を満たすとする。
 
 - $\emptyset\in\mathscr{A}$である。
-- $A\in\mathscr{A}$なら$S\backslash A\in\mathscr{A}$である。
+- $A\in\mathscr{A}$なら$S\setminus A\in\mathscr{A}$である。
 - $A_{n}\in\mathscr{A}$なら$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{A}$である。
 
 このとき$\mathscr{A}$を$S$上の$\sigma$ **加法族** （additive class of sets）と呼び、組$( S, \mathscr{A} )$を **可測空間** （measurable space）と呼ぶ。また$A\in\mathscr{A}$は$\mathscr{A}$可測あるいは単に可測であるという。
@@ -21,7 +21,7 @@ $\sigma$加法族は歴史的な経緯から呼び方が安定しない。例え
 
 __命題__ $\mathscr{A}\subset 2^{S}$を$\sigma$加法族とする。
 
-- $A, B\in\mathscr{A}$について$A\backslash B\in\mathscr{A}$である。
+- $A, B\in\mathscr{A}$について$A\setminus B\in\mathscr{A}$である。
 - $A_{n}\in\mathscr{A}$について$\bigcap_{n\in\mathbb{N}}A_{n}\in\mathscr{A}$である。
 
 __命題__ 写像$f\colon S\rightarrow T$について以下が成り立つ。

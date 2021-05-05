@@ -14,31 +14,31 @@ __定義__ $\mathscr{S}\subset 2^{S}$は次の3条件を満たすとする。
 
 - $\emptyset\in\mathscr{S}$である。
 - $A, B\in\mathscr{S}$なら$A\cap B\in\mathscr{S}$である。
-- $A\in\mathscr{S}$なら有限個の互いに素な元$A_{1}, \dotsc, A_{n}\in\mathscr{S}$を用いて$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
+- $A\in\mathscr{S}$なら有限個の互いに素な元$A_{1}, \dotsc, A_{n}\in\mathscr{S}$を用いて$S\setminus A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。
 
 このとき$\mathscr{S}$を$S$上の **半加法族** （semi-additive family of sets）と呼ぶ。
 
-この定義の出処は拡張定理の証明にある。証明の中で$\lbrace C\cap A \rbrace, \lbrace C\backslash A \rbrace$が$E\cap A, E\backslash A$の被覆であることを示すのに有限加法族の性質を用いた。そこで$C\backslash A=C\cap( S\backslash A )$に注意しつつ、有限加法族の条件を緩めたのが上の定義になる。被覆となるためには$S\backslash A$自身が$\mathscr{A}$の元である必要はなく、$\mathscr{A}$による有限和で表せれば良い。
+この定義の出処は拡張定理の証明にある。証明の中で$\lbrace C\cap A \rbrace, \lbrace C\setminus A \rbrace$が$E\cap A, E\setminus A$の被覆であることを示すのに有限加法族の性質を用いた。そこで$C\setminus A=C\cap( S\setminus A )$に注意しつつ、有限加法族の条件を緩めたのが上の定義になる。被覆となるためには$S\setminus A$自身が$\mathscr{A}$の元である必要はなく、$\mathscr{A}$による有限和で表せれば良い。
 
 > 半加法族も名前が安定しない。集合半代数などと呼ばれたこともある。
 
-$\mathscr{S}\subset 2^{S}$を半加法族とする。$A, B\in\mathscr{S}$について、半加法族の定義より$S\backslash B=\bigsqcup_{i=1}^{m}B_{i}$と表せる。従って
+$\mathscr{S}\subset 2^{S}$を半加法族とする。$A, B\in\mathscr{S}$について、半加法族の定義より$S\setminus B=\bigsqcup_{i=1}^{m}B_{i}$と表せる。従って
 
 $$
-A\backslash B=A\cap( S\backslash B )=A\cap\bigsqcup_{i=1}^{m}B_{i}=\bigsqcup_{i=1}^{m}( A\cap B_{i} )
+A\setminus B=A\cap( S\setminus B )=A\cap\bigsqcup_{i=1}^{m}B_{i}=\bigsqcup_{i=1}^{m}( A\cap B_{i} )
 $$
 
-となるが、右辺は$A\backslash B$が$\mathscr{S}$による非交叉有限和で表せることを意味している。（この性質は後で半環の節で述べる。）これより半加法族において、非自明だが面白い性質を示すことができる。
+となるが、右辺は$A\setminus B$が$\mathscr{S}$による非交叉有限和で表せることを意味している。（この性質は後で半環の節で述べる。）これより半加法族において、非自明だが面白い性質を示すことができる。
 
 __補題__ $\mathscr{S}\subset 2^{S}$を半加法族とする。任意の$A\in\mathscr{S}$及び$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、互いに素な$B_{1}, \dotsc, B_{m}\in\mathscr{S}$が存在して
 
 $$
-A\backslash\bigcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}B_{j}
+A\setminus\bigcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}B_{j}
 $$
 
 と表せる。
 
-（証明）上の議論より$A\backslash A_{1}=\bigsqcup_{j=1}^{m}C_{j}$なる互いに素な$\lbrace C_{j} \rbrace\subset\mathscr{S}$が取れる。$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}( C_{j}\backslash A_{2} )$より、再び$C_{j}\backslash A_{2}=\bigsqcup_{k=1}^{m_{j}}D_{j, k}$なる互いに素な$\lbrace D_{j, k} : k=1, \dotsc, m_{j} \rbrace\subset\mathscr{S}$が取れて、$( A\backslash A_{1} )\backslash A_{2} = \bigsqcup_{j=1}^{m}\bigsqcup_{k=1}^{m_{j}}D_{j, k}$を満たす。このとき$\lbrace D_{j, k} \rbrace\subset\mathscr{S}$は互いに素である。以上を繰り返せば良い。$\square$
+（証明）上の議論より$A\setminus A_{1}=\bigsqcup_{j=1}^{m}C_{j}$なる互いに素な$\lbrace C_{j} \rbrace\subset\mathscr{S}$が取れる。$( A\setminus A_{1} )\setminus A_{2} = \bigsqcup_{j=1}^{m}( C_{j}\setminus A_{2} )$より、再び$C_{j}\setminus A_{2}=\bigsqcup_{k=1}^{m_{j}}D_{j, k}$なる互いに素な$\lbrace D_{j, k} : k=1, \dotsc, m_{j} \rbrace\subset\mathscr{S}$が取れて、$( A\setminus A_{1} )\setminus A_{2} = \bigsqcup_{j=1}^{m}\bigsqcup_{k=1}^{m_{j}}D_{j, k}$を満たす。このとき$\lbrace D_{j, k} \rbrace\subset\mathscr{S}$は互いに素である。以上を繰り返せば良い。$\square$
 
 半加法族の生成する有限加法族は、形が良く分かる集合になっている。
 
@@ -46,7 +46,7 @@ __命題__ $\mathscr{S}\subset 2^{S}$を半加法族とする。このとき$\si
 
 （証明）$\mathscr{S}$の元の非交叉有限和で表される集合全体を$\mathscr{A}$とする。$\mathscr{A}\subset\sigma_{0}\lbrack \mathscr{S} \rbrack$は明らかなので逆を示そう。$\mathscr{S}\subset\mathscr{A}$より$\mathscr{A}$が有限加法族であることを示せば良い。
 
-$\emptyset\in\mathscr{A}$は明白。$A_{i}, B_{j}\in\mathscr{S}$について$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}\in\mathscr{A}$とする。$A\cap B=\bigsqcup_{i, j}A_{i}\cap B_{j}$となるが、$\mathscr{S}$は半加法族なので$A_{i}\cap B_{j}\in\mathscr{S}$である。故に$A\cap B\in\mathscr{A}$を得る。また$S\backslash A=\bigcap_{i=1}^{n}( S\backslash A_{i} )$となるが、$A_{i}\in\mathscr{S}$より$S\backslash A_{i}$は$\mathscr{S}$の元の非交叉有限和で表せる。つまり$S\backslash A_{i}\in\mathscr{A}$であり、$\mathscr{A}$は有限交叉で閉じているから$S\backslash A\in\mathscr{A}$を得る。以上より$\mathscr{A}$は有限加法族であり、生成の最小性から$\sigma_{0}\lbrack \mathscr{S} \rbrack=\mathscr{A}$を得る。$\square$
+$\emptyset\in\mathscr{A}$は明白。$A_{i}, B_{j}\in\mathscr{S}$について$A=\bigsqcup_{i=1}^{n}A_{i}, B=\bigsqcup_{j=1}^{m}B_{j}\in\mathscr{A}$とする。$A\cap B=\bigsqcup_{i, j}A_{i}\cap B_{j}$となるが、$\mathscr{S}$は半加法族なので$A_{i}\cap B_{j}\in\mathscr{S}$である。故に$A\cap B\in\mathscr{A}$を得る。また$S\setminus A=\bigcap_{i=1}^{n}( S\setminus A_{i} )$となるが、$A_{i}\in\mathscr{S}$より$S\setminus A_{i}$は$\mathscr{S}$の元の非交叉有限和で表せる。つまり$S\setminus A_{i}\in\mathscr{A}$であり、$\mathscr{A}$は有限交叉で閉じているから$S\setminus A\in\mathscr{A}$を得る。以上より$\mathscr{A}$は有限加法族であり、生成の最小性から$\sigma_{0}\lbrack \mathscr{S} \rbrack=\mathscr{A}$を得る。$\square$
 
 
 
@@ -64,7 +64,7 @@ __命題__ $\mu$を半加法族$\mathscr{S}\subset 2^{S}$上の前測度とす�
 
 特に$\mu$は単調かつ有限劣加法的である。
 
-（証明）補題より互いに素な$D_{1}, \dotsc, D_{m}\in\mathscr{S}$が存在して$A\backslash\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}D_{j}$と表せる。$\bigsqcup_{i=1}^{n}A_{i}\subset A$とする。このとき$A=\bigsqcup_{i=1}^{n}A_{i}\sqcup\bigsqcup_{j=1}^{m}D_{j}$であり、$\mu$は有限加法的であるから
+（証明）補題より互いに素な$D_{1}, \dotsc, D_{m}\in\mathscr{S}$が存在して$A\setminus\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{j=1}^{m}D_{j}$と表せる。$\bigsqcup_{i=1}^{n}A_{i}\subset A$とする。このとき$A=\bigsqcup_{i=1}^{n}A_{i}\sqcup\bigsqcup_{j=1}^{m}D_{j}$であり、$\mu$は有限加法的であるから
 
 $$
 \mu( A )=\sum_{i=1}^{n}\mu( A_{i} )+\sum_{j=1}^{m}\mu( D_{j} )\ge\sum_{i=1}^{n}\mu( A_{i} )
@@ -75,7 +75,7 @@ $$
 $B\subset\bigcup_{i=1}^{n}B_{i}$とする。$B=\bigcup_{i=1}^{n}( B\cap B_{i} )$なので、
 
 $$
-C_{i}:=( B\cap B_{i} )\backslash\bigcup_{j=1}^{i-1}( B\cap B_{j} )
+C_{i}:=( B\cap B_{i} )\setminus\bigcup_{j=1}^{i-1}( B\cap B_{j} )
 $$
 
 と置けば、$B=\bigsqcup_{i=1}^{n}C_{i}$と互いに素な和で表せる。ここで$B\cap B_{j}\in\mathscr{S}$だから、補題より互いに素な$\lbrace D_{i, j} : j=1, \dotsc, n_{i} \rbrace\subset\mathscr{S}$が存在して$C_{i}=\bigsqcup_{j=1}^{n_{i}}D_{i, j}$と表せる。$\mu$は有限加法的であり、$\bigsqcup_{j=1}^{n_{i}}D_{i, j}=C_{i}\subset B_{i}$であるから、上の結果より
@@ -152,24 +152,24 @@ __定理__ （半加法族上の前測度に対する拡張定理）$\mu$を半�
 
 まず外測度$\widehat{\mu}$の構成に関して、$\sigma_{0}\lbrack \mathscr{S} \rbrack$の元が$\mathscr{S}$の元の非交叉有限和で書けるので、$\mu$から誘導される外測度も$\mu_{0}$から誘導される外測度も等しい。
 
-次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\in\mathscr{S}$及び$E\subset S$とする。$\mathscr{S}$は半加法族なので$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$S\backslash A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。$\mathscr{C}\subset\mathscr{S}$を$E$の被覆とすると$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。また$C\in\mathscr{C}$について
+次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\in\mathscr{S}$及び$E\subset S$とする。$\mathscr{S}$は半加法族なので$A_{1}, \dotsc, A_{n}\in\mathscr{S}$が存在して$S\setminus A=\bigsqcup_{i=1}^{n}A_{i}$と表せる。$\mathscr{C}\subset\mathscr{S}$を$E$の被覆とすると$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。また$C\in\mathscr{C}$について
 
 $$
-C\backslash A=C\cap( S\backslash A )=C\cap\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{i=1}^{n}( C\cap A_{i} )
+C\setminus A=C\cap( S\setminus A )=C\cap\bigsqcup_{i=1}^{n}A_{i}=\bigsqcup_{i=1}^{n}( C\cap A_{i} )
 $$
 
-より$\lbrace C\cap A_{i} : C\in\mathscr{C}, i=1, \dotsc, n \rbrace\subset\mathscr{S}$は$E\backslash A$の被覆となる。よって
+より$\lbrace C\cap A_{i} : C\in\mathscr{C}, i=1, \dotsc, n \rbrace\subset\mathscr{S}$は$E\setminus A$の被覆となる。よって
 
 $$
 \begin{aligned}
-\widehat{\mu}( E\cap A )+\widehat{\mu}( E\backslash A ) &\le \sum_{C\in\mathscr{C}}\mu( C\cap A )+\sum_{C\in\mathscr{C}}\sum_{i=1}^{n}\mu( C\cap A_{i} ) \\
+\widehat{\mu}( E\cap A )+\widehat{\mu}( E\setminus A ) &\le \sum_{C\in\mathscr{C}}\mu( C\cap A )+\sum_{C\in\mathscr{C}}\sum_{i=1}^{n}\mu( C\cap A_{i} ) \\
 &=\sum_{C\in\mathscr{C}}\left( \mu( C\cap A )+\sum_{i=1}^{n}\mu( C\cap A_{i} ) \right)
 \end{aligned}
 $$
 
 となる。ところで
 $$
-C=( C\cap A )\sqcup ( C\backslash A )=( C\cap A )\sqcup( C\cap A_{1} )\sqcup\dotsb\sqcup( C\cap A_{n} )
+C=( C\cap A )\sqcup ( C\setminus A )=( C\cap A )\sqcup( C\cap A_{1} )\sqcup\dotsb\sqcup( C\cap A_{n} )
 $$
 
 より$C\in\mathscr{C}$より$\mu$の有限加法性から

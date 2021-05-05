@@ -46,7 +46,7 @@ $$
 である。また
 
 $$
-( S\times T )\backslash( A\times B )=( S\backslash A )\times B\sqcup( S\backslash A )\times( T\backslash B )\sqcup( A\times( T\backslash B )
+( S\times T )\setminus( A\times B )=( S\setminus A )\times B\sqcup( S\setminus A )\times( T\setminus B )\sqcup( A\times( T\setminus B )
 $$
 
 より、$\mathscr{A}\times\mathscr{B}$の元の非交叉有限和で書ける。従って$\mathscr{A}\times\mathscr{B}$は半加法族である。$\square$
@@ -80,22 +80,22 @@ $$
 だから、
 
 $$
-(A\backslash A_{k+1} )\times( B\backslash B_{k+1} )=\bigsqcup_{i=1}^{k}( A_{i}\backslash A_{k+1} )\times( B_{i}\backslash B_{k+1} )
+(A\setminus A_{k+1} )\times( B\setminus B_{k+1} )=\bigsqcup_{i=1}^{k}( A_{i}\setminus A_{k+1} )\times( B_{i}\setminus B_{k+1} )
 $$
 
 が成り立つ。帰納法の仮定より
 
 $$
-\mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\backslash B_{k+1} )=\sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\backslash B_{k+1} )
+\mu_{S}( A\setminus A_{k+1} )\mu_{T}( B\setminus B_{k+1} )=\sum_{i=1}^{k}\mu_{S}( A_{i}\setminus A_{k+1} )\mu_{T}( B_{i}\setminus B_{k+1} )
 $$
 
 が成り立つ。同様にして
 
 $$
-\begin{align*}
-\mu_{S}( A\backslash A_{k+1} )\mu_{T}( B\cap B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\backslash A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} ), \\
-\mu_{S}( A\cap A_{k+1} )\mu_{T}( B\backslash B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\backslash B_{k+1} )
-\end{align*}
+\begin{aligned}
+\mu_{S}( A\setminus A_{k+1} )\mu_{T}( B\cap B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\setminus A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} ), \\
+\mu_{S}( A\cap A_{k+1} )\mu_{T}( B\setminus B_{k+1} ) &= \sum_{i=1}^{k}\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\setminus B_{k+1} )
+\end{aligned}
 $$
 
 も成り立つ。ここで$i=1, \dotsc, k$について$\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} )\gt 0$と仮定すると、
@@ -107,59 +107,78 @@ $$
 となり矛盾する。故に$\mu_{S}( A_{i}\cap A_{k+1} )\mu_{T}( B_{i}\cap B_{k+1} )=0$であり、
 
 $$
-\begin{align*} \mu( A\times B ) &= \mu_{S}( A )\mu_{T}( B ) \\
-&= ( \mu_{S}( A\backslash A_{k+1} )+\mu_{S}( A\cap A_{k+1} ) )( \mu_{T}( B\backslash B_{k+1} )+\mu_{T}( B\cap B_{k+1} ) ) \\
-&=\left( \sum_{i=1}^{k}( \mu_{S}( A_{i}\backslash A_{k+1} )+\mu_{S}( A_{i}\cap A_{k+1} ) )( \mu_{T}( B_{i}\backslash B_{k+1} )+\mu_{T}( B_{i}\cap B_{k+1} ) ) \right) +\mu_{S}( A_{k+1} )\mu_{T}( B_{k+1} ) \\
+\begin{aligned} \mu( A\times B ) &= \mu_{S}( A )\mu_{T}( B ) \\
+&= ( \mu_{S}( A\setminus A_{k+1} )+\mu_{S}( A\cap A_{k+1} ) )( \mu_{T}( B\setminus B_{k+1} )+\mu_{T}( B\cap B_{k+1} ) ) \\
+&=\left( \sum_{i=1}^{k}( \mu_{S}( A_{i}\setminus A_{k+1} )+\mu_{S}( A_{i}\cap A_{k+1} ) )( \mu_{T}( B_{i}\setminus B_{k+1} )+\mu_{T}( B_{i}\cap B_{k+1} ) ) \right) +\mu_{S}( A_{k+1} )\mu_{T}( B_{k+1} ) \\
  &= \sum_{i=1}^{k+1}\mu_{S}( A_{i} )\mu_{T}( B_{i} )
-\end{align*}
+\end{aligned}
 $$
 
 を得る。$\square$
 
-<!--
-\begin{Thm}{}{}
-上記補題の$\mu$は弱可算劣加法的である。
-\end{Thm}
+__定理__ 上記補題の$\mu$は弱可算劣加法的である。
 
-\begin{proof}
-（証明）集合$X$上の可算被覆$\mathscr{C}\subset 2^{X}$について考える。
-すなわち$\mathscr{C}=\lbrace C_{1}, C_{2}, \dotsc \rbrace$は$X=\bigcup_{n\in\mathbb{N}}C_{n}$を満たすとする。
-写像$f\colon X\rightarrow 2^{\mathbb{N}}$を$x\in X$に対し、$x\in C_{n}$なら$f( x )_{n}:=1$、$x\notin C_{n}$なら$f( x )_{n}:=0$により定める。このとき$f$は単射であり、
-\[ f^{-1}( a )=\bigcap_{a_{i}=1}C_{i}\cap\bigcap_{a_{i}=0}( X\backslash C_{i} ) \]
-が成り立つ。特に$f^{-1}( 0 )=0$であり、$X=\bigsqcup_{a\in2^{\mathbb{N}}}f^{-1}( a )$が成り立つ。
+（証明）集合$X$上の可算被覆$\mathscr{C}=\lbrace C_{1}, C_{2}, \dotsc \rbrace\subset 2^{X}$を考える。まず写像$f\colon X\rightarrow 2^{\mathbb{N}}$を以下で定める。
 
-互いに素な$\lbrace A_{n}\times B_{n} \rbrace\subset\mathscr{A}\times\mathscr{B}$について、
-$\bigsqcup_{n\in\mathbb{N}}A_{n}\times B_{n}=A\times B\in\mathscr{A}\times\mathscr{B}$であるとする。
-$\bigcup_{n\in\mathbb{N}}A_{n}=A, \bigcup_{n\in\mathbb{N}}B_{n}=B$より、
-写像$f\colon A\rightarrow 2^{\mathbb{N}}, g\colon B\rightarrow 2^{\mathbb{N}}$を上記のように定めることができる。
-このとき$\mathscr{A}, \mathscr{B}$は$\sigma$加法族だから、$f^{-1}( a )\in\mathscr{A}, g^{-1}( b )\in\mathscr{B}$が成り立つ。$\mu_{S}, \mu_{T}$は測度だから可算加法的、つまり
-\begin{align*}
+- $x\in X$及び$n\in\mathbb{N}$について、$x\in C_{n}$なら$f(x)_{n}=1$、$x\notin C_{n}$なら$f(x)_{n}=0$とする。
+
+このとき$p\in 2^{\mathbb{N}}$について
+
+$$
+f^{-1}(u)=\bigcap_{p_{i}=1}C_{i}\cap\bigcap_{p_{i}=0}( X\setminus C_{i} )
+$$
+
+であり、従って$f^{-1}( 0 )=\emptyset$及び$X=\bigsqcup_{p\in 2^{\mathbb{N}}}f^{-1}(p)$が成り立つ。
+
+さて互いに素な$\lbrace A_{n}\times B_{n} \rbrace\subset\mathscr{A}\times\mathscr{B}$について、$\bigsqcup_{n\in\mathbb{N}}A_{n}\times B_{n}=A\times B\in\mathscr{A}\times\mathscr{B}$であるとする。$\bigcup_{n\in\mathbb{N}}A_{n}=A, \bigcup_{n\in\mathbb{N}}B_{n}=B$より、写像$f\colon A\rightarrow 2^{\mathbb{N}}, g\colon B\rightarrow 2^{\mathbb{N}}$を上記のように定めることができる。更に$\mathscr{A}, \mathscr{B}$は$\sigma$加法族だから、$p, q\in 2^{\mathbb{N}}$について$f^{-1}(p)\in\mathscr{A}, g^{-1}(q)\in\mathscr{B}$が成り立つ。$\mu_{S}, \mu_{T}$は測度だから可算加法的なので
+
+$$
+\begin{aligned}
 \mu( A\times B ) &= \mu_{S}( A )\mu_{T}( B ) \\
-&= \left( \sum_{a\in 2^{\mathbb{N}}}\mu_{S}( f^{-1}( a ) ) \right)\left( \sum_{b\in 2^{\mathbb{N}}}\mu_{T}( g^{-1}( b ) ) \right) \\
-&=\sum_{a, b}\mu_{S}( f^{-1}( a ) )\mu_{T}( g^{-1}( b ) ) \\
-&= \sum_{a, b}\mu( f^{-1}( a )\times g^{-1}( b ) )
-\end{align*}
-が成り立つ。ところで$( x, y )\in A\times B$について、ある$n$が存在して$( x, y )\in A_{n}\times B_{n}$である。
-このとき$f( x )_{n}=g( y )_{n}=1$であるから、任意の$n$について$a_{n}\neq b_{n}$となる$a, b$について$f^{-1}( a )\times g^{-1}( b )=\emptyset$となる。従って
-\begin{align*} \sum_{a, b}\mu( f^{-1}( a )\times g^{-1}( b ) ) &\le \sum_{n\in\mathbb{N}}\sum_{a_{n}=1}\sum_{b_{n}=1}\mu( f^{-1}( a )\times g^{-1}( b ) ) \\
-&=\sum_{n\in\mathbb{N}}\sum_{a_{n}=1}\sum_{b_{n}=1}\mu_{S}( f^{-1}( a ) )\mu_{T}( g^{-1}( b ) ) \\ &=\sum_{n\in\mathbb{N}}\mu_{S}( A_{n} )\mu_{T}( B_{n} ) \\
-&= \sum_{n\in\mathbb{N}}\mu( A_{n}\times B_{n} )
-\end{align*}
-が分かる。以上より$\mu$が弱可算劣加法的であることが示された。$\square$
-\end{proof}
+&= \left( \sum_{p\in 2^{\mathbb{N}}}\mu_{S}( f^{-1}(p) ) \right)\left( \sum_{q\in 2^{\mathbb{N}}}\mu_{T}( g^{-1}(q) ) \right) \\
+&=\sum_{p, q}\mu_{S}( f^{-1}(p) )\mu_{T}( g^{-1}(q) ) \\
+&= \sum_{p, q}\mu( f^{-1}(p)\times g^{-1}(q) )
+\end{aligned}
+$$
 
-従って拡張定理より$\mu$の拡張となる$\mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack$上の測度が存在する。
-これをもって測度空間$( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$の積としたいのだが、実は拡張は一意でない。
+を得る。
+
+ところで$( x, y )\in A\times B$について、ある$n$が存在して$( x, y )\in A_{n}\times B_{n}$であり、従って$f( x )_{n}=g( y )_{n}=1$である。故に$p, q\in 2^{\mathbb{N}}$が任意の$n$について$p_{n}=q_{n}=1$でないなら、$f^{-1}(p)\times g^{-1}(q)=\emptyset$であり、特に$\mu$は前測度なので$\mu( f^{-1}(p)\times g^{-1}(q) )=0$である。以上より
+
+$$
+\begin{aligned}
+\sum_{p, q}\mu(f^{-1}(p)\times g^{-1}(q)) &=\sum_{\exists n(p_{n}=q_{n}=1)}\mu( f^{-1}(p)\times g^{-1}(q) ) \\
+&\le \sum_{n\in\mathbb{N}}\sum_{p_{n}=q_{n}=1}\mu( f^{-1}(p)\times g^{-1}(q) ) \\
+&=\sum_{n\in\mathbb{N}}\sum_{p_{n}=q_{n}=1}\mu_{S}( f^{-1}(p) )\mu_{T}( g^{-1}(q) ) \\
+\end{aligned}
+$$
+
+を得る。ここで$A=\bigsqcup_{p\in 2^{\mathbb{N}}}f^{-1}(p)$より、$A_{n}=\bigsqcup_{p}f^{-1}(p)\cap A_{n}=\bigsqcup_{p_{n}=1}f^{-1}(p)$である。よって
+
+$$
+\mu_{S}(A_{n})\mu_{T}(B_{n})=\left(\sum_{p_{n}=1}\mu_{S}(f^{-1}(p))\right)\left(\sum_{q_{n}=1}\mu_{T}(g^{-1}(q))\right)=\sum_{p_{n}=q_{n}=1}\mu_{S}(f^{-1}(p))\mu_{T}(g^{-1}(q))
+$$
+
+だから、結局
+
+$$
+\mu(A\times B)\le\sum_{n\in\mathbb{N}}\sum_{p_{n}=q_{n}=1}\mu_{S}( f^{-1}(p) )\mu_{T}( g^{-1}(q) )=\sum_{n\in\mathbb{N}}\mu_{S}(A_{n})\mu_{T}(B_{n})
+$$
+
+を得る。つまり$\mu$は弱可算劣加法的である。$\square$
+
+従って拡張定理より$\mu$の拡張となる$\mathscr{A}\otimes\mathscr{B}=\sigma\lbrack \mathscr{A}\times\mathscr{B} \rbrack$上の測度が存在する。これをもって測度空間$( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$の積としたいのだが、実は拡張は一意でない。
 
 
 
+<!--
 
 \subsection{ディンキン族}
 \begin{Def}{}{}
 集合$S$において$\mathscr{D}\subset 2^{S}$が次の3条件を満たすとき、$\mathscr{D}$は$S$上のディンキン族であるという。
 \begin{EnumCond}
 \item$S\in\mathscr{D}$である。
-\item$A, B\in\mathscr{D}, A\subset B$なら$B\backslash A\in\mathscr{D}$である。
+\item$A, B\in\mathscr{D}, A\subset B$なら$B\setminus A\in\mathscr{D}$である。
 \item$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$が単調増大列（$D_{1}\subset D_{2}\subset\dotsm$）なら$\bigcup_{n\in\mathbb{N}}D_{n}\in\mathscr{D}$である。
 \end{EnumCond}
 \end{Def}
@@ -183,8 +202,8 @@ $\mathscr{G}\subset 2^{S}$とする。$A\in D\lbrack \mathscr{G} \rbrack$に対�
 
 \begin{proof}
 （証明）$A\cap X= A\in D\lbrack \mathscr{G} \rbrack$より$X\in\mathscr{D}_{A}$である。
-$B, C\in D\lbrack \mathscr{G} \rbrack, B\subset C$に対して$A\cap ( C\backslash B )=( A\cap C )\backslash( A\cap B )$となる。
-ここで$A\cap B, A\cap C\in D\lbrack \mathscr{G} \rbrack$は$A\cap B\subset A\cap C$を満たすので、$C\backslash B\in\mathscr{D}_{A}$が分かる。
+$B, C\in D\lbrack \mathscr{G} \rbrack, B\subset C$に対して$A\cap ( C\setminus B )=( A\cap C )\setminus( A\cap B )$となる。
+ここで$A\cap B, A\cap C\in D\lbrack \mathscr{G} \rbrack$は$A\cap B\subset A\cap C$を満たすので、$C\setminus B\in\mathscr{D}_{A}$が分かる。
 単調増大列$\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$を取る。
 $A\cap\bigcup_{n\in\mathbb{N}}B_{n}=\bigcup_{n\in\mathbb{N}}( A\cap B_{n} )$だが、
 これは単調増大列$\lbrace A\cap B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$の極限で表せる。
@@ -210,16 +229,16 @@ $\mathscr{D}_{A}$はディンキン族だから最小性より$D\lbrack \mathscr
 \[ \mathscr{D}:=\lbrace A\in D\lbrack \mathscr{G} \rbrack : \mathscr{D}_{A}=D\lbrack \mathscr{G} \rbrack \rbrace \]
 と定める。上の議論より$\mathscr{G}\subset\mathscr{D}$となる。そこで$\mathscr{D}$が$S$上のディンキン族となることを示そう。
 $\mathscr{D}_{X}=D\lbrack \mathscr{G} \rbrack$より$X\in\mathscr{D}$である。$A, B\in\mathscr{D}, A\subset B$とする。
-$G\in\mathscr{G}$に対し$G\cap( B\backslash A )=( G\cap B )\backslash( G\cap A )\in D\lbrack \mathscr{G} \rbrack$が成り立つ。
-故に$\mathscr{D}_{B\backslash A}$は$\mathscr{G}$を含むディンキン族となり$\mathscr{D}_{B\backslash A}=D\lbrack \mathscr{G} \rbrack$を満たす。
+$G\in\mathscr{G}$に対し$G\cap( B\setminus A )=( G\cap B )\setminus( G\cap A )\in D\lbrack \mathscr{G} \rbrack$が成り立つ。
+故に$\mathscr{D}_{B\setminus A}$は$\mathscr{G}$を含むディンキン族となり$\mathscr{D}_{B\setminus A}=D\lbrack \mathscr{G} \rbrack$を満たす。
 同様に単調増大列$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$を取れば、
 $G\in\mathscr{G}$に対し$( \bigcup_{n\in\mathbb{N}} )\cap G=\bigcup_{n\in\mathbb{N}}( G\cap A_{n} )$が成り立つ。
 これは単調増大列$\lbrace G\cap A_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$の極限だから
 結局$D\lbrack \mathscr{G} \rbrack = \mathscr{D}_{\bigcup_{n\in\mathbb{N}}}$を得る。
 以上により$\mathscr{D}$は$S$上のディンキン族となる。特に$\mathscr{G}$を含むことから$\mathscr{D}=D\lbrack \mathscr{G} \rbrack$が従う。
 
-最後に$\mathscr{D}$が$\sigma$加法族であることを示そう。$A, B\in\mathscr{D}$に対し、$A\backslash B=A\backslash( A\cap B )\in\mathscr{D}$である。
-特に$\emptyset=X\backslash X\in\mathscr{D}$となる。また$A\cup B=X\backslash( ( X\backslash A )\cap( X\backslash B ) )\in\mathscr{D}$も分かる。
+最後に$\mathscr{D}$が$\sigma$加法族であることを示そう。$A, B\in\mathscr{D}$に対し、$A\setminus B=A\setminus( A\cap B )\in\mathscr{D}$である。
+特に$\emptyset=X\setminus X\in\mathscr{D}$となる。また$A\cup B=X\setminus( ( X\setminus A )\cap( X\setminus B ) )\in\mathscr{D}$も分かる。
 $\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$について、$B_{n}=\bigcup_{i=1}^{n}A_{i}$と定めれば
 $\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$は単調増大列となる。
 従って$\bigcup_{n\in\mathbb{N}}A_{n}=\bigcup_{n\in\mathbb{N}}B_{n}\in\mathscr{D}$となる。$\square$
@@ -244,10 +263,10 @@ $\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$は単調増大列と�
 \end{Prop}
 
 \begin{proof}
-（証明）定義より$S\in\mathscr{D}$である。$A, B\in\mathscr{D}, A\subset B$とする。$\mu_{j}$は有限な測度だから$\mu_{j}( B\backslash A )=\mu_{j}( B )-\mu_{j}( A )$となる。
-故に$B\backslash A\in\mathscr{D}$となる。また単調増大列$\lbrace A_{n} \rbrace\subset\mathscr{D}$に対し、$A_{0}:=\emptyset, B_{n}:=A_{n}\backslash A_{n-1}$と定めれば
-\[ \mu_{j}\left( \bigcup_{n\in\mathbb{N}} \right)=\mu_{j}\left( \bigsqcup_{n\in\mathbb{N}}B_{n} \right)=\sum_{n\in\mathbb{N}}\mu_{j}( A_{n}\backslash A_{n-1} ) \]
-が成り立つ。$A_{n}\backslash A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$が従う。$\square$
+（証明）定義より$S\in\mathscr{D}$である。$A, B\in\mathscr{D}, A\subset B$とする。$\mu_{j}$は有限な測度だから$\mu_{j}( B\setminus A )=\mu_{j}( B )-\mu_{j}( A )$となる。
+故に$B\setminus A\in\mathscr{D}$となる。また単調増大列$\lbrace A_{n} \rbrace\subset\mathscr{D}$に対し、$A_{0}:=\emptyset, B_{n}:=A_{n}\setminus A_{n-1}$と定めれば
+\[ \mu_{j}\left( \bigcup_{n\in\mathbb{N}} \right)=\mu_{j}\left( \bigsqcup_{n\in\mathbb{N}}B_{n} \right)=\sum_{n\in\mathbb{N}}\mu_{j}( A_{n}\setminus A_{n-1} ) \]
+が成り立つ。$A_{n}\setminus A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$が従う。$\square$
 \end{proof}
 
 \begin{Thm}{}{}
