@@ -171,34 +171,31 @@ $$
 
 
 
-<!--
 
-\subsection{ディンキン族}
-\begin{Def}{}{}
-集合$S$において$\mathscr{D}\subset 2^{S}$が次の3条件を満たすとき、$\mathscr{D}$は$S$上のディンキン族であるという。
-\begin{EnumCond}
-\item$S\in\mathscr{D}$である。
-\item$A, B\in\mathscr{D}, A\subset B$なら$B\setminus A\in\mathscr{D}$である。
-\item$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$が単調増大列（$D_{1}\subset D_{2}\subset\dotsm$）なら$\bigcup_{n\in\mathbb{N}}D_{n}\in\mathscr{D}$である。
-\end{EnumCond}
-\end{Def}
+## ディンキン族
 
-明らかに$\emptyset\in\mathscr{D}$である。また$\sigma$加法族はディンキン族である。
+__定義__ 集合$S$において$\mathscr{D}\subset 2^{S}$が次の3条件を満たすとき、$\mathscr{D}$は$S$上のディンキン族であるという。
+
+- $S\in\mathscr{D}$である。
+- $A, B\in\mathscr{D}, A\subset B$なら$B\setminus A\in\mathscr{D}$である。
+- $\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$が単調増大列（$D_{1}\subset D_{2}\subset\dotsm$）なら$\bigcup_{n\in\mathbb{N}}D_{n}\in\mathscr{D}$である。
+
+> 明らかに$\emptyset\in\mathscr{D}$である。また$\sigma$加法族はディンキン族である。
 
 ディンキン族も任意の交叉でディンキン族となるため、生成を考えることができる。
 
-\begin{Def}{}{}
-$\mathscr{G}\subset 2^{S}$について、$\mathscr{S}$を含むディンキン族全体の交叉を$D\lbrack \mathscr{G} \rbrack_{S}$、
-あるいは単に$D\lbrack \mathscr{G} \rbrack$で記し、$\mathscr{G}$により$S$上で生成されたディンキン族と呼ぶ。
-\end{Def}
+__定義__ $\mathscr{G}\subset 2^{S}$について、$\mathscr{S}$を含むディンキン族全体の交叉を$D\lbrack \mathscr{G} \rbrack_{S}$や$D\lbrack \mathscr{G} \rbrack$と記し、$\mathscr{G}$により$S$上で生成されたディンキン族と呼ぶ。
 
-$D\lbrack \mathscr{G} \rbrack$は$\mathscr{G}$を含む最小のディンキン族である。
+__命題__ $\mathscr{G}\subset 2^{S}$とする。$A\in D\lbrack \mathscr{G} \rbrack$に対して
 
-\begin{Prop}{}{}
-$\mathscr{G}\subset 2^{S}$とする。$A\in D\lbrack \mathscr{G} \rbrack$に対して
-\[ \mathscr{D}_{A}:=\lbrace B\in D\lbrack \mathscr{G} \rbrack : A\cap B\in D\lbrack \mathscr{G} \rbrack \rbrace \]
+$$
+\mathscr{D}_{A}:=\lbrace B\in D\lbrack \mathscr{G} \rbrack : A\cap B\in D\lbrack \mathscr{G} \rbrack \rbrace
+$$
+
 と定めると$\mathscr{D}_{A}$はディンキン族となる。
-\end{Prop}
+
+
+<!--
 
 \begin{proof}
 （証明）$A\cap X= A\in D\lbrack \mathscr{G} \rbrack$より$X\in\mathscr{D}_{A}$である。
