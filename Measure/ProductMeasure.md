@@ -174,17 +174,19 @@ $$
 
 ## ディンキン族
 
-__定義__ 集合$S$において$\mathscr{D}\subset 2^{S}$が次の3条件を満たすとき、$\mathscr{D}$は$S$上のディンキン族であるという。
+__定義__ $S$を集合とする。$\mathscr{D}\subset 2^{S}$は次の3条件を満たすとする。
 
 - $S\in\mathscr{D}$である。
 - $A, B\in\mathscr{D}, A\subset B$なら$B\setminus A\in\mathscr{D}$である。
 - $\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{D}$が単調増大列（$D_{1}\subset D_{2}\subset\dotsm$）なら$\bigcup_{n\in\mathbb{N}}D_{n}\in\mathscr{D}$である。
 
+このとき$\mathscr{D}$を$S$上の **ディンキン族** と呼ぶ。
+
 > 明らかに$\emptyset\in\mathscr{D}$である。また$\sigma$加法族はディンキン族である。
 
-ディンキン族も任意の交叉でディンキン族となるため、生成を考えることができる。
+ディンキン族も任意の交叉でディンキン族となる。従って生成を考えることができる。
 
-__定義__ $\mathscr{G}\subset 2^{S}$について、$\mathscr{S}$を含むディンキン族全体の交叉を$D\lbrack \mathscr{G} \rbrack_{S}$や$D\lbrack \mathscr{G} \rbrack$と記し、$\mathscr{G}$により$S$上で生成されたディンキン族と呼ぶ。
+__定義__ $\mathscr{G}\subset 2^{S}$とする。$\mathscr{S}$を含むディンキン族全体の交叉を$D\lbrack \mathscr{G} \rbrack_{S}$や$D\lbrack \mathscr{G} \rbrack$と記し、$\mathscr{G}$により$S$上で生成されたディンキン族と呼ぶ。
 
 __命題__ $\mathscr{G}\subset 2^{S}$とする。$A\in D\lbrack \mathscr{G} \rbrack$に対して
 
@@ -194,24 +196,21 @@ $$
 
 と定めると$\mathscr{D}_{A}$はディンキン族となる。
 
+（証明）$A\cap S= A\in D\lbrack \mathscr{G} \rbrack$より$S\in\mathscr{D}_{A}$である。
+
+$B, C\in D\lbrack \mathscr{G} \rbrack, B\subset C$に対して$A\cap ( C\setminus B )=( A\cap C )\setminus( A\cap B )$となる。ここで$A\cap B, A\cap C\in D\lbrack \mathscr{G} \rbrack$は$A\cap B\subset A\cap C$を満たすので、$C\setminus B\in\mathscr{D}_{A}$を得る。
+
+単調増大列$\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$を取る。$A\cap\bigcup_{n\in\mathbb{N}}B_{n}=\bigcup_{n\in\mathbb{N}}( A\cap B_{n} )$だが、これは単調増大列$\lbrace A\cap B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$の極限で表せる。故に$\bigcup_{n\in\mathbb{N}}B_{n}\in\mathscr{D}_{A}$も従う。$\square$
+
+__補題__ （ディンキンの補題）$\mathscr{G}\subset 2^{S}$は有限交叉で閉じるとする。すなわち$G_{1}, \dotsc, G_{n}\in\mathscr{G}$について、
+
+$$
+\bigcap_{i=1}^{n}G_{i}\in\mathscr{G}
+$$
+
+を満たすとする。このとき$D\lbrack \mathscr{G} \rbrack=\sigma\lbrack \mathscr{G} \rbrack$が成り立つ。
 
 <!--
-
-\begin{proof}
-（証明）$A\cap X= A\in D\lbrack \mathscr{G} \rbrack$より$X\in\mathscr{D}_{A}$である。
-$B, C\in D\lbrack \mathscr{G} \rbrack, B\subset C$に対して$A\cap ( C\setminus B )=( A\cap C )\setminus( A\cap B )$となる。
-ここで$A\cap B, A\cap C\in D\lbrack \mathscr{G} \rbrack$は$A\cap B\subset A\cap C$を満たすので、$C\setminus B\in\mathscr{D}_{A}$が分かる。
-単調増大列$\lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$を取る。
-$A\cap\bigcup_{n\in\mathbb{N}}B_{n}=\bigcup_{n\in\mathbb{N}}( A\cap B_{n} )$だが、
-これは単調増大列$\lbrace A\cap B_{n} \rbrace_{n\in\mathbb{N}}\subset D\lbrack \mathscr{G} \rbrack$の極限で表せる。
-故に$\bigcup_{n\in\mathbb{N}}B_{n}\in\mathscr{D}_{A}$も従う。$\square$
-\end{proof}
-
-\begin{Lem}{ディンキンの補題}{}
-$\mathscr{G}\subset 2^{S}$は有限交叉で閉じるとする。すなわち$G_{1}, \dotsc, G_{n}\in\mathscr{G}$について、
-\[ \bigcap_{i=1}^{n}G_{i}\in\mathscr{G} \]
-であるとする。このとき$D\lbrack \mathscr{G} \rbrack=\sigma\lbrack \mathscr{G} \rbrack$が成り立つ。
-\end{Lem}
 
 \begin{proof}
 （証明）$\sigma$加法族はディンキン族であるから、最小性より$D\lbrack \mathscr{G} \rbrack\subset\sigma\lbrack \mathscr{G} \rbrack$である。
