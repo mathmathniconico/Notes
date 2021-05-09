@@ -240,31 +240,31 @@ $\mathscr{D}=D\lbrack \mathscr{G} \rbrack$は有限交叉で閉じている。�
 
 
 
-<!--
 
+## 測度の一致
 
-\subsection{測度の一致}
-\begin{Def}{}{}
-単調な集合函数$\mu\colon\mathscr{G}\rightarrow\lbrack 0, \infty \rbrack$に対し以下を定める。
-\begin{EnumCond}
-\item$S\in\mathscr{G}$であり、$\mu( G )\lt\infty$のとき$\mu$は有限（finite）であるという。
-\item ある$\lbrace G_{n} \rbrace\subset\mathscr{G}$が存在して$G_{n}\nearrow S, \mu( G_{n} )\lt\infty$を満たすとき$\mu$は$\sigma$-有限であるという。
-\end{EnumCond}
-\end{Def}
+__定義__ 集合函数$\mu\colon\mathscr{G}\rightarrow\lbrack 0, \infty \rbrack$は単調とする。以下を定める。
 
-\begin{Prop}{}{}
-可測空間$( S, \mathscr{A} )$上の有限な測度$\mu_{1}, \mu_{2}$に対し、$\mu_{1}( S )=\mu_{2}( S )$なら
-\[ \mathscr{D}:=\lbrace D\in\mathscr{A} : \mu_{1}( D )=\mu_{2}( D ) \rbrace \]
+- $S\in\mathscr{G}$かつ$\mu( G )\lt\infty$のとき$\mu$は有限（finite）という。
+- ある$\lbrace G_{n} \rbrace\subset\mathscr{G}$が存在して$G_{n}\nearrow S, \mu( G_{n} )\lt\infty$を満たすとき$\mu$は$\sigma$-有限という。
+
+__命題__ $\mu_{1}, \mu_{2}$は可測空間$( S, \mathscr{A} )$上の有限な測度とする。$\mu_{1}( S )=\mu_{2}( S )$なら
+
+$$
+\mathscr{D}:=\lbrace D\in\mathscr{A} : \mu_{1}( D )=\mu_{2}( D ) \rbrace
+$$
+
 はディンキン族である。
-\end{Prop}
 
-\begin{proof}
-（証明）定義より$S\in\mathscr{D}$である。$A, B\in\mathscr{D}, A\subset B$とする。$\mu_{j}$は有限な測度だから$\mu_{j}( B\setminus A )=\mu_{j}( B )-\mu_{j}( A )$となる。
-故に$B\setminus A\in\mathscr{D}$となる。また単調増大列$\lbrace A_{n} \rbrace\subset\mathscr{D}$に対し、$A_{0}:=\emptyset, B_{n}:=A_{n}\setminus A_{n-1}$と定めれば
-\[ \mu_{j}\left( \bigcup_{n\in\mathbb{N}} \right)=\mu_{j}\left( \bigsqcup_{n\in\mathbb{N}}B_{n} \right)=\sum_{n\in\mathbb{N}}\mu_{j}( A_{n}\setminus A_{n-1} ) \]
-が成り立つ。$A_{n}\setminus A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$が従う。$\square$
-\end{proof}
+（証明）定義より$S\in\mathscr{D}$である。$A, B\in\mathscr{D}, A\subset B$について$\mu_{j}$は有限な測度だから$\mu_{j}( B\setminus A )=\mu_{j}( B )-\mu_{j}( A )$である。故に$B\setminus A\in\mathscr{D}$を得る。また単調増大列$\lbrace A_{n} \rbrace\subset\mathscr{D}$に対し、$A_{0}:=\emptyset, B_{n}:=A_{n}\setminus A_{n-1}$と定めれば$\bigcup A_{n}=\bigsqcup B_{n}$より
 
+$$
+\mu_{j}\left( \bigcup_{n\in\mathbb{N}}A_{n} \right)=\sum_{n\in\mathbb{N}}\mu_{j}( B_{n} )=\sum_{n\in\mathbb{N}}\mu_{j}( A_{n}\setminus A_{n-1} )
+$$
+
+が成り立つ。$A_{n}\setminus A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$を得る。\square$
+
+<!--
 \begin{Thm}{}{}
 $\mathscr{G}\subset 2^{S}$は有限交叉で閉じるとする。$\sigma\lbrack \mathscr{G} \rbrack$上の測度$\mu_{1}, \mu_{2}$は、$\mathscr{G}$上で一致し、更に
 $\mu_{0}:=\mu_{j}|_{\mathscr{G}}$は$\sigma$-有限とする。このとき$\mu_{1}=\mu_{2}$が成り立つ。
