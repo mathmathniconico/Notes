@@ -262,47 +262,40 @@ $$
 \mu_{j}\left( \bigcup_{n\in\mathbb{N}}A_{n} \right)=\sum_{n\in\mathbb{N}}\mu_{j}( B_{n} )=\sum_{n\in\mathbb{N}}\mu_{j}( A_{n}\setminus A_{n-1} )
 $$
 
-が成り立つ。$A_{n}\setminus A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$を得る。\square$
+が成り立つ。$A_{n}\setminus A_{n-1}\in\mathscr{D}$より$\bigcup_{n\in\mathbb{N}}A_{n}\in\mathscr{D}$を得る。$\square$
 
-<!--
-\begin{Thm}{}{}
-$\mathscr{G}\subset 2^{S}$は有限交叉で閉じるとする。$\sigma\lbrack \mathscr{G} \rbrack$上の測度$\mu_{1}, \mu_{2}$は、$\mathscr{G}$上で一致し、更に
-$\mu_{0}:=\mu_{j}|_{\mathscr{G}}$は$\sigma$-有限とする。このとき$\mu_{1}=\mu_{2}$が成り立つ。
-\end{Thm}
+__定理__ $\mathscr{G}\subset 2^{S}$は有限交叉で閉じるとする。$\sigma\lbrack \mathscr{G} \rbrack$上の測度$\mu_{1}, \mu_{2}$は、$\mathscr{G}$上で一致し、更に$\mu_{0}:=\mu_{j}|_{\mathscr{G}}$は$\sigma$-有限とする。このとき$\mu_{1}=\mu_{2}$が成り立つ。
 
-\begin{proof}
-（証明）単調増大な$\lbrace G_{n} \rbrace\subset\mathscr{G}$を、$G_{n}\nearrow S, \mu_{0}( G_{n} )\lt\infty$を満たすように取る。
-$A\in\sigma\lbrack \mathscr{G} \rbrack$に対して$A\cap G_{n}\nearrow A$であるから、増大列連続性より$\mu_{j}( A )=\lim_{n\in\mathbb{N}}\mu( A\cap G_{n} )$が成り立つ。
+（証明）単調増大な$\lbrace G_{n} \rbrace\subset\mathscr{G}$を、$G_{n}\nearrow S, \mu_{0}( G_{n} )\lt\infty$を満たすように取る。$A\in\sigma\lbrack \mathscr{G} \rbrack$に対して$A\cap G_{n}\nearrow A$であるから、増大列連続性より$\mu_{j}( A )=\lim_{n\in\mathbb{N}}\mu_{j}( A\cap G_{n} )$が成り立つ。
 
-$A\in\sigma\lbrack \mathscr{G} \rbrack$に対して$\widetilde{\mu}_{j}( A ):=\mu_{j}( A\cap G_{n} )$と定めると、
-$\widetilde{\mu}_{j}$は$\sigma\lbrack \mathscr{G} \rbrack$上の有限な測度となる。ここで
-\[ \mathscr{D}_{n}:=\lbrace A\in\sigma\lbrack \mathscr{G} \rbrack : \widetilde{\mu}_{1}( A )=\widetilde{\mu}_{2}( A ) \rbrace \]
-と置くと、先の命題よりこれはディンキン族となる。ディンキンの補題より$\sigma\lbrack \mathscr{G} \rbrack=D\lbrack \mathscr{G} \rbrack$であるから、
-最小性より$\mathscr{D}_{n}=\sigma\lbrack \mathscr{G} \rbrack$となる。よって$\mu_{1}( A\cap G_{n} )=\mu_{2}( A\cap G_{n} )$であるから、$\mu_{1}=\mu_{2}$が従う。$\square$
-\end{proof}
+ところで$A\in\sigma\lbrack \mathscr{G} \rbrack$に対して$\mu_{j, n}( A ):=\mu_{j}( A\cap G_{n} )$と定めると、$\mu_{j, n}$は$\sigma\lbrack \mathscr{G} \rbrack$上の有限な測度となる。ここで
 
-\begin{Cor}{}{}
-$( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$を測度空間とする。$\mu_{S}, \mu_{T}$が$\sigma$-有限であるとき、
-前測度$\mu\colon\mathscr{A}\times\mathscr{B}\rightarrow\lbrack 0, \infty \rbrack$の拡張は一意的である。
-\end{Cor}
+$$
+\mathscr{D}_{n}:=\lbrace A\in\sigma\lbrack \mathscr{G} \rbrack : \mu_{1, n}( A )=\mu_{2, n}( A ) \rbrace
+$$
 
-\begin{proof}
+と置くと、先の命題よりディンキン族となる。ディンキンの補題より$\sigma\lbrack \mathscr{G} \rbrack=D\lbrack \mathscr{G} \rbrack$であるから、最小性より$\mathscr{D}_{n}=\sigma\lbrack \mathscr{G} \rbrack$となる。よって任意の$A\in\sigma\lbrack \mathscr{G} \rbrack$に対して$\mu_{1}( A\cap G_{n} )=\mu_{2}( A\cap G_{n} )$を得る。以上より$\mu_{1}=\mu_{2}$が従う。$\square$
+
+__系__ $( S, \mathscr{A}, \mu_{S} ), ( T, \mathscr{B}, \mu_{T} )$を測度空間とする。$\mu_{S}, \mu_{T}$が$\sigma$-有限であるとき、前測度$\mu\colon\mathscr{A}\times\mathscr{B}\rightarrow\lbrack 0, \infty \rbrack$の拡張は一意的である。
+
 （証明）$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{A}, \lbrace B_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{B}$として
-\begin{align*}
+
+$$
+\begin{aligned}
 A_{n}&\nearrow S, & B_{n}&\nearrow T, & \mu_{S}( A_{n} ), \mu_{T}( B_{n} )&\lt\infty
-\end{align*}
-を満たすように取る。ここで$C_{n}=A_{n}\times B_{n}\in\mathscr{A}\times\mathscr{B}$とすれば
-\begin{align*}
+\end{aligned}
+$$
+
+を満たすように取れる。ここで$C_{n}:=A_{n}\times B_{n}\in\mathscr{A}\times\mathscr{B}$とすると
+
+$$
+\begin{aligned}
 C_{n}&\nearrow S\times T, & \mu( C_{n} )&=\mu_{S}( A_{n} )\mu_{T}( B_{n} )\lt\infty
-\end{align*}
-が成り立つ。従って$\mu$は$\sigma$-有限であるため、定理から拡張は一意的であることが分かる。$\square$
-\end{proof}
+\end{aligned}
+$$
 
-\begin{Def}{}{}
-系において$\mu$の拡張となる可測空間$( S\times T, \mathscr{A}\otimes\mathscr{B} )$上の測度は一意的に存在する。
-これを$\mu_{S}\otimes\mu_{T}$と記し、$\mu_{S}$と$\mu_{T}$の積測度と呼ぶ。このとき$( S\times T, \mathscr{A}\otimes\mathscr{B}, \mu_{S}\otimes\mu_{T} )$を積測度空間と呼ぶ。
-\end{Def}
+を満たす。即ち$\mu$は$\sigma$-有限であるため、定理から拡張は一意的であることが分かる。$\square$
 
-ただし積測度空間は圏における積対象ではない。
+__定義__ 系において$\mu$の拡張となる可測空間$( S\times T, \mathscr{A}\otimes\mathscr{B} )$上の測度は一意的に存在する。これを$\mu_{S}\otimes\mu_{T}$と記し、$\mu_{S}$と$\mu_{T}$の積測度と呼ぶ。このとき$( S\times T, \mathscr{A}\otimes\mathscr{B}, \mu_{S}\otimes\mu_{T} )$を積測度空間と呼ぶ。
 
--->
+> TODO: 圏$\mathbf{Meas}$における積対象
