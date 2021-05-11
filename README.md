@@ -132,7 +132,7 @@
 - [有限加法族](/Measure/FinitaryAdditive.md)
 - [半加法族](/Measure/SemiAdditive.md)
 - [積測度空間と測度の一致](/Measure/ProductMeasure.md)
-- ボレル集合族
+- [ボレル集合族](/Measure/BorelMeasurability.md)
 - ルベーグ・スティルチェス測度
 
 
