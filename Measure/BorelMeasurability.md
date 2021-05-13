@@ -28,39 +28,29 @@ __命題__ 位相空間$( X, \mathcal{O} )$において、閉集合全体$\mathf
 
 逆にこれを満たす$\mathfrak{A}\subset 2^{X}$に対し、$\mathfrak{A}$を閉集合とする$X$上の位相が唯一つ存在する。
 
-<!--
-\begin{Def}{}{}
-$( X, \mathcal{O} )$を位相空間、$A\subset X$とする。$x\in X$について以下を定める。
-\begin{EnumCond}
-\item ある開集合$U\in\mathcal{O}$が存在して$x\in U\subset A$が成り立つとき$x$は$A$の内点であるという。
-$A$の内点全体を$A^{i}$あるいは$A^{\circ}$で表し、$A$の内部（interior）あるいは開核という。
-\item$x$が$X\backslash A$の内点であるとき$x$は$A$の外点であるという。$A$の外点全体を$A^{e}$で表し、$A$の外部（exterior）という。
-\item$x$が$A$の内点でも外点でもないとき$x$は$A$の境界点であるという。$A$の境界点全体を$A^{f}$で表し、$A$の境界（frontier）という。
-\item 任意の開集合$U\in\mathcal{O}$について$x\in U$なら$U\cap A\neq\emptyset$が成り立つとき$x$は$A$の触点であるという。
-$A$の触点全体を$\overline{A}$あるいは$A^{a}$で表し、$A$の閉包（closure）という。
-\end{EnumCond}
-\end{Def}
+__定義__ $( X, \mathcal{O} )$を位相空間、$A\subset X$とする。$x\in X$について以下を定める。
 
-$A^{i}$は$A$に含まれる最大の開集合であり、$\overline{A}$は$A$を含む最小の閉集合である。
+- ある開集合$U\in\mathcal{O}$により$x\in U\subset A$となるとき$x$は$A$の内点という。内点全体を$A^{i}$で表し$A$の内部（interior）と呼ぶ。
+- $x$が$X\backslash A$の内点であるとき$x$は$A$の外点という。$A$の外点全体を$A^{e}$で表し$A$の外部（exterior）と呼ぶ。
+- $x$が$A$の内点でも外点でもないとき$x$は$A$の境界点という。$A$の境界点全体を$A^{f}$で表し$A$の境界（frontier）と呼ぶ。
+- 任意の開集合$U\in\mathcal{O}$について$x\in U$なら$U\cap A\neq\emptyset$が成り立つとき$x$は$A$の触点という。$A$の触点全体を$\overline{A}$あるいは$A^{a}$で表し$A$の閉包（closure）と呼ぶ。
+
+> $A^{i}$は$A$に含まれる最大の開集合であり、$\overline{A}$は$A$を含む最小の閉集合である。
 
 写像$i\colon A\mapsto A^{i}$を開核作用子、写像$k\colon A\mapsto\overline{A}$を閉包作用子という。
 
-\begin{Exc}{}{}
-位相空間$( X, \mathcal{O} )$において、開核作用子は$A, B\subset X$について以下を満たす。
-\begin{EnumCond}
-\item$i( X )=X$である。
-\item$i( A )\subset A$である。
-\item$i( A\cap B )=i( A )\cap i( B )$である。
-\item$i( i( A ) )=i( A )$である。
-\end{EnumCond}
+__命題__ 位相空間$( X, \mathcal{O} )$において、開核作用子は$A, B\subset X$について以下を満たす。
+
+- $i( X )=X$である。
+- $i( A )\subset A$である。
+- $i( A\cap B )=i( A )\cap i( B )$である。
+- $i( i( A ) )=i( A )$である。
 
 逆にこれを満たす写像$i$に対し、$i( A )$を$A$の内部とする$X$上の位相が唯一つ存在する。
-\end{Exc}
 
-\begin{proof}
-（ヒント）$\mathcal{O}:=\lbrace U : i( U )=U \rbrace$とすればよい。$\square$
-\end{proof}
+（証明）$\mathcal{O}:=\lbrace U : i( U )=U \rbrace$とすればよい。$\square$
 
+<!--
 \begin{Exc}{クラトウスキイの公理系}{}
 位相空間$( X, \mathcal{O} )$において、閉包作用子は$A, B\subset X$について以下を満たす。
 \begin{EnumCond}
