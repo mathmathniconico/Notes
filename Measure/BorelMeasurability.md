@@ -39,7 +39,7 @@ __定義__ $( X, \mathcal{O} )$を位相空間、$A\subset X$とする。$x\in X
 
 写像$i\colon A\mapsto A^{i}$を開核作用子、写像$k\colon A\mapsto\overline{A}$を閉包作用子という。
 
-__命題__ 位相空間$( X, \mathcal{O} )$において、開核作用子は$A, B\subset X$について以下を満たす。
+__命題__ $i$は位相空間$( X, \mathcal{O} )$の開核作用子とする。$A, B\subset X$について以下が成り立つ。
 
 - $i( X )=X$である。
 - $i( A )\subset A$である。
@@ -50,28 +50,20 @@ __命題__ 位相空間$( X, \mathcal{O} )$において、開核作用子は$A, 
 
 （証明）$\mathcal{O}:=\lbrace U : i( U )=U \rbrace$とすればよい。$\square$
 
-<!--
-\begin{Exc}{クラトウスキイの公理系}{}
-位相空間$( X, \mathcal{O} )$において、閉包作用子は$A, B\subset X$について以下を満たす。
-\begin{EnumCond}
-\item$k( \emptyset )=\emptyset$である。
-\item$k( A )\supset A$である。
-\item$k( A\cup B )=k( A )\cup k( B )$である。
-\item$k( k( A ) )=k( A )$である。
-\end{EnumCond}
+__命題__ （クラトウスキイの公理系）$k$は位相空間$( X, \mathcal{O} )$の閉包作用子とする。$A, B\subset X$について以下が成り立つ。
+
+- $k( \emptyset )=\emptyset$である。
+- $k( A )\supset A$である。
+- $k( A\cup B )=k( A )\cup k( B )$である。
+- $k( k( A ) )=k( A )$である。
 
 逆にこれを満たす写像$k$に対し、$k( A )$を$A$の閉包とする$X$上の位相が唯一つ存在する。
-\end{Exc}
 
-\begin{proof}
-（ヒント）$\mathcal{O}:=\lbrace U : k( X\backslash U )=X\backslash U \rbrace$とすればよい。$\square$
-\end{proof}
+（証明）$\mathcal{O}:=\lbrace U : k( X\backslash U )=X\backslash U \rbrace$とすればよい。$\square$
 
-\begin{Def}{}{}
-$( X, \mathcal{O} )$を位相空間、$a\in X$とする。$N\subset X$が$a\in N^{i}$を満たすとき、$a$の近傍（neighborhood）であるという。
-$a$の近傍全体を$\mathfrak{N}( a )$で表し、$a$の近傍系という。
-\end{Def}
+__定義__ $( X, \mathcal{O} )$を位相空間、$a\in X$とする。$N\subset X$が$a\in N^{i}$を満たすとき、$a$の近傍（neighborhood）と呼ぶ。$a$の近傍全体を$\mathfrak{N}( a )$で表し、$a$の近傍系と呼ぶ。
 
+<!--
 \begin{Exc}{ハウスドルフの公理系}{}
 位相空間$( X, \mathcal{O} )$において、近傍系は$a\in X$について以下を満たす。
 \begin{EnumCond}
