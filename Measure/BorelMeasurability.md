@@ -39,7 +39,7 @@ __定義__ $( X, \mathcal{O} )$を位相空間、$A\subset X$とする。$x\in X
 
 写像$i\colon A\mapsto A^{i}$を開核作用子、写像$k\colon A\mapsto\overline{A}$を閉包作用子という。
 
-__命題__ $i$は位相空間$( X, \mathcal{O} )$の開核作用子とする。$A, B\subset X$について以下が成り立つ。
+__命題__ 位相空間$( X, \mathcal{O} )$の開核作用子$i$を考える。$A, B\subset X$について以下が成り立つ。
 
 - $i( X )=X$である。
 - $i( A )\subset A$である。
@@ -50,7 +50,7 @@ __命題__ $i$は位相空間$( X, \mathcal{O} )$の開核作用子とする。$
 
 （証明）$\mathcal{O}:=\lbrace U : i( U )=U \rbrace$とすればよい。$\square$
 
-__命題__ （クラトウスキイの公理系）$k$は位相空間$( X, \mathcal{O} )$の閉包作用子とする。$A, B\subset X$について以下が成り立つ。
+__命題__ （クラトウスキイの公理系）位相空間$( X, \mathcal{O} )$の閉包作用子$k$を考える。$A, B\subset X$について以下が成り立つ。
 
 - $k( \emptyset )=\emptyset$である。
 - $k( A )\supset A$である。
@@ -63,23 +63,18 @@ __命題__ （クラトウスキイの公理系）$k$は位相空間$( X, \mathc
 
 __定義__ $( X, \mathcal{O} )$を位相空間、$a\in X$とする。$N\subset X$が$a\in N^{i}$を満たすとき、$a$の近傍（neighborhood）と呼ぶ。$a$の近傍全体を$\mathfrak{N}( a )$で表し、$a$の近傍系と呼ぶ。
 
-<!--
-\begin{Exc}{ハウスドルフの公理系}{}
-位相空間$( X, \mathcal{O} )$において、近傍系は$a\in X$について以下を満たす。
-\begin{EnumCond}
-\item$X\in\mathfrak{N}( a )$であり、$N\in\mathfrak{N}( a )$なら$a\in N$である。
-\item$N, M\in\mathfrak{N}( a )$なら$N\cap M\in\mathfrak{N}( a )$である。
-\item$N\in\mathfrak{N}( a )$であり、$N\subset M$なら$M\in\mathfrak{N}( a )$である。
-\item$N\in\mathfrak{N}( a )$について、ある$M\in\mathfrak{N}( a )$が存在し、任意の$b\in M$について$N\in\mathfrak{N}( b )$が成り立つ。
-\end{EnumCond}
+__命題__ （ハウスドルフの公理系）位相空間$( X, \mathcal{O} )$の近傍系を考える。$a\in X$について以下が成り立つ。
+
+- $X\in\mathfrak{N}( a )$であり、$N\in\mathfrak{N}( a )$なら$a\in N$である。
+- $N, M\in\mathfrak{N}( a )$なら$N\cap M\in\mathfrak{N}( a )$である。
+- $N\in\mathfrak{N}( a )$であり、$N\subset M$なら$M\in\mathfrak{N}( a )$である。
+- $N\in\mathfrak{N}( a )$について、ある$M\in\mathfrak{N}( a )$が存在し、任意の$b\in M$について$N\in\mathfrak{N}( b )$が成り立つ。
 
 逆にこれを満たす写像$a\mapsto\mathfrak{N}( a )$に対し、$\mathfrak{N}( a )$を$a$の近傍系とする$X$上の位相が唯一つ存在する。 
-\end{Exc}
 
-\begin{proof}
-（ヒント）$\mathcal{O}:=\lbrace N : a\in N \Rightarrow N\in\mathfrak{N}( a ) \rbrace$とすればよい。$\square$
-\end{proof}
+（証明）$\mathcal{O}:=\lbrace N : a\in N \Rightarrow N\in\mathfrak{N}( a ) \rbrace$とすればよい。$\square$
 
+<!--
 次に連続写像を定義する。
 
 \begin{Def}{}{}
