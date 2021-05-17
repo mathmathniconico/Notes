@@ -92,6 +92,53 @@ __定義__ 上の4条件の何れか（従って全て）を満たすとき、$f
 
 
 
+## 位相の生成
+
+__定義__ $( X, \mathcal{O} )$を位相空間、$\mathcal{B}\subset\mathcal{O}$とする。任意の開集合$U\in\mathcal{O}$に対し、ある$\mathcal{B}_{0}\subset\mathcal{B}$が存在して$U=\cup\mathcal{B}_{0}$と表せるとき、$\mathcal{B}$は位相$\mathcal{O}$の開基（open basis）であるという。
+
+言い換えれば、任意の開集合$U\in\mathcal{O}$及び$x\in U$に対し、適当な$B\in\mathcal{B}$を取れば$x\in B\subset U$が成り立つようにできる。
+
+__注意__ 集合族$\mathfrak{A}\subset 2^{X}$について$\mathfrak{A}$が空でないときは
+
+$$
+\begin{aligned}
+\cup\mathfrak{A}&=\bigcup_{A\in\mathfrak{A}}A,& \cap\mathfrak{A}&=\bigcap_{A\in\mathfrak{A}}A
+\end{aligned}
+$$
+
+と定め、
+
+$$
+\begin{aligned}
+\cup\emptyset&=\emptyset, & \cap\emptyset&=X
+\end{aligned}
+$$
+
+と定める。
+
+> 通常の位相を持ったユークリッド空間$\mathbb{R}$の開基としては、例えば開区間全体がある。当然開集合全体も開基であり、位相については様々な開基を考えることが出来る。しかし、開基が定める位相は次の命題より一意的である。
+
+__命題__ $X$を集合、$\mathcal{B}\subset 2^{X}$とする。TFAE
+
+1. $\mathcal{B}$はある位相の開基である。
+1. 次の2条件を満たす。
+    - $X=\cup\mathcal{B}$である。
+	- $B_{1}, B_{2}\in\mathcal{B}$及び$x\in B_{1}\cap B_{2}$について、ある$B\in\mathcal{B}$が存在して$x\in B\subset B_{1}\cap B_{2}$を満たす。
+
+このとき$\mathcal{B}$を開基とする位相は一意的である。
+
+（証明）位相$\mathcal{O}$が$\mathcal{B}$を開基とするなら、
+
+$$
+\mathcal{O}=\lbrace \cup\mathfrak{A} : \mathfrak{A}\subset\mathcal{B} \rbrace
+$$
+
+という等式を満たさなければならない。一意性はこれより明らか。また下の2条件を満たすとき、この等式で定めた$\mathcal{O}$は位相を定め、$\mathcal{B}$はその開基となる。上から下も簡単。$\square$
+
+> TODO:
+
+__定義__ $( X, \mathcal{O} )$を位相空間とする。位相$\mathcal{O}$が、高々可算個の開集合からなる開基を持つとき、第2可算公理を満たすという。
+
 
 ## TODO
 
