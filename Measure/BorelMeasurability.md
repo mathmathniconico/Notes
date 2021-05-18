@@ -14,51 +14,34 @@ __補題__ 位相空間$( X, \mathcal{O} )$は第2可算公理を満たし、開
 （証明）開集合$U\in\mathcal{O}$について、$\mathcal{B}$は可算開基$\mathcal{B}^{\prime}$を含むので、$\mathcal{B}^{\prime}_{0}\subset\mathcal{B}^{\prime}$を取り$U=\cup\mathcal{B}^{\prime}_{0}$と表せる。このとき$O\in\sigma\lbrack \mathcal{B} \rbrack$を得るから、最小性より$\sigma\lbrack \mathcal{O} \rbrack\subset\sigma\lbrack \mathcal{B} \rbrack$が従う。$\square$
 
 
-<!--
-
-
-\subsection{積位相空間とボレル集合族}
-位相空間に対しても積を考えることが出来る。我々は可測空間において有限積しか今の所は考えていないので、位相空間においても同様に有限積のみを考えることにする。
-
-\begin{Def}{}{}
-$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$を位相空間とする。
-\[ \mathcal{O}_{X}\times\mathcal{O}_{Y}=\lbrace U\times V : U\in\mathcal{O}_{X}, V\in\mathcal{O}_{Y} \rbrace\subset 2^{X\times Y} \]
-は開基の2条件を満たし、ある一意的な位相$\mathcal{O}\subset 2^{X\times Y}$の開基となる。
-この位相を箱型積位相（box product topology）と呼び、$( X\times Y, \mathcal{O} )$を箱型積位相空間という。
-\end{Def}
-
-実は、任意の添え字を持つ位相空間の族について、その直積集合上に積位相と呼ばれる位相を定めることができ、これを積位相空間、あるいは単に積空間と呼ぶ。
-このとき積空間と各成分への射影は普遍性を満たし、圏$\mathbf{Top}$における積対象となる。積空間の位相は一般的に箱型積位相とは異なるものだが、添え字集合が有限のときには一致する。
-従って上で定めた箱型積位相空間$( X\times Y, \mathcal{O} )$は、積空間であり、$( X, \mathcal{O}_{X} )$と$( Y, \mathcal{O}_{Y} )$の積対象でもある。
-これより、以下では「箱型」という用語は省略して述べる。
-
-\begin{Prop}{}{}
-$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$を位相空間とする。
-$\mathcal{B}_{X}, \mathcal{B}_{Y}$を$\mathcal{O}_{X}, \mathcal{O}_{Y}$の開基とすれば、$\mathcal{B}_{X}\times\mathcal{B}_{Y}$は積位相の開基となる。
-
-特に$\mathcal{B}_{X}, \mathcal{B}_{Y}$が可算のとき、$\mathcal{B}_{X}\times\mathcal{B}_{Y}$も可算である。故に有限積は第2可算公理を保つ。
-\end{Prop}
-
-\begin{proof}
-（証明）開基の2条件が成り立つことを示せば良い。$\square$
-\end{proof}
-
 位相空間$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$について、$\mathcal{B}_{X}, \mathcal{B}_{Y}$をその開基、$( X\times Y, \mathcal{O} )$をその積空間とする。このとき
-\[ \sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack \subset \sigma\lbrack \mathcal{B}_{X}\times Y\cup X\times\mathcal{B}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O}_{X}\times Y\cup X\times\mathcal{O}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O} \rbrack \]
+
+$$
+\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack \subset \sigma\lbrack \mathcal{B}_{X}\times Y\cup X\times\mathcal{B}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O}_{X}\times Y\cup X\times\mathcal{O}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O} \rbrack
+$$
+
 が成り立つ。ここで
-\begin{align*}
+
+$$
+\begin{aligned}
 \sigma\lbrack \mathcal{B}_{X} \rbrack\otimes\sigma\lbrack \mathcal{B}_{Y} \rbrack &:= \sigma\left\lbrack \sigma\lbrack \mathcal{B}_{X} \rbrack\times Y\cup X\times\sigma\lbrack \mathcal{B}_{Y} \rbrack \right\rbrack = \sigma\left\lbrack \sigma\lbrack \mathcal{B}_{X} \rbrack\times\sigma\lbrack \mathcal{B}_{Y} \rbrack \right\rbrack, \\
 \sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack &:= \sigma\left\lbrack \sigma\lbrack \mathcal{O}_{X} \rbrack\times Y\cup X\times\sigma\lbrack \mathcal{O}_{Y} \rbrack \right\rbrack = \sigma\left\lbrack \sigma\lbrack \mathcal{O}_{X} \rbrack\times\sigma\lbrack \mathcal{O}_{Y} \rbrack \right\rbrack
-\end{align*}
+\end{aligned}
+$$
+
 が成り立つので、
-\begin{align*}
+
+$$
+\begin{aligned}
 \sigma\lbrack \mathcal{B}_{X}\times Y\cup X\times\mathcal{B}_{Y} \rbrack &\subset \sigma\lbrack \mathcal{B}_{X} \rbrack\otimes\sigma\lbrack \mathcal{B}_{Y} \rbrack, \\
 \sigma\lbrack \mathcal{O}_{X}\times Y\cup X\times\mathcal{O}_{Y} \rbrack &\subset \sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack
-\end{align*}
-も成り立つ。
+\end{aligned}
+$$
 
-ここで興味があるのは、これらの包含関係が「いつ」等号となるかという疑問である。この一つの答えを、我々は第2可算公理の文脈で得ることが出来る。
+も成り立つ。これらの包含関係は「いつ」等号となるだろうか。この一つの答えを、我々は第2可算公理の文脈で得ることが出来る。
 
+
+<!--
 \begin{Thm}{}{}
 位相空間$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$は第2可算公理を満たし、$\mathcal{B}_{X}, \mathcal{B}_{Y}$はその可算開基とする。積位相を$\mathcal{O}$とすれば、
 \[ \sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{B}_{X} \rbrack\otimes\sigma\lbrack \mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack \]

@@ -139,6 +139,31 @@ $$
 
 __定義__ $( X, \mathcal{O} )$を位相空間とする。位相$\mathcal{O}$が、高々可算個の開集合からなる開基を持つとき、第2可算公理を満たすという。
 
+位相空間に対しても積を考えることが出来る。我々は可測空間において有限積しか今の所は考えていないので、位相空間においても同様に有限積のみを考えることにする。
+
+__定義__ $( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$を位相空間とする。
+
+$$
+\mathcal{O}_{X}\times\mathcal{O}_{Y}=\lbrace U\times V : U\in\mathcal{O}_{X}, V\in\mathcal{O}_{Y} \rbrace\subset 2^{X\times Y}
+$$
+
+は開基の2条件を満たし、ある一意的な位相$\mathcal{O}\subset 2^{X\times Y}$の開基となる。この位相を箱型積位相（box product topology）と呼び、$( X\times Y, \mathcal{O} )$を箱型積位相空間という。
+
+> 実は、任意の添え字を持つ位相空間の族について、その直積集合上に積位相と呼ばれる位相を定めることができ、これを積位相空間、あるいは単に積空間と呼ぶ。このとき積空間と各成分への射影は普遍性を満たし、圏$\mathbf{Top}$における積対象となる。積空間の位相は一般的に箱型積位相とは異なるものだが、添え字集合が有限のときには一致する。従って上で定めた箱型積位相空間$( X\times Y, \mathcal{O} )$は、積空間であり、$( X, \mathcal{O}_{X} )$と$( Y, \mathcal{O}_{Y} )$の積対象でもある。これより、以下では「箱型」という用語は省略して述べる。
+
+__命題__ $( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$を位相空間とする。$\mathcal{B}_{X}, \mathcal{B}_{Y}$を$\mathcal{O}_{X}, \mathcal{O}_{Y}$の開基とすれば、$\mathcal{B}_{X}\times\mathcal{B}_{Y}$は積位相の開基となる。
+
+特に$\mathcal{B}_{X}, \mathcal{B}_{Y}$が可算のとき、$\mathcal{B}_{X}\times\mathcal{B}_{Y}$も可算である。故に有限積は第2可算公理を保つ。
+
+（証明）開基の2条件が成り立つことを示せば良い。$\square$
+
+
+
+
+
+
+
+
 
 ## TODO
 
