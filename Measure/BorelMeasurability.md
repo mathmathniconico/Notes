@@ -38,30 +38,18 @@ $$
 \end{aligned}
 $$
 
-も成り立つ。これらの包含関係は「いつ」等号となるだろうか。この一つの答えを、我々は第2可算公理の文脈で得ることが出来る。
+も成り立つ。更に第2可算公理の文脈でこれらの包含関係は等号となる。
 
+__定理__ 位相空間$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$は第2可算公理を満たすとする。$\mathcal{B}_{X}, \mathcal{B}_{Y}$を可算開基、積位相を$\mathcal{O}$とする。このとき
 
-<!--
-\begin{Thm}{}{}
-位相空間$( X, \mathcal{O}_{X} ), ( Y, \mathcal{O}_{Y} )$は第2可算公理を満たし、$\mathcal{B}_{X}, \mathcal{B}_{Y}$はその可算開基とする。積位相を$\mathcal{O}$とすれば、
-\[ \sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{B}_{X} \rbrack\otimes\sigma\lbrack \mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack \]
+$$
+\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{B}_{X} \rbrack\otimes\sigma\lbrack \mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack
+$$
+
 が成り立つ。
-\end{Thm}
 
-\begin{proof}
-（証明）補題より$\sigma\lbrack \mathcal{B}_{X} \rbrack=\sigma\lbrack \mathcal{O}_{X} \rbrack, \sigma\lbrack \mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{O}_{Y} \rbrack$
-及び$\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack = \sigma\lbrack \mathcal{O} \rbrack$が成り立つ。
-従って上の議論から$\sigma\lbrack \mathcal{O} \rbrack\subset\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack$となるため、逆を示せば良い。
+（証明）補題より$\sigma\lbrack \mathcal{B}_{X} \rbrack=\sigma\lbrack \mathcal{O}_{X} \rbrack, \sigma\lbrack \mathcal{B}_{Y} \rbrack=\sigma\lbrack \mathcal{O}_{Y} \rbrack$及び$\sigma\lbrack \mathcal{B}_{X}\times\mathcal{B}_{Y} \rbrack = \sigma\lbrack \mathcal{O} \rbrack$が成り立つ。よって$\sigma\lbrack \mathcal{O} \rbrack\subset\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack$だから逆を示せば良い。
 
-$f\colon X\times Y\rightarrow X, g\colon X\times Y\rightarrow Y$を射影とする。このとき積位相の定義より$f, g$は連続写像となるから、可測写像でもある。
-従って普遍性より、唯一つの可測写像$h\colon ( X\times Y, \sigma\lbrack \mathcal{O} \rbrack )\rightarrow ( X\times Y, \sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack )$が存在して、図式を可換にする。
-このとき$h$は定め方より恒等写像となるが、可測性より$\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O} \rbrack$を得る。$\square$
-\end{proof}
+$f\colon X\times Y\rightarrow X, g\colon X\times Y\rightarrow Y$を射影とする。このとき積位相の定義より$f, g$は連続写像だから可測写像でもある。普遍性より、唯一つの可測写像$h\colon ( X\times Y, \sigma\lbrack \mathcal{O} \rbrack )\rightarrow ( X\times Y, \sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack )$が存在して、図式を可換にする。このとき$h$は定め方より恒等写像となるが、可測性より$\sigma\lbrack \mathcal{O}_{X} \rbrack\otimes\sigma\lbrack \mathcal{O}_{Y} \rbrack \subset \sigma\lbrack \mathcal{O} \rbrack$を得る。$\square$
 
-定理の示すところは、可算開基を持つ位相空間について、積位相空間のボレル集合族は、ボレル集合族の積$\sigma$-加法族である、ということであり、
-ボレル集合族の表記に倣えば$\mathscr{B}_{X\times Y}=\mathscr{B}_{X}\otimes\mathscr{B}_{Y}$が成り立つということを意味している。
-この意味でボレル函手は有限積に関して自然に振舞うことが分かる。
-
-\end{document}
-
--->
+> 可算開基を持つ位相空間について、積位相空間のボレル集合族は、ボレル集合族の積$\sigma$加法族となる。ボレル集合族の表記に倣えば$\mathscr{B}_{X\times Y}=\mathscr{B}_{X}\otimes\mathscr{B}_{Y}$であり、この意味でボレル函手は有限積に関して自然に振舞う。
