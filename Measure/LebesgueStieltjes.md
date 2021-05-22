@@ -29,49 +29,36 @@ $$
 
 と表せる。
 
-
-<!-- 
-
-\begin{Def}{}{}
-$\mathscr{S}\subset 2^{S}$を半環とする。
-集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、$\mu$は半環$\mathscr{S}$上の前測度という。
-\end{Def}
+__定義__ $\mathscr{S}\subset 2^{S}$を半環とする。集合函数$\mu\colon\mathscr{S}\rightarrow\lbrack 0, \infty \rbrack$が正値かつ有限加法的であるとき、$\mu$は半環$\mathscr{S}$上の前測度という。
 
 次の命題も半加法族のときと全く同様に示すことができる。
 
-\begin{Prop}{}{}
-$\mu$を半環$\mathscr{S}\subset 2^{S}$上の前測度とする。次が成り立つ。
-\begin{EnumCond}
-\item$A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$に対し、
-\[ \bigsqcup_{i=1}^{n}A_{i}\subset A\Rightarrow\sum_{i=1}^{n}\mu( A_{i} )\le\mu( A ) \]
-が成り立つ。
-\item$B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$に対し、
-\[ B\subset\bigcup_{i=1}^{n}B_{i}\Rightarrow\mu( B )\le\sum_{i=1}^{n}\mu( B_{i} ) \]
-が成り立つ。
-\end{EnumCond}
+__命題__ $\mu$を半環$\mathscr{S}\subset 2^{S}$上の前測度とする。
+
+- $A\in\mathscr{S}$及び互いに素な$A_{1}, \dotsc, A_{n}\in\mathscr{S}$について$\bigsqcup_{i=1}^{n}A_{i}\subset A$なら$\sum_{i=1}^{n}\mu( A_{i} )\le\mu( A )$である。
+- $B\in\mathscr{S}$及び$B_{1}, \dotsc, B_{n}\in\mathscr{S}$について$B\subset\bigcup_{i=1}^{n}B_{i}$なら$\mu( B )\le\sum_{i=1}^{n}\mu( B_{i} )$である。
 
 特に$\mu$は単調かつ有限劣加法的である。
-\end{Prop}
 
-上の補題と命題から、次の命題を示すことができる。
+__命題__ $\mu$を半環$\mathscr{S}\subset 2^{S}$上の前測度とする。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$に対し、互いに素な$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$が存在して、
 
-\begin{Prop}{}{}
-$\mu$を半環$\mathscr{S}\subset 2^{S}$上の前測度とする。$\lbrace A_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$に対し、
-互いに素な$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$が存在して、
-\begin{align*}
+$$
+\begin{aligned}
 \bigcup_{n\in\mathbb{N}}A_{n}&=\bigsqcup_{n\in\mathbb{N}}D_{n}, & \sum_{n\in\mathbb{N}}\mu( A_{n} )&\ge\sum_{n\in\mathbb{N}}\mu( D_{n} )
-\end{align*}
-を満たす。
-\end{Prop}
+\end{aligned}
+$$
 
-\begin{proof}
-（証明）$B_{1}=A_{1}, B_{n+1}=A_{n+1}\backslash \bigcup_{i=1}^{n}A_{i}$とする。
-補題より互いに素な$D_{n, 1}, \dotsc, D_{n, m_{n}}\in\mathscr{S}$が存在して$B_{n}=\bigsqcup_{i=1}^{m_{n}}D_{n, i}$と表せる。
-このとき$\bigcup_{n\in\mathbb{N}}=\bigsqcup_{n\in\mathbb{N}}B_{n}$が成り立つ。$\mu$は単調かつ有限加法的なので
-\[ \sum_{n\in\mathbb{N}}\mu( A_{n} )\ge\sum_{n\in\mathbb{N}}\mu( B_{n} )=\sum_{n\in\mathbb{N}}\sum_{i=1}^{m_{n}}\mu( D_{n, i} ) \]
+が成り立つ。
+
+（証明）$B_{1}=A_{1}, B_{n+1}=A_{n+1}\backslash \bigcup_{i=1}^{n}A_{i}$とする。補題より互いに素な$D_{n, 1}, \dotsc, D_{n, m_{n}}\in\mathscr{S}$が存在して$B_{n}=\bigsqcup_{i=1}^{m_{n}}D_{n, i}$と表せる。このとき$\bigcup_{n\in\mathbb{N}}=\bigsqcup_{n\in\mathbb{N}}B_{n}$が成り立つ。$\mu$は単調かつ有限加法的なので
+
+$$
+\sum_{n\in\mathbb{N}}\mu( A_{n} )\ge\sum_{n\in\mathbb{N}}\mu( B_{n} )=\sum_{n\in\mathbb{N}}\sum_{i=1}^{m_{n}}\mu( D_{n, i} )
+$$
+
 となる。
-\end{proof}
 
+<!-- 
 半環上の前測度に対する測度への拡張問題については以下の定理が成り立つ。
 
 \begin{Thm}{カラテオドリの拡張定理}{}
