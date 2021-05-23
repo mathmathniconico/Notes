@@ -58,18 +58,14 @@ $$
 
 となる。
 
-<!-- 
 半環上の前測度に対する測度への拡張問題については以下の定理が成り立つ。
 
-\begin{Thm}{カラテオドリの拡張定理}{}
-$\mu$は半環$\mathscr{S}\subset 2^{S}$上の前測度とする。以下は同値である。
-\begin{EnumEquiv}
-\item$\sigma\lbrack \mathscr{S} \rbrack$上の測度$\widehat{\mu}$が存在して$\widehat{\mu}|_{\mathscr{S}}=\mu$を満たす。
-つまり$A\in\mathscr{S}$なら$\widehat{\mu}( A )=\mu( A )$が成り立つ。
-\item$\mu$は弱可算劣加法的である。
-\end{EnumEquiv}
-\end{Thm}
+__定理__ （カラテオドリの拡張定理）$\mu$は半環$\mathscr{S}\subset 2^{S}$上の前測度とする。TFAE
 
+1. $\sigma\lbrack \mathscr{S} \rbrack$上の測度$\widehat{\mu}$が存在して$\widehat{\mu}|_{\mathscr{S}}=\mu$を満たす。つまり$A\in\mathscr{S}$なら$\widehat{\mu}( A )=\mu( A )$が成り立つ。
+1. $\mu$は弱可算劣加法的である。
+
+<!-- 
 \begin{proof}
 （証明）ホップの拡張定理と同様に証明したい。まず外測度$\widehat{\mu}$の構成に関しては、$\mu$から誘導される外測度を考える。
 
