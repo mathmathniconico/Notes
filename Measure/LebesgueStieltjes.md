@@ -65,38 +65,50 @@ __定理__ （カラテオドリの拡張定理）$\mu$は半環$\mathscr{S}\sub
 1. $\sigma\lbrack \mathscr{S} \rbrack$上の測度$\widehat{\mu}$が存在して$\widehat{\mu}|_{\mathscr{S}}=\mu$を満たす。つまり$A\in\mathscr{S}$なら$\widehat{\mu}( A )=\mu( A )$が成り立つ。
 1. $\mu$は弱可算劣加法的である。
 
-<!-- 
-\begin{proof}
 （証明）ホップの拡張定理と同様に証明したい。まず外測度$\widehat{\mu}$の構成に関しては、$\mu$から誘導される外測度を考える。
 
-次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\subset\mathscr{S}$及び$E\subset S$を取る。
-$E$の被覆$\mathscr{C}\subset\mathscr{S}$を取れば、$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。
-また半環の定義より各$C\in\mathscr{C}$に対して、互いに素な$D^{C}_{1}, \dotsc, D^{C}_{n( C )}\in\mathscr{S}$が存在して$C\backslash A=\bigsqcup_{i=1}^{n( C )}D^{C}_{i}$と表せる。
-このとき$\lbrace D^{C}_{i} : C\in\mathscr{C}, 1\le i \le n( C ) \rbrace\subset\mathscr{S}$は$E\backslash A$の被覆となる。故に
-\begin{align*}
+次に$\mathscr{S}\subset\mathscr{M}_{\widehat{\mu}}$を示したい。$A\subset\mathscr{S}$及び$E\subset S$を取る。$E$の被覆$\mathscr{C}\subset\mathscr{S}$を取れば、$\lbrace C\cap A : C\in\mathscr{C} \rbrace\subset\mathscr{S}$は$E\cap A$の被覆となる。また半環の定義より各$C\in\mathscr{C}$に対して、互いに素な$D^{C}_{1}, \dotsc, D^{C}_{n( C )}\in\mathscr{S}$が存在して$C\backslash A=\bigsqcup_{i=1}^{n( C )}D^{C}_{i}$と表せる。このとき$\lbrace D^{C}_{i} : C\in\mathscr{C}, 1\le i \le n( C ) \rbrace\subset\mathscr{S}$は$E\backslash A$の被覆となる。故に
+
+$$
+\begin{aligned}
 \widehat{\mu}( E\cap A )+\widehat{\mu}( E\backslash A )&\le\sum_{C\in\mathscr{C}}\mu( C\cap A )+\sum_{C\in\mathscr{C}}\sum_{i=1}^{n( C )}\mu( D^{C}_{i} ) \\
 &=\sum_{C\in\mathscr{C}}\left( \mu( C\cap A )+\sum_{i=1}^{n( C )}\mu( D^{C}_{i} ) \right)
-\end{align*}
+\end{aligned}
+$$
+
 となる。このとき
-\[ C=( C\cap A )\sqcup\bigsqcup_{i=1}^{n( C )}D^{C}_{i} \]
+$$
+C=( C\cap A )\sqcup\bigsqcup_{i=1}^{n( C )}D^{C}_{i}
+$$
+
 であるから、$C\in\mathscr{S}$より$\mu$の有限加法性が使えて結局
-\[ \mu( C\cap A )+\sum_{i=1}^{n( C )}\mu( D^{C}_{i} )=\mu( C ) \]
+
+$$
+\mu( C\cap A )+\sum_{i=1}^{n( C )}\mu( D^{C}_{i} )=\mu( C )
+$$
+
 が従う。
 
-以上により$\widehat{\mu}$は$\sigma\lbrack \mathscr{S} \rbrack$上の測度となることが分かった。最後に$\mathscr{S}$上での値を見てみよう。
-まず$A\in\mathscr{S}$に対して定義より$\widehat{\mu}( A )\le\mu( A )$が成り立つ。逆を示すために$A$の被覆$\mathscr{C}\subset\mathscr{S}$を取る。
-先の命題より、互いに素な$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$が存在して
-\begin{align*}
+以上により$\widehat{\mu}$は$\sigma\lbrack \mathscr{S} \rbrack$上の測度となることが分かった。最後に$\mathscr{S}$上での値を見てみよう。まず$A\in\mathscr{S}$に対して定義より$\widehat{\mu}( A )\le\mu( A )$が成り立つ。逆を示すために$A$の被覆$\mathscr{C}\subset\mathscr{S}$を取る。先の命題より、互いに素な$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$が存在して
+
+$$
+\begin{aligned}
 \bigcup_{C\in\mathscr{C}}C&=\bigsqcup_{n\in\mathbb{N}}D_{n}, & \sum_{C\in\mathscr{C}}\mu( C )&\ge\sum_{n\in\mathbb{N}}\mu( D_{n} )
-\end{align*}
+\end{aligned}
+$$
+
 を満たす。$\lbrace D_{n} \rbrace_{n\in\mathbb{N}}\subset\mathscr{S}$も$A$の被覆となるから、$\mu$の弱可算劣加法性及び単調性より
-\[ \mu( A ) = \mu\left( \bigsqcup_{n\in\mathbb{N}}A\cap D_{n} \right) \le \sum_{n\in\mathbb{N}}\mu( A\cap D_{n} ) \le \sum_{n\in\mathbb{N}}\mu( D_{n} ) \le \sum_{C\in\mathscr{C}}\mu( C ) \]
+
+$$
+\mu( A ) = \mu\left( \bigsqcup_{n\in\mathbb{N}}A\cap D_{n} \right) \le \sum_{n\in\mathbb{N}}\mu( A\cap D_{n} ) \le \sum_{n\in\mathbb{N}}\mu( D_{n} ) \le \sum_{C\in\mathscr{C}}\mu( C )
+$$
+
 を得る。右辺の下限を取れば$\mu( A )\le\widehat{\mu}( A )$が従う。$\square$
-\end{proof}
 
 定理により、半環上の前測度に対しても、可算加法性、可算劣加法性、弱可算劣加法性は全て同値となる。
 
 
+<!-- 
 
 
 \subsection{スティルチェス測度}
