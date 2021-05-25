@@ -108,23 +108,17 @@ $$
 定理により、半環上の前測度に対しても、可算加法性、可算劣加法性、弱可算劣加法性は全て同値となる。
 
 
+
+
+## スティルチェス測度
+
+この節では、ユークリッド空間$\mathbb{R}$の通常の位相$\mathcal{O}$において、ボレル集合族$\sigma\lbrack \mathcal{O} \rbrack$上の測度として、スティルチェス測度の構成を行う。一般論ではなく具体例に関する内容であることから、連続性の公理に始まる実数$\mathbb{R}$の性質、あるいは距離空間としての位相的性質、そして解析的な連続性の扱い方などについては既知とする。ここで用いる大事な性質を一つ挙げるならば、有界閉区間のコンパクト性である。即ち、閉区間を任意個の開区間で覆ったとき、その中の有限個を選んで再び閉区間を覆うようにできる。コンパクト性については後の章で改めて議論する。
+
+まず$\mathcal{O}$は開区間から為る可算開基$\mathcal{B}=\lbrace ( a, b ) : a, b\in\mathbb{Q}, a\lt b \rbrace$を持つ。つまり第2可算公理を満たすのだが、$\mathcal{O}$は測度論的には扱い難い。そこで次の集合族について考える。
+
+__命題__ $\mathscr{I}:=\lbrace ( a, b \rbrack : a, b\in\mathbb{R}, a\lt b \rbrace\cup\lbrace \emptyset \rbrace$とする。このとき$\mathscr{I}$は半環であり、$\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathscr{I} \rbrack$を満たす。
+
 <!-- 
-
-
-\subsection{スティルチェス測度}
-この節では、ユークリッド空間$\mathbb{R}$の通常の位相$\mathcal{O}$において、ボレル集合族$\sigma\lbrack \mathcal{O} \rbrack$上の測度として、スティルチェス測度の構成を行う。
-一般論ではなく具体例に関する内容であることから、連続性の公理に始まる実数$\mathbb{R}$の性質、あるいは距離空間としての位相的性質、そして解析的な連続性の扱い方などについては既知とする。
-和書なら杉浦光夫「解析入門」が網羅的である。ここで用いる大事な性質を一つ挙げるならば、有界閉区間のコンパクト性である。
-即ち、閉区間を任意個の開区間で覆ったとき、その中の有限個を選んで再び閉区間を覆うようにできる。コンパクト性については後の章で改めて議論する。
-
-まず$\mathcal{O}$は開区間から為る可算開基$\mathcal{B}=\lbrace ( a, b ) : a, b\in\mathbb{Q}, a\lt b \rbrace$を持つ。
-つまり第2可算公理を満たすのだが、$\mathcal{O}$は測度論的には扱い難い。そこで次の集合族について考える。
-
-\begin{Prop}{}{}
-空集合及び左半開区間から為る集合を$\mathscr{I}:=\lbrace ( a, b \rbrack : a, b\in\mathbb{R}, a\lt b \rbrace\cup\lbrace \emptyset \rbrace$とする。
-このとき$\mathscr{I}$は半環であり、$\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathscr{I} \rbrack$を満たす。
-\end{Prop}
-
 \begin{proof}
 （証明）$\mathscr{I}$が半環となることは良いだろう。差集合を取るときが特殊で、$( a, b \rbrack\subset( c, d \rbrack$のときに限り
 $( c, d \rbrack\backslash( a, b \rbrack=( c, a \rbrack\sqcup( b, d \rbrack$となるので$\mathscr{I}$の元の非交叉有限和である。
