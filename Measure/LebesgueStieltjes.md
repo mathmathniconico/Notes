@@ -118,21 +118,25 @@ $$
 
 __命題__ $\mathscr{I}:=\lbrace ( a, b \rbrack : a, b\in\mathbb{R}, a\lt b \rbrace\cup\lbrace \emptyset \rbrace$とする。このとき$\mathscr{I}$は半環であり、$\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathscr{I} \rbrack$を満たす。
 
-<!-- 
-\begin{proof}
-（証明）$\mathscr{I}$が半環となることは良いだろう。差集合を取るときが特殊で、$( a, b \rbrack\subset( c, d \rbrack$のときに限り
-$( c, d \rbrack\backslash( a, b \rbrack=( c, a \rbrack\sqcup( b, d \rbrack$となるので$\mathscr{I}$の元の非交叉有限和である。
+（証明）$\mathscr{I}$が半環となることは良い。差集合を取るときが特殊で、$( a, b \rbrack\subset( c, d \rbrack$のときに限り$( c, d \rbrack\backslash( a, b \rbrack=( c, a \rbrack\sqcup( b, d \rbrack$となるので$\mathscr{I}$の元の非交叉有限和である。
 
-$( a, b \rbrack\in\mathscr{I}$に対し、$a\lt c\lt b$なる$c\in\mathbb{Q}$を取る。
-また数列$( a_{n} )_{n\in\mathbb{N}}, ( b_{n} )_{n\in\mathbb{N}}\subset\mathbb{Q}$を、$a_{n}\searrow a, b_{n}\searrow b, a\lt a_{n}\lt c\lt b\lt b_{n}$を満たすように取る。このとき
-\[ ( a, b \rbrack=\left( \bigcap_{n\in\mathbb{N}}( c, b_{n} ) \right)\cup\left( \bigcup_{n\in\mathbb{N}}( a_{n}, c ) \right) \]
+$( a, b \rbrack\in\mathscr{I}$に対し$a\lt c\lt b$なる$c\in\mathbb{Q}$を取る。また数列$( a_{n} )_{n\in\mathbb{N}}, ( b_{n} )_{n\in\mathbb{N}}\subset\mathbb{Q}$を$a_{n}\searrow a, b_{n}\searrow b, a\lt a_{n}\lt c\lt b\lt b_{n}$が成り立つように取る。このとき
+
+$$
+( a, b \rbrack=\left( \bigcap_{n\in\mathbb{N}}( c, b_{n} ) \right)\cup\left( \bigcup_{n\in\mathbb{N}}( a_{n}, c ) \right)
+$$
+
 であるから、$( a, b \rbrack\in\sigma\lbrack \mathcal{B} \rbrack$を得る。
 
 逆に$( a, b )\in\mathcal{B}$に対し、数列$( b_{n} )_{n\in\mathbb{N}}\subset\mathbb{Q}$を$a\lt b_{n} \lt b$を満たすように取る。このとき
-\[ ( a, b )=\bigcup_{n\in\mathbb{N}}( a, b_{n} \rbrack \]
-であるから、$( a, b )\in\sigma\lbrack \mathscr{I} \rbrack$を得る。$\square$
-\end{proof}
 
+$$
+( a, b )=\bigcup_{n\in\mathbb{N}}( a, b_{n} \rbrack
+$$
+
+であるから、$( a, b )\in\sigma\lbrack \mathscr{I} \rbrack$を得る。$\square$
+
+<!-- 
 以下ボレル集合族$\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathcal{B} \rbrack=\sigma\lbrack \mathscr{I} \rbrack$のことを$\mathscr{B}( \mathbb{R} )$で表す。
 
 \begin{Prop}{}{}
