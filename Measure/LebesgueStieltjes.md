@@ -136,15 +136,17 @@ $$
 
 であるから、$( a, b )\in\sigma\lbrack \mathscr{I} \rbrack$を得る。$\square$
 
-<!-- 
 以下ボレル集合族$\sigma\lbrack \mathcal{O} \rbrack=\sigma\lbrack \mathcal{B} \rbrack=\sigma\lbrack \mathscr{I} \rbrack$のことを$\mathscr{B}( \mathbb{R} )$で表す。
 
-\begin{Prop}{}{}
-$\varphi\colon\mathbb{R}\rightarrow\mathbb{R}$は右連続な非減少函数とする。$( a, b \rbrack\in\mathscr{I}$に対し
-\[ \mu( ( a, b \rbrack ):=\varphi( b )-\varphi( a ) \]
-と定めると、$\mu$は半環$\mathscr{I}$上の前測度となる。
-\end{Prop}
+__命題__ $\varphi\colon\mathbb{R}\rightarrow\mathbb{R}$は右連続な非減少函数とする。$( a, b \rbrack\in\mathscr{I}$に対し
 
+$$
+\mu( ( a, b \rbrack ):=\varphi( b )-\varphi( a )
+$$
+
+と定めると、$\mu$は半環$\mathscr{I}$上の前測度となる。
+
+<!-- 
 \begin{proof}
 （証明）$\mu$が有限加法的であることは明らかだろう。
 実際$( a, b \rbrack=( a_{1}, b_{1} \rbrack\sqcup\dotsm( a_{n}, b_{n} \rbrack$とすると、$a_{1}=a, a_{n+1}=b_{n}, b_{n}=b$より、
