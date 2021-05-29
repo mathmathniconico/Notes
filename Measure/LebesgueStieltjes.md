@@ -146,17 +146,19 @@ $$
 
 と定めると、$\mu$は半環$\mathscr{I}$上の前測度となる。
 
-<!-- 
-\begin{proof}
-（証明）$\mu$が有限加法的であることは明らかだろう。
-実際$( a, b \rbrack=( a_{1}, b_{1} \rbrack\sqcup\dotsm( a_{n}, b_{n} \rbrack$とすると、$a_{1}=a, a_{n+1}=b_{n}, b_{n}=b$より、
-\begin{align*}
+（証明）$\mu$が有限加法的であることは明らかだろう。実際$( a, b \rbrack=( a_{1}, b_{1} \rbrack\sqcup\dotsm( a_{n}, b_{n} \rbrack$とすると、$a_{1}=a, a_{n+1}=b_{n}, b_{n}=b$より、
+
+$$
+\begin{aligned}
 \mu( ( a, b \rbrack ) &= \varphi( b )-\varphi( a ) \\
 &= ( \varphi( b_{n} )-\varphi( a_{n} ) )+\dotsm+( \varphi( b_{1} )-\varphi( a_{1} ) ) \\
 &= \mu( ( a_{n}, b_{n} \rbrack )+\dotsm+\mu( ( a_{1}, b_{1} \rbrack )
-\end{align*}
+\end{aligned}
+$$
+
 が成り立つ。
 
+<!-- 
 $\mu$が弱可算劣加法的であることを示そう。$( a, b \rbrack=\bigsqcup_{n\in\mathbb{N}}( a_{n}, b_{n} \rbrack$とする。
 $\varepsilon\gt 0$とする。$\varphi$は右連続だから、十分小さな$\delta, \delta_{n} \gt 0$を取り、
 \begin{align*}
