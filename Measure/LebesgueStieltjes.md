@@ -158,26 +158,31 @@ $$
 
 が成り立つ。
 
-<!-- 
-$\mu$が弱可算劣加法的であることを示そう。$( a, b \rbrack=\bigsqcup_{n\in\mathbb{N}}( a_{n}, b_{n} \rbrack$とする。
-$\varepsilon\gt 0$とする。$\varphi$は右連続だから、十分小さな$\delta, \delta_{n} \gt 0$を取り、
-\begin{align*}
+$\mu$が弱可算劣加法的であることを示そう。$( a, b \rbrack=\bigsqcup_{n\in\mathbb{N}}( a_{n}, b_{n} \rbrack$とする。$\varepsilon\gt 0$とする。$\varphi$は右連続だから、十分小さな$\delta, \delta_{n} \gt 0$を取り、
+
+$$
+\begin{aligned}
 \varphi( a+\delta )-\varphi( a )&\lt\frac{\varepsilon}{2}, & \varphi( b_{n}+\delta_{n} )-\varphi( b_{n} )\lt\frac{\varepsilon}{2^{n+1}}
-\end{align*}
-を満たすようにできる。$\lbrack a+\delta, b \rbrack\subset\bigcup_{n\in\mathbb{N}}( a_{n}, b_{n}+\delta_{n} )$より、
-コンパクト性から有限集合$F\subset\mathbb{N}$を選び、特に$( a+\delta, b \rbrack\subset\bigcup_{n\in F}( a_{n}, b_{n}+\delta_{n} \rbrack$が成り立つようにできる。
-$\mu$は半環$\mathscr{I}$上の前測度だから、
-\begin{align*}
+\end{aligned}
+$$
+
+を満たすようにできる。$\lbrack a+\delta, b \rbrack\subset\bigcup_{n\in\mathbb{N}}( a_{n}, b_{n}+\delta_{n} )$より、コンパクト性から有限集合$F\subset\mathbb{N}$を選び、特に$( a+\delta, b \rbrack\subset\bigcup_{n\in F}( a_{n}, b_{n}+\delta_{n} \rbrack$が成り立つようにできる。$\mu$は半環$\mathscr{I}$上の前測度だから、
+
+$$
+\begin{aligned}
 \mu( ( a, b \rbrack ) &= \varphi( b )-\varphi( a ) \\
 &\lt \varphi( b )-\varphi( a+\delta )+\frac{\varepsilon}{2} \\
 &= \mu( ( a+\delta, b \rbrack )+\frac{\varepsilon}{2} \\
 &\le\sum_{n\in F}\mu( ( a_{n}, b_{n}+\delta_{n} \rbrack )+\frac{\varepsilon}{2} \\
 &\lt \sum_{n\in F}\mu( ( a_{n}, b_{n} \rbrack )+\varepsilon \\
 &\le \sum_{n\in\mathbb{N}}\mu( ( a_{n}, b_{n} \rbrack )+\varepsilon
-\end{align*}
-を得る。$\varepsilon$は任意だから、$\mu$の弱可算劣加法性が従う。$\square$
-\end{proof}
+\end{aligned}
+$$
 
+を得る。$\varepsilon$は任意だから、$\mu$の弱可算劣加法性が従う。$\square$
+
+
+<!-- 
 拡張定理より$\mathscr{B}( \mathbb{R} )$上の測度であり、$\mathscr{I}$上で$\mu$と一致するものが存在する。
 特に$\mu$は$\sigma$-有限なので、拡張された測度も$\sigma$-有限である。更に$\mathscr{I}$は有限交叉で閉じるので、このような測度は一意的である。
 
