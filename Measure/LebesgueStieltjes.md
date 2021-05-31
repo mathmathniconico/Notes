@@ -181,17 +181,6 @@ $$
 
 を得る。$\varepsilon$は任意だから、$\mu$の弱可算劣加法性が従う。$\square$
 
+拡張定理より$\mathscr{B}( \mathbb{R} )$上の測度であり、$\mathscr{I}$上で$\mu$と一致するものが存在する。特に$\mu$は$\sigma$-有限なので、拡張された測度も$\sigma$-有限である。更に$\mathscr{I}$は有限交叉で閉じるので、このような測度は一意的である。
 
-<!-- 
-拡張定理より$\mathscr{B}( \mathbb{R} )$上の測度であり、$\mathscr{I}$上で$\mu$と一致するものが存在する。
-特に$\mu$は$\sigma$-有限なので、拡張された測度も$\sigma$-有限である。更に$\mathscr{I}$は有限交叉で閉じるので、このような測度は一意的である。
-
-\begin{Def}{}{}
-右連続な非減少函数$\varphi\colon\mathbb{R}\rightarrow\mathbb{R}$に対し、$\mathscr{B}( \mathbb{R} )$上の$\sigma$-有限な測度で、
-$( a, b \rbrack\in\mathscr{I}$に対して$\mu( ( a, b \rbrack )=\varphi( b )-\varphi( a )$となるものを、
-（ボレル集合族$\mathscr{B}( \mathbb{R} )$上の）スティルチェス測度（Stieltjes measure）と呼ぶ。
-
-特に$\varphi( x )=x$のとき、（ボレル集合族$\mathscr{B}( \mathbb{R} )$上の）ルベーグ測度（Lebesgue measure）と呼ぶ。
-\end{Def}
-
--->
+__定義__ 右連続な非減少函数$\varphi\colon\mathbb{R}\rightarrow\mathbb{R}$に対し、$\mathscr{B}( \mathbb{R} )$上の$\sigma$-有限な測度で、$( a, b \rbrack\in\mathscr{I}$に対して$\mu( ( a, b \rbrack )=\varphi( b )-\varphi( a )$となるものを、（ボレル集合族$\mathscr{B}( \mathbb{R} )$上の）スティルチェス測度（Stieltjes measure）と呼ぶ。特に$\varphi( x )=x$のとき（ボレル集合族$\mathscr{B}( \mathbb{R} )$上の）ルベーグ測度（Lebesgue measure）と呼ぶ。
