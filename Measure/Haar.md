@@ -4,20 +4,16 @@
 
 ルベーグ測度には平行移動不変性がある。ハール測度はこの一般化にあたる。
 
-<!--
+__定義__ 位相空間$(X, \mathcal{O})$のコンパクト部分集合全体を$\mathcal{K}$と書くことにする。集合関数$\lambda:\mathcal{K}\rightarrow [0, \infty]$が以下の条件を満たすとき、容量あるいはコンテント\textup{(content)}と呼ぶ。
 
-\begin{Def}
-位相空間$(X, \mathcal{O})$のコンパクト部分集合全体を$\mathcal{K}$と書くことにする。
-集合関数$\lambda:\mathcal{K}\rightarrow [0, \infty]$が以下の条件を満たすとき、容量あるいはコンテント\textup{(content)}と呼ぶ。
-\begin{itemize}
-\item[\textup{(i)}] 任意の$K\in\mathcal{K}$に対して$\lambda (K)<\infty$であり、$\lambda (\emptyset)=0$を満たす。
-\item[\textup{(ii)}] 単調性が成り立つ。即ち$A, B\in\mathcal{K}, A\subset B$なら$\lambda (A)\le\lambda (B)$を満たす。
-\item[\textup{(iii)}] 有限劣加法性が成り立つ。$A, B\in\mathcal{K}$なら$\lambda (A\cup B)\le\lambda (A)+\lambda (B)$が成り立つ。
-\footnote{コンパクト集合同士の和はコンパクト集合だったことを思い出しておく。}
-\item[\textup{(iv)}] 有限加法性が成り立つ。つまり\textup{(iii)}で$A\cap B=\emptyset$なら等号が成り立つ。
-\footnote{$\mathcal{K}$が適当な集合演算で閉じてないので、これらの条件を纏めることはできない。}
-\end{itemize}
-\end{Def}
+- 任意の$K\in\mathcal{K}$に対して$\lambda (K)<\infty$であり、$\lambda (\emptyset)=0$を満たす。
+- 単調性が成り立つ。即ち$A, B\in\mathcal{K}, A\subset B$なら$\lambda (A)\le\lambda (B)$を満たす。
+- 有限劣加法性が成り立つ。$A, B\in\mathcal{K}$なら$\lambda (A\cup B)\le\lambda (A)+\lambda (B)$が成り立つ。
+- 有限加法性が成り立つ。つまり\textup{(iii)}で$A\cap B=\emptyset$なら等号が成り立つ。
+
+> コンパクト集合同士の和はコンパクト集合であった。また$\mathcal{K}$が適当な集合演算で閉じてないので、これらの条件を纏めることはできない。
+
+<!--
 
 　容量から外測度に近い概念を定義することができる。
 
