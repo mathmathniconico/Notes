@@ -13,22 +13,23 @@ __定義__ 位相空間$(X, \mathcal{O})$のコンパクト部分集合全体を
 
 > コンパクト集合同士の和はコンパクト集合であった。また$\mathcal{K}$が適当な集合演算で閉じてないので、これらの条件を纏めることはできない。
 
-<!--
 
 　容量から外測度に近い概念を定義することができる。
 
-\begin{Def}
-$\lambda:\mathcal{K}\rightarrow [0, \infty]$を位相空間$(X, \mathcal{O})$上の容量とする。$A\subset X$に対し、
-\[ \lambda_{*}(A):=\sup\{\lambda (K)\mid K\in\mathcal{K}, K\subset A\} \]
+__定義__ $\lambda:\mathcal{K}\rightarrow [0, \infty]$を位相空間$(X, \mathcal{O})$上の容量とする。$A\subset X$とする。
+
+$$
+\lambda_{\ast}(A):=\sup\lbrace \lambda (K)\mid K\in\mathcal{K}, K\subset A \rbrace
+$$
+
 を$A$の内部容量\textup{(inner content)}と呼ぶ。
-\end{Def}
 
-　$\lambda_{*}$は単調で、かつ$\lambda_{*}(\emptyset)=0$を満たす。
-位相空間にハウスドルフ性を認めれば$\mathcal{O}$上の可算劣加法性が従う。
+> $\lambda_{\ast}$は単調で、かつ$\lambda_{\ast}(\emptyset)=0$を満たす。位相空間にハウスドルフ性を認めれば$\mathcal{O}$上の可算劣加法性が従う。
 
+<!--
 \begin{Prop}
 位相空間$(X, \mathcal{O})$はハウスドルフ空間とする。
-このとき$\lambda_{*}|_{\mathcal{O}}$は可算劣加法的かつ有限加法的である。
+このとき$\lambda_{\ast}|_{\mathcal{O}}$は可算劣加法的かつ有限加法的である。
 \end{Prop}
 \begin{Proof}
 まず位相空間論における事実から
@@ -38,39 +39,39 @@ $K\in\mathcal{K}, U_{1}, U_{2}\in\mathcal{O}$に対し$K\subset U_{1}\cup U_{2}$
 　$\mathcal{O}$上での可算劣加法性を示そう。$\{U_{n}\}\subset\mathcal{O}$とする。
 $K\subset\bigcup U_{n}, K\in\mathcal{K}$に対してコンパクト性より有限集合$F\subset\mathbb{N}$が取れ、
 $K\subset\bigcup_{n\in F}U_{n}$とできる。このとき先に述べた事実により$K_{n}\in\mathcal{K}$が存在して
-$K=\bigcup_{n\in F}K_{n},\, K_{n}\subset U_{n}$を満たすようにできる。$\lambda$の有限劣加法性と$\lambda_{*}$の定義より
-\[ \lambda (K)\le\sum_{n\in F}\lambda (K_{n})\le\sum_{n\in F}\lambda_{*}(U_{n})\le\sum\lambda_{*}(U_{n}) \]
-が成り立つ。左辺の上限を取れば$\lambda_{*}\left(\bigcup I_{n}\right)\le\sum\lambda_{*}(U_{n})$を得る。
+$K=\bigcup_{n\in F}K_{n},\, K_{n}\subset U_{n}$を満たすようにできる。$\lambda$の有限劣加法性と$\lambda_{\ast}$の定義より
+\[ \lambda (K)\le\sum_{n\in F}\lambda (K_{n})\le\sum_{n\in F}\lambda_{\ast}(U_{n})\le\sum\lambda_{\ast}(U_{n}) \]
+が成り立つ。左辺の上限を取れば$\lambda_{\ast}\left(\bigcup I_{n}\right)\le\sum\lambda_{\ast}(U_{n})$を得る。
 
 　互いに素な$U_{1}, \dotsc, U_{n}\in\mathcal{O}$を取る。$K_{j}\subset U_{j}, K_{j}\in\mathcal{K}$を取れば互いに素で、
 $\bigcup_{j=1}^{n}K_{j}\in\mathcal{K}$かつ$\bigcup_{j=1}^{n}K_{j}\subset\bigcup_{j=1}^{n}U_{j}$を満たす。
-\[ \sum_{j=1}^{n}\lambda (K_{j})=\lambda\left(\bigcup_{j=1}^{n}K_{j}\right)\le\lambda_{*}\left(\bigcup_{j=1}^{n}U_{j}\right) \]
-だから、左辺の上限を取れば$\sum_{j=1}^{n}\lambda_{*}(U_{j})\le\lambda_{*}\left(\bigcup_{j=1}^{n}U_{j}\right)$を得る。
+\[ \sum_{j=1}^{n}\lambda (K_{j})=\lambda\left(\bigcup_{j=1}^{n}K_{j}\right)\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right) \]
+だから、左辺の上限を取れば$\sum_{j=1}^{n}\lambda_{\ast}(U_{j})\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right)$を得る。
 \end{Proof}
 
 　ハウスドルフ空間上に容量が定まっているとき、その内部容量から外測度が構成できる。
 
 \begin{Prop}
 $(X, \mathcal{O})$をハウスドルフ空間、$\lambda$を容量とする。$A\subset X$に対し
-\[ \widehat{\lambda}(A):=\inf\{\lambda_{*}(U)\mid U\in\mathcal{O}, A\subset U\} \]
+\[ \widehat{\lambda}(A):=\inf\{\lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U\} \]
 と定めれば、$\widehat{\lambda}$は外測度になる。
 \end{Prop}
 \begin{Proof}
-まず$\widehat{\lambda}|_{\mathcal{O}}=\lambda_{*}|_{\mathcal{O}}$であることを示す。
-$U\in\mathcal{O}$に対し$U$自身が$U$を含む開集合だから$\widehat{\lambda}(U)\le\lambda_{*}(U)$である。
-一方$\lambda_{*}$の単調性より、$O\in\mathcal{O}, U\subset O$に対し$\lambda_{*}(U)\le\lambda_{*}(O)$が成り立つ。
-故に$\lambda_{*}(U)\le\widehat{\lambda}(U)$である。
-特に$\widehat{\lambda}(\emptyset)=\lambda_{*}(\emptyset)=0$が分かる。
+まず$\widehat{\lambda}|_{\mathcal{O}}=\lambda_{\ast}|_{\mathcal{O}}$であることを示す。
+$U\in\mathcal{O}$に対し$U$自身が$U$を含む開集合だから$\widehat{\lambda}(U)\le\lambda_{\ast}(U)$である。
+一方$\lambda_{\ast}$の単調性より、$O\in\mathcal{O}, U\subset O$に対し$\lambda_{\ast}(U)\le\lambda_{\ast}(O)$が成り立つ。
+故に$\lambda_{\ast}(U)\le\widehat{\lambda}(U)$である。
+特に$\widehat{\lambda}(\emptyset)=\lambda_{\ast}(\emptyset)=0$が分かる。
 
 　$\widehat{\lambda}$が単調であることは良い。故に可算劣加法性を示す。
 このとき$\{A_{n}\}\subset 2^{X}$に対し、$\sum\widehat{\lambda}(A_{n})<\infty$と仮定して良い。
 $\varepsilon>0$を取る。$\widehat{\lambda}$の定義から、適当な開集合$U_{n}$を、$A_{n}\subset U_{n}$かつ
-\[ \lambda_{*}(U_{n})\le\widehat{\lambda}(A_{n})+\frac{\varepsilon}{2^{n}} \]
+\[ \lambda_{\ast}(U_{n})\le\widehat{\lambda}(A_{n})+\frac{\varepsilon}{2^{n}} \]
 を満たすように取れる。このとき
 \begin{align*}
 \widehat{\lambda}\left(\bigcup A_{n}\right)
-&\le\widehat{\lambda}\left(\bigcup U_{n}\right)=\lambda_{*}\left(\bigcup U_{n}\right) \\
-&\le\sum\lambda_{*}(U_{n})\le\sum\widehat{\lambda}(A_{n})+\varepsilon
+&\le\widehat{\lambda}\left(\bigcup U_{n}\right)=\lambda_{\ast}\left(\bigcup U_{n}\right) \\
+&\le\sum\lambda_{\ast}(U_{n})\le\sum\widehat{\lambda}(A_{n})+\varepsilon
 \end{align*}
 となる。$\varepsilon$は任意だから可算劣加法性が成り立つ。
 \end{Proof}
@@ -86,10 +87,10 @@ $A\in\sigma[\mathcal{O}]$は$\mu$-外部正則であり、$U\in\mathcal{O}$は$\
 \footnote{一般のボレル集合が$\mu$-内部正則になるとは限らない。}
 \end{Prop}
 \begin{Proof}
-$A\in\sigma[\mathcal{O}]$に対し$\mu (A)=\widehat{\lambda}(A)=\inf_{A\subset O\in\mathcal{O}}\lambda_{*}(O)$である。
-ここで$\lambda_{*}(O)=\widehat{\lambda}(O)=\mu (O)$であるから、$A$は$\mu$-外部正則となる。
-また$U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{*}(U)=\sup_{U\supset K\in\mathcal{K}}\lambda (K)$である。
-ここで$K\subset O\in\mathcal{O}$に対して$\lambda_{*}(O)$の定義により$\lambda (K)\le\lambda_{*}(O)$が成り立つ。
+$A\in\sigma[\mathcal{O}]$に対し$\mu (A)=\widehat{\lambda}(A)=\inf_{A\subset O\in\mathcal{O}}\lambda_{\ast}(O)$である。
+ここで$\lambda_{\ast}(O)=\widehat{\lambda}(O)=\mu (O)$であるから、$A$は$\mu$-外部正則となる。
+また$U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{\ast}(U)=\sup_{U\supset K\in\mathcal{K}}\lambda (K)$である。
+ここで$K\subset O\in\mathcal{O}$に対して$\lambda_{\ast}(O)$の定義により$\lambda (K)\le\lambda_{\ast}(O)$が成り立つ。
 右辺の下限を取れば$\lambda (K)\le\widehat{\lambda}(K)$が従う。
 よって$\mu (U)\le\sup_{U\supset K\in\mathcal{K}}\widehat{\lambda}(K)$を得るが、逆の不等号は明らかなので、
 $U$は$\mu$-内部正則となる。
@@ -112,9 +113,9 @@ $\mu:\mathcal{A}\rightarrow [0, \infty], \nu:\mathcal{B}\rightarrow [0, \infty]$
 &=\{\gamma (L)\mid L=h(K), K\in\mathcal{K}, K\subset U\} \\
 &=\{\gamma (L)\mid L\in\mathcal{L}, L\subset h(U)\}
 \end{align*}
-が成り立つので$\lambda_{*}(U)=\gamma_{*}(h(U))$が従う。次に$A\subset X$に対して
+が成り立つので$\lambda_{\ast}(U)=\gamma_{*}(h(U))$が従う。次に$A\subset X$に対して
 \begin{align*}
-\{\lambda_{*}(U)\mid U\in\mathcal{O}, A\subset U\}&=\{\gamma_{*}(h(U))\mid U\in\mathcal{O}, A\subset U\} \\
+\{\lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U\}&=\{\gamma_{*}(h(U))\mid U\in\mathcal{O}, A\subset U\} \\
 &=\{\gamma_{*}(V)\mid V=h(U), U\in\mathcal{O}, A\subset U\} \\
 &=\{\gamma_{*}(V)\mid V\in\mathcal{T}, h(A)\subset V\}
 \end{align*}
@@ -211,10 +212,10 @@ $G$を局所コンパクトハウスドルフ位相群とする。ボレル集�
 \begin{Proof}
 $\lambda$を上で得た容量とする。このとき$\sigma[\mathcal{O}]\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。
 $U\in\mathcal{O}$が$\widehat{\lambda}$-可測であることを示せばよい。$A\subset G$及び$\varepsilon>0$を取る。
-$\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{*}(O)$であるから、ある$O\in\mathcal{O}$が存在して
-\[ A\subset O, \lambda_{*}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3} \]
+$\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{\ast}(O)$であるから、ある$O\in\mathcal{O}$が存在して
+\[ A\subset O, \lambda_{\ast}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3} \]
 を満たすように取れる。ここで$O\cap U$は開集合だから
-$\widehat{\lambda}(O\cap U)=\lambda_{*}(O\cap U)=\sup_{O\cap U\supset K\in\mathcal{K}}\lambda (K)$である。
+$\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\mathcal{K}}\lambda (K)$である。
 よってある$K\in\mathcal{K}$が存在して
 \[ K\subset O\cap U, \widehat{\lambda}(O\cap U)-\frac{\varepsilon}{3}\le\lambda (K) \]
 を満たすように取れる。更に$O\backslash K$も開集合だから、同様にして$L\in\mathcal{K}$を
@@ -225,7 +226,7 @@ $\widehat{\lambda}(O\cap U)=\lambda_{*}(O\cap U)=\sup_{O\cap U\supset K\in\mathc
 &\le\widehat{\lambda}(O\cap U)+\widehat{\lambda}(O\backslash U)-\frac{2}{3}\varepsilon \\
 &\le\lambda (K)+\widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3} \\
 &\le\lambda (K)+\lambda (L)=\lambda (K\sqcup L)\\
-&\le\lambda_{*}((O\cap U)\cup (O\backslash K))=\lambda_{*}(O) \\
+&\le\lambda_{\ast}((O\cap U)\cup (O\backslash K))=\lambda_{\ast}(O) \\
 &\le\widehat{\lambda}(A)+\frac{\varepsilon}{3}
 \end{align*}
 となる。つまり
@@ -236,7 +237,7 @@ $\widehat{\lambda}(O\cap U)=\lambda_{*}(O\cap U)=\sup_{O\cap U\supset K\in\mathc
 $K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\{K_{x}^{\circ}\}$は$K$の開被覆となる。
 $K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。
 このとき$L:=\bigcup_{j=1}^{n}K_{j}$とすれば$K\subset L^{\circ}\subset L$が従う。故に
-\[ \widehat{\lambda}(K)\le\lambda_{*}(L^{\circ})\le\lambda_{*}(L)=\lambda (L)<\infty \]
+\[ \widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty \]
 を得る。
 \end{Proof}
 
