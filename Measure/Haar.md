@@ -2,14 +2,14 @@
 
 # ハール測度
 
-ルベーグ測度には平行移動不変性がある。ハール測度はこの一般化にあたる。
+ルベーグ測度には平行移動不変性があるが、ハール測度はこの一般化にあたる。
 
-__定義__ 位相空間$(X, \mathcal{O})$のコンパクト部分集合全体を$\mathcal{K}$と書く。集合関数$\lambda\colon\mathcal{K}\rightarrow\lbrack 0, \infty \rbrack$は以下を満たすとする。
+__定義__ 位相空間$(X, \mathcal{O})$のコンパクト部分集合全体を$\mathcal{K}$と書く。集合函数$\lambda\colon\mathcal{K}\rightarrow\lbrack 0, \infty \rbrack$は以下を満たすとする。
 
-- 任意の$K\in\mathcal{K}$に対して$\lambda (K)<\infty$であり、$\lambda (\emptyset)=0$を満たす。
-- 単調性が成り立つ。つまり$A, B\in\mathcal{K}$について$A\subset B$なら$\lambda (A)\le\lambda (B)$を満たす。
-- 有限劣加法性が成り立つ。つまり$A, B\in\mathcal{K}$について$\lambda (A\cup B)\le\lambda (A)+\lambda (B)$が成り立つ。
-- 有限加法性が成り立つ。つまり上の条件で$A\cap B=\emptyset$なら等号が成り立つ。
+- コンパクトな$K\subset X$について$\lambda (K)<\infty$であり、$\lambda (\emptyset)=0$である。
+- コンパクトな$A, B\subset X$について、$A\subset B$なら$\lambda (A)\le\lambda (B)$を満たす。（単調性）
+- コンパクトな$A, B\subset X$について、$\lambda (A\cup B)\le\lambda (A)+\lambda (B)$が成り立つ。（有限劣加法性）
+- 上の状況で$A\cap B=\emptyset$なら等号が成り立つ。（有限加法性）
 
 このとき$\lambda$を **容量** （content）と呼ぶ。
 
@@ -27,24 +27,27 @@ $$
 
 > $\lambda_{\ast}$は単調で、かつ$\lambda_{\ast}(\emptyset)=0$を満たす。位相空間にハウスドルフ性を認めれば$\mathcal{O}$上の可算劣加法性が従う。
 
-__命題__ 位相空間$(X, \mathcal{O})$はハウスドルフ空間とする。このとき$\lambda_{\ast}\vert_{\mathcal{O}}$は可算劣加法的かつ有限加法的である。
+__命題__ 位相空間$(X, \mathcal{O})$はハウスドルフ空間とする。このとき$\lambda_{\ast}$は$\mathcal{O}$上で可算劣加法的かつ有限加法的である。
 
-<!--
-（証明）まず位相空間論における事実から$K\in\mathcal{K}, U_{1}, U_{2}\in\mathcal{O}$に対し$K\subset U_{1}\cup U_{2}$であるとする。このとき$K_{j}\in\mathcal{K}$を$K=K_{1}\cup K_{2}, K_{j}\subset U_{j}$を満たすように取れる。
+（証明）まずハウスドルフ空間における事実として、コンパクトな$K\subset X$と開集合$U_{1}, U_{2}$について$K\subset U_{1}\cup U_{2}$とすると、あるコンパクトな$K_{j}\subset X$が存在して$K=K_{1}\cup K_{2}, K_{j}\subset U_{j}$が成り立つことが知られている。
 
-$\mathcal{O}$上での可算劣加法性を示そう。$\lbrace U_{n} \lbrace\subset\mathcal{O}$とする。
-$K\subset\bigcup U_{n}, K\in\mathcal{K}$に対してコンパクト性より有限集合$F\subset\mathbb{N}$が取れ、
-$K\subset\bigcup_{n\in F}U_{n}$とできる。このとき先に述べた事実により$K_{n}\in\mathcal{K}$が存在して
-$K=\bigcup_{n\in F}K_{n},\, K_{n}\subset U_{n}$を満たすようにできる。$\lambda$の有限劣加法性と$\lambda_{\ast}$の定義より
-\[ \lambda (K)\le\sum_{n\in F}\lambda (K_{n})\le\sum_{n\in F}\lambda_{\ast}(U_{n})\le\sum\lambda_{\ast}(U_{n}) \]
+$\mathcal{O}$上での可算劣加法性を示そう。$U_{n}\in\mathcal{O}$とする。コンパクトな$K\subset\bigcup U_{n}$について、ある有限集合$F\subset\mathbb{N}$により$K\subset\bigcup_{n\in F}U_{n}$と表せる。従って先の事実より、$K=\bigcup_{n\in F}K_{n}$を満たすコンパクトな$K_{n}\subset U_{n}$が存在する。$\lambda$の有限劣加法性と$\lambda_{\ast}$の定義より
+
+$$
+\lambda (K)\le\sum_{n\in F}\lambda (K_{n})\le\sum_{n\in F}\lambda_{\ast}(U_{n})\le\sum\lambda_{\ast}(U_{n})
+$$
+
 が成り立つ。左辺の上限を取れば$\lambda_{\ast}\left(\bigcup I_{n}\right)\le\sum\lambda_{\ast}(U_{n})$を得る。
 
-　互いに素な$U_{1}, \dotsc, U_{n}\in\mathcal{O}$を取る。$K_{j}\subset U_{j}, K_{j}\in\mathcal{K}$を取れば互いに素で、
-$\bigcup_{j=1}^{n}K_{j}\in\mathcal{K}$かつ$\bigcup_{j=1}^{n}K_{j}\subset\bigcup_{j=1}^{n}U_{j}$を満たす。
-\[ \sum_{j=1}^{n}\lambda (K_{j})=\lambda\left(\bigcup_{j=1}^{n}K_{j}\right)\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right) \]
-だから、左辺の上限を取れば$\sum_{j=1}^{n}\lambda_{\ast}(U_{j})\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right)$を得る。
-\end{Proof}
+$U_{1}, \dotsc, U_{n}\in\mathcal{O}$は互いに素とする。コンパクトな$K_{j}\subset U_{j}$を取ると、$K_{1}, \dotsc, K_{n}$は互いに素で、$\bigcup_{j=1}^{n}K_{j}$はコンパクトかつ$\bigcup_{j=1}^{n}K_{j}\subset\bigcup_{j=1}^{n}U_{j}$を満たす。$\lambda$の有限加法性より
 
+$$
+\sum_{j=1}^{n}\lambda (K_{j})=\lambda\left(\bigcup_{j=1}^{n}K_{j}\right)\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right)
+$$
+
+だから、左辺の上限を取れば$\sum_{j=1}^{n}\lambda_{\ast}(U_{j})\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right)$を得る。$\square$
+
+<!--
 　ハウスドルフ空間上に容量が定まっているとき、その内部容量から外測度が構成できる。
 
 \begin{Prop}
