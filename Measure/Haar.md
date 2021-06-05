@@ -47,14 +47,17 @@ $$
 
 だから、左辺の上限を取れば$\sum_{j=1}^{n}\lambda_{\ast}(U_{j})\le\lambda_{\ast}\left(\bigcup_{j=1}^{n}U_{j}\right)$を得る。$\square$
 
-<!--
 　ハウスドルフ空間上に容量が定まっているとき、その内部容量から外測度が構成できる。
 
-\begin{Prop}
-$(X, \mathcal{O})$をハウスドルフ空間、$\lambda$を容量とする。$A\subset X$に対し
-\[ \widehat{\lambda}(A):=\inf\lbrace \lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U \lbrace \]
+__命題__ $(X, \mathcal{O})$をハウスドルフ空間、$\lambda$を容量とする。$A\subset X$に対し
+
+$$
+\widehat{\lambda}(A):=\inf\lbrace \lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U \rbrace
+$$
+
 と定めれば、$\widehat{\lambda}$は外測度になる。
-\end{Prop}
+
+<!--
 \begin{Proof}
 まず$\widehat{\lambda}|_{\mathcal{O}}=\lambda_{\ast}|_{\mathcal{O}}$であることを示す。
 $U\in\mathcal{O}$に対し$U$自身が$U$を含む開集合だから$\widehat{\lambda}(U)\le\lambda_{\ast}(U)$である。
