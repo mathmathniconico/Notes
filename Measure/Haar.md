@@ -27,7 +27,7 @@ $$
 
 > $\lambda_{\ast}$は単調で、かつ$\lambda_{\ast}(\emptyset)=0$を満たす。位相空間にハウスドルフ性を認めれば$\mathcal{O}$上の可算劣加法性が従う。
 
-__命題__ 位相空間$(X, \mathcal{O})$はハウスドルフ空間とする。このとき$\lambda_{\ast}$は$\mathcal{O}$上で可算劣加法的かつ有限加法的である。
+__命題__ 位相空間$(X, \mathcal{O})$はハウスドルフ空間とする。このとき$\lambda_{\ast}$の$\mathcal{O}$への制限$\lambda_{\ast}\vert_{\mathcal{O}}$は可算劣加法的かつ有限加法的である。
 
 （証明）まずハウスドルフ空間における事実として、コンパクトな$K\subset X$と開集合$U_{1}, U_{2}$について$K\subset U_{1}\cup U_{2}$とすると、あるコンパクトな$K_{j}\subset X$が存在して$K=K_{1}\cup K_{2}, K_{j}\subset U_{j}$が成り立つことが知られている。
 
@@ -57,27 +57,27 @@ $$
 
 と定めれば、$\widehat{\lambda}$は外測度になる。
 
-<!--
-\begin{Proof}
-まず$\widehat{\lambda}|_{\mathcal{O}}=\lambda_{\ast}|_{\mathcal{O}}$であることを示す。
-$U\in\mathcal{O}$に対し$U$自身が$U$を含む開集合だから$\widehat{\lambda}(U)\le\lambda_{\ast}(U)$である。
-一方$\lambda_{\ast}$の単調性より、$O\in\mathcal{O}, U\subset O$に対し$\lambda_{\ast}(U)\le\lambda_{\ast}(O)$が成り立つ。
-故に$\lambda_{\ast}(U)\le\widehat{\lambda}(U)$である。
-特に$\widehat{\lambda}(\emptyset)=\lambda_{\ast}(\emptyset)=0$が分かる。
+（証明）まず$\widehat{\lambda}|_{\mathcal{O}}=\lambda_{\ast}|_{\mathcal{O}}$であることを示す。$U\in\mathcal{O}$に対し$U$自身が$U$を含む開集合だから$\widehat{\lambda}(U)\le\lambda_{\ast}(U)$である。一方$\lambda_{\ast}$の単調性より、$O\in\mathcal{O}, U\subset O$に対し$\lambda_{\ast}(U)\le\lambda_{\ast}(O)$が成り立つ。故に$\lambda_{\ast}(U)\le\widehat{\lambda}(U)$である。特に$\widehat{\lambda}(\emptyset)=\lambda_{\ast}(\emptyset)=0$が分かる。
 
-　$\widehat{\lambda}$が単調であることは良い。故に可算劣加法性を示す。
-このとき$\lbrace A_{n} \lbrace\subset 2^{X}$に対し、$\sum\widehat{\lambda}(A_{n})<\infty$と仮定して良い。
-$\varepsilon>0$を取る。$\widehat{\lambda}$の定義から、適当な開集合$U_{n}$を、$A_{n}\subset U_{n}$かつ
-\[ \lambda_{\ast}(U_{n})\le\widehat{\lambda}(A_{n})+\frac{\varepsilon}{2^{n}} \]
-を満たすように取れる。このとき
-\begin{align*}
+$\widehat{\lambda}$が単調であることは良い。可算劣加法性を示す。$A_{n}\subset X$について$\sum\widehat{\lambda}(A_{n})<\infty$とする。$\varepsilon>0$を取る。$\widehat{\lambda}$の定義から、適当な開集合$U_{n}$を取り$A_{n}\subset U_{n}$かつ
+
+$$
+\lambda_{\ast}(U_{n})\le\widehat{\lambda}(A_{n})+\frac{\varepsilon}{2^{n}}
+$$
+
+を満たすようにできる。このとき
+
+$$
+\begin{aligned}
 \widehat{\lambda}\left(\bigcup A_{n}\right)
 &\le\widehat{\lambda}\left(\bigcup U_{n}\right)=\lambda_{\ast}\left(\bigcup U_{n}\right) \\
 &\le\sum\lambda_{\ast}(U_{n})\le\sum\widehat{\lambda}(A_{n})+\varepsilon
-\end{align*}
-となる。$\varepsilon$は任意だから可算劣加法性が成り立つ。
-\end{Proof}
+\end{aligned}
+$$
 
+となる。$\varepsilon$は任意だから可算劣加法性が成り立つ。$\square$
+
+<!--
 　$\widehat{\lambda}$-可測な集合全体を$\mathcal{M}_{\widehat{\lambda}}$とすれば、
 $\widehat{\lambda}:\mathcal{M}_{\widehat{\lambda}}\rightarrow [0, \infty]$は測度となる。
 
