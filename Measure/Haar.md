@@ -77,31 +77,25 @@ $$
 
 となる。$\varepsilon$は任意だから可算劣加法性が成り立つ。$\square$
 
-$\widehat{\lambda}$可測な集合全体を$\mathcal{M}_{\widehat{\lambda}}$とすれば、$\widehat{\lambda}:\mathcal{M}_{\widehat{\lambda}}\rightarrow [0, \infty]$は測度となる。
+$\widehat{\lambda}$可測な集合全体を$\mathcal{M}_{\widehat{\lambda}}$とすれば、$\widehat{\lambda}:\mathcal{M}_{\widehat{\lambda}}\rightarrow \lbrack 0, \infty \rbrack$は測度となる。
 
-__命題__ $(X, \mathcal{O})$はハウスドルフ空間、$\lambda\colon\mathcal{K}\rightarrow [0, \infty]$は容量とする。$\mu\colon\mathscr{A}\rightarrow [0, \infty]$は測度で$\sigma[\mathcal{O}]\subset\mathscr{A}$を満たすとする。このとき$\mu|_{\sigma\lbrack \mathcal{O} \rbrack}=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$であれば、$A\in\sigma\lbrack \mathcal{O} \rbrack$は$\mu$外部正則であり、$U\in\mathcal{O}$は$\mu$内部正則になる。
+__命題__ $(X, \mathcal{O})$はハウスドルフ空間、$\lambda\colon\mathcal{K}\rightarrow \lbrack 0, \infty \rbrack$は容量とする。$\mu\colon\mathscr{A}\rightarrow \lbrack 0, \infty \rbrack$は測度で$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$を満たすとする。このとき$\mu|_{\sigma\lbrack \mathcal{O} \rbrack}=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$であれば、$A\in\sigma\lbrack \mathcal{O} \rbrack$は$\mu$外部正則であり、$U\in\mathcal{O}$は$\mu$内部正則になる。
 
 > 一般のボレル集合が$\mu$内部正則になるとは限らない。
 
+（証明）$A\in\sigma \lbrack \mathcal{O} \rbrack$に対し$\mu (A)=\widehat{\lambda}(A)=\inf_{A\subset O\in\mathcal{O}}\lambda_{\ast}(O)$である。ここで$\lambda_{\ast}(O)=\widehat{\lambda}(O)=\mu (O)$であるから、$A$は$\mu$-外部正則となる。
+
+$U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{\ast}(U)=\sup_{U\supset K\in\mathcal{K}}\lambda (K)$である。ここで$K\subset O\in\mathcal{O}$に対して$\lambda_{\ast}(O)$の定義により$\lambda (K)\le\lambda_{\ast}(O)$が成り立つ。右辺の下限を取れば$\lambda (K)\le\widehat{\lambda}(K)$が従う。よって$\mu (U)\le\sup_{U\supset K\in\mathcal{K}}\widehat{\lambda}(K)$を得るが、逆の不等号は明らかなので、$U$は$\mu$-内部正則となる。$\square$
+
+> 上記の$\mu$を、$\lambda$により誘導された測度とも言う。この測度は以下の意味で$\mathcal{K}$により特徴付けられる。
+
 <!--
-\begin{Proof}
-$A\in\sigma[\mathcal{O}]$に対し$\mu (A)=\widehat{\lambda}(A)=\inf_{A\subset O\in\mathcal{O}}\lambda_{\ast}(O)$である。
-ここで$\lambda_{\ast}(O)=\widehat{\lambda}(O)=\mu (O)$であるから、$A$は$\mu$-外部正則となる。
-また$U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{\ast}(U)=\sup_{U\supset K\in\mathcal{K}}\lambda (K)$である。
-ここで$K\subset O\in\mathcal{O}$に対して$\lambda_{\ast}(O)$の定義により$\lambda (K)\le\lambda_{\ast}(O)$が成り立つ。
-右辺の下限を取れば$\lambda (K)\le\widehat{\lambda}(K)$が従う。
-よって$\mu (U)\le\sup_{U\supset K\in\mathcal{K}}\widehat{\lambda}(K)$を得るが、逆の不等号は明らかなので、
-$U$は$\mu$-内部正則となる。
-\end{Proof}
-
-　上記の$\mu$を、$\lambda$により誘導された測度とも言う。この測度は以下の意味で$\mathcal{K}$により特徴付けられる。
-
 \begin{Prop}
 $(X, \mathcal{O}), (Y, \mathcal{T})$をハウスドルフ空間、$h:X\rightarrow Y$は同相写像とする。
 $\lambda, \gamma$を$X, Y$上の容量として、これらにより誘導された測度を
-$\mu:\mathcal{A}\rightarrow [0, \infty], \nu:\mathcal{B}\rightarrow [0, \infty]$とする。
+$\mu:\mathcal{A}\rightarrow \lbrack 0, \infty \rbrack, \nu:\mathcal{B}\rightarrow \lbrack 0, \infty \rbrack$とする。
 任意のコンパクト集合$K\Subset X$に対して$\gamma (h(K))=\lambda (K)$が成り立つとする。
-このとき$A\in\sigma[\mathcal{O}]$に対して$\nu (h(A))=\mu (A)$が成り立つ。
+このとき$A\in\sigma\lbrack \mathcal{O} \rbrack$に対して$\nu (h(A))=\mu (A)$が成り立つ。
 \end{Prop}
 \begin{Proof}
 以下$\mathcal{O}, \mathcal{T}$のコンパクト集合全体を$\mathcal{K}, \mathcal{L}$で表す。
@@ -118,8 +112,8 @@ $\mu:\mathcal{A}\rightarrow [0, \infty], \nu:\mathcal{B}\rightarrow [0, \infty]$
 &=\lbrace \gamma_{*}(V)\mid V\in\mathcal{T}, h(A)\subset V \lbrace
 \end{align*}
 が成り立つので$\widehat{\lambda}(A)=\widehat{\gamma}(h(A))$が成り立つ。
-特に$A\in\sigma[\mathcal{O}]\subset\mathscr{A}$なら$h(A)\in\sigma[\mathcal{T}]\subset\mathscr{B}$であるから、
-\[ \mu (A)=\widehat{\lambda}(A)=\widehat{\gamma}(h(A))=\nu (h(A)) \]
+特に$A\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$なら$h(A)\in\sigma\lbrack \mathcal{T} \rbrack\subset\mathscr{B}$であるから、
+\\lbrack  \mu (A)=\widehat{\lambda}(A)=\widehat{\gamma}(h(A))=\nu (h(A)) \ \rbrack
 を得る。
 \end{Proof}
 
@@ -135,7 +129,7 @@ $x\in K$に対し$W_{x}:=x^{-1}U$とおくと$x\in U$より$W_{x}$は$1$の開�
 このとき$\lbrace x V_{x}\mid x\in K \lbrace$は$K$の開被覆となるから、コンパクト性より$x_{1}, \dotsc, x_{n}\in K$を取り
 $K\subset\bigcup_{j=1}^{n}x_{j}V_{x_{j}}$と表せる。$V:=\bigcap_{j=1}^{n}V_{x_{j}}$と定めると$1$の開近傍である。
 このとき$x\in K$に対し$x\in x_{j}V_{x_{j}}$となる$x_{j}$が取れるので、
-\[ xV\subset x_{j}V_{x_{j}}V\subset x_{j}V_{x_{j}}V_{x_{j}}\subset x_{j}W_{x_{j}}=U \]
+\\lbrack  xV\subset x_{j}V_{x_{j}}V\subset x_{j}V_{x_{j}}V_{x_{j}}\subset x_{j}W_{x_{j}}=U \ \rbrack
 を得る。
 \end{Proof}
 
@@ -146,19 +140,19 @@ $K\subset\bigcup_{j=1}^{n}gV^{\circ}$とできる。このような被覆が存�
 
 　以下$G$のコンパクト集合全体を$\mathcal{K}$、$1$の開近傍全体を$\mathcal{U}$で表す。
 $G$は局所コンパクトであるから、$1$のコンパクト近傍$K_{0}$が存在する。\footnote{位相群の位相は$1$の近傍系で記述できた。}
-そこで$U\in\mathcal{U}$に対し、写像$\lambda_{U}:\mathcal{K}\rightarrow [0, \infty]$を
-\[ \lambda_{U}(K):=\frac{\#(K:U)}{\#(K_{0}:U)} \]
+そこで$U\in\mathcal{U}$に対し、写像$\lambda_{U}:\mathcal{K}\rightarrow \lbrack 0, \infty \rbrack$を
+\\lbrack  \lambda_{U}(K):=\frac{\#(K:U)}{\#(K_{0}:U)} \ \rbrack
 で定める。ここで$K_{0}$は近傍だから$\#(K_{0}:U)\neq 0$となることに注意する。
 
 　このとき$0\le\lambda_{U}(K)\le\#(K:K_{0})<\infty$が成り立つ。実際$\#(K:U)\le\#(K:K_{0})\#(K_{0}:U)$を示せばよいが、
 これは被覆を考えれば明らかである。故に$\lambda_{U}$は
-\[ \Lambda:=\prod_{K\in\mathcal{K}}[0, \#(K:K_{0})] \]
+\\lbrack  \Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \#(K:K_{0}) \rbrack \ \rbrack
 の元と見なせる。この$\Lambda$はチコノフの定理によりコンパクトである。\footnote{選択公理を用いている。}
 $V\in\mathscr{U}$に対し、
-\[ \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \lbrace} \]
+\\lbrack  \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \lbrace} \ \rbrack
 と定める。もし$\lbrace \Lambda (V)\mid V\in\mathscr{U} \lbrace$が有限交叉性を持てば、
 $\Lambda$がコンパクトであることから
-\[ \bigcap_{V\in\mathscr{U}}\Lambda (V)\neq\emptyset \]
+\\lbrack  \bigcap_{V\in\mathscr{U}}\Lambda (V)\neq\emptyset \ \rbrack
 が従う。
 
 　実際に$V_{1}, \dotsc, V_{n}\in\mathscr{U}$を取れば、$V:=\bigcap_{j=1}^{n}V_{j}\in\mathscr{U}$であり、
@@ -198,26 +192,26 @@ $\Lambda(V^{-1})$上で恒等的に$0$となり、よって$\lambda (K_{1}\sqcup
 \end{Proof}
 
 \begin{Thm}
-$G$を局所コンパクトハウスドルフ位相群とする。ボレル集合体を$\mathscr{B}(G)=\sigma[\mathcal{O}]$と書く。
-以下を満たす測度$\mu:\mathscr{B}(G)\rightarrow [0, \infty]$が存在する。
+$G$を局所コンパクトハウスドルフ位相群とする。ボレル集合体を$\mathscr{B}(G)=\sigma\lbrack \mathcal{O} \rbrack$と書く。
+以下を満たす測度$\mu:\mathscr{B}(G)\rightarrow \lbrack 0, \infty \rbrack$が存在する。
 \begin{itemize}
-\item[\textup{(i)}] $G$のコンパクト集合全体$\mathcal{K}$上で有限値を取る。つまり$K\in\mathcal{K}$なら$\mu (K)<\infty$を満たす。
-\item[\textup{(ii)}] $\mu$は外部正則である。
-\item[\textup{(iii)}] 開集合$O\in\mathcal{O}$は$\mu$-内部正則である。
-\item[\textup{(iv)}] 左移動で不変である。つまり任意の$A\in\mathscr{B}$に対して$\mu (gA)=\mu (A)$が成り立つ。
+\item\lbrack \textup{(i)} \rbrack $G$のコンパクト集合全体$\mathcal{K}$上で有限値を取る。つまり$K\in\mathcal{K}$なら$\mu (K)<\infty$を満たす。
+\item\lbrack \textup{(ii)} \rbrack $\mu$は外部正則である。
+\item\lbrack \textup{(iii)} \rbrack 開集合$O\in\mathcal{O}$は$\mu$-内部正則である。
+\item\lbrack \textup{(iv)} \rbrack 左移動で不変である。つまり任意の$A\in\mathscr{B}$に対して$\mu (gA)=\mu (A)$が成り立つ。
 \end{itemize}
 \end{Thm}
 \begin{Proof}
-$\lambda$を上で得た容量とする。このとき$\sigma[\mathcal{O}]\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。
+$\lambda$を上で得た容量とする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。
 $U\in\mathcal{O}$が$\widehat{\lambda}$-可測であることを示せばよい。$A\subset G$及び$\varepsilon>0$を取る。
 $\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{\ast}(O)$であるから、ある$O\in\mathcal{O}$が存在して
-\[ A\subset O, \lambda_{\ast}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3} \]
+\\lbrack  A\subset O, \lambda_{\ast}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3} \ \rbrack
 を満たすように取れる。ここで$O\cap U$は開集合だから
 $\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\mathcal{K}}\lambda (K)$である。
 よってある$K\in\mathcal{K}$が存在して
-\[ K\subset O\cap U, \widehat{\lambda}(O\cap U)-\frac{\varepsilon}{3}\le\lambda (K) \]
+\\lbrack  K\subset O\cap U, \widehat{\lambda}(O\cap U)-\frac{\varepsilon}{3}\le\lambda (K) \ \rbrack
 を満たすように取れる。更に$O\backslash K$も開集合だから、同様にして$L\in\mathcal{K}$を
-\[ L\subset O\backslash K, \widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3}\le\lambda (L) \]
+\\lbrack  L\subset O\backslash K, \widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3}\le\lambda (L) \ \rbrack
 を満たすように取れる。$K\subset U$より$O\backslash U\subset O\backslash K$となり、また$K\cap L=\emptyset$であるから、
 \begin{align*}
 \widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)-\frac{2}{3}\varepsilon
@@ -228,14 +222,14 @@ $\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\ma
 &\le\widehat{\lambda}(A)+\frac{\varepsilon}{3}
 \end{align*}
 となる。つまり
-\[ \widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)\le\widehat{\lambda}(A)+\varepsilon \]
+\\lbrack  \widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)\le\widehat{\lambda}(A)+\varepsilon \ \rbrack
 であるから、$\varepsilon$が任意に取れたので$U$は$\widehat{\lambda}$-可測となる。
 
-　以上により$\mu:=\widehat{\lambda}|_{\sigma[\mathcal{O}]}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。
+　以上により$\mu:=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。
 $K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \lbrace$は$K$の開被覆となる。
 $K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。
 このとき$L:=\bigcup_{j=1}^{n}K_{j}$とすれば$K\subset L^{\circ}\subset L$が従う。故に
-\[ \widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty \]
+\\lbrack  \widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty \ \rbrack
 を得る。
 \end{Proof}
 
@@ -243,7 +237,7 @@ $K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\s
 定理の条件を満たす測度を左不変ハール測度\textup{(left-invariant Haar measure)}と呼ぶ。
 条件\textup{(iv)}を以下の\textup{(iv$^{\prime}$)}に変えた条件を満たす測度を右不変ハール測度と呼ぶ。
 \begin{itemize}
-\item[\textup{(iv$^{\prime}$)}] 右移動で不変である。つまり$A\in\mathscr{B}$に対して$\mu (Ag)=\mu (A)$が成り立つ。
+\item\lbrack \textup{(iv$^{\prime}$)} \rbrack 右移動で不変である。つまり$A\in\mathscr{B}$に対して$\mu (Ag)=\mu (A)$が成り立つ。
 \end{itemize}
 両方の条件を満たす測度を両側不変ハール測度と呼ぶ。
 \end{Def}
