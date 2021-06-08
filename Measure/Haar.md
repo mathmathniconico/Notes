@@ -77,17 +77,13 @@ $$
 
 となる。$\varepsilon$は任意だから可算劣加法性が成り立つ。$\square$
 
-<!--
-　$\widehat{\lambda}$-可測な集合全体を$\mathcal{M}_{\widehat{\lambda}}$とすれば、
-$\widehat{\lambda}:\mathcal{M}_{\widehat{\lambda}}\rightarrow [0, \infty]$は測度となる。
+$\widehat{\lambda}$可測な集合全体を$\mathcal{M}_{\widehat{\lambda}}$とすれば、$\widehat{\lambda}:\mathcal{M}_{\widehat{\lambda}}\rightarrow [0, \infty]$は測度となる。
 
-\begin{Prop}
-$(X, \mathcal{O})$はハウスドルフ空間、$\lambda:\mathcal{K}\rightarrow [0, \infty]$は容量とする。
-$\mu:\mathscr{A}\rightarrow [0, \infty]$は測度で$\sigma[\mathcal{O}]\subset\mathscr{A}$を満たすとする。
-このとき$\mu|_{\sigma[\mathcal{O}]}=\widehat{\lambda}|_{\sigma[\mathcal{O}]}$であれば、
-$A\in\sigma[\mathcal{O}]$は$\mu$-外部正則であり、$U\in\mathcal{O}$は$\mu$-内部正則になる。
-\footnote{一般のボレル集合が$\mu$-内部正則になるとは限らない。}
-\end{Prop}
+__命題__ $(X, \mathcal{O})$はハウスドルフ空間、$\lambda\colon\mathcal{K}\rightarrow [0, \infty]$は容量とする。$\mu\colon\mathscr{A}\rightarrow [0, \infty]$は測度で$\sigma[\mathcal{O}]\subset\mathscr{A}$を満たすとする。このとき$\mu|_{\sigma\lbrack \mathcal{O} \rbrack}=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$であれば、$A\in\sigma\lbrack \mathcal{O} \rbrack$は$\mu$外部正則であり、$U\in\mathcal{O}$は$\mu$内部正則になる。
+
+> 一般のボレル集合が$\mu$内部正則になるとは限らない。
+
+<!--
 \begin{Proof}
 $A\in\sigma[\mathcal{O}]$に対し$\mu (A)=\widehat{\lambda}(A)=\inf_{A\subset O\in\mathcal{O}}\lambda_{\ast}(O)$である。
 ここで$\lambda_{\ast}(O)=\widehat{\lambda}(O)=\mu (O)$であるから、$A$は$\mu$-外部正則となる。
