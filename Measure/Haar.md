@@ -89,14 +89,9 @@ $U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{\ast}(U)=\su
 
 > 上記の$\mu$を、$\lambda$により誘導された測度とも言う。この測度は以下の意味で$\mathcal{K}$により特徴付けられる。
 
+__命題__ $(X, \mathcal{O}), (Y, \mathcal{T})$をハウスドルフ空間、$h\colon X\rightarrow Y$は同相写像とする。$\lambda, \gamma$を$X, Y$上の容量として、これらにより誘導された測度を$\mu\colon \mathcal{A}\rightarrow \lbrack 0, \infty \rbrack, \nu\colon \mathcal{B}\rightarrow \lbrack 0, \infty \rbrack$とする。任意のコンパクト集合$K\Subset X$に対して$\gamma (h(K))=\lambda (K)$が成り立つとする。このとき$A\in\sigma\lbrack \mathcal{O} \rbrack$に対して$\nu (h(A))=\mu (A)$が成り立つ。
+
 <!--
-\begin{Prop}
-$(X, \mathcal{O}), (Y, \mathcal{T})$をハウスドルフ空間、$h:X\rightarrow Y$は同相写像とする。
-$\lambda, \gamma$を$X, Y$上の容量として、これらにより誘導された測度を
-$\mu:\mathcal{A}\rightarrow \lbrack 0, \infty \rbrack, \nu:\mathcal{B}\rightarrow \lbrack 0, \infty \rbrack$とする。
-任意のコンパクト集合$K\Subset X$に対して$\gamma (h(K))=\lambda (K)$が成り立つとする。
-このとき$A\in\sigma\lbrack \mathcal{O} \rbrack$に対して$\nu (h(A))=\mu (A)$が成り立つ。
-\end{Prop}
 \begin{Proof}
 以下$\mathcal{O}, \mathcal{T}$のコンパクト集合全体を$\mathcal{K}, \mathcal{L}$で表す。
 まず$U\in\mathcal{O}$に対して
