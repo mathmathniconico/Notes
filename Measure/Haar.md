@@ -91,37 +91,45 @@ $U\in\mathcal{O}$に対し、$\mu (U)=\widehat{\lambda}(U)=\lambda_{\ast}(U)=\su
 
 __命題__ $(X, \mathcal{O}), (Y, \mathcal{T})$をハウスドルフ空間、$h\colon X\rightarrow Y$は同相写像とする。$\lambda, \gamma$を$X, Y$上の容量として、これらにより誘導された測度を$\mu\colon \mathcal{A}\rightarrow \lbrack 0, \infty \rbrack, \nu\colon \mathcal{B}\rightarrow \lbrack 0, \infty \rbrack$とする。任意のコンパクト集合$K\Subset X$に対して$\gamma (h(K))=\lambda (K)$が成り立つとする。このとき$A\in\sigma\lbrack \mathcal{O} \rbrack$に対して$\nu (h(A))=\mu (A)$が成り立つ。
 
-<!--
-\begin{Proof}
-以下$\mathcal{O}, \mathcal{T}$のコンパクト集合全体を$\mathcal{K}, \mathcal{L}$で表す。
-まず$U\in\mathcal{O}$に対して
-\begin{align*}
-\lbrace \lambda (K)\mid K\in\mathcal{K}, K\subset U \lbrace&=\lbrace \gamma (h(K))\mid K\in\mathcal{K}, K\subset U \lbrace \\
-&=\lbrace \gamma (L)\mid L=h(K), K\in\mathcal{K}, K\subset U \lbrace \\
-&=\lbrace \gamma (L)\mid L\in\mathcal{L}, L\subset h(U) \lbrace
-\end{align*}
-が成り立つので$\lambda_{\ast}(U)=\gamma_{*}(h(U))$が従う。次に$A\subset X$に対して
-\begin{align*}
-\lbrace \lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U \lbrace&=\lbrace \gamma_{*}(h(U))\mid U\in\mathcal{O}, A\subset U \lbrace \\
-&=\lbrace \gamma_{*}(V)\mid V=h(U), U\in\mathcal{O}, A\subset U \lbrace \\
-&=\lbrace \gamma_{*}(V)\mid V\in\mathcal{T}, h(A)\subset V \lbrace
-\end{align*}
-が成り立つので$\widehat{\lambda}(A)=\widehat{\gamma}(h(A))$が成り立つ。
-特に$A\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$なら$h(A)\in\sigma\lbrack \mathcal{T} \rbrack\subset\mathscr{B}$であるから、
-\\lbrack  \mu (A)=\widehat{\lambda}(A)=\widehat{\gamma}(h(A))=\nu (h(A)) \ \rbrack
-を得る。
-\end{Proof}
+（照明）以下$\mathcal{O}, \mathcal{T}$のコンパクト集合全体を$\mathcal{K}, \mathcal{L}$で表す。まず$U\in\mathcal{O}$に対して
 
+$$
+\begin{aligned}
+\lbrace \lambda (K)\mid K\in\mathcal{K}, K\subset U \rbrace&=\lbrace \gamma (h(K))\mid K\in\mathcal{K}, K\subset U \rbrace \\
+&=\lbrace \gamma (L)\mid L=h(K), K\in\mathcal{K}, K\subset U \rbrace \\
+&=\lbrace \gamma (L)\mid L\in\mathcal{L}, L\subset h(U) \rbrace
+\end{aligned}
+$$
+
+が成り立つので$\lambda_{\ast}(U)=\gamma_{*}(h(U))$が従う。次に$A\subset X$に対して
+
+$$
+\begin{aligned}
+\lbrace \lambda_{\ast}(U)\mid U\in\mathcal{O}, A\subset U \rbrace&=\lbrace \gamma_{*}(h(U))\mid U\in\mathcal{O}, A\subset U \rbrace \\
+&=\lbrace \gamma_{*}(V)\mid V=h(U), U\in\mathcal{O}, A\subset U \rbrace \\
+&=\lbrace \gamma_{*}(V)\mid V\in\mathcal{T}, h(A)\subset V \rbrace
+\end{aligned}
+$$
+
+が成り立つので$\widehat{\lambda}(A)=\widehat{\gamma}(h(A))$が成り立つ。特に$A\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$なら$h(A)\in\sigma\lbrack \mathcal{T} \rbrack\subset\mathscr{B}$であるから、
+
+$$
+\mu (A)=\widehat{\lambda}(A)=\widehat{\gamma}(h(A))=\nu (h(A))
+$$
+
+を得る。$\square$
+
+<!--
 　局所コンパクトな位相群が容量を持つことを示そう。その前に、位相群におけるコンパクト集合の性質に触れておく。
 
 \begin{Lem}
 $G$を位相群、$K\Subset G$はコンパクトであるとする。$K\subset U$なる開集合$U$に対し、$1$の開近傍$V$を取り、
-$KV=\lbrace xy\mid x\in K, y\in V \lbrace\subset U$とできる。
+$KV=\lbrace xy\mid x\in K, y\in V \rbrace\subset U$とできる。
 \end{Lem}
 \begin{Proof}
 $x\in K$に対し$W_{x}:=x^{-1}U$とおくと$x\in U$より$W_{x}$は$1$の開近傍となる。
 そこで$1$の開近傍$V_{x}\subset W_{x}$を$V_{x}V_{x}\subset W_{x}$となるように取る。
-このとき$\lbrace x V_{x}\mid x\in K \lbrace$は$K$の開被覆となるから、コンパクト性より$x_{1}, \dotsc, x_{n}\in K$を取り
+このとき$\lbrace x V_{x}\mid x\in K \rbrace$は$K$の開被覆となるから、コンパクト性より$x_{1}, \dotsc, x_{n}\in K$を取り
 $K\subset\bigcup_{j=1}^{n}x_{j}V_{x_{j}}$と表せる。$V:=\bigcap_{j=1}^{n}V_{x_{j}}$と定めると$1$の開近傍である。
 このとき$x\in K$に対し$x\in x_{j}V_{x_{j}}$となる$x_{j}$が取れるので、
 \\lbrack  xV\subset x_{j}V_{x_{j}}V\subset x_{j}V_{x_{j}}V_{x_{j}}\subset x_{j}W_{x_{j}}=U \ \rbrack
@@ -130,7 +138,7 @@ $K\subset\bigcup_{j=1}^{n}x_{j}V_{x_{j}}$と表せる。$V:=\bigcap_{j=1}^{n}V_{
 
 　$G$を局所コンパクトハウスドルフ位相群とする。
 $K\Subset G$をコンパクトな部分集合、$V\subset G$は内点を持つとする。即ち$V^{\circ}\neq\emptyset$であるとする。
-このとき$\lbrace gV^{\circ}\mid g\in G \lbrace$は$K$の開被覆となるから、有限個の$g_{1}, \dotsc, g_{n}\in G$を選び
+このとき$\lbrace gV^{\circ}\mid g\in G \rbrace$は$K$の開被覆となるから、有限個の$g_{1}, \dotsc, g_{n}\in G$を選び
 $K\subset\bigcup_{j=1}^{n}gV^{\circ}$とできる。このような被覆が存在する$n$の内、最小のものを$\#(K:V)$で表す。
 
 　以下$G$のコンパクト集合全体を$\mathcal{K}$、$1$の開近傍全体を$\mathcal{U}$で表す。
@@ -144,14 +152,14 @@ $G$は局所コンパクトであるから、$1$のコンパクト近傍$K_{0}$�
 \\lbrack  \Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \#(K:K_{0}) \rbrack \ \rbrack
 の元と見なせる。この$\Lambda$はチコノフの定理によりコンパクトである。\footnote{選択公理を用いている。}
 $V\in\mathscr{U}$に対し、
-\\lbrack  \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \lbrace} \ \rbrack
-と定める。もし$\lbrace \Lambda (V)\mid V\in\mathscr{U} \lbrace$が有限交叉性を持てば、
+\\lbrack  \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \rbrace} \ \rbrack
+と定める。もし$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$が有限交叉性を持てば、
 $\Lambda$がコンパクトであることから
 \\lbrack  \bigcap_{V\in\mathscr{U}}\Lambda (V)\neq\emptyset \ \rbrack
 が従う。
 
 　実際に$V_{1}, \dotsc, V_{n}\in\mathscr{U}$を取れば、$V:=\bigcap_{j=1}^{n}V_{j}\in\mathscr{U}$であり、
-$\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda (V)\mid V\in\mathscr{U} \lbrace$は有限交叉性を持つ。
+$\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$は有限交叉性を持つ。
 つまり$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$が取れる。
 \footnote{ここまでハウスドルフ性は用いていない。しかし$\lambda$が容量であることを示すのに必要となる。}
 
@@ -166,7 +174,7 @@ $\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda 
 　(ii)　$K_{1}, K_{2}\in\mathcal{K}$が$K_{1}\subset K_{2}$を満たすとする。$U\in\mathscr{U}$に対し
 $\#(K_{1}:U)\le\#(K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。
 そこで$f\in\Lambda$に対し$f(K_{2})-f(K_{1})$を対応させる写像$\Lambda\rightarrow\mathbb{R}$は、射影と差の合成なので連続写像となる。
-この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \lbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。
+この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \rbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。
 よって$\lambda (K_{2})-\lambda (K_{1})\ge 0$を得る。
 
 　(iii)　$K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$による$K_{1}$の被覆と$K_{2}$の被覆を合わせると
@@ -221,7 +229,7 @@ $\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\ma
 であるから、$\varepsilon$が任意に取れたので$U$は$\widehat{\lambda}$-可測となる。
 
 　以上により$\mu:=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。
-$K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \lbrace$は$K$の開被覆となる。
+$K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \rbrace$は$K$の開被覆となる。
 $K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。
 このとき$L:=\bigcup_{j=1}^{n}K_{j}$とすれば$K\subset L^{\circ}\subset L$が従う。故に
 \\lbrack  \widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty \ \rbrack
