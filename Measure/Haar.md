@@ -119,23 +119,25 @@ $$
 
 を得る。$\square$
 
+局所コンパクトな位相群が容量を持つことを示そう。その前に、位相群におけるコンパクト集合の性質に触れておく。
+
+__補題__ $G$を位相群、$K\Subset G$はコンパクトとする。$K\subset U$なる開集合$U$に対し、$1$の開近傍$V$を取り、
+
+$$
+KV=\lbrace xy\mid x\in K, y\in V \rbrace\subset U
+$$
+
+とできる。
+
+（証明）$x\in K$に対し$W_{x}:=x^{-1}U$とおくと$x\in U$より$W_{x}$は$1$の開近傍となる。そこで$1$の開近傍$V_{x}\subset W_{x}$を$V_{x}V_{x}\subset W_{x}$となるように取る。このとき$\lbrace x V_{x}\mid x\in K \rbrace$は$K$の開被覆となるから、コンパクト性より$x_{1}, \dotsc, x_{n}\in K$を取り$K\subset\bigcup_{j=1}^{n}x_{j}V_{x_{j}}$と表せる。$V:=\bigcap_{j=1}^{n}V_{x_{j}}$と定めると$1$の開近傍である。このとき$x\in K$に対し$x\in x_{j}V_{x_{j}}$となる$x_{j}$が取れるので、
+
+$$
+xV\subset x_{j}V_{x_{j}}V\subset x_{j}V_{x_{j}}V_{x_{j}}\subset x_{j}W_{x_{j}}=U
+$$
+
+を得る。$\square$
+
 <!--
-　局所コンパクトな位相群が容量を持つことを示そう。その前に、位相群におけるコンパクト集合の性質に触れておく。
-
-\begin{Lem}
-$G$を位相群、$K\Subset G$はコンパクトであるとする。$K\subset U$なる開集合$U$に対し、$1$の開近傍$V$を取り、
-$KV=\lbrace xy\mid x\in K, y\in V \rbrace\subset U$とできる。
-\end{Lem}
-\begin{Proof}
-$x\in K$に対し$W_{x}:=x^{-1}U$とおくと$x\in U$より$W_{x}$は$1$の開近傍となる。
-そこで$1$の開近傍$V_{x}\subset W_{x}$を$V_{x}V_{x}\subset W_{x}$となるように取る。
-このとき$\lbrace x V_{x}\mid x\in K \rbrace$は$K$の開被覆となるから、コンパクト性より$x_{1}, \dotsc, x_{n}\in K$を取り
-$K\subset\bigcup_{j=1}^{n}x_{j}V_{x_{j}}$と表せる。$V:=\bigcap_{j=1}^{n}V_{x_{j}}$と定めると$1$の開近傍である。
-このとき$x\in K$に対し$x\in x_{j}V_{x_{j}}$となる$x_{j}$が取れるので、
-\\lbrack  xV\subset x_{j}V_{x_{j}}V\subset x_{j}V_{x_{j}}V_{x_{j}}\subset x_{j}W_{x_{j}}=U \ \rbrack
-を得る。
-\end{Proof}
-
 　$G$を局所コンパクトハウスドルフ位相群とする。
 $K\Subset G$をコンパクトな部分集合、$V\subset G$は内点を持つとする。即ち$V^{\circ}\neq\emptyset$であるとする。
 このとき$\lbrace gV^{\circ}\mid g\in G \rbrace$は$K$の開被覆となるから、有限個の$g_{1}, \dotsc, g_{n}\in G$を選び
