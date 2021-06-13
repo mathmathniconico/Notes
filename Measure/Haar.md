@@ -137,21 +137,20 @@ $$
 
 を得る。$\square$
 
+$G$を局所コンパクトハウスドルフ位相群とする。$K\Subset G$をコンパクトな部分集合、$V\subset G$は内点を持つとする。即ち$V^{\circ}\neq\emptyset$であるとする。このとき$\lbrace gV^{\circ}\mid g\in G \rbrace$は$K$の開被覆となるから、有限個の$g_{1}, \dotsc, g_{n}\in G$を選び$K\subset\bigcup_{j=1}^{n}gV^{\circ}$とできる。このような被覆が存在する$n$の内、最小のものを$\sharp (K:V)$で表す。
+
+以下$G$のコンパクト集合全体を$\mathcal{K}$、$1$の開近傍全体を$\mathcal{U}$で表す。$G$は局所コンパクトであるから、$1$のコンパクト近傍$K_{0}$が存在する。そこで$U\in\mathcal{U}$に対し、写像$\lambda_{U}:\mathcal{K}\rightarrow \lbrack 0, \infty \rbrack$を
+
+$$
+\lambda_{U}(K):=\frac{\sharp (K:U)}{\sharp (K_{0}:U)}
+$$
+
+で定める。ここで$K_{0}$は近傍だから$\sharp (K_{0}:U)\neq 0$となることに注意する。
+
 <!--
-　$G$を局所コンパクトハウスドルフ位相群とする。
-$K\Subset G$をコンパクトな部分集合、$V\subset G$は内点を持つとする。即ち$V^{\circ}\neq\emptyset$であるとする。
-このとき$\lbrace gV^{\circ}\mid g\in G \rbrace$は$K$の開被覆となるから、有限個の$g_{1}, \dotsc, g_{n}\in G$を選び
-$K\subset\bigcup_{j=1}^{n}gV^{\circ}$とできる。このような被覆が存在する$n$の内、最小のものを$\#(K:V)$で表す。
-
-　以下$G$のコンパクト集合全体を$\mathcal{K}$、$1$の開近傍全体を$\mathcal{U}$で表す。
-$G$は局所コンパクトであるから、$1$のコンパクト近傍$K_{0}$が存在する。\footnote{位相群の位相は$1$の近傍系で記述できた。}
-そこで$U\in\mathcal{U}$に対し、写像$\lambda_{U}:\mathcal{K}\rightarrow \lbrack 0, \infty \rbrack$を
-\\lbrack  \lambda_{U}(K):=\frac{\#(K:U)}{\#(K_{0}:U)} \ \rbrack
-で定める。ここで$K_{0}$は近傍だから$\#(K_{0}:U)\neq 0$となることに注意する。
-
-　このとき$0\le\lambda_{U}(K)\le\#(K:K_{0})<\infty$が成り立つ。実際$\#(K:U)\le\#(K:K_{0})\#(K_{0}:U)$を示せばよいが、
+　このとき$0\le\lambda_{U}(K)\le\sharp (K:K_{0})<\infty$が成り立つ。実際$\sharp (K:U)\le\sharp (K:K_{0})\sharp (K_{0}:U)$を示せばよいが、
 これは被覆を考えれば明らかである。故に$\lambda_{U}$は
-\\lbrack  \Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \#(K:K_{0}) \rbrack \ \rbrack
+\\lbrack  \Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \sharp (K:K_{0}) \rbrack \ \rbrack
 の元と見なせる。この$\Lambda$はチコノフの定理によりコンパクトである。\footnote{選択公理を用いている。}
 $V\in\mathscr{U}$に対し、
 \\lbrack  \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \rbrace} \ \rbrack
@@ -170,17 +169,17 @@ $\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda 
 \end{Prop}
 \begin{Proof}
 (i)　まず$\lambda\in\Lambda$より$\lambda (K)<\infty$が任意の$K\in\mathcal{K}$が成り立つ。
-特に$K=\emptyset$のとき、$\#(\emptyset:K_{0})=0$だから$\Lambda$の$\emptyset\in\mathcal{K}$成分は一点になる。
+特に$K=\emptyset$のとき、$\sharp (\emptyset:K_{0})=0$だから$\Lambda$の$\emptyset\in\mathcal{K}$成分は一点になる。
 つまり$\lambda (\emptyset)=0$を得る。
 
 　(ii)　$K_{1}, K_{2}\in\mathcal{K}$が$K_{1}\subset K_{2}$を満たすとする。$U\in\mathscr{U}$に対し
-$\#(K_{1}:U)\le\#(K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。
+$\sharp (K_{1}:U)\le\sharp (K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。
 そこで$f\in\Lambda$に対し$f(K_{2})-f(K_{1})$を対応させる写像$\Lambda\rightarrow\mathbb{R}$は、射影と差の合成なので連続写像となる。
 この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \rbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。
 よって$\lambda (K_{2})-\lambda (K_{1})\ge 0$を得る。
 
 　(iii)　$K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$による$K_{1}$の被覆と$K_{2}$の被覆を合わせると
-$K_{1}\cup K_{2}$の被覆となるから$\#(K_{1}\cup K_{2}:U)\le\#(K_{1}:U)+\#(K_{2}:U)$となる。
+$K_{1}\cup K_{2}$の被覆となるから$\sharp (K_{1}\cup K_{2}:U)\le\sharp (K_{1}:U)+\sharp (K_{2}:U)$となる。
 つまり$\lambda_{U}(K_{1}\cup K_{2})\le\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$が分かる。
 (ii)と同様に考えれば$\lambda (K_{1}\cup K_{2})\le\lambda (K_{1})+\lambda (K_{2})$が従う。
 
@@ -189,9 +188,9 @@ $K_{1}\subset U_{1}, K_{2}\subset U_{2}$とできる。補題より$K_{1}V_{1}\s
 $1$の開近傍$V_{1}, V_{2}$が取れる。そこで$V:=V_{1}\cap V_{2}$と置くと、$K_{1}V\cap K_{2}V=\emptyset$である。
 $U\in\mathscr{U}$が$U\subset V^{-1}$を満たすとする。このとき$K_{1}U^{-1}\cap K_{2}U^{-1}=\emptyset$であるが、
 $\lambda_{U}(K_{1}\sqcup K_{2})=\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$となる。
-実際$n:=\#(K_{1}\sqcup K_{2}:U)$と置き、$K_{1}\sqcup K_{2}\subset\bigcup_{j=1}^{n}g_{j}U$となる被覆を取る。
+実際$n:=\sharp (K_{1}\sqcup K_{2}:U)$と置き、$K_{1}\sqcup K_{2}\subset\bigcup_{j=1}^{n}g_{j}U$となる被覆を取る。
 ここで$g_{j}U\cap K_{1}, g_{j}U\cap K_{2}\neq\emptyset$なら$g_{j}\in K_{1}U^{-1}\cap K_{2}U^{-1}$となるから矛盾する。
-従って$g_{j}U$は$K_{1}, K_{2}$の一方のみとしか交わらない。よって$\#(K_{1}:U)+\#(K_{2}:U)\le\#(K_{1}\sqcup K_{2}:U)$が分かる。
+従って$g_{j}U$は$K_{1}, K_{2}$の一方のみとしか交わらない。よって$\sharp (K_{1}:U)+\sharp (K_{2}:U)\le\sharp (K_{1}\sqcup K_{2}:U)$が分かる。
 結局$f\in\Lambda$に対し$f(K_{1})+f_(K_{2})-f(K_{1}\sqcup K_{2})$を対応させる連続写像は
 $\Lambda(V^{-1})$上で恒等的に$0$となり、よって$\lambda (K_{1}\sqcup K_{2})=\lambda (K_{1})+\lambda (K_{2})$を得る。
 \end{Proof}
