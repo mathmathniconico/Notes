@@ -147,23 +147,31 @@ $$
 
 で定める。ここで$K_{0}$は近傍だから$\sharp (K_{0}:U)\neq 0$となることに注意する。
 
-<!--
-　このとき$0\le\lambda_{U}(K)\le\sharp (K:K_{0})<\infty$が成り立つ。実際$\sharp (K:U)\le\sharp (K:K_{0})\sharp (K_{0}:U)$を示せばよいが、
-これは被覆を考えれば明らかである。故に$\lambda_{U}$は
-\\lbrack  \Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \sharp (K:K_{0}) \rbrack \ \rbrack
-の元と見なせる。この$\Lambda$はチコノフの定理によりコンパクトである。\footnote{選択公理を用いている。}
-$V\in\mathscr{U}$に対し、
-\\lbrack  \Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \rbrace} \ \rbrack
-と定める。もし$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$が有限交叉性を持てば、
-$\Lambda$がコンパクトであることから
-\\lbrack  \bigcap_{V\in\mathscr{U}}\Lambda (V)\neq\emptyset \ \rbrack
+このとき$0\le\lambda_{U}(K)\le\sharp (K:K_{0})<\infty$が成り立つ。実際$\sharp (K:U)\le\sharp (K:K_{0})\sharp (K_{0}:U)$を示せばよいが、これは被覆を考えれば明らかである。故に$\lambda_{U}$は
+
+$$
+\Lambda:=\prod_{K\in\mathcal{K}}\lbrack 0, \sharp (K:K_{0}) \rbrack
+$$
+
+の元と見なせる。この$\Lambda$はチコノフの定理によりコンパクトである。$V\in\mathscr{U}$に対し、
+
+$$
+\Lambda (V):=\overline{\lbrace \lambda_{U}\mid U\in\mathscr{U}, U\subset V \rbrace}
+$$
+
+と定める。もし$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$が有限交叉性を持てば、$\Lambda$がコンパクトであることから
+
+$$
+\bigcap_{V\in\mathscr{U}}\Lambda (V)\neq\emptyset
+$$
+
 が従う。
 
-　実際に$V_{1}, \dotsc, V_{n}\in\mathscr{U}$を取れば、$V:=\bigcap_{j=1}^{n}V_{j}\in\mathscr{U}$であり、
-$\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$は有限交叉性を持つ。
-つまり$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$が取れる。
-\footnote{ここまでハウスドルフ性は用いていない。しかし$\lambda$が容量であることを示すのに必要となる。}
+実際に$V_{1}, \dotsc, V_{n}\in\mathscr{U}$を取れば、$V:=\bigcap_{j=1}^{n}V_{j}\in\mathscr{U}$であり、$\lambda_{V}\in\bigcap_{j=1}^{n}\Lambda (V_{j})$となるから$\lbrace \Lambda (V)\mid V\in\mathscr{U} \rbrace$は有限交叉性を持つ。つまり$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$が取れる。
 
+> ここまでハウスドルフ性は用いていない。しかし$\lambda$が容量であることを示すのに必要となる。
+
+<!--
 \begin{Prop}
 上記の$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$は容量である。
 \end{Prop}
