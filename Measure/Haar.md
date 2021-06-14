@@ -171,21 +171,14 @@ $$
 
 > ここまでハウスドルフ性は用いていない。しかし$\lambda$が容量であることを示すのに必要となる。
 
+__命題__ 上記の$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$は容量である。
+
+（証明）
+まず$\lambda\in\Lambda$より$\lambda (K)<\infty$が任意の$K\in\mathcal{K}$が成り立つ。特に$K=\emptyset$のとき、$\sharp (\emptyset:K_{0})=0$だから$\Lambda$の$\emptyset\in\mathcal{K}$成分は一点になる。つまり$\lambda (\emptyset)=0$を得る。
+
+$K_{1}, K_{2}\in\mathcal{K}$が$K_{1}\subset K_{2}$を満たすとする。$U\in\mathscr{U}$に対し$\sharp (K_{1}:U)\le\sharp (K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。そこで$f\in\Lambda$に対し$f(K_{2})-f(K_{1})$を対応させる写像$\Lambda\rightarrow\mathbb{R}$は、射影と差の合成なので連続写像となる。この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \rbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。よって$\lambda (K_{2})-\lambda (K_{1})\ge 0$を得る。
+
 <!--
-\begin{Prop}
-上記の$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$は容量である。
-\end{Prop}
-\begin{Proof}
-(i)　まず$\lambda\in\Lambda$より$\lambda (K)<\infty$が任意の$K\in\mathcal{K}$が成り立つ。
-特に$K=\emptyset$のとき、$\sharp (\emptyset:K_{0})=0$だから$\Lambda$の$\emptyset\in\mathcal{K}$成分は一点になる。
-つまり$\lambda (\emptyset)=0$を得る。
-
-　(ii)　$K_{1}, K_{2}\in\mathcal{K}$が$K_{1}\subset K_{2}$を満たすとする。$U\in\mathscr{U}$に対し
-$\sharp (K_{1}:U)\le\sharp (K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。
-そこで$f\in\Lambda$に対し$f(K_{2})-f(K_{1})$を対応させる写像$\Lambda\rightarrow\mathbb{R}$は、射影と差の合成なので連続写像となる。
-この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \rbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。
-よって$\lambda (K_{2})-\lambda (K_{1})\ge 0$を得る。
-
 　(iii)　$K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$による$K_{1}$の被覆と$K_{2}$の被覆を合わせると
 $K_{1}\cup K_{2}$の被覆となるから$\sharp (K_{1}\cup K_{2}:U)\le\sharp (K_{1}:U)+\sharp (K_{2}:U)$となる。
 つまり$\lambda_{U}(K_{1}\cup K_{2})\le\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$が分かる。
