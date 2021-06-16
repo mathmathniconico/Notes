@@ -178,24 +178,11 @@ __命題__ 上記の$\lambda\in\bigcap_{V\in\mathscr{U}}\Lambda (V)$は容量で
 
 $K_{1}, K_{2}\in\mathcal{K}$が$K_{1}\subset K_{2}$を満たすとする。$U\in\mathscr{U}$に対し$\sharp (K_{1}:U)\le\sharp (K_{2}:U)$より$\lambda_{U}(K_{1})\le\lambda_{U}(K_{2})$は明らか。そこで$f\in\Lambda$に対し$f(K_{2})-f(K_{1})$を対応させる写像$\Lambda\rightarrow\mathbb{R}$は、射影と差の合成なので連続写像となる。この写像は$\lbrace \lambda_{U}\mid U\in\mathscr{U} \rbrace$上で非負であるから、$\Lambda (V)$上でも非負となる。よって$\lambda (K_{2})-\lambda (K_{1})\ge 0$を得る。
 
+$K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$による$K_{1}$の被覆と$K_{2}$の被覆を合わせると$K_{1}\cup K_{2}$の被覆となるから$\sharp (K_{1}\cup K_{2}:U)\le\sharp (K_{1}:U)+\sharp (K_{2}:U)$となる。つまり$\lambda_{U}(K_{1}\cup K_{2})\le\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$が分かる。先程と同様に考えれば$\lambda (K_{1}\cup K_{2})\le\lambda (K_{1})+\lambda (K_{2})$が従う。
+
+$K_{1}\cap K_{2}=\emptyset$とする。このとき$G$はハウスドルフ空間だから、互いに素な開集合$U_{1}, U_{2}$を取り$K_{1}\subset U_{1}, K_{2}\subset U_{2}$とできる。補題より$K_{1}V_{1}\subset U_{1}, K_{2}V_{2}\subset U_{2}$なる$1$の開近傍$V_{1}, V_{2}$が取れる。そこで$V:=V_{1}\cap V_{2}$と置くと、$K_{1}V\cap K_{2}V=\emptyset$である。$U\in\mathscr{U}$が$U\subset V^{-1}$を満たすとする。このとき$K_{1}U^{-1}\cap K_{2}U^{-1}=\emptyset$であるが、$\lambda_{U}(K_{1}\sqcup K_{2})=\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$となる。実際$n:=\sharp (K_{1}\sqcup K_{2}:U)$と置き、$K_{1}\sqcup K_{2}\subset\bigcup_{j=1}^{n}g_{j}U$となる被覆を取る。ここで$g_{j}U\cap K_{1}, g_{j}U\cap K_{2}\neq\emptyset$なら$g_{j}\in K_{1}U^{-1}\cap K_{2}U^{-1}$となるから矛盾する。従って$g_{j}U$は$K_{1}, K_{2}$の一方のみとしか交わらない。よって$\sharp (K_{1}:U)+\sharp (K_{2}:U)\le\sharp (K_{1}\sqcup K_{2}:U)$が分かる。結局$f\in\Lambda$に対し$f(K_{1})+f_(K_{2})-f(K_{1}\sqcup K_{2})$を対応させる連続写像は$\Lambda(V^{-1})$上で恒等的に$0$となり、よって$\lambda (K_{1}\sqcup K_{2})=\lambda (K_{1})+\lambda (K_{2})$を得る。$\square$
+
 <!--
-　(iii)　$K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$による$K_{1}$の被覆と$K_{2}$の被覆を合わせると
-$K_{1}\cup K_{2}$の被覆となるから$\sharp (K_{1}\cup K_{2}:U)\le\sharp (K_{1}:U)+\sharp (K_{2}:U)$となる。
-つまり$\lambda_{U}(K_{1}\cup K_{2})\le\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$が分かる。
-(ii)と同様に考えれば$\lambda (K_{1}\cup K_{2})\le\lambda (K_{1})+\lambda (K_{2})$が従う。
-
-　(iv)　$K_{1}\cap K_{2}=\emptyset$とする。このとき$G$はハウスドルフ空間だから、互いに素な開集合$U_{1}, U_{2}$を取り
-$K_{1}\subset U_{1}, K_{2}\subset U_{2}$とできる。補題より$K_{1}V_{1}\subset U_{1}, K_{2}V_{2}\subset U_{2}$なる
-$1$の開近傍$V_{1}, V_{2}$が取れる。そこで$V:=V_{1}\cap V_{2}$と置くと、$K_{1}V\cap K_{2}V=\emptyset$である。
-$U\in\mathscr{U}$が$U\subset V^{-1}$を満たすとする。このとき$K_{1}U^{-1}\cap K_{2}U^{-1}=\emptyset$であるが、
-$\lambda_{U}(K_{1}\sqcup K_{2})=\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$となる。
-実際$n:=\sharp (K_{1}\sqcup K_{2}:U)$と置き、$K_{1}\sqcup K_{2}\subset\bigcup_{j=1}^{n}g_{j}U$となる被覆を取る。
-ここで$g_{j}U\cap K_{1}, g_{j}U\cap K_{2}\neq\emptyset$なら$g_{j}\in K_{1}U^{-1}\cap K_{2}U^{-1}$となるから矛盾する。
-従って$g_{j}U$は$K_{1}, K_{2}$の一方のみとしか交わらない。よって$\sharp (K_{1}:U)+\sharp (K_{2}:U)\le\sharp (K_{1}\sqcup K_{2}:U)$が分かる。
-結局$f\in\Lambda$に対し$f(K_{1})+f_(K_{2})-f(K_{1}\sqcup K_{2})$を対応させる連続写像は
-$\Lambda(V^{-1})$上で恒等的に$0$となり、よって$\lambda (K_{1}\sqcup K_{2})=\lambda (K_{1})+\lambda (K_{2})$を得る。
-\end{Proof}
-
 \begin{Thm}
 $G$を局所コンパクトハウスドルフ位相群とする。ボレル集合体を$\mathscr{B}(G)=\sigma\lbrack \mathcal{O} \rbrack$と書く。
 以下を満たす測度$\mu:\mathscr{B}(G)\rightarrow \lbrack 0, \infty \rbrack$が存在する。
