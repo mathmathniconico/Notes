@@ -182,18 +182,14 @@ $K_{1}, K_{2}\in\mathcal{K}$を取る。$U\in\mathscr{U}$に対し、$U$によ�
 
 $K_{1}\cap K_{2}=\emptyset$とする。このとき$G$はハウスドルフ空間だから、互いに素な開集合$U_{1}, U_{2}$を取り$K_{1}\subset U_{1}, K_{2}\subset U_{2}$とできる。補題より$K_{1}V_{1}\subset U_{1}, K_{2}V_{2}\subset U_{2}$なる$1$の開近傍$V_{1}, V_{2}$が取れる。そこで$V:=V_{1}\cap V_{2}$と置くと、$K_{1}V\cap K_{2}V=\emptyset$である。$U\in\mathscr{U}$が$U\subset V^{-1}$を満たすとする。このとき$K_{1}U^{-1}\cap K_{2}U^{-1}=\emptyset$であるが、$\lambda_{U}(K_{1}\sqcup K_{2})=\lambda_{U}(K_{1})+\lambda_{U}(K_{2})$となる。実際$n:=\sharp (K_{1}\sqcup K_{2}:U)$と置き、$K_{1}\sqcup K_{2}\subset\bigcup_{j=1}^{n}g_{j}U$となる被覆を取る。ここで$g_{j}U\cap K_{1}, g_{j}U\cap K_{2}\neq\emptyset$なら$g_{j}\in K_{1}U^{-1}\cap K_{2}U^{-1}$となるから矛盾する。従って$g_{j}U$は$K_{1}, K_{2}$の一方のみとしか交わらない。よって$\sharp (K_{1}:U)+\sharp (K_{2}:U)\le\sharp (K_{1}\sqcup K_{2}:U)$が分かる。結局$f\in\Lambda$に対し$f(K_{1})+f_(K_{2})-f(K_{1}\sqcup K_{2})$を対応させる連続写像は$\Lambda(V^{-1})$上で恒等的に$0$となり、よって$\lambda (K_{1}\sqcup K_{2})=\lambda (K_{1})+\lambda (K_{2})$を得る。$\square$
 
+__定理__ $G$を局所コンパクトハウスドルフ位相群とする。ボレル集合体を$\mathscr{B}(G)=\sigma\lbrack \mathcal{O} \rbrack$と書く。以下を満たす測度$\mu\colon\mathscr{B}(G)\rightarrow \lbrack 0, \infty \rbrack$が存在する。
+
+- $G$のコンパクト集合全体$\mathcal{K}$上で有限値を取る。つまり$K\in\mathcal{K}$なら$\mu (K)<\infty$を満たす。
+- $\mu$は外部正則である。
+- 開集合$O\in\mathcal{O}$は$\mu$内部正則である。
+- 左移動で不変である。つまり任意の$A\in\mathscr{B}$に対して$\mu (gA)=\mu (A)$が成り立つ。
+
 <!--
-\begin{Thm}
-$G$を局所コンパクトハウスドルフ位相群とする。ボレル集合体を$\mathscr{B}(G)=\sigma\lbrack \mathcal{O} \rbrack$と書く。
-以下を満たす測度$\mu:\mathscr{B}(G)\rightarrow \lbrack 0, \infty \rbrack$が存在する。
-\begin{itemize}
-\item\lbrack \textup{(i)} \rbrack $G$のコンパクト集合全体$\mathcal{K}$上で有限値を取る。つまり$K\in\mathcal{K}$なら$\mu (K)<\infty$を満たす。
-\item\lbrack \textup{(ii)} \rbrack $\mu$は外部正則である。
-\item\lbrack \textup{(iii)} \rbrack 開集合$O\in\mathcal{O}$は$\mu$-内部正則である。
-\item\lbrack \textup{(iv)} \rbrack 左移動で不変である。つまり任意の$A\in\mathscr{B}$に対して$\mu (gA)=\mu (A)$が成り立つ。
-\end{itemize}
-\end{Thm}
-\begin{Proof}
 $\lambda$を上で得た容量とする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。
 $U\in\mathcal{O}$が$\widehat{\lambda}$-可測であることを示せばよい。$A\subset G$及び$\varepsilon>0$を取る。
 $\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{\ast}(O)$であるから、ある$O\in\mathcal{O}$が存在して
