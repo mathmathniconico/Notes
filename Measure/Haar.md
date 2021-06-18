@@ -189,30 +189,46 @@ __定理__ $G$を局所コンパクトハウスドルフ位相群とする。ボ
 - 開集合$O\in\mathcal{O}$は$\mu$内部正則である。
 - 左移動で不変である。つまり任意の$A\in\mathscr{B}$に対して$\mu (gA)=\mu (A)$が成り立つ。
 
-<!--
-$\lambda$を上で得た容量とする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。
-$U\in\mathcal{O}$が$\widehat{\lambda}$-可測であることを示せばよい。$A\subset G$及び$\varepsilon>0$を取る。
-$\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{\ast}(O)$であるから、ある$O\in\mathcal{O}$が存在して
-\\lbrack  A\subset O, \lambda_{\ast}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3} \ \rbrack
-を満たすように取れる。ここで$O\cap U$は開集合だから
-$\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\mathcal{K}}\lambda (K)$である。
-よってある$K\in\mathcal{K}$が存在して
-\\lbrack  K\subset O\cap U, \widehat{\lambda}(O\cap U)-\frac{\varepsilon}{3}\le\lambda (K) \ \rbrack
+（証明）$\lambda$を上で得た容量とする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathcal{M}_{\widehat{\lambda}}$が成り立つ。$U\in\mathcal{O}$が$\widehat{\lambda}$可測であることを示せばよい。$A\subset G$及び$\varepsilon>0$を取る。$\widehat{\lambda}(A)=\inf_{A\subset U\in\mathcal{O}}\lambda_{\ast}(O)$であるから、ある$O\in\mathcal{O}$が存在して
+
+$$
+A\subset O, \lambda_{\ast}(O)\le\widehat{\lambda}(A)+\frac{\varepsilon}{3}
+$$
+
+を満たすように取れる。ここで$O\cap U$は開集合だから$\widehat{\lambda}(O\cap U)=\lambda_{\ast}(O\cap U)=\sup_{O\cap U\supset K\in\mathcal{K}}\lambda (K)$である。よってある$K\in\mathcal{K}$が存在して
+
+$$
+K\subset O\cap U, \widehat{\lambda}(O\cap U)-\frac{\varepsilon}{3}\le\lambda (K)
+$$
+
 を満たすように取れる。更に$O\backslash K$も開集合だから、同様にして$L\in\mathcal{K}$を
-\\lbrack  L\subset O\backslash K, \widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3}\le\lambda (L) \ \rbrack
+
+$$
+L\subset O\backslash K, \widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3}\le\lambda (L)
+$$
+
 を満たすように取れる。$K\subset U$より$O\backslash U\subset O\backslash K$となり、また$K\cap L=\emptyset$であるから、
-\begin{align*}
+
+$$
+\begin{aligned}
 \widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)-\frac{2}{3}\varepsilon
 &\le\widehat{\lambda}(O\cap U)+\widehat{\lambda}(O\backslash U)-\frac{2}{3}\varepsilon \\
 &\le\lambda (K)+\widehat{\lambda}(O\backslash K)-\frac{\varepsilon}{3} \\
 &\le\lambda (K)+\lambda (L)=\lambda (K\sqcup L)\\
 &\le\lambda_{\ast}((O\cap U)\cup (O\backslash K))=\lambda_{\ast}(O) \\
 &\le\widehat{\lambda}(A)+\frac{\varepsilon}{3}
-\end{align*}
-となる。つまり
-\\lbrack  \widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)\le\widehat{\lambda}(A)+\varepsilon \ \rbrack
-であるから、$\varepsilon$が任意に取れたので$U$は$\widehat{\lambda}$-可測となる。
+\end{aligned}
+$$
 
+となる。つまり
+
+$$
+\widehat{\lambda}(A\cap U)+\widehat{\lambda}(A\backslash U)\le\widehat{\lambda}(A)+\varepsilon
+$$
+
+であるから、$\varepsilon$が任意に取れたので$U$は$\widehat{\lambda}$可測となる。
+
+<!--
 　以上により$\mu:=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。
 $K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \rbrace$は$K$の開被覆となる。
 $K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。
