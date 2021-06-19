@@ -228,15 +228,15 @@ $$
 
 であるから、$\varepsilon$が任意に取れたので$U$は$\widehat{\lambda}$可測となる。
 
-<!--
-　以上により$\mu:=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。
-$K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \rbrace$は$K$の開被覆となる。
-$K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。
-このとき$L:=\bigcup_{j=1}^{n}K_{j}$とすれば$K\subset L^{\circ}\subset L$が従う。故に
-\\lbrack  \widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty \ \rbrack
-を得る。
-\end{Proof}
+以上により$\mu:=\widehat{\lambda}|_{\sigma\lbrack \mathcal{O} \rbrack}$が求める測度となる。後は$\mathcal{K}$上で有限値を取ることを示せばよい。$K\in\mathcal{K}$を取る。$x\in K$に対しコンパクトな近傍$K_{x}$を取れるが、このとき$\lbrace K_{x}^{\circ} \rbrace$は$K$の開被覆となる。$K$はコンパクトだから有限個の$K_{1}, \dotsc, K_{n}$を取り、$K\subset\bigcup_{j=1}^{n}K_{j}^{\circ}$とできる。このとき$L:=\bigcup_{j=1}^{n}K_{j}$とすれば$K\subset L^{\circ}\subset L$が従う。故に
 
+$$
+\widehat{\lambda}(K)\le\lambda_{\ast}(L^{\circ})\le\lambda_{\ast}(L)=\lambda (L)<\infty
+$$
+
+を得る。$\square$
+
+<!--
 \begin{Def}
 定理の条件を満たす測度を左不変ハール測度\textup{(left-invariant Haar measure)}と呼ぶ。
 条件\textup{(iv)}を以下の\textup{(iv$^{\prime}$)}に変えた条件を満たす測度を右不変ハール測度と呼ぶ。
