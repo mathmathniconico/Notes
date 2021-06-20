@@ -236,16 +236,10 @@ $$
 
 を得る。$\square$
 
-<!--
-\begin{Def}
-定理の条件を満たす測度を左不変ハール測度\textup{(left-invariant Haar measure)}と呼ぶ。
-条件\textup{(iv)}を以下の\textup{(iv$^{\prime}$)}に変えた条件を満たす測度を右不変ハール測度と呼ぶ。
-\begin{itemize}
-\item\lbrack \textup{(iv$^{\prime}$)} \rbrack 右移動で不変である。つまり$A\in\mathscr{B}$に対して$\mu (Ag)=\mu (A)$が成り立つ。
-\end{itemize}
+__定義__ 定理の条件を満たす測度を **左不変ハール測度** （left-invariant Haar measure）と呼ぶ。四番目の条件を以下のものに変えた場合は右不変ハール測度と呼ぶ。
+
+- 右移動で不変である。つまり$A\in\mathscr{B}$に対して$\mu (Ag)=\mu (A)$が成り立つ。
+
 両方の条件を満たす測度を両側不変ハール測度と呼ぶ。
-\end{Def}
 
 
-
--->
