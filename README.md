@@ -136,6 +136,7 @@
 - [積測度空間と測度の一致](/Measure/ProductMeasure.md)
 - [ボレル集合族](/Measure/BorelMeasurability.md)
 - [ルベーグ・スティルチェス測度](/Measure/LebesgueStieltjes.md)
+- [位相正則性](/Measure/Regular.md)
 - [ハール測度](/Measure/Haar.md)
 
 
