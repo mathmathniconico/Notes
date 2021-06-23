@@ -3,24 +3,14 @@
 
 位相正則性とは可測集合が開集合とコンパクト集合により近似されることを主張する概念である。
 
-<!--
-\begin{Def}
-$(X, \mathcal{O})$は位相空間、$\mu:\mathscr{A}\rightarrow [0, \infty]$は測度とする。
-\footnote{必ずしも位相と迎合していなくてもよい。}
-以下$\mathcal{K}$はコンパクト集合全体とする。
-\begin{itemize}
-\item[\textup{(1)}] $A\in\mathscr{A}$が$\mu$-内部正則\textup{($\mu$-inner regular)}であるとは、
-\[ \mu (A)=\sup\{\mu (K)\mid K\subset A, K\in\mathcal{K}\cap\mathscr{A}\} \]
-を満たすことをいう。
-\item[\textup{(2)}] $A\in\mathscr{A}$が$\mu$-外部正則\textup{($\mu$-outer regular)}であるとは、
-\[ \mu (A)=\inf\{\mu (U)\mid A\subset U, U\in\mathcal{O}\cap\mathscr{A}\} \]
-を満たすことをいう。特に$A, X\backslash A$が$\mu$-外部正則のとき、両側$\mu$-外部正則\textup{(two-sided $\mu$-outer regular)}と呼ぶ。
-\item[\textup{(3)}] $A\in\mathscr{A}$が$\mu$-内部正則かつ$\mu$-外部正則であるとき$\mu$-正則\textup{($\mu$-regular)}という。
-\item[\textup{(4)}] 任意の$A\in\mathscr{A}$が$\mu$-内部正則\textup{(resp. $\mu$-外部正則、両側$\mu$-外部正則、$\mu$-正則)}であるとき、
-$\mu$は内部正則\textup{(resp. 外部正則、両側外部正則、正則)}であるという。
-\end{itemize}
-\end{Def}
+__定義__ $(X, \mathcal{O})$は位相空間、$\mu:\mathscr{A}\rightarrow [0, \infty]$は測度とする。以下$\mathcal{K}$はコンパクト集合全体とする。
 
+- $A\in\mathscr{A}$について$\mu (A)=\sup\lbrace \mu (K) : K\subset A, K\in\mathcal{K}\cap\mathscr{A} \rbrace$のとき$\mu$ **内部正則**（inner regular）という。
+- $A\in\mathscr{A}$について$\mu (A)=\inf\lbrace \mu (U) : A\subset U, U\in\mathcal{O}\cap\mathscr{A} \rbrace$のとき$\mu$ **外部正則** （outer regular）という。特に$A, X\backslash A$が$\mu$外部正則のとき、$\mu$両側外部正則（two-sided outer regular）という。
+- $A\in\mathscr{A}$について$\mu$内部正則かつ$\mu$外部正則であるとき$\mu$ **正則** （regular）という。
+- 任意の$A\in\mathscr{A}$が$\mu$内部正則（resp. $\mu$外部正則、$\mu$両側外部正則、$\mu$正則）のとき$\mu$は内部正則（resp. 外部正則、両側外部正則、正則）という。
+
+<!--
 　特に$\sigma[\mathcal{O}]\subset\mathscr{A}$のとき、$A\in\mathscr{A}$が$\mu$-外部正則であることと、
 任意の$\varepsilon>0$に対して開集合$G$が存在して$A\subset G, \mu (G\backslash A)=0$
 とできることは同値になる。そこで$\mu$-外部正則な集合全体を$\mathscr{A}_{+}$と表す。
