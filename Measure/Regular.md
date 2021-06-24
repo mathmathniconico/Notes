@@ -10,16 +10,11 @@ __定義__ $(X, \mathcal{O})$は位相空間、$\mu:\mathscr{A}\rightarrow [0, \
 - $A\in\mathscr{A}$について$\mu$内部正則かつ$\mu$外部正則であるとき$\mu$ **正則** （regular）という。
 - 任意の$A\in\mathscr{A}$が$\mu$内部正則（resp. $\mu$外部正則、$\mu$両側外部正則、$\mu$正則）のとき$\mu$は内部正則（resp. 外部正則、両側外部正則、正則）という。
 
+　特に$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$のとき、$A\in\mathscr{A}$が$\mu$外部正則であることと、任意の$\varepsilon>0$に対して開集合$G$が存在して$A\subset G, \mu (G\backslash A)=0$であることは同値になる。そこで$\mu$外部正則な集合全体を$\mathscr{A}_{+}$と表す。また両側$\mu$外部正則な集合全体を$\mathscr{A}_{0}$と書く。$A\in\mathscr{A}$が両側$\mu$外部正則であることと、任意の$\varepsilon>0$に対して開集合$G$と閉集合$F$が存在して$F\subset A\subset G, \mu (G\backslash F)\lt\varepsilon$とできることは同値である。
+
+　以下$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$であるとする。
+
 <!--
-　特に$\sigma[\mathcal{O}]\subset\mathscr{A}$のとき、$A\in\mathscr{A}$が$\mu$-外部正則であることと、
-任意の$\varepsilon>0$に対して開集合$G$が存在して$A\subset G, \mu (G\backslash A)=0$
-とできることは同値になる。そこで$\mu$-外部正則な集合全体を$\mathscr{A}_{+}$と表す。
-また両側$\mu$-外部正則な集合全体を$\mathscr{A}_{0}$と書く。
-$A\in\mathscr{A}$が両側$\mu$-外部正則であることと、任意の$\varepsilon>0$に対して開集合$G$と閉集合$F$が存在して
-$F\subset A\subset G, \mu (G\backslash F)<\varepsilon$とできることは同値である。
-
-　以下$\sigma[\mathcal{O}]\subset\mathscr{A}$であるとする。
-
 \begin{Prop}
 $\mathscr{A}_{+}$は可算和で閉じる。
 \end{Prop}
