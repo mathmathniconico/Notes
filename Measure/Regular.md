@@ -24,19 +24,19 @@ $$
 
 を満たすように取れる。$G:=\bigcup G_{n}$と置けば開集合で$G\setminus A\subset\bigcup G_{n}\setminus A_{n}$であるから$\mu (G\setminus A)\le\sum\mu (G_{n}\setminus A_{n})\lt\varepsilon$が成り立つ。故に$A\in\mathscr{A}_{+}$を得る。$\square$
 
-<!--
-　開集合の加算交叉で表される集合を$G_{\delta}$-集合または内極限集合と言った。
-同様に閉集合の加算和で表される集合を$F_{\sigma}$-集合と言う。
+　開集合の加算交叉で表される集合を$G_{\delta}$-集合または内極限集合と言った。同様に閉集合の加算和で表される集合を$F_{\sigma}$集合と言う。
 
-\begin{Def}
-任意の閉集合が$G_{\delta}$集合であるとき、その位相空間は$G_{\delta}$空間と呼ぶ。
-\footnote{あるいは同値な定義として任意の開集合が$F_{\sigma}$集合のとき$F_{\sigma}$空間と言っても良い。}
-\end{Def}
+__定義__ 任意の閉集合が$G_{\delta}$集合であるとき、その位相空間は$G_{\delta}$空間と呼ぶ。
 
-　例えば距離空間$(X, \rho)$は$G_{\delta}$空間である。実際開集合$O$に対して
-\[ F_{n}:=\left\{x\in X\mid \rho(x, X\setminus O)\le\frac{1}{n}\right\} \]
+例えば距離空間$(X, \rho)$は$G_{\delta}$空間である。実際開集合$O$に対して
+
+$$
+F_{n}:=\left\lbrace x\in X\mid \rho(x, X\setminus O)\le\frac{1}{n} \right\rbrace
+$$
+
 と定めれば$F_{n}$は閉集合で、かつ$O=\bigcup F_{n}$と表せる。
 
+<!--
 \begin{Prop}
 $\mu$が有限なら$\mathscr{A}_{+}$は可算交叉で閉じる。
 特に位相空間$(X, \mathcal{O})$が$G_{\delta}$空間なら$\mathcal{O}\subset\mathscr{A}_{0}$が成り立つ。
