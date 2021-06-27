@@ -36,12 +36,9 @@ $$
 
 と定めれば$F_{n}$は閉集合で、かつ$O=\bigcup F_{n}$と表せる。
 
+__命題__ $\mu$が有限なら$\mathscr{A}_{+}$は可算交叉で閉じる。特に位相空間$(X, \mathcal{O})$が$G_{\delta}$空間なら$\mathcal{O}\subset\mathscr{A}_{0}$が成り立つ。このとき$\mathscr{A}_{0}$は$\sigma$加法族だから$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が成り立つ。
+
 <!--
-\begin{Prop}
-$\mu$が有限なら$\mathscr{A}_{+}$は可算交叉で閉じる。
-特に位相空間$(X, \mathcal{O})$が$G_{\delta}$空間なら$\mathcal{O}\subset\mathscr{A}_{0}$が成り立つ。
-このとき$\mathscr{A}_{0}$は$\sigma$-加法族だから$\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$が成り立つ。
-\end{Prop}
 \begin{Proof}
 $\mu$は有限とする。$\{A_{n}\}\subset\mathscr{A}_{+}, A:=\bigcap A_{n}$とする。
 $\varepsilon>0$に対して開集合$G_{n}$を$A_{n}\subset G_{n}$かつ
