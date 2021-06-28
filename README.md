@@ -26,7 +26,7 @@
 - 例示：普遍性
 - [函手](/Category/Functor.md)
 - [忠実充満函手と部分圏](/Category/Subcategory.md)
-- 前層の圏
+- [前層の圏](/Category/Presheaf.md)
 - [米田の補題](/Category/YonedaLemma.md)
 - 極限と余極限
 - 随伴

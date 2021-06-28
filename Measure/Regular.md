@@ -38,25 +38,29 @@ $$
 
 __命題__ $\mu$が有限なら$\mathscr{A}_{+}$は可算交叉で閉じる。特に位相空間$(X, \mathcal{O})$が$G_{\delta}$空間なら$\mathcal{O}\subset\mathscr{A}_{0}$が成り立つ。このとき$\mathscr{A}_{0}$は$\sigma$加法族だから$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が成り立つ。
 
-<!--
-\begin{Proof}
-$\mu$は有限とする。$\{A_{n}\}\subset\mathscr{A}_{+}, A:=\bigcap A_{n}$とする。
-$\varepsilon>0$に対して開集合$G_{n}$を$A_{n}\subset G_{n}$かつ
-\[ \mu (G_{n}\setminus A_{n})<\frac{\varepsilon}{2^{n+1}} \]
-を満たすように取れる。$G:=\bigcap G_{n}\in\mathscr{A}$と置く。
-ここで$H_{n}:=\bigcap_{j=1}^{n}G_{j}$は$A$を含む開集合であって$H_{n}\searrow G$を満たす。
-$\mu$は有限だから測度の減少列連続性より、ある番号$N$が存在して
-\[ \mu (H_{N}\setminus G)<\frac{\varepsilon}{2} \]
+（証明）$\mu$は有限とする。$\lbrace A_{n} \rbrace\subset\mathscr{A}_{+}, A:=\bigcap A_{n}$とする。$\varepsilon\gt 0$に対して開集合$G_{n}$を$A_{n}\subset G_{n}$かつ
+
+$$
+\mu (G_{n}\setminus A_{n})\lt\frac{\varepsilon}{2^{n+1}}
+$$
+
+を満たすように取れる。$G:=\bigcap G_{n}\in\mathscr{A}$と置く。ここで$H_{n}:=\bigcap_{j=1}^{n}G_{j}$は$A$を含む開集合であって$H_{n}\searrow G$を満たす。$\mu$は有限だから測度の減少列連続性より、ある番号$N$が存在して
+
+$$
+\mu (H_{N}\setminus G)\lt\frac{\varepsilon}{2}
+$$
+
 を満たす。$G\setminus A\subset \bigcup (G_{n}\setminus A_{n})$であるから
-\[ \mu (H_{N}\setminus A)\le\mu (H_{N}\setminus G)+\mu (G\setminus A)
-<\frac{\varepsilon}{2}+\sum\mu (G_{n}\setminus A_{n})\le\varepsilon \]
+
+$$
+\mu (H_{N}\setminus A)\le\mu (H_{N}\setminus G)+\mu (G\setminus A)\lt\frac{\varepsilon}{2}+\sum\mu (G_{n}\setminus A_{n})\le\varepsilon
+$$
+
 を得る。
 
-　$\mathcal{O}\subset\mathscr{A}_{+}$は明らか。$X\setminus O$は閉集合だから、$G_{\delta}$-空間の定義により可算個の開集合$O_{n}$を用いて
-$X\setminus O=\bigcap O_{n}$と表せる。故に$X\setminus O\in\mathscr{A}_{+}$なので$\mathcal{O}\subset\mathscr{A}_{0}$を得る。
-$\mathscr{A}_{0}$は$\sigma$-加法族になるので$\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$が分かる。
-\end{Proof}
+$\mathcal{O}\subset\mathscr{A}_{+}$は明らか。$X\setminus O$は閉集合だから、$G_{\delta}$空間の定義により可算個の開集合$O_{n}$を用いて$X\setminus O=\bigcap O_{n}$と表せる。故に$X\setminus O\in\mathscr{A}_{+}$なので$\mathcal{O}\subset\mathscr{A}_{0}$を得る。$\mathscr{A}_{0}$は$\sigma$加法族になるので$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が分かる。
 
+<!--
 \begin{Prop}
 測度$\mu$に対し、ある$\{B_{n}\}\subset\mathcal{O}$が存在して$B_{n}\nearrow X, \mu (B_{n})<\infty$を満たすとする。
 このとき$\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$が成り立つ。
