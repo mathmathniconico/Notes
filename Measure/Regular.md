@@ -60,11 +60,9 @@ $$
 
 $\mathcal{O}\subset\mathscr{A}_{+}$は明らか。$X\setminus O$は閉集合だから、$G_{\delta}$空間の定義により可算個の開集合$O_{n}$を用いて$X\setminus O=\bigcap O_{n}$と表せる。故に$X\setminus O\in\mathscr{A}_{+}$なので$\mathcal{O}\subset\mathscr{A}_{0}$を得る。$\mathscr{A}_{0}$は$\sigma$加法族になるので$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が分かる。
 
+__命題__ 測度$\mu$に対し、ある$\lbrace B_{n} \rbrace\subset\mathcal{O}$が存在して$B_{n}\nearrow X, \mu (B_{n})\lt\infty$を満たすとする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が成り立つ。
+
 <!--
-\begin{Prop}
-測度$\mu$に対し、ある$\{B_{n}\}\subset\mathcal{O}$が存在して$B_{n}\nearrow X, \mu (B_{n})<\infty$を満たすとする。
-このとき$\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$が成り立つ。
-\end{Prop}
 \begin{Proof}
 $B\in\mathscr{A}$に対して$\mu_{n}(B):=\mu (B\cap B_{n})$と定めると$\mu_{n}:\mathscr{A}\rightarrow [0, \infty]$は有限測度となる。
 $A\in\sigma[\mathcal{O}]$及び$\varepsilon>0$を取る。このとき$A\cap B_{n}\in\sigma[\mathcal{O}]\subset\mathscr{A}$である。
