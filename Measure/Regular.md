@@ -62,21 +62,9 @@ $\mathcal{O}\subset\mathscr{A}_{+}$は明らか。$X\setminus O$は閉集合だ�
 
 __命題__ 測度$\mu$に対し、ある$\lbrace B_{n} \rbrace\subset\mathcal{O}$が存在して$B_{n}\nearrow X, \mu (B_{n})\lt\infty$を満たすとする。このとき$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$が成り立つ。
 
+（証明）$B\in\mathscr{A}$に対して$\mu_{n}(B):=\mu (B\cap B_{n})$と定めると$\mu_{n}:\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$は有限測度となる。$A\in\sigma\lbrack \mathcal{O} \rbrack$及び$\varepsilon\gt 0$を取る。このとき$A\cap B_{n}\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$である。$G, H\in\mathcal{O}$として$A\cap B_{n}\subset G, X\setminus (A\cap B_{n})\subset H$かつ$\mu_{n}(G\setminus (A\cap B_{n})), \mu_{n}(H\setminus (X\setminus (A\cap B_{n})))\lt\varepsilon$を満たすように取れる。ここで$G_{n}:=G\cap B_{n}, H_{n}:=H\cap B_{n}$と置くと$G_{n}, H_{n}\in\mathcal{O}$であり、$\mu (G_{n}\setminus (A\cap B_{n})), \mu (H_{n}\setminus (X\setminus (A\cap B_{n})))\lt\varepsilon$を満たす。故に$A\cap B_{n}\in\mathscr{A}_{0}\subset\mathscr{A}_{+}$が従う。ここで$\mathscr{A}_{+}$は可算和で閉じるから$A=\bigcup (A\cap B_{n})\in\mathscr{A}_{+}$を得る。一方$X\setminus A\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{+}$であるから結局$A\in\mathscr{A}_{0}$を得る。$\square$
+
 <!--
-\begin{Proof}
-$B\in\mathscr{A}$に対して$\mu_{n}(B):=\mu (B\cap B_{n})$と定めると$\mu_{n}:\mathscr{A}\rightarrow [0, \infty]$は有限測度となる。
-$A\in\sigma[\mathcal{O}]$及び$\varepsilon>0$を取る。このとき$A\cap B_{n}\in\sigma[\mathcal{O}]\subset\mathscr{A}$である。
-$G, H\in\mathcal{O}$として$A\cap B_{n}\subset G, X\setminus (A\cap B_{n})\subset H$かつ
-$\mu_{n}(G\setminus (A\cap B_{n})), \mu_{n}(H\setminus (X\setminus (A\cap B_{n})))<\varepsilon$を満たすように取れる。
-ここで$G_{n}:=G\cap B_{n}, H_{n}:=H\cap B_{n}$と置くと$G_{n}, H_{n}\in\mathcal{O}$であり、
-$\mu (G_{n}\setminus (A\cap B_{n})), \mu (H_{n}\setminus (X\setminus (A\cap B_{n})))<\varepsilon$を満たす。
-故に$A\cap B_{n}\in\mathscr{A}_{0}\subset\mathscr{A}_{+}$が従う。ここで$\mathscr{A}_{+}$は可算和で閉じるから
-$A=\bigcup (A\cap B_{n})\in\mathscr{A}_{+}$を得る。一方$X\setminus A\in\sigma[\mathcal{O}]\subset\mathscr{A}_{+}$であるから
-結局$A\in\mathscr{A}_{0}$を得る。
-\end{Proof}
-
-　完備化との関係を見る。
-
 \begin{Prop}
 $(X, \mathcal{O})$は$G_{\delta}$-空間、$\mu:\mathscr{A}\rightarrow [0, \infty]$は
 $\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$なる測度とする。
