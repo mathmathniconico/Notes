@@ -64,13 +64,9 @@ __命題__ 測度$\mu$に対し、ある$\lbrace B_{n} \rbrace\subset\mathcal{O}
 
 （証明）$B\in\mathscr{A}$に対して$\mu_{n}(B):=\mu (B\cap B_{n})$と定めると$\mu_{n}:\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$は有限測度となる。$A\in\sigma\lbrack \mathcal{O} \rbrack$及び$\varepsilon\gt 0$を取る。このとき$A\cap B_{n}\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}$である。$G, H\in\mathcal{O}$として$A\cap B_{n}\subset G, X\setminus (A\cap B_{n})\subset H$かつ$\mu_{n}(G\setminus (A\cap B_{n})), \mu_{n}(H\setminus (X\setminus (A\cap B_{n})))\lt\varepsilon$を満たすように取れる。ここで$G_{n}:=G\cap B_{n}, H_{n}:=H\cap B_{n}$と置くと$G_{n}, H_{n}\in\mathcal{O}$であり、$\mu (G_{n}\setminus (A\cap B_{n})), \mu (H_{n}\setminus (X\setminus (A\cap B_{n})))\lt\varepsilon$を満たす。故に$A\cap B_{n}\in\mathscr{A}_{0}\subset\mathscr{A}_{+}$が従う。ここで$\mathscr{A}_{+}$は可算和で閉じるから$A=\bigcup (A\cap B_{n})\in\mathscr{A}_{+}$を得る。一方$X\setminus A\in\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{+}$であるから結局$A\in\mathscr{A}_{0}$を得る。$\square$
 
+__命題__ $(X, \mathcal{O})$は$G_{\delta}$空間、$\mu:\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$は$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$なる測度とする。$(\mathscr{A}^{\mu}, \mu^{\ast})$を$(\mathscr{A}, \mu)$の完備化とすると、$A\in\sigma\lbrack \mathcal{O} \rbrack^{\mu}$は両側$\mu^{\ast}$外部正則となる。つまり$\sigma\lbrack \mathcal{O} \rbrack^{\mu}\subset\mathscr{A}_{0}$となる。
+
 <!--
-\begin{Prop}
-$(X, \mathcal{O})$は$G_{\delta}$-空間、$\mu:\mathscr{A}\rightarrow [0, \infty]$は
-$\sigma[\mathcal{O}]\subset\mathscr{A}_{0}$なる測度とする。
-$(\mathscr{A}^{\mu}, \mu^{*})$を$(\mathscr{A}, \mu)$の完備化とすると、
-$A\in\sigma[\mathcal{O}]^{\mu}$は両側$\mu^{*}$-外部正則となる。つまり$\sigma[\mathcal{O}]^{\mu}\subset\mathscr{A}_{0}$となる。
-\end{Prop}
 \begin{Proof}
 $A_{0}, A_{1}\in\sigma[\mathcal{O}]$を$A_{0}\subset A\subset A_{1}$かつ$\mu (A_{1}\setminus A_{0})=0$であるように取れる。
 $A_{j}\in\mathscr{A}_{0}$より閉集合$F$及び開集合$G$を
