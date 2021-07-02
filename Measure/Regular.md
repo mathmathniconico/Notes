@@ -66,17 +66,21 @@ __命題__ 測度$\mu$に対し、ある$\lbrace B_{n} \rbrace\subset\mathcal{O}
 
 __命題__ $(X, \mathcal{O})$は$G_{\delta}$空間、$\mu:\mathscr{A}\rightarrow\lbrack 0, \infty \rbrack$は$\sigma\lbrack \mathcal{O} \rbrack\subset\mathscr{A}_{0}$なる測度とする。$(\mathscr{A}^{\mu}, \mu^{\ast})$を$(\mathscr{A}, \mu)$の完備化とすると、$A\in\sigma\lbrack \mathcal{O} \rbrack^{\mu}$は両側$\mu^{\ast}$外部正則となる。つまり$\sigma\lbrack \mathcal{O} \rbrack^{\mu}\subset\mathscr{A}_{0}$となる。
 
-<!--
-\begin{Proof}
-$A_{0}, A_{1}\in\sigma[\mathcal{O}]$を$A_{0}\subset A\subset A_{1}$かつ$\mu (A_{1}\setminus A_{0})=0$であるように取れる。
-$A_{j}\in\mathscr{A}_{0}$より閉集合$F$及び開集合$G$を
-\[ F\subset A_{0}, A_{1}\subset G, \mu (A_{0}\setminus F), \mu (G\setminus A_{1})<\frac{\varepsilon}{2} \]
-となるように取れる。故に
-\[ F\subset A\subset G, \mu^{*}(G\setminus F)=\mu (G\setminus F)
-=\mu (G\setminus A_{1})+\mu (A_{1}\setminus A_{0})+\mu (A_{0}\setminus F)<\varepsilon \]
-が成り立つ。
-\end{Proof}
+（証明）$A_{0}, A_{1}\in\sigma\lbrack \mathcal{O} \rbrack$を$A_{0}\subset A\subset A_{1}$かつ$\mu (A_{1}\setminus A_{0})=0$であるように取れる。$A_{j}\in\mathscr{A}_{0}$より閉集合$F$及び開集合$G$を
 
+$$
+F\subset A_{0}, A_{1}\subset G, \mu (A_{0}\setminus F), \mu (G\setminus A_{1})\lt\frac{\varepsilon}{2}
+$$
+
+となるように取れる。故に
+
+$$
+F\subset A\subset G, \mu^{\ast}(G\setminus F)=\mu (G\setminus F)=\mu (G\setminus A_{1})+\mu (A_{1}\setminus A_{0})+\mu (A_{0}\setminus F)\lt\varepsilon
+$$
+
+が成り立つ。$\square$
+
+<!--
 　距離空間$(X, \rho)$の開集合全体を$\mathcal{O}_{\rho}$とし、この上のボレル集合体を$\mathscr{B}(X):=\sigma[\mathcal{O}_{\rho}]$と書く。
 この上の測度$\mu:\mathscr{B}(X)\rightarrow [0, \infty]$に対して
 \[ B\in\mathscr{B}(X)\textup{が有界なら}\mu (B)<\infty \]
