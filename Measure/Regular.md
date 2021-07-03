@@ -80,13 +80,13 @@ $$
 
 が成り立つ。$\square$
 
-<!--
-　距離空間$(X, \rho)$の開集合全体を$\mathcal{O}_{\rho}$とし、この上のボレル集合体を$\mathscr{B}(X):=\sigma[\mathcal{O}_{\rho}]$と書く。
-この上の測度$\mu:\mathscr{B}(X)\rightarrow [0, \infty]$に対して
-\[ B\in\mathscr{B}(X)\textup{が有界なら}\mu (B)<\infty \]
-という条件を加える。このとき例えば適当な点$a\in X$を取り、$B_{n}:=\{x\in X\mid \rho (x, a)<n\}$と置けば$B_{n}$は開集合でかつ
-$B_{n}\nearrow X, \mu (B_{n})<\infty$を満たすので、$\mu$は両側外部正則であり、更に先の命題により$\mu^{*}$も両側外部正則となる。
+距離空間$(X, \rho)$の開集合全体を$\mathcal{O}_{\rho}$とし、この上のボレル集合体を$\mathscr{B}(X):=\sigma\lbrack \mathcal{O}_{\rho} \rbrack$と書く。この上の測度$\mu\colon\mathscr{B}(X)\rightarrow \lbrack 0, \infty \rbrack$に対して
 
+- $B\in\mathscr{B}(X)$が有界なら$\mu (B)\lt\infty$
+
+という条件を加える。このとき例えば適当な点$a\in X$を取り、$B_{n}:=\lbrace x\in X\mid \rho (x, a)\lt n \rbrace$と置けば$B_{n}$は開集合でかつ$B_{n}\nearrow X, \mu (B_{n})\lt\infty$を満たすので、$\mu$は両側外部正則であり、更に先の命題により$\mu^{*}$も両側外部正則となる。
+
+<!--
 　一方で内部正則性は単純には従わず、更なる条件を付け加える必要となる。
 事実として完備距離空間において全有界かつ閉な集合はコンパクトになる。
 \footnote{$K\subset X$が全有界とは、任意の$\delta>0$に対し有限個の半径$\delta$の開球で覆えることであった。}
