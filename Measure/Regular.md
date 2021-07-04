@@ -86,16 +86,13 @@ $$
 
 という条件を加える。このとき例えば適当な点$a\in X$を取り、$B_{n}:=\lbrace x\in X\mid \rho (x, a)\lt n \rbrace$と置けば$B_{n}$は開集合でかつ$B_{n}\nearrow X, \mu (B_{n})\lt\infty$を満たすので、$\mu$は両側外部正則であり、更に先の命題により$\mu^{*}$も両側外部正則となる。
 
-<!--
-　一方で内部正則性は単純には従わず、更なる条件を付け加える必要となる。
-事実として完備距離空間において全有界かつ閉な集合はコンパクトになる。
-\footnote{$K\subset X$が全有界とは、任意の$\delta>0$に対し有限個の半径$\delta$の開球で覆えることであった。}
+一方で内部正則性は単純には従わず、更なる条件を付け加える必要となる。事実として完備距離空間において全有界かつ閉な集合はコンパクトになる。
 
-\begin{Thm}[ウラム]
-$X$が可分、即ち稠密な加算部分集合を持つとする。$A\in\mathscr{B}(X)^{\mu}$は両側$\mu^{*}$-外部正則であるから$\varepsilon>0$に対し
-閉集合$F$及び開集合$G$が$F\subset A\subset G, \mu (G\setminus F)<\varepsilon$を満たすように取れた。
-このとき$\mu^{*}(A)<\infty$なら上記の閉集合$F$として全有界なものが取れる。更に$X$が距離空間として完備なら$F$はコンパクトに取れる。
-\end{Thm}
+> $K\subset X$が全有界とは、任意の$\delta\gt 0$に対し有限個の半径$\delta$の開球で覆えることであった。
+
+__定理__ （ウラム）$X$が可分、即ち稠密な加算部分集合を持つとする。$A\in\mathscr{B}(X)^{\mu}$は両側$\mu^{\ast}$外部正則であるから$\varepsilon\gt 0$に対し閉集合$F$及び開集合$G$が$F\subset A\subset G, \mu (G\setminus F)\lt\varepsilon$を満たすように取れた。このとき$\mu^{\ast}(A)\lt\infty$なら上記の閉集合$F$として全有界なものが取れる。更に$X$が距離空間として完備なら$F$はコンパクトに取れる。
+
+<!--
 \begin{Proof}
 $G\in\mathcal{O}$が$\mu (G)<\infty$を満たすとき、任意の$\varepsilon>0$に対して
 全有界な閉集合$K$を$K\subset G, \mu (G\setminus K)<\infty$が取れることを示す。
