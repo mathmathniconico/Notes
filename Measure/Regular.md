@@ -92,34 +92,53 @@ $$
 
 __定理__ （ウラム）$X$が可分、即ち稠密な加算部分集合を持つとする。$A\in\mathscr{B}(X)^{\mu}$は両側$\mu^{\ast}$外部正則であるから$\varepsilon\gt 0$に対し閉集合$F$及び開集合$G$が$F\subset A\subset G, \mu (G\setminus F)\lt\varepsilon$を満たすように取れた。このとき$\mu^{\ast}(A)\lt\infty$なら上記の閉集合$F$として全有界なものが取れる。更に$X$が距離空間として完備なら$F$はコンパクトに取れる。
 
-<!--
-\begin{Proof}
-$G\in\mathcal{O}$が$\mu (G)<\infty$を満たすとき、任意の$\varepsilon>0$に対して
-全有界な閉集合$K$を$K\subset G, \mu (G\setminus K)<\infty$が取れることを示す。
-$X$は可分なので、稠密な可算部分集合$D$を持つ。ここで$n\in\mathbb{N}$に対し
-\[ I_{n}:=\left\{(x, m)\in D\times\mathbb{N}\mid m\ge n, \overline{B}(x; \frac{1}{m})\right\} \]
-と定める。ただし$\overline{B}(x; r)$は$x$を中心とする半径$r$以下の元全体とする。
-また$I_{n}$の有限部分集合列$I_{n}(l)\nearrow I_{n}$を取る。
-\[ G=\bigcup_{(x, m)\in I_{n}}\overline{B}(x; \frac{1}{m}) \]
-が成り立つことに注意すると、任意の$\varepsilon>0$及び$n$に対し、$l_{n}\in\mathbb{N}$が存在して
-\[ K_{n}:=\bigcup_{(x, m)\in I_{n}(l_{n})}\overline{B}(x; \frac{1}{m}) \]
+（証明）$G\in\mathcal{O}$が$\mu (G)\lt\infty$を満たすとき、任意の$\varepsilon\gt 0$に対して全有界な閉集合$K$を$K\subset G, \mu (G\setminus K)\lt\infty$が取れることを示す。$X$は可分なので、稠密な可算部分集合$D$を持つ。ここで$n\in\mathbb{N}$に対し
+
+$$
+I_{n}:=\left\lbrace (x, m)\in D\times\mathbb{N}\mid m\ge n, \overline{B}(x; \frac{1}{m})\right\rbrace
+$$
+
+と定める。ただし$\overline{B}(x; r)$は$x$を中心とする半径$r$以下の元全体とする。また$I_{n}$の有限部分集合列$I_{n}(l)\nearrow I_{n}$を取る。
+
+$$
+G=\bigcup_{(x, m)\in I_{n}}\overline{B}(x; \frac{1}{m})
+$$
+
+が成り立つことに注意すると、任意の$\varepsilon\gt 0$及び$n$に対し、$l_{n}\in\mathbb{N}$が存在して
+
+$$
+K_{n}:=\bigcup_{(x, m)\in I_{n}(l_{n})}\overline{B}(x; \frac{1}{m})
+$$
+
 と置けば
-\[ \mu (G)<\mu (K_{n})+\frac{\varepsilon}{2^{n}} \]
-を満たすように取れる。$K:=\bigcap K_{n}$は全有界であり、また閉集合でもある。
-特に$K\subset G$かつ$\mu (G\setminus K)\le\sum\mu (G\setminus K_{n})<\varepsilon$を満たす。
-この$K$は$X$が完備なら先に述べた事実よりコンパクトになる。
 
-　$A\in\mathscr{B}(X)^{\mu}$は$\mu^{*}(A)<\infty$を満たすとする。$\varepsilon>0$に対し閉集合$F$及び開集合$G$を取り、
-\[ F\subset A\subset G, \mu (G\setminus F)<\frac{\varepsilon}{2} \]
+$$
+\mu (G)\lt\mu (K_{n})+\frac{\varepsilon}{2^{n}}
+$$
+
+を満たすように取れる。$K:=\bigcap K_{n}$は全有界であり、また閉集合でもある。特に$K\subset G$かつ$\mu (G\setminus K)\le\sum\mu (G\setminus K_{n})\lt\varepsilon$を満たす。この$K$は$X$が完備なら先に述べた事実よりコンパクトになる。
+
+$A\in\mathscr{B}(X)^{\mu}$は$\mu^{\ast}(A)\lt\infty$を満たすとする。$\varepsilon\gt 0$に対し閉集合$F$及び開集合$G$を取り、
+
+$$
+F\subset A\subset G, \mu (G\setminus F)\lt\frac{\varepsilon}{2}
+$$
+
 を満たすようにできる。このとき
-\[ \mu (G)=\mu (G\setminus F)+\mu (F)<\frac{\varepsilon}{2}+\mu^{*}(A)<\infty \]
-であるから、先に述べたことより全有界かつ閉な$K\subset G$を
-\[ \mu (G\setminus K)<\frac{\varepsilon}{2} \]
-となるように取れる。$F\cap K\subset A$は全有界かつ閉で、
-$\mu (G\setminus (F\cap K))\le \mu (G\setminus F)+\mu (G\setminus K)<\varepsilon$
-を満たす。特に$X$が完備なら$K$がコンパクトだから$F\cap K$もコンパクトになる。　
-\end{Proof}
 
+$$
+\mu (G)=\mu (G\setminus F)+\mu (F)\lt\frac{\varepsilon}{2}+\mu^{\ast}(A)\lt\infty
+$$
+
+であるから、先に述べたことより全有界かつ閉な$K\subset G$を
+
+$$
+\mu (G\setminus K)\lt\frac{\varepsilon}{2}
+$$
+
+となるように取れる。$F\cap K\subset A$は全有界かつ閉で、$\mu (G\setminus (F\cap K))\le \mu (G\setminus F)+\mu (G\setminus K)\lt\varepsilon$を満たす。特に$X$が完備なら$K$がコンパクトだから$F\cap K$もコンパクトになる。$\square$
+
+<!--
 \begin{Cor}
 可分な完備距離空間上の測度$\mu:\mathscr{B}(X)\rightarrow [0, \infty]$が
 有界な$B\in\mathscr{B}(X)$に対して$\mu (B)<\infty$を満たすとする。
