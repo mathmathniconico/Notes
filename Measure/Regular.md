@@ -138,12 +138,9 @@ $$
 
 となるように取れる。$F\cap K\subset A$は全有界かつ閉で、$\mu (G\setminus (F\cap K))\le \mu (G\setminus F)+\mu (G\setminus K)\lt\varepsilon$を満たす。特に$X$が完備なら$K$がコンパクトだから$F\cap K$もコンパクトになる。$\square$
 
+可分な完備距離空間上の測度$\mu\colon\mathscr{B}(X)\rightarrow\lbrack 0, \infty \rbrack$が有界な$B\in\mathscr{B}(X)$に対して$\mu (B)\lt\infty$を満たすとする。このとき$\mu, \mu^{\ast}$は正則である。
+
 <!--
-\begin{Cor}
-可分な完備距離空間上の測度$\mu:\mathscr{B}(X)\rightarrow [0, \infty]$が
-有界な$B\in\mathscr{B}(X)$に対して$\mu (B)<\infty$を満たすとする。
-このとき$\mu, \mu^{*}$は正則である。
-\end{Cor}
 \begin{Proof}
 以下コンパクト集合全体を$\mathcal{K}$と書く。距離空間はハウスドウルフ空間でもあるのでコンパクト集合は閉集合でもある。
 $A\in\mathscr{B}(X)^{\mu}$とする。$\sup_{A\supset K\in\mathcal{K}}\mu^{*}(K)\ge\mu^{*}(A)$を示せば十分である。
