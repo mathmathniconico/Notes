@@ -140,14 +140,10 @@ $$
 
 可分な完備距離空間上の測度$\mu\colon\mathscr{B}(X)\rightarrow\lbrack 0, \infty \rbrack$が有界な$B\in\mathscr{B}(X)$に対して$\mu (B)\lt\infty$を満たすとする。このとき$\mu, \mu^{\ast}$は正則である。
 
-<!--
-\begin{Proof}
-以下コンパクト集合全体を$\mathcal{K}$と書く。距離空間はハウスドウルフ空間でもあるのでコンパクト集合は閉集合でもある。
-$A\in\mathscr{B}(X)^{\mu}$とする。$\sup_{A\supset K\in\mathcal{K}}\mu^{*}(K)\ge\mu^{*}(A)$を示せば十分である。
-$\mu^{*}(A)<\infty$ならコンパクトな$F$を取り$\mu^{*}(A)=\mu (F)+\mu^{*}(A\setminus F)<\mu (F)+\varepsilon$と出来るので従う。
-$\mu^{*}(A)=\infty$のときは単に閉集合として$F$が取れるが、
-\[ \mu^{*}(F)=\mu (F)\ge\mu (A_{0})=\mu^{*}(A)=\infty \]
-である。$\overline{B_{n}}\cap F$は有界閉集合だが$X$は完備距離空間なのでコンパクトになる。
-これは$F$への増大列となるので結局$\mu^{*}$の増大列連続性より$\sup_{A\supset K\in\mathcal{K}}\mu^{*}(K)=\infty$となる。
-\end{Proof}
--->
+（証明）以下コンパクト集合全体を$\mathcal{K}$と書く。距離空間はハウスドウルフ空間でもあるのでコンパクト集合は閉集合でもある。$A\in\mathscr{B}(X)^{\mu}$とする。$\sup_{A\supset K\in\mathcal{K}}\mu^{\ast}(K)\ge\mu^{\ast}(A)$を示せば十分である。$\mu^{\ast}(A)\lt\infty$ならコンパクトな$F$を取り$\mu^{\ast}(A)=\mu (F)+\mu^{\ast}(A\setminus F)\lt\mu (F)+\varepsilon$と出来るので従う。$\mu^{\ast}(A)=\infty$のときは単に閉集合として$F$が取れるが、
+
+$$
+\mu^{\ast}(F)=\mu (F)\ge\mu (A_{0})=\mu^{\ast}(A)=\infty
+$$
+
+である。$\overline{B_{n}}\cap F$は有界閉集合だが$X$は完備距離空間なのでコンパクトになる。これは$F$への増大列となるので結局$\mu^{\ast}$の増大列連続性より$\sup_{A\supset K\in\mathcal{K}}\mu^{\ast}(K)=\infty$となる。
