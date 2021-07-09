@@ -138,7 +138,7 @@
 - [ルベーグ・スティルチェス測度](/Measure/LebesgueStieltjes.md)
 - [位相正則性](/Measure/Regular.md)
 - [ハール測度](/Measure/Haar.md)
-
+- [距離空間と速度](/Measure/MetricAndMeasure.md)
 
 
 # 距離空間
