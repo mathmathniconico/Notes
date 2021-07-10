@@ -1,18 +1,17 @@
 
 # 距離空間と測度
 
-<!--
-　距離空間における外測度の構成法を学ぶ。以下$(X, \rho)$は距離空間とする。また$A\subset X$に対し$A$の直径を
-\[ |A|=\textup{diam}(A):=\sup\{\rho (x, y)\mid x, y\in A\} \]
+以下$(X, \rho)$は距離空間とする。また$A\subset X$に対し$A$の直径を
+
+$$
+\vert A \vert=\textrm{diam}(A):=\sup\lbrace \rho (x, y)\mid x, y\in A \rbrace
+$$
+
 で表す。
 
-\begin{Def}
-$X$上の外測度$\mu$が距離外測度\textup{(metric outer measure)}であるとは、
-任意の$A, B\subset X$に対して$\rho (A, B):=\inf\{\rho (x, y)\mid x\in A, y\in B\}>0$なら
-\[ \mu (A\sqcup B)=\mu (A)+\mu (B) \]
-成り立つときをいう。
-\end{Def}
+__定義__ $\mu$を$X$上の外測度とする。任意の$A, B\subset X$について、$\rho (A, B):=\inf\lbrace \rho (x, y)\mid x\in A, y\in B \rbrace\gt 0$なら$\mu (A\sqcup B)=\mu (A)+\mu (B)$が成り立つとき **距離外測度** （metric outer measure）であるという。
 
+<!--
 \begin{Prop}
 距離外測度$\mu$は以下の性質を満たす。
 \begin{itemize}

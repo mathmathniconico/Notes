@@ -35,3 +35,4 @@ __定義__ $(x_{a}: a\in A)$を集合$X$上のネットとする。
 - $x_{\ge p}:=\lbrace x_{a} : a\ge p \rbrace$を **尾集合** （tail set）と呼ぶ。
 - $S\subset X$について、$S$がある尾集合を含むとき **等終** （eventual）という。
 - $S\subset X$について、$S$が全ての尾集合と共通部分を持つとき **共終** （cofinal）という。
+
