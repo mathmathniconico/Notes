@@ -30,9 +30,32 @@ __定義__ $X$を集合とする。有向集合$(A, \le)$から$X$への写像�
 
 ## サブネット
 
-__定義__ $(x_{a}: a\in A)$を集合$X$上のネットとする。
+__定義__ $x_{\bullet}=(x_{a}: a\in A)$を集合$X$上のネットとする。
 
-- $x_{\ge p}:=\lbrace x_{a} : a\ge p \rbrace$を **尾集合** （tail set）と呼ぶ。
-- $S\subset X$について、$S$がある尾集合を含むとき **等終** （eventual）という。
-- $S\subset X$について、$S$が全ての尾集合と共通部分を持つとき **共終** （cofinal）という。
+- $x_{\ge p}:=\lbrace x_{a} : a\ge p \rbrace$を$x_{\bullet}$の **尾集合** （tail set）と呼ぶ。
+- $S\subset X$について、$S$がある尾集合を含むとき$x_{\bullet}$に関して **等終** （eventual）という。
+- $S\subset X$について、$S$が全ての尾集合と共通部分を持つとき$x_{\bullet}$に関して **共終** （cofinal）という。
 
+> 定義より、$S$が等終なら共終である。
+
+__命題__ $x_{\bullet}=(x_{a}: a\in A)$を集合$X$上のネットとする。$S\subset X$とする。TFAE
+
+- $S$は等終である。
+- $X\setminus S$は共終でない。
+
+（証明）ある$p\in A$について$x_{\ge p}\subset S$とする。$x_{\ge p}\cap (X\setminus S)=\emptyset$より$X\setminus S$は共終でない。逆も同様。$\square$
+
+__命題__ $x_{\bullet}=(x_{a}: a\in A)$を集合$X$上のネットとする。$S, T\subset X$とする。
+
+- $S\subset T$とする。$S$が等終なら$T$も等終である。
+- $S\subset T$とする。$S$が共終なら$T$も共終である。
+- $S, T$が等終なら$S\cap T$も等終である。
+- $S\cup T$が共終なら$S, T$の少なくとも一方は共終である。
+
+（証明）上二つは明らか。
+
+$x_{\ge p}\subset S, x_{\ge q}\subset T$とすると、ある$r$が存在して$p, q\le r$となるから$x_{\ge r}\subset x_{\ge p}\cap x_{\ge q}\subset S\cap T$を得る。
+
+$S, T$が共終でないとすると、$X\setminus S, X\setminus T$は等終である。従って$(X\setminus S)\cap(X\setminus T)=X\setminus(S\cup T)$も等終である。つまり$S\cup T$は共終でない。$\square$
+
+> 一般に$S_{1}, \dotsc, S_{n}\subset X$について、$S_{1}\cup\dotsb\cup S_{n}$が共終なら、ある$i$について$S_{i}$は共終である。
