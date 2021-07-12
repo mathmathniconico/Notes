@@ -59,3 +59,9 @@ $x_{\ge p}\subset S, x_{\ge q}\subset T$とすると、ある$r$が存在して$
 $S, T$が共終でないとすると、$X\setminus S, X\setminus T$は等終である。従って$(X\setminus S)\cap(X\setminus T)=X\setminus(S\cup T)$も等終である。つまり$S\cup T$は共終でない。$\square$
 
 > 一般に$S_{1}, \dotsc, S_{n}\subset X$について、$S_{1}\cup\dotsb\cup S_{n}$が共終なら、ある$i$について$S_{i}$は共終である。
+
+まずは部分列の類推よりサブネットを考える。$x_{\bullet}\colon A\rightarrow X$をネットとする。$B\subset A$は前順序集合となるから、これが有向集合となればよい。$a, b\in B$とする。$A$は有向集合だから、ある$c\in A$が存在して$a, b\le c$となる。そこで$c\le d$となる$d\in B$が存在すれば、$B$もまた有向集合となる。そのためには、任意の$c\in A$について$c\le d$なる$d\in B$が存在すればよい。ところで$A$自身は恒等写像$\mathrm{id}\colon A\rightarrow A$により$A$上のネットを定めるが、上記は$\mathrm{id}_{\ge c}\cap B\neq\emptyset$と書き換えられる。すなわち$B$は$\mathrm{id}$に対して共終である。
+
+__定義__ $x\colon A\rightarrow X$をネットとする。$B\subset A$は$\mathrm{id}\colon A\rightarrow A$に関して共終であるとする。すなわち任意の$a\in A$に対して、ある$b\in B$が存在して$a\le b$を満たすとする。このとき$x$の$B$への制限$x\restriction_{B}$を **共終サブネット** （cofinal subnet）と呼ぶ。
+
+ネット全体において、共終サブネットという関係は非常に狭いものとなる。実際上の例で$A$のコピー$A^{\prime}$を用意すると、$B$は$A^{\prime}$に含まれないため、共終サブネットとはならない。
