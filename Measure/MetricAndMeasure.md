@@ -11,27 +11,25 @@ $$
 
 __定義__ $\mu$を$X$上の外測度とする。任意の$A, B\subset X$について、$\rho (A, B):=\inf\lbrace \rho (x, y)\mid x\in A, y\in B \rbrace\gt 0$なら$\mu (A\sqcup B)=\mu (A)+\mu (B)$が成り立つとき **距離外測度** （metric outer measure）であるという。
 
+__命題__ $\mu$を距離外測度とする。以下が成り立つ。
+
+- $A_{n}\nearrow A$が$\rho (A_{n}, A\setminus A_{n+1})\gt 0$を満たすとき$\mu (A)=\sup\mu (A_{n})$が成り立つ。
+- ボレル集合は$\mu$可測である。即ち$\sigma\lbrack \mathcal{O}_{\rho} \rbrack\subset\mathcal{M}_{\mu}$が成り立つ。
+
 <!--
-\begin{Prop}
-距離外測度$\mu$は以下の性質を満たす。
-\begin{itemize}
-\item[\textup{(1)}] $A_{n}\nearrow A$が$\rho (A_{n}, A\backslash A_{n+1})>0$を満たすとき$\mu (A)=\sup\mu (A_{n})$が成り立つ。
-\item[\textup{(2)}] ボレル集合は$\mu$-可測である。即ち$\sigma[\mathcal{O}_{\rho}]\subset\mathcal{M}_{\mu}$が成り立つ。
-\end{itemize}
-\end{Prop}
 \begin{Proof}
-(1)　$B_{1}:=A_{1}, B_{m}:=A_{m}\backslash A_{m-1}$と置くと$A_{n}=\bigsqcup_{m=1}^{n}B_{m}, A=\bigsqcup B_{m}$が成り立つ。
+(1)　$B_{1}:=A_{1}, B_{m}:=A_{m}\setminus A_{m-1}$と置くと$A_{n}=\bigsqcup_{m=1}^{n}B_{m}, A=\bigsqcup B_{m}$が成り立つ。
 ここで$\mu$は外測度だから、単調性及び可算劣加法性より
 \[ \sum_{m=1}^{n}\mu (B_{m})=\mu (A_{n})\le\mu (A)\le\sum\mu (B_{m}) \]
 が成り立つ。このとき左辺の上限を取れば$\sup\mu (A_{n})=\mu (A)$を得る。
 
 　(2)　$F\subset X$を閉集合とする。$n\in\mathbb{N}$に対して
-\[ U_{n}:=\left\{x\in X\backslash F\mid \rho (x, F)>\frac{1}{n}\right\} \]
-と定めると$U_{n}\nearrow X\backslash F$となる。任意の$E\subset X$に対して$\rho (E\cap U_{n}, E\cap F)>0$を満たす。
+\[ U_{n}:=\left\{x\in X\setminus F\mid \rho (x, F)>\frac{1}{n}\right\} \]
+と定めると$U_{n}\nearrow X\setminus F$となる。任意の$E\subset X$に対して$\rho (E\cap U_{n}, E\cap F)>0$を満たす。
 $\mu$は距離外測度だから
 \[ \mu (E\cap U_{n})+\mu (E\cap F)=\mu ((E\cap U_{n})\sqcup (E\cap F))\le\mu(E) \]
-が成り立つが、$E\cap U_{n}\nearrow E\backslash F$は(1)の条件を満たしているので
-\[ \mu (E\backslash F)+\mu (E\cap F)\le\mu (E) \]
+が成り立つが、$E\cap U_{n}\nearrow E\setminus F$は(1)の条件を満たしているので
+\[ \mu (E\setminus F)+\mu (E\cap F)\le\mu (E) \]
 を得る。即ち$F$は$\mu$-可測となる。$\mu$-可測集合全体は$\sigma$-加法族なので、$\sigma[\mathcal{O}_{\rho}]\subset\mathcal{M}_{\mu}$が従う。
 \end{Proof}
 
