@@ -16,13 +16,15 @@ __命題__ $\mu$を距離外測度とする。以下が成り立つ。
 - $A_{n}\nearrow A$が$\rho (A_{n}, A\setminus A_{n+1})\gt 0$を満たすとき$\mu (A)=\sup\mu (A_{n})$が成り立つ。
 - ボレル集合は$\mu$可測である。即ち$\sigma\lbrack \mathcal{O}_{\rho} \rbrack\subset\mathcal{M}_{\mu}$が成り立つ。
 
-<!--
-\begin{Proof}
-(1)　$B_{1}:=A_{1}, B_{m}:=A_{m}\setminus A_{m-1}$と置くと$A_{n}=\bigsqcup_{m=1}^{n}B_{m}, A=\bigsqcup B_{m}$が成り立つ。
-ここで$\mu$は外測度だから、単調性及び可算劣加法性より
-\[ \sum_{m=1}^{n}\mu (B_{m})=\mu (A_{n})\le\mu (A)\le\sum\mu (B_{m}) \]
+（証明）$B_{1}:=A_{1}, B_{m}:=A_{m}\setminus A_{m-1}$と置くと$A_{n}=\bigsqcup_{m=1}^{n}B_{m}, A=\bigsqcup B_{m}$が成り立つ。ここで$\mu$は外測度だから、単調性及び可算劣加法性より
+
+$$
+\sum_{m=1}^{n}\mu (B_{m})=\mu (A_{n})\le\mu (A)\le\sum\mu (B_{m})
+$$
+
 が成り立つ。このとき左辺の上限を取れば$\sup\mu (A_{n})=\mu (A)$を得る。
 
+<!--
 　(2)　$F\subset X$を閉集合とする。$n\in\mathbb{N}$に対して
 \[ U_{n}:=\left\{x\in X\setminus F\mid \rho (x, F)>\frac{1}{n}\right\} \]
 と定めると$U_{n}\nearrow X\setminus F$となる。任意の$E\subset X$に対して$\rho (E\cap U_{n}, E\cap F)>0$を満たす。
