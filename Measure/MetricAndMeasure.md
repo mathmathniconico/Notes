@@ -24,17 +24,27 @@ $$
 
 が成り立つ。このとき左辺の上限を取れば$\sup\mu (A_{n})=\mu (A)$を得る。
 
-<!--
-　(2)　$F\subset X$を閉集合とする。$n\in\mathbb{N}$に対して
-\[ U_{n}:=\left\{x\in X\setminus F\mid \rho (x, F)>\frac{1}{n}\right\} \]
-と定めると$U_{n}\nearrow X\setminus F$となる。任意の$E\subset X$に対して$\rho (E\cap U_{n}, E\cap F)>0$を満たす。
-$\mu$は距離外測度だから
-\[ \mu (E\cap U_{n})+\mu (E\cap F)=\mu ((E\cap U_{n})\sqcup (E\cap F))\le\mu(E) \]
-が成り立つが、$E\cap U_{n}\nearrow E\setminus F$は(1)の条件を満たしているので
-\[ \mu (E\setminus F)+\mu (E\cap F)\le\mu (E) \]
-を得る。即ち$F$は$\mu$-可測となる。$\mu$-可測集合全体は$\sigma$-加法族なので、$\sigma[\mathcal{O}_{\rho}]\subset\mathcal{M}_{\mu}$が従う。
-\end{Proof}
+$F\subset X$を閉集合とする。$n\in\mathbb{N}$に対して
 
+$$
+U_{n}:=\left\lbrace x\in X\setminus F\mid \rho (x, F)\gt\frac{1}{n}\right\rbrace
+$$
+
+と定めると$U_{n}\nearrow X\setminus F$となる。任意の$E\subset X$に対して$\rho (E\cap U_{n}, E\cap F)\gt 0$を満たす。$\mu$は距離外測度だから
+
+$$
+\mu (E\cap U_{n})+\mu (E\cap F)=\mu ((E\cap U_{n})\sqcup (E\cap F))\le\mu(E)
+$$
+
+が成り立つが、$E\cap U_{n}\nearrow E\setminus F$は先の条件を満たしているので
+
+$$
+\mu (E\setminus F)+\mu (E\cap F)\le\mu (E)
+$$
+
+を得る。即ち$F$は$\mu$可測となる。$\mu$可測集合全体は$\sigma$加法族なので、$\sigma\lbrack \mathcal{O}_{\rho} \rbrack\subset\mathcal{M}_{\mu}$が従う。$\square$
+
+<!--
 　距離外測度は以下のようにして構成できる。$\mathscr{E}\subset 2^{X}$は空集合を含むとする。$\delta>0$とする。
 以下の文脈において$\mathscr{C}\subset\mathscr{E}$が$A\subset X$の$\mathscr{E}$による$\delta$-被覆であるとは、
 $\mathscr{C}$が高々可算集合かつ$A\subset\bigcup_{C\in\mathscr{C}}C$であり、また任意の$C\in\mathscr{C}$に対して
