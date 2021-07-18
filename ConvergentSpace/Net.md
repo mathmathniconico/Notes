@@ -16,7 +16,7 @@ __定義__ 前順序集合$(A, \le)$は以下を満たすとする。
 
 > 例えば集合$X$上の空でない部分集合族$\mathscr{S}\subset 2^{X}, \neq\empty$について、$\mathscr{S}$上の前順序を$A\le B:\Leftrightarrow A\supset B$で定めることができる。このとき$\mathscr{S}$が有向であることと、$\mathscr{S}$がprefilterであることは同値となる。
 
-__定義__ $X$を集合とする。有向集合$(A, \le)$から$X$への写像を **有向ネット** （directed net）あるいは単にネットと呼ぶ。ネットは$(x_{a}: a\in A)$や$x_{\bullet}\colon A\rightarrow X$などと表す。
+__定義__ $X$を集合とする。有向集合$(A, \le)$から$X$への写像を **有向ネット** （directed net）あるいは単にネットと呼ぶ。ネットは$(x_{a}: a\in A)$や$x\colon A\rightarrow X$、$A$が明らかなときは$x_{\bullet}$などと表す。
 
 > ネット全体は真クラスとなる！
 
@@ -79,7 +79,7 @@ __定義__ $x\colon A\rightarrow X, y\colon B\rightarrow X$をネットとする
 
 このとき$y$は$x$の **Willardサブネット** であるといい、$y\le_{w}x$と表す。
 
-これで良さそうに思えるが、まだサブネットの本質には至らない。ネットにおいて重要なのは値域の並びと先の方での動き（共終性）であるため、単調性は外しても良い。
+> これで良さそうに思えるが、ネットにおいて重要なのは値域の並びと先の方での動き（等終性）であるため、単調性は外しても良い。
 
 __定義__ Willardサブネットの一番目の単調性を外した条件を満たすとき **Kellyサブネット** といい、$y\le_{k}x$と表す。
 
@@ -91,4 +91,12 @@ __例__ （[KellyサブネットだがWillardサブネットでない例](https:
 | $y_{n}$ | $2^{-1}$ | $2^{0}$ | $2^{-3}$ | $2^{-2}$ | $2^{-5}$ | $2^{-4}$ |
 
 ここで$n$が偶数のとき$\phi(n)=n+1$、奇数のとき$\phi(n)=n-1$と定めると、$x_{\phi(n)}=y_{n}$を満たす。また隣接する二項を入れ替えたに過ぎないので$\phi(\mathbb{N})\subset\mathbb{N}$は共終である。従って$y\le_{k}x$だが、$\phi$は単調ではないので$y\le_{w}x$ではない。
+
+> AarnesとAndenaesは、ネットの等終性を$X$において記述することで、サブネットの概念を拡張することに成功した。
+
+__命題__ $x\colon A\rightarrow X$をネットとする。尾集合全体は$X$上のprefilterを定める。特に空ネットの場合を除き真prefilterとなる。
+
+（証明）$\mathscr{B}=\lbrace x_{\ge p} : p\in A \rbrace$とおく。$x_{\ge p}, x_{\ge q}\in\mathscr{B}$について、ある$r\in A$が存在して$p, q\le r$を満たす。特に$x_{\ge r}\subset x_{\ge p}\cap x_{\ge q}$であり$x_{\ge r}\in\mathscr{B}$なので$\mathscr{B}$はprefilterである。$\square$
+
+__定義__ ネット$x\colon A\rightarrow X$の尾集合全体により生成されるフィルターを **等終フィルター** （eventual filter）と呼ぶ。
 
