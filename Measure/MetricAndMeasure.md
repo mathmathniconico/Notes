@@ -44,17 +44,17 @@ $$
 
 を得る。即ち$F$は$\mu$可測となる。$\mu$可測集合全体は$\sigma$加法族なので、$\sigma\lbrack \mathcal{O}_{\rho} \rbrack\subset\mathcal{M}_{\mu}$が従う。$\square$
 
-<!--
-　距離外測度は以下のようにして構成できる。$\mathscr{E}\subset 2^{X}$は空集合を含むとする。$\delta>0$とする。
-以下の文脈において$\mathscr{C}\subset\mathscr{E}$が$A\subset X$の$\mathscr{E}$による$\delta$-被覆であるとは、
-$\mathscr{C}$が高々可算集合かつ$A\subset\bigcup_{C\in\mathscr{C}}C$であり、また任意の$C\in\mathscr{C}$に対して
-$|C|\le\delta$を満たすことを意味するものとする。
+距離外測度は以下のようにして構成できる。$\mathscr{E}\subset 2^{X}$は空集合を含むとする。$\delta\gt 0$とする。以下の文脈において$\mathscr{C}\subset\mathscr{E}$が$A\subset X$の$\mathscr{E}$による$\delta$被覆であるとは、$\mathscr{C}$が高々可算集合かつ$A\subset\bigcup_{C\in\mathscr{C}}C$であり、また任意の$C\in\mathscr{C}$に対して$\vert C \vert\le\delta$を満たすことを意味するものとする。
 
-集合関数$\tau:\mathscr{E}\rightarrow [0, \infty]$は$\tau (\emptyset)=0$を満たすとする。$\delta>0$及び$A\subset X$に対し、
-\[ \mu_{\delta}(A):=\inf\left\{\sum_{C\in\mathscr{C}}\tau (C)\mid
-\mathscr{C}\subset\mathscr{E}\textup{は$A$の$\delta$-被覆}\right\} \]
+集合関数$\tau\colon\mathscr{E}\rightarrow\lbrack 0, \infty \rbrack$は$\tau (\emptyset)=0$を満たすとする。$\delta\gt 0$及び$A\subset X$に対し、$A$の$\delta$被覆$\mathscr{C}\subset\mathscr{E}$に関する$\sum_{C\in\mathscr{C}}\tau(C)$の下限を$\mu_{\delta}(A)$と定める。つまり
+
+$$
+\mu_{\delta}(A):=\inf\left\lbrace \sum_{C\in\mathscr{C}}\tau (C) : \mathscr{C}\subset\mathscr{E}\textup{は$A$の$\delta$被覆}\right \rbrace
+$$
+
 と定める。そして$\mu (A):=\sup_{\delta}\mu_{\delta}(A)$と置く。
 
+<!--
 \begin{Prop}
 $\mu$は距離外測度となる。
 \end{Prop}
