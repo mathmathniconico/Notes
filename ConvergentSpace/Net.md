@@ -40,8 +40,8 @@ __定義__ $x_{\bullet}=(x_{a}: a\in A)$を集合$X$上のネットとする。
 
 __命題__ $(x_{a}: a\in A)$を集合$X$上のネットとする。$S\subset X$とする。TFAE
 
-- $S$は等終である。
-- $X\setminus S$は共終でない。
+1. $S$は等終である。
+1. $X\setminus S$は共終でない。
 
 （証明）ある$p\in A$について$x_{\ge p}\subset S$とする。$x_{\ge p}\cap (X\setminus S)=\emptyset$より$X\setminus S$は共終でない。逆も同様。$\square$
 
@@ -79,7 +79,7 @@ __定義__ $x\colon A\rightarrow X, y\colon B\rightarrow X$をネットとする
 
 このとき$y$は$x$の **Willardサブネット** であるといい、$y\le_{w}x$と表す。
 
-> これで良さそうに思えるが、ネットにおいて重要なのは値域の並びと先の方での動き（等終性）であるため、単調性は外しても良い。
+> これで良さそうに思えるが、ネットにおいて重要なのは値域の並びと大きい方での動きであるため、単調性は外しても良い。
 
 __定義__ Willardサブネットの一番目の単調性を外した条件を満たすとき **Kellyサブネット** といい、$y\le_{k}x$と表す。
 
@@ -94,9 +94,24 @@ __例__ （[KellyサブネットだがWillardサブネットでない例](https:
 
 > AarnesとAndenaesは、ネットの等終性を$X$において記述することで、サブネットの概念を拡張することに成功した。
 
-__命題__ $x\colon A\rightarrow X$をネットとする。尾集合全体は$X$上のprefilterを定める。特に空ネットの場合を除き真prefilterとなる。
+__命題__ $x\colon A\rightarrow X$をネットとする。尾集合全体は$X$上のprefilterである。特に空ネットの場合を除き真prefilterとなる。
 
 （証明）$\mathscr{B}=\lbrace x_{\ge p} : p\in A \rbrace$とおく。$x_{\ge p}, x_{\ge q}\in\mathscr{B}$について、ある$r\in A$が存在して$p, q\le r$を満たす。特に$x_{\ge r}\subset x_{\ge p}\cap x_{\ge q}$であり$x_{\ge r}\in\mathscr{B}$なので$\mathscr{B}$はprefilterである。$\square$
 
 __定義__ ネット$x\colon A\rightarrow X$の尾集合全体により生成されるフィルターを **等終フィルター** （eventual filter）と呼ぶ。
 
+> 次の命題が本質的である。
+
+__命題__ $X$上のネット$x_{\bullet}=(x_{a}), y_{\bullet}=(y_{b})$について、$\mathscr{F}, \mathscr{G}$をその等終フィルターとする。TFAE
+
+1. $S\subset X$について、$S$が$y_{\bullet}$に関して共終なら$x_{\bullet}$に関して共終である。
+1. $S\subset X$について、$S$が$x_{\bullet}$に関して等終なら$y_{\bullet}$に関して等終である。
+1. $\mathscr{F}\subset\mathscr{G}$である。
+1. 任意の$a\in A$について、ある$b\in B$が存在して$y_{\ge b}\subset x_{\ge a}$が成り立つ。
+1. $S\subset A$を等終部分集合とすると、$y^{-1}(x(S))\subset B$も等終部分集合である。
+
+（証明）1なら2を示す。$S$は$y_{\bullet}$に関して等終でないとする。このとき$X\setminus S$は$y_{\bullet}$に関して共終であり、仮定より$x_{\bullet}$に関しても共終である。故に$S$は$x_{\bullet}$に関して等終でない。
+
+2なら3を示す。$F\in\mathscr{F}$とすると、ある$a\in A$が存在して$x_{\ge a}\subset F$を満たす。つまり$F$は$x_{\bullet}$に関して等終だから仮定より$y_{\bullet}$に関しても等終である。つまりある$b\in B$が存在して$y_{\ge b}\subset F$を満たし、即ち$F\in\mathscr{G}$である。
+
+3なら4を示す。
