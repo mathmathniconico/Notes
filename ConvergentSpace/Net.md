@@ -77,11 +77,11 @@ __定義__ $x\colon A\rightarrow X, y\colon B\rightarrow X$をネットとする
 - $\phi(B)\subset A$は共終部分集合となる。つまり任意の$a\in A$に対して、ある$b\in B$が存在して$a\le\phi(b)$が成り立つ。特に$\phi(B_{\ge b})\subset A_{\ge a}$である。
 - $x\circ\phi=y$である。つまり任意の$b\in B$について$x_{\phi(b)}=y_{b}$が成り立つ。
 
-このとき$y$は$x$の **Willardサブネット** であるといい、$y\le_{w}x$と表す。
+このとき$y$は$x$の **Willardサブネット** であるといい、$y\le_{W}x$と表す。
 
-> これで良さそうに思えるが、ネットにおいて重要なのは値域の並びと大きい方での動きであるため、単調性は外しても良い。
+> これで良さそうに思えるが、ネットにおいて重要なのは値域の並びと大きい方での動き（共終性）であるため、単調性は外しても良い。
 
-__定義__ Willardサブネットの一番目の単調性を外した条件を満たすとき **Kellyサブネット** といい、$y\le_{k}x$と表す。
+__定義__ Willardサブネットの一番目の単調性を外した条件を満たすとき **Kellyサブネット** といい、$y\le_{K}x$と表す。
 
 __例__ （[KellyサブネットだがWillardサブネットでない例](https://math.stackexchange.com/questions/1126609/different-definitions-of-subnet)）$n\in\mathbb{N}$に対し$x_{n}=2^{-n}$と定める。また$n$が偶数のとき$y_{n}=2^{-(n+1)}$、奇数のとき$y_{n}=2^{-(n-1)}$と定める。
 
@@ -90,7 +90,7 @@ __例__ （[KellyサブネットだがWillardサブネットでない例](https:
 | $x_{n}$ | $2^{0}$ | $2^{-1}$ | $2^{-2}$ | $2^{-3}$ | $2^{-4}$ | $2^{-5}$ |
 | $y_{n}$ | $2^{-1}$ | $2^{0}$ | $2^{-3}$ | $2^{-2}$ | $2^{-5}$ | $2^{-4}$ |
 
-ここで$n$が偶数のとき$\phi(n)=n+1$、奇数のとき$\phi(n)=n-1$と定めると、$x_{\phi(n)}=y_{n}$を満たす。また隣接する二項を入れ替えたに過ぎないので$\phi(\mathbb{N})\subset\mathbb{N}$は共終である。従って$y\le_{k}x$だが、$\phi$は単調ではないので$y\le_{w}x$ではない。
+ここで$n$が偶数のとき$\phi(n)=n+1$、奇数のとき$\phi(n)=n-1$と定めると、$x_{\phi(n)}=y_{n}$を満たす。また隣接する二項を入れ替えたに過ぎないので$\phi(\mathbb{N})\subset\mathbb{N}$は共終である。従って$y\le_{K}x$だが、$\phi$は単調ではないので$y\le_{W}x$ではない。
 
 > AarnesとAndenaesは、ネットの等終性を$X$において記述することで、サブネットの概念を拡張することに成功した。
 
@@ -110,8 +110,16 @@ __命題__ $X$上のネット$x_{\bullet}=(x_{a}), y_{\bullet}=(y_{b})$につい
 1. 任意の$a\in A$について、ある$b\in B$が存在して$y_{\ge b}\subset x_{\ge a}$が成り立つ。
 1. $S\subset A$を等終部分集合とすると、$y^{-1}(x(S))\subset B$も等終部分集合である。
 
-（証明）1なら2を示す。$S$は$y_{\bullet}$に関して等終でないとする。このとき$X\setminus S$は$y_{\bullet}$に関して共終であり、仮定より$x_{\bullet}$に関しても共終である。故に$S$は$x_{\bullet}$に関して等終でない。
+（証明）1から2を示す。$S$は$y_{\bullet}$に関して等終でないとする。このとき$X\setminus S$は$y_{\bullet}$に関して共終であり、仮定より$x_{\bullet}$に関しても共終である。故に$S$は$x_{\bullet}$に関して等終でない。2から1も同様である。
 
-2なら3を示す。$F\in\mathscr{F}$とすると、ある$a\in A$が存在して$x_{\ge a}\subset F$を満たす。つまり$F$は$x_{\bullet}$に関して等終だから仮定より$y_{\bullet}$に関しても等終である。つまりある$b\in B$が存在して$y_{\ge b}\subset F$を満たし、即ち$F\in\mathscr{G}$である。
+2と3の同値性は等終性の言い換えに過ぎない。
 
-3なら4を示す。
+3を仮定する。$a\in A$について$x_{\ge a}\in\mathscr{F}\subset\mathscr{G}$より、ある$b\in B$が存在して$x_{\ge b}\subset x_{\ge a}$である。逆に4を仮定すると、$F\in\mathscr{F}$についてある$a\in A$が取れて$x_{\ge a}\subset F$を満たす。仮定より$b\in B$が存在して$x_{\ge b}\subset x_{\ge a}\subset F$を得る。故に$F\in\mathscr{G}$である。
+
+4を仮定する。$S\subset A$を等終部分集合とする。つまりある$a\in A$が存在して$A_{\ge a}\subset S$とする。仮定より$b\in B$を$y_{\ge b}\subset x_{\ge a}$を満たすように取れる。$x_{\ge a}=x(A_{\ge a})$だから$B_{\ge b}\subset y^{-1}(y_{\ge b})\subset y^{-1}(x_{\ge a})=y^{-1}(x(A_{a}))\subset y^{-1}(x(S))$より、$y^{-1}(x(S))\subset B$も等終部分集合である。逆に5を仮定すると、$a\in A$について$S=A_{\ge a}$を取ればよい。実際ある$b\in B$が存在して$B_{\ge b}\subset y^{-1}(x(A_{\ge a}))$を満たすから、$y_{\ge b}=y(B_{\ge b})\subset x(A_{\ge a})=x_{\ge a}$を得る。$\square$
+
+__定義__ $x\colon A\rightarrow X, y\colon B\rightarrow X$をネットとする。先の命題の条件の一つ（従って全て）が成り立つとする。このとき$y$は$x$の **AAサブネット** であるといい、$y\le_{AA}x$と表す。
+
+> $y\le_{AA}x\Leftrightarrow \mathscr{F}\subset\mathscr{G}$なので関係の向きが逆になることに注意。
+
+$X$を集合とする。上の定義より$X$上のネットを対象とし、AAサブネットの関係を射とする圏$\mathbf{Net}(X)$が定まる。一方$X$上のフィルターを対象とし、包含関係を射とする圏$\mathbf{Fil}(X)$も定まる。このとき、ネットに対してその等終フィルターを対応させる函手$\Phi\colon\mathbf{Net}(X)^{\mathrm{op}}\rightarrow\mathbf{Fil}(X)$が定まる。
