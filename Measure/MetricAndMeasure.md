@@ -54,17 +54,18 @@ $$
 
 と定める。そして$\mu (A):=\sup_{\delta}\mu_{\delta}(A)$と置く。
 
-<!--
-\begin{Prop}
-$\mu$は距離外測度となる。
-\end{Prop}
-\begin{Proof}
-$\delta$-被覆はつまり直径が$\delta$以下の集合全体による被覆だから、$\mu_{\delta}$は外測度になる。
-従って$A, B\subset X, A\subset B, \{A_{n}\}\subset 2^{X}$に対して
-\[ \mu_{\delta}(\emptyset)=0, \mu_{\delta}(A)\le\mu_{\delta}(B),
-\mu_{\delta}\left(\bigcup A_{n}\right)\le\sum\mu_{\delta}(A_{n}) \]
+__命題__ $\mu$は距離外測度となる。
+
+（証明）$\delta$被覆はつまり直径が$\delta$以下の集合全体による被覆だから、$\mu_{\delta}$は外測度になる。従って$A, B\subset X, A\subset B, \lbrace A_{n} \rbrace\subset 2^{X}$に対して
+
+$$
+\mu_{\delta}(\emptyset)=0, \mu_{\delta}(A)\le\mu_{\delta}(B),
+\mu_{\delta}\left( \bigcup A_{n} \right)\le\sum\mu_{\delta}(A_{n})
+$$
+
 が成り立つ。$\delta$の上限を取れば、$\mu$は外測度になる。
 
+<!--
 　$A, B\subset X$は$\rho (A, B)>0$を満たすとする。このとき
 \[ \delta:=\frac{\rho (A, B)}{3} \]
 とすると、$A\sqcup B$の$\delta$-被覆$\mathscr{C}$に対して$A, B$の部分$\delta$-被覆$\mathscr{C}_{A}, \mathscr{C}_{B}$を互いに素に取れる。このとき
