@@ -65,17 +65,28 @@ $$
 
 が成り立つ。$\delta$の上限を取れば、$\mu$は外測度になる。
 
-<!--
-　$A, B\subset X$は$\rho (A, B)>0$を満たすとする。このとき
-\[ \delta:=\frac{\rho (A, B)}{3} \]
-とすると、$A\sqcup B$の$\delta$-被覆$\mathscr{C}$に対して$A, B$の部分$\delta$-被覆$\mathscr{C}_{A}, \mathscr{C}_{B}$を互いに素に取れる。このとき
-\[ \mu_{\delta}(A)+\mu_{\delta}(B)\le\sum_{C\in\mathscr{C}_{A}}\tau (C)+\sum_{C\in\mathscr{C}_{B}}\tau (C)
-\le\sum_{C\in\mathscr{C}}\tau (C) \]
-が成り立つ。従って右辺の下限を取れば
-\[ \mu_{\delta}(A)+\mu_{\delta}(B)\le\mu_{\delta}(A\sqcup B)\le\mu (A\sqcup B) \]
-を得る。左辺の上限を取れば$\mu (A)+\mu (B)\le\mu (A\sqcup B)$が従う。逆は明らか。
-\end{Proof}
+$A, B\subset X$は$\rho (A, B)\gt 0$を満たすとする。このとき
 
+$$
+\delta:=\frac{\rho (A, B)}{3}
+$$
+
+とすると、$A\sqcup B$の$\delta$被覆$\mathscr{C}$に対して$A, B$の部分$\delta$被覆$\mathscr{C}_{A}, \mathscr{C}_{B}$を互いに素に取れる。このとき
+
+$$
+\mu_{\delta}(A)+\mu_{\delta}(B)\le\sum_{C\in\mathscr{C}_{A}}\tau (C)+\sum_{C\in\mathscr{C}_{B}}\tau (C)
+\le\sum_{C\in\mathscr{C}}\tau (C)
+$$
+
+が成り立つ。従って右辺の下限を取れば
+
+$$
+\mu_{\delta}(A)+\mu_{\delta}(B)\le\mu_{\delta}(A\sqcup B)\le\mu (A\sqcup B)
+$$
+
+を得る。左辺の上限を取れば$\mu (A)+\mu (B)\le\mu (A\sqcup B)$が従う。逆は明らか。
+
+<!--
 \begin{Def}
 特に$\alpha\ge 0$に対して$\mathscr{E}=2^{X}, \tau (A):=|A|^{\alpha}$としたとき
 $\mu_{\delta}, \mu$をそれぞれ$\mathcal{H}_{\delta}^{\alpha}, \mathcal{H}^{\alpha}$と書く。
