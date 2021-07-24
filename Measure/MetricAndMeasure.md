@@ -86,13 +86,9 @@ $$
 
 を得る。左辺の上限を取れば$\mu (A)+\mu (B)\le\mu (A\sqcup B)$が従う。逆は明らか。
 
-<!--
-\begin{Def}
-特に$\alpha\ge 0$に対して$\mathscr{E}=2^{X}, \tau (A):=|A|^{\alpha}$としたとき
-$\mu_{\delta}, \mu$をそれぞれ$\mathcal{H}_{\delta}^{\alpha}, \mathcal{H}^{\alpha}$と書く。
-$\mathcal{H}^{\alpha}$により生成される測度を$\alpha$-次元ハウスドルフ測度\textup{($\alpha$-dimensional Hausdorff measure)}と呼ぶ。
-\end{Def}
+特に$\alpha\ge 0$に対して$\mathscr{E}=2^{X}, \tau (A):=\vert A \vert^{\alpha}$としたとき$\mu_{\delta}, \mu$をそれぞれ$\mathcal{H}_{\delta}^{\alpha}, \mathcal{H}^{\alpha}$と書く。$\mathcal{H}^{\alpha}$により生成される測度を$\alpha$次元 **ハウスドルフ測度** （Hausdorff measure）と呼ぶ。
 
+<!--
 \begin{Rem}
 $\alpha\ge 0, \delta>0$及び$A\subset X$に対し
 \[ P_{\delta}^{\alpha}(A):=\sup\left\{\sum |B_{n}|^{\alpha}\mid
