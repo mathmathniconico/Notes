@@ -88,12 +88,17 @@ $$
 
 特に$\alpha\ge 0$に対して$\mathscr{E}=2^{X}, \tau (A):=\vert A \vert^{\alpha}$としたとき$\mu_{\delta}, \mu$をそれぞれ$\mathcal{H}_{\delta}^{\alpha}, \mathcal{H}^{\alpha}$と書く。$\mathcal{H}^{\alpha}$により生成される測度を$\alpha$次元 **ハウスドルフ測度** （Hausdorff measure）と呼ぶ。
 
+__注意__ $\alpha\ge 0, \delta\gt 0$及び$A\subset X$に対し
+
+$$
+P_{\delta}^{\alpha}(A):=\sup\left\lbrace \sum \vert B_{n} \vert^{\alpha} : B_{n}=B(x_{n}; r_{n}), x_{n}\in A, r_{n}\le\delta, B_{i}\cap B_{j}=\emptyset \right\rbrace
+$$
+
+と定める。
+
+
 <!--
-\begin{Rem}
-$\alpha\ge 0, \delta>0$及び$A\subset X$に対し
-\[ P_{\delta}^{\alpha}(A):=\sup\left\{\sum |B_{n}|^{\alpha}\mid
-B_{n}=B(x_{n}; r_{n}), x_{n}\in A, r_{n}\le\delta, B_{i}\cap B_{j}=\emptyset\right\} \]
-と定める。つまり$A$の点を中心とする半径$\delta$以下の互いに素な閉球全体を考え、その直径の$\alpha$乗の和の上限を取る。
+つまり$A$の点を中心とする半径$\delta$以下の互いに素な閉球全体を考え、その直径の$\alpha$乗の和の上限を取る。
 このとき集合関数$P_{0}^{\alpha}:2^{X}\rightarrow [0, \infty]$を$A\subset X$に対し
 \[ P_{0}^{\alpha}(A):=\inf_{\delta}P_{\delta}^{\alpha}(A) \]
 と定め、この関数により生成される外測度
