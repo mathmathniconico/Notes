@@ -94,17 +94,16 @@ $$
 P_{\delta}^{\alpha}(A):=\sup\left\lbrace \sum \vert B_{n} \vert^{\alpha} : B_{n}=B(x_{n}; r_{n}), x_{n}\in A, r_{n}\le\delta, B_{i}\cap B_{j}=\emptyset \right\rbrace
 $$
 
-と定める。
+と定める。つまり$A$の点を中心とする半径$\delta$以下の互いに素な閉球全体を考え、その直径の$\alpha$乗の和の上限を取る。このとき集合関数$P_{0}^{\alpha}\colon 2^{X}\rightarrow \lbrack 0, \infty \rbrack$を$A\subset X$に対し
 
+$$
+P_{0}^{\alpha}(A):=\inf_{\delta}P_{\delta}^{\alpha}(A)
+$$
 
-<!--
-つまり$A$の点を中心とする半径$\delta$以下の互いに素な閉球全体を考え、その直径の$\alpha$乗の和の上限を取る。
-このとき集合関数$P_{0}^{\alpha}:2^{X}\rightarrow [0, \infty]$を$A\subset X$に対し
-\[ P_{0}^{\alpha}(A):=\inf_{\delta}P_{\delta}^{\alpha}(A) \]
 と定め、この関数により生成される外測度
-\[ P^{\alpha}(A):=\inf\left\{\sum_{C\in\mathscr{C}} P_{0}^{\alpha}(C)\mid
-\mathscr{C}\subset 2^{X}\textup{は$A$の被覆}\right\} \]
-を$\alpha$-次元パッキング測度\textup{($\alpha$-dimensional packing measure)}と呼ぶ。
-\end{Rem}
 
--->
+$$
+P^{\alpha}(A):=\inf\left\lbrace \sum_{C\in\mathscr{C}} P_{0}^{\alpha}(C) : \mathscr{C}\subset 2^{X}\textup{は$A$の被覆}\right \rbrace
+$$
+
+を$\alpha$次元 **パッキング測度** （dimensional packing measure）と呼ぶ。
