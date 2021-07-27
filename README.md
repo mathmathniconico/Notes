@@ -126,9 +126,9 @@
 1. [ネット](/ConvergentSpace/Net.md)
 
 
-# 測度論
+# 古いノート
 
-古いノートを移したもの
+測度論
 
 - [可測空間と測度空間](/Measure/MeasurableSpace.md)
 - [外測度](/Measure/OuterMeasure.md)
@@ -140,6 +140,10 @@
 - [位相正則性](/Measure/Regular.md)
 - [ハール測度](/Measure/Haar.md)
 - [距離空間と速度](/Measure/MetricAndMeasure.md)
+
+$C^{\ast}$代数（普通$C^{\ast}$代数と書かれるが、markdownと相性が悪そうなのでCstarと表記する）
+
+- [バナッハ代数](/Cstar/BanachAlgebra.md)
 
 
 # 距離空間
