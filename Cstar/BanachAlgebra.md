@@ -9,21 +9,14 @@ $$
 
 を満たすときノルム代数と呼ぶ。特にバナッハ空間がノルム代数となるとき **バナッハ代数** （Banach algebra）と呼ぶ。
 
-__定義__ 代数$\mathcal{A}$が積に関する単位元を持つとき代数$\mathcal{A}$は単位的であるという。特に単位元のノルムが$1$であるとき **規格化されている** （standardized）という。
+__定義__ 代数$\mathcal{A}$が積に関する単位元を持つとき代数$\mathcal{A}$は単位的であるという。特に単位元のノルムが$1$であるとき **規格化されている** （standardized）という。単位元は$I$や$I_{\mathcal{A}}$と表す。
 
 - 単位的代数の単位元は一意的である。
 - $0:=\lbrace 0 \rbrace$はバナッハ代数である。
 
-<!--
-\begin{Def}
-　代数$\mathcal{A}$において、積が交換可能（$AB=BA$）なとき$\mathcal{A}$は可換\textup{:commutative}であるという。
-\\
-　単位的代数$\mathcal{A}$において$A\in\mathcal{A}$が可逆\textup{:invertible}であるとは、ある元$B\in\mathcal{A}$が存在して$AB=BA=I$を満たすことをいう。
-このとき$B$は$A$に対して一意的に定まるので$A^{-1}$と書き、$A$の逆元\textup{:inverse}という。
-可逆なことを特に正則\textup{:regular}とも呼び、全体を$\mathcal{R}$で表す。
-正則でないことを特異\textup{:singular}であると言い全体を$\mathcal{S}$と表す。それぞれ代数を明示して$\mathcal{R}_{\mathcal{A}}, \mathcal{S}_{\mathcal{A}}$とも表す。
-\end{Def}
+__定義__ 単位的代数$\mathcal{A}$において$A\in\mathcal{A}$が可逆であるとは、ある元$B\in\mathcal{A}$が存在して$AB=BA=I$を満たすことをいう。このとき$B$は$A$に対して一意的に定まるので$A^{-1}$と書き、$A$の逆元という。可逆なことを特に **正則** （regular）とも呼び、全体を$\mathcal{R}$で表す。正則でないことを **特異** （singular）であると言い全体を$\mathcal{S}$と表す。それぞれ代数を明示して$\mathcal{R}_{\mathcal{A}}, \mathcal{S}_{\mathcal{A}}$とも表す。
 
+<!--
 　まずは可逆元に対する基本的だが重要な命題を示そう。
 
 \begin{Prop}
