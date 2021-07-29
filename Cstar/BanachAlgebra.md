@@ -16,19 +16,13 @@ __定義__ 代数$\mathcal{A}$が積に関する単位元を持つとき代数$\
 
 __定義__ 単位的代数$\mathcal{A}$において$A\in\mathcal{A}$が可逆であるとは、ある元$B\in\mathcal{A}$が存在して$AB=BA=I$を満たすことをいう。このとき$B$は$A$に対して一意的に定まるので$A^{-1}$と書き、$A$の逆元という。可逆なことを特に **正則** （regular）とも呼び、全体を$\mathcal{R}$で表す。正則でないことを **特異** （singular）であると言い全体を$\mathcal{S}$と表す。それぞれ代数を明示して$\mathcal{R}_{\mathcal{A}}, \mathcal{S}_{\mathcal{A}}$とも表す。
 
-<!--
-　まずは可逆元に対する基本的だが重要な命題を示そう。
+__命題__ $\mathcal{B}$を単位的バナッハ代数、$A\in\mathcal{B}$とする。以下が成り立つ。
 
-\begin{Prop}
-　$\mathcal{B}$を単位的\textup{Banach}代数、$A\in\mathcal{B}$とする。
-\begin{enumerate}
-\item $||A||<1$なら$I-A$は可逆であり
-\[ (I-A)^{-1}=\sum_{k=0}^{\infty}A^{k} \]
-と表される。ただし右辺の無限和はノルム収束を意味する。
-\item $\mathcal{R}\subset\mathcal{A}$は開集合。
-\item $\mathcal{R}\ni A \mapsto A^{-1}\in\mathcal{R}$は連続。
-\end{enumerate}
-\end{Prop}
+- $\Vert A \Vert\lt 1$なら$I-A$は可逆で$(I-A)^{-1}=\sum_{k=0}^{\infty}A^{k}$が成り立つ。右辺の無限和はノルム収束である。
+- $\mathcal{R}\subset\mathcal{A}$は開集合である。
+- $\mathcal{R}\ni A \mapsto A^{-1}\in\mathcal{R}$は連続である。
+
+<!--
 \begin{Proof}
 　(1) $B_{n}:=\sum_{k=0}^{n}A^{n}$とおくと、$\{B_{n}\}$はCauchy列となる。
 実際ノルムの三角不等式と積に関するBanach代数の条件から、$n\ge{m}$に対し
