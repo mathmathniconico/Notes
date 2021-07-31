@@ -122,4 +122,30 @@ __定義__ $x\colon A\rightarrow X, y\colon B\rightarrow X$をネットとする
 
 > $y\le_{AA}x\Leftrightarrow \mathscr{F}\subset\mathscr{G}$なので関係の向きが逆になることに注意。
 
-$X$を集合とする。上の定義より$X$上のネットを対象とし、AAサブネットの関係を射とする圏$\mathbf{Net}(X)$が定まる。一方$X$上のフィルターを対象とし、包含関係を射とする圏$\mathbf{Fil}(X)$も定まる。このとき、ネットに対してその等終フィルターを対応させる函手$\Phi\colon\mathbf{Net}(X)^{\mathrm{op}}\rightarrow\mathbf{Fil}(X)$が定まる。
+__例__ （[WillardサブネットだがAAサブネットでない例](https://math.stackexchange.com/questions/1126609/different-definitions-of-subnet)）
+
+> TODO
+
+$X$を集合とする。上の定義より$X$上のネットを対象とし、AAサブネットの関係を射とする圏$\mathbf{Net}(X)$が定まる。一方$X$上のフィルターを対象とし、包含関係を射とする圏$\mathbf{Fil}(X)$も定まる。このときAAサブネットの定義より、ネットに対してその等終フィルターを対応させる函手$\Phi\colon\mathbf{Net}(X)^{\mathrm{op}}\rightarrow\mathbf{Fil}(X)$が定まる。（空ネットは真フィルターに対応させる）
+
+__定理__ 函手$\Psi$は圏同値を与える。
+
+（証明）逆向きの対応を考えよう。$X$上の真フィルター$\mathscr{F}$に対し、
+
+$$
+A_{\mathscr{F}}:=\lbrace (x, F)\in X\times\mathscr{F} : x\in F \rbrace
+$$
+
+とする。$(x, F), (y, G)\in A_{\mathscr{F}}$について$(x, F)\le (y, G)$を$F\supset G$で定めると$(A_{\mathscr{F}}, \le)$は有向集合となる。実際$(x, F), (y, G)$について$F, G\in\mathscr{F}$より$\emptyset\neq F\cap G\in\mathscr{F}$より、ある$z\in F\cap G$が取れて$(x, F), (y, G)\le (z, F\cap G)$となる。そこでネット$\Psi\mathscr{F}\colon A_{\mathscr{F}}\rightarrow X$を$(x, F)\mapsto x$により定める。
+
+一般に$\Psi\mathscr{F}_{\ge(x, F)}=F$が成り立つ。実際$(y, G)\in A_{\mathscr{F}}$について$(y, G)\ge (x, F)$なら$\Psi(y, G)=y\in G\subset F$であり、$y\in F$について$(y, F)\ge (x, F)$より逆の包含も従う。ここで$\mathscr{F}\subset\mathscr{G}$を真フィルターとする。ネット$\Psi\mathscr{F}$の尾集合は$\Psi\mathscr{F}_{\ge(x, F)}=F\in\mathscr{F}\subset\mathscr{G}$より、$(x, F)\in A_{\mathscr{G}}$だから、$F=\Psi\mathscr{G}_{\ge(x, F)}$はネット$\Psi\mathscr{F}$の尾集合でもある。故に$\Psi\mathscr{G}\le_{AA}\Psi\mathscr{F}$を得る。
+
+以上より函手$\Psi\colon\mathrm{Fil}(X)^{\mathrm{op}}\rightarrow\mathrm{Net}(X)$が定まる。まずフィルター$\mathscr{F}$に対して
+
+$$
+\Phi\Psi\mathscr{F}=\langle \lbrace \Psi_{\ge(x, F)} : (x, F)\in A_{\mathscr{F}} \rbrace \rangle=\langle \lbrace F : F\in\mathscr{F} \rbrace \rangle=\mathscr{F}
+$$
+
+より$\Phi\Psi=\mathrm{id}$である。ネット$x$に対して$\Psi\Phi x\simeq x$となることは、AAサブネットの定義と今示した$\Phi\Psi=\mathrm{id}$より従う。$\square$
+
+> こうして、AAサブネットによる$X$上のネットの圏と、包含関係による$X$上のフィルターの圏が、互いに反変同値であることが分かった。従ってネットとフィルターは本質的に同一のものである。ネットの方は真クラスであり、フィルターの方は集合（数学的対象）である。このような言い換えは数学の様々な場面で見かけるので、個人的に興味深い。
