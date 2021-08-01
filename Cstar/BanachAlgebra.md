@@ -22,14 +22,9 @@ __命題__ $\mathcal{B}$を単位的バナッハ代数、$A\in\mathcal{B}$とす
 - $\mathcal{R}\subset\mathcal{A}$は開集合である。
 - $\mathcal{R}\ni A \mapsto A^{-1}\in\mathcal{R}$は連続である。
 
+（証明）$B_{n}:=\sum_{k=0}^{n}A^{n}$とおくと、$\lbrace B_{n} \rbrace$はコーシー列となる。実際ノルムの三角不等式と積に関するバナッハ代数の条件から、$n\ge m$に対し$\Vert B_{n}-B_{m} \Vert=\Vert \sum_{k=m+1}^{n}A^{k} \Vert\le\sum_{k=m+1}^{n}\Vert A^{k} \Vert\le\sum_{k=m+1}^{n}\Vert A \Vert^{k}$であるから、$\Vert A \Vert\lt 1$より$0$に収束する。故に収束先$B=\lim B_{n}=\sum_{k=0}^{\infty}A^{k}$が存在する。後はこれが$I-A$の逆元を与えることを示せばよく、$\Vert I-(I-A)B \Vert=\lim\Vert I-(I-A)B_{n} \Vert=\lim\Vert A^{n} \Vert=0$であるから$(I-A)B=I$が分かる。逆も同様。
+
 <!--
-\begin{Proof}
-　(1) $B_{n}:=\sum_{k=0}^{n}A^{n}$とおくと、$\{B_{n}\}$はCauchy列となる。
-実際ノルムの三角不等式と積に関するBanach代数の条件から、$n\ge{m}$に対し
-$||B_{n}-B_{m}||=||\sum_{k=m+1}^{n}A^{k}||\le\sum_{k=m+1}^{n}||A^{k}||\le\sum_{k=m+1}^{n}||A||^{k}$であるから、$||A||<1$より、これは$0$に収束する。
-故に収束先$B=\lim B_{n}=\sum_{k=0}^{\infty}A^{k}$が存在する。
-後はこれが$I-A$の逆元を与えることを示せばよく、$||I-(I-A)B||=\lim||I-(I-A)B_{n}||=\lim||A^{n}||=0$であるから$(I-A)B=I$が分かる。逆も同様。
-\\
 　(2) $A_{0}\in\mathcal{R}$の近傍が$\mathcal{R}$に含まれることを示せばよい。
 $||A-A_{0}||<\delta$とおく。$||I-A_{0}^{-1}A||=||A_{0}^{-1}(A_{0}-A)||\le||A_{0}^{-1}||||A-A_{0}||<||A_{0}^{-1}||\delta$より、$\delta=||A_{0}^{-1}||^{-1}$とすれば
 $||I-A_{0}^{-1}A||<1$を得る。(1)より$A_{0}^{-1}A\in\mathcal{R}$となるから$A=A_{0}A_{0}^{-1}A\in\mathcal{R}$より$A$は可逆。
