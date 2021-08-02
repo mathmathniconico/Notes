@@ -24,11 +24,9 @@ __命題__ $\mathcal{B}$を単位的バナッハ代数、$A\in\mathcal{B}$とす
 
 （証明）$B_{n}:=\sum_{k=0}^{n}A^{n}$とおくと、$\lbrace B_{n} \rbrace$はコーシー列となる。実際ノルムの三角不等式と積に関するバナッハ代数の条件から、$n\ge m$に対し$\Vert B_{n}-B_{m} \Vert=\Vert \sum_{k=m+1}^{n}A^{k} \Vert\le\sum_{k=m+1}^{n}\Vert A^{k} \Vert\le\sum_{k=m+1}^{n}\Vert A \Vert^{k}$であるから、$\Vert A \Vert\lt 1$より$0$に収束する。故に収束先$B=\lim B_{n}=\sum_{k=0}^{\infty}A^{k}$が存在する。後はこれが$I-A$の逆元を与えることを示せばよく、$\Vert I-(I-A)B \Vert=\lim\Vert I-(I-A)B_{n} \Vert=\lim\Vert A^{n} \Vert=0$であるから$(I-A)B=I$が分かる。逆も同様。
 
+$A_{0}\in\mathcal{R}$の近傍が$\mathcal{R}$に含まれることを示せばよい。$\Vert A-A_{0} \Vert\lt\delta$とおく。$\Vert I-A_{0}^{-1}A \Vert=\Vert A_{0}^{-1}(A_{0}-A) \Vert\le\Vert A_{0}^{-1} \Vert \Vert A-A_{0} \Vert\lt\Vert A_{0}^{-1} \Vert\delta$より、$\delta=\Vert A_{0}^{-1} \Vert^{-1}$とすれば$\Vert I-A_{0}^{-1}A \Vert\lt 1$を得る。上の結果より$A_{0}^{-1}A\in\mathcal{R}$となるから$A=A_{0}A_{0}^{-1}A\in\mathcal{R}$より$A$は可逆。
+
 <!--
-　(2) $A_{0}\in\mathcal{R}$の近傍が$\mathcal{R}$に含まれることを示せばよい。
-$||A-A_{0}||<\delta$とおく。$||I-A_{0}^{-1}A||=||A_{0}^{-1}(A_{0}-A)||\le||A_{0}^{-1}||||A-A_{0}||<||A_{0}^{-1}||\delta$より、$\delta=||A_{0}^{-1}||^{-1}$とすれば
-$||I-A_{0}^{-1}A||<1$を得る。(1)より$A_{0}^{-1}A\in\mathcal{R}$となるから$A=A_{0}A_{0}^{-1}A\in\mathcal{R}$より$A$は可逆。
-\\
 　(3) ノルム位相による連続性を示すには点列連続性を示せば十分である。
 $\{A_{n}\}\subset\mathcal{R}, A\in\mathcal{R}$が$A_{n}\rightarrow A$を満たすとする。$A_{n}^{-1}\rightarrow A^{-1}$を示せばよい。
 $||A_{n}^{-1}-A^{-1}||\le||(A^{-1}A_{n})^{-1}-I||||A^{-1}||$であるが、$||I-A^{-1}A_{n}||\le||A^{-1}||||A-A_{n}||\rightarrow 0$より十分大きな$n$に対して
