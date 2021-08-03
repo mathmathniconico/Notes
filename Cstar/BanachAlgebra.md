@@ -26,15 +26,9 @@ __命題__ $\mathcal{B}$を単位的バナッハ代数、$A\in\mathcal{B}$とす
 
 $A_{0}\in\mathcal{R}$の近傍が$\mathcal{R}$に含まれることを示せばよい。$\Vert A-A_{0} \Vert\lt\delta$とおく。$\Vert I-A_{0}^{-1}A \Vert=\Vert A_{0}^{-1}(A_{0}-A) \Vert\le\Vert A_{0}^{-1} \Vert \Vert A-A_{0} \Vert\lt\Vert A_{0}^{-1} \Vert\delta$より、$\delta=\Vert A_{0}^{-1} \Vert^{-1}$とすれば$\Vert I-A_{0}^{-1}A \Vert\lt 1$を得る。上の結果より$A_{0}^{-1}A\in\mathcal{R}$となるから$A=A_{0}A_{0}^{-1}A\in\mathcal{R}$より$A$は可逆。
 
-<!--
-　(3) ノルム位相による連続性を示すには点列連続性を示せば十分である。
-$\{A_{n}\}\subset\mathcal{R}, A\in\mathcal{R}$が$A_{n}\rightarrow A$を満たすとする。$A_{n}^{-1}\rightarrow A^{-1}$を示せばよい。
-$||A_{n}^{-1}-A^{-1}||\le||(A^{-1}A_{n})^{-1}-I||||A^{-1}||$であるが、$||I-A^{-1}A_{n}||\le||A^{-1}||||A-A_{n}||\rightarrow 0$より十分大きな$n$に対して
-$(A^{-1}A_{n})^{-1}=\sum_{k=0}^{\infty}(I-A^{-1}A_{n})^{k}$と表せるから、
-$||A_{n}^{-1}-A^{-1}||\le||A^{-1}||||\sum_{k=1}^{\infty}(I-A^{-1}A_{n})^{k}||\le||A^{-1}||\sum_{k=1}^{\infty}||I-A^{-1}A_{n}||^{k}$となる。
-ここで和は$k=1$からであることに注意すると$n\rightarrow\infty$のとき$0$に収束する。故に$A_{n}^{-1}\rightarrow A^{-1}$を得る。
-\end{Proof}
+ノルム位相による連続性を示すには点列連続性を示せば十分である。$\lbrace A_{n} \rbrace\subset\mathcal{R}, A\in\mathcal{R}$が$A_{n}\rightarrow A$を満たすとする。$A_{n}^{-1}\rightarrow A^{-1}$を示せばよい。$\Vert A_{n}^{-1}-A^{-1} \Vert\le\Vert (A^{-1}A_{n})^{-1}-I \Vert\Vert A^{-1} \Vert$であるが、$\Vert I-A^{-1}A_{n} \Vert\le\Vert A^{-1} \Vert\Vert A-A_{n} \Vert\rightarrow 0$より十分大きな$n$に対して$(A^{-1}A_{n})^{-1}=\sum_{k=0}^{\infty}(I-A^{-1}A_{n})^{k}$と表せるから、$\Vert A_{n}^{-1}-A^{-1} \Vert\le\Vert A^{-1} \Vert\Vert \sum_{k=1}^{\infty}(I-A^{-1}A_{n})^{k} \Vert\le\Vert A^{-1} \Vert\sum_{k=1}^{\infty} \Vert I-A^{-1}A_{n} \Vert^{k}$となる。ここで和は$k=1$からであることに注意すると$n\rightarrow\infty$のとき$0$に収束する。故に$A_{n}^{-1}\rightarrow A^{-1}$を得る。
 
+<!--
 \begin{Def}
 　単位的代数$\mathcal{A}$及び$A\in\mathcal{A}$に対し、$\rho(A)=\{\lambda\in\mathbb{C}\mid A-\lambda I\in\mathcal{R}_{\mathcal{A}}\}$をレゾルベント集合\textup{:resolvent}という。
 代数$\mathcal{A}$を明示して$\rho_{\mathcal{A}}(A)$と表すこともある。
