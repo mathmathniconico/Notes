@@ -28,32 +28,30 @@ $A_{0}\in\mathcal{R}$の近傍が$\mathcal{R}$に含まれることを示せば�
 
 ノルム位相による連続性を示すには点列連続性を示せば十分である。$\lbrace A_{n} \rbrace\subset\mathcal{R}, A\in\mathcal{R}$が$A_{n}\rightarrow A$を満たすとする。$A_{n}^{-1}\rightarrow A^{-1}$を示せばよい。$\Vert A_{n}^{-1}-A^{-1} \Vert\le\Vert (A^{-1}A_{n})^{-1}-I \Vert\Vert A^{-1} \Vert$であるが、$\Vert I-A^{-1}A_{n} \Vert\le\Vert A^{-1} \Vert\Vert A-A_{n} \Vert\rightarrow 0$より十分大きな$n$に対して$(A^{-1}A_{n})^{-1}=\sum_{k=0}^{\infty}(I-A^{-1}A_{n})^{k}$と表せるから、$\Vert A_{n}^{-1}-A^{-1} \Vert\le\Vert A^{-1} \Vert\Vert \sum_{k=1}^{\infty}(I-A^{-1}A_{n})^{k} \Vert\le\Vert A^{-1} \Vert\sum_{k=1}^{\infty} \Vert I-A^{-1}A_{n} \Vert^{k}$となる。ここで和は$k=1$からであることに注意すると$n\rightarrow\infty$のとき$0$に収束する。故に$A_{n}^{-1}\rightarrow A^{-1}$を得る。
 
-<!--
-\begin{Def}
-　単位的代数$\mathcal{A}$及び$A\in\mathcal{A}$に対し、$\rho(A)=\{\lambda\in\mathbb{C}\mid A-\lambda I\in\mathcal{R}_{\mathcal{A}}\}$をレゾルベント集合\textup{:resolvent}という。
-代数$\mathcal{A}$を明示して$\rho_{\mathcal{A}}(A)$と表すこともある。
-$\sigma(A)=\mathbb{C}\backslash\rho_{\mathcal{A}}(A)$をスペクトル集合\textup{:spectrum}という。
-同様に代数$\mathcal{A}$を明示して$\sigma_{\mathcal{A}}(A)$と表すこともある。
-$\lambda\in\rho(A)$に対し$(A-\lambda I)^{-1}\in\mathcal{A}$を対応させる写像を$A(\lambda)$と書き、レゾルベント関数という。
-\end{Def}
+__定義__ 単位的代数$\mathcal{A}$及び$A\in\mathcal{A}$に対し、$\rho(A)=\lbrace \lambda\in\mathbb{C} : A-\lambda I\in\mathcal{R}_{\mathcal{A}} \rbrace$を **レゾルベント** （resolvent）という。代数$\mathcal{A}$を明示して$\rho_{\mathcal{A}}(A)$と表すこともある。
 
+$\sigma(A)=\mathbb{C}\backslash\rho_{\mathcal{A}}(A)$を **スペクトル** （spectrum）という。同様に代数$\mathcal{A}$を明示して$\sigma_{\mathcal{A}}(A)$と表すこともある。
+
+$\lambda\in\rho(A)$に対し$(A-\lambda I)^{-1}\in\mathcal{A}$を対応させる写像を$A(\lambda)$と書き、レゾルベント関数という。
+
+<!--
 　いくつか性質を見てみよう。
 
 \begin{Prop}
 　単位的代数$\mathcal{A}$の元$A, B$に対し、スペクトル集合に関して次が成立する。
 \begin{enumerate}
-\item $\sigma(AB)\cup\{0\}=\sigma(BA)\cup\{0\}$が成り立つ。
-\item $A$が可逆なら$\sigma(A^{-1})=\sigma(A)^{-1}=\{\lambda^{-1}\mid\lambda\in\sigma(A)\}$が成り立つ。
+\item $\sigma(AB)\cup \lbrace 0  \rbrace=\sigma(BA)\cup \lbrace 0  \rbrace$が成り立つ。
+\item $A$が可逆なら$\sigma(A^{-1})=\sigma(A)^{-1}= \lbrace \lambda^{-1} : \lambda\in\sigma(A)  \rbrace$が成り立つ。
 \item $\mu\in\mathbb{C}, \neq 0$に対して$\sigma(\mu A)=\mu\sigma(A)$が成り立つ。
 \end{enumerate}
 \end{Prop}
 \begin{Proof}
-　(1) $\lambda\notin\sigma(AB)\{0\}$とすると、$AB-\lambda I$は可逆である。$C=(AB-\lambda I)^{-1}$と置く。
+　(1) $\lambda\notin\sigma(AB) \lbrace 0  \rbrace$とすると、$AB-\lambda I$は可逆である。$C=(AB-\lambda I)^{-1}$と置く。
 $C(AB-\lambda I)=I=(AB-\lambda I)C$より、$CAB=\lambda C+I=ABC$が成り立つ。
 今$(BA-\lambda I)(BCA-I)=B(ABC)A-BA-\lambda BCA+\lambda I=\lambda I$であり、
 また$(BCA-I)(BA-\lambda I)=B(CAB)A-\lambda BCA-BA+\lambda I=\lambda I$である。
 $\lambda\neq 0$だから$(BA-\lambda I)^{-1}=\lambda^{-1}(BA-\lambda I$が分かる。
-つまり$\lambda\notin\sigma(BA)\cup\{0\}$を得る。逆も同様。
+つまり$\lambda\notin\sigma(BA)\cup \lbrace 0  \rbrace$を得る。逆も同様。
 \\
 　(2) $A$が可逆なら$0\notin\sigma(A)$に注意すれば、$A-\lambda I=-\lambda A(A^{-1}-\lambda^{-1}I)$及び$A^{-1}-\lambda^{-1}I=-\lambda^{-1}A^{-1}(A-\lambda I)$より分かる。
 \\
@@ -66,7 +64,7 @@ $\lambda\neq 0$だから$(BA-\lambda I)^{-1}=\lambda^{-1}(BA-\lambda I$が分か
 \begin{Prop}
 　$\mathcal{B}$を単位的\textup{Banach}代数、$A\in\mathcal{B}$とする。
 \begin{enumerate}
-\item $\sigma(A)\subset \{ \lambda\in\mathbb{C}\mid |\lambda|\le ||A|| \}$が成り立つ。
+\item $\sigma(A)\subset  \lbrace  \lambda\in\mathbb{C} :  |\lambda|\le ||A||   \rbrace$が成り立つ。
 \item $\sigma(A)$はコンパクト。
 \item レゾルベント等式$A(\lambda)-A(\mu)=(\lambda-\mu)A(\lambda)A(\mu)$が成り立つ。
 \item レゾルベント関数$A(\lambda)$は解析的。
@@ -111,12 +109,12 @@ $||A(\lambda)||\le||(-\lambda(I-\frac{1}{\lambda}A))^{-1}||=|\lambda|^{-1}||(I-\
 　次の系は明快だが重要な結果である。
 
 \begin{Cor}[Gelfand-Mazurの定理]
-　$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash\{0\}$とする。
+　$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash \lbrace 0  \rbrace$とする。
 このとき$\mathcal{B}=\mathbb{C}I$が成り立つ。
 \end{Cor}
 \begin{Proof}
 　仮定より$\mathcal{B}\neq 0$に注意する。任意の元$A\in\mathcal{B}$に対して定理より$\sigma(A)$は空でないから、ある元$\lambda\in\sigma(A)$が存在して$A-\lambda I\in\mathcal{S}$を満たす。
-ところが$\mathcal{S}=\{0\}$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
+ところが$\mathcal{S}= \lbrace 0  \rbrace$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
 \end{Proof}
 
 \begin{Lem}[スペクトル写像定理（多項式版）]
@@ -144,7 +142,7 @@ $A-\lambda_{k}I$が可逆でないことに反するから$p(A)-\lambda I$は可
 
 \begin{Fact}[Banach-Steinhausの定理（または一様有界性定理）の系]
 　$\mathcal{B}$を\textup{Banach}代数、$E\subset\mathcal{B}$は空でないとする。
-任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対し$\{|\varphi(A)|\mid A\in E\}$が有界ならば、$\sup\{||A||\mid A\in E\}<\infty$が成り立つ。
+任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対し$ \lbrace |\varphi(A)| :  A\in E  \rbrace$が有界ならば、$\sup \lbrace ||A|| :  A\in E  \rbrace<\infty$が成り立つ。
 \end{Fact}
 \begin{Proof}
 　元々の定理は\textup{Baire}のカテゴリー定理により示される。更に選択公理を用いて\textup{Hahn-Banach}の定理などが示され、$\mathcal{B}\hookrightarrow\mathcal{B}^{**}$を得る。この事実は以上より従う。
@@ -152,7 +150,7 @@ $A-\lambda_{k}I$が可逆でないことに反するから$p(A)-\lambda I$は可
 
 \begin{Thm}
 　$\mathcal{B}$を$0$でない単位的\textup{Banach}代数とする。$A\in\mathcal{B}$に対し、以下の値が存在して、
-\[ \lim_{n}||A^{n}||^{\frac{1}{n}}=\inf_{n}||A^{n}||^{\frac{1}{n}}=\sup\{|\lambda|\mid\lambda\in\sigma(A)\} \]
+\[ \lim_{n}||A^{n}||^{\frac{1}{n}}=\inf_{n}||A^{n}||^{\frac{1}{n}}=\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace \]
 が成り立つ。
 \end{Thm}
 \begin{Proof}
@@ -162,15 +160,15 @@ $A-\lambda_{k}I$が可逆でないことに反するから$p(A)-\lambda I$は可
 つまり$\lim ||A^{n}||^{\frac{1}{n}}$が存在して$\lim ||A^{n}||^{\frac{1}{n}}=\inf ||A^{n}||^{\frac{1}{n}}$が分かる。
 \\
 　$\lambda\in\sigma(A)$とすると補題より$\lambda^{n}\in\sigma(A^{n})$であるから$|\lambda|^{n}=|\lambda^{n}|\le||A^{n}||$を得る。
-任意の$n$に対して言えるので$|\lambda|\le\inf ||A^{n}||^{\frac{1}{n}}$が従い、$sup\{|\lambda|\mid\lambda\in\sigma(A)\}\le\inf ||A^{n}||^{\frac{1}{n}}$を得る。
+任意の$n$に対して言えるので$|\lambda|\le\inf ||A^{n}||^{\frac{1}{n}}$が従い、$sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace\le\inf ||A^{n}||^{\frac{1}{n}}$を得る。
 \\
-　逆は関数論の議論が必要となる。背理法により示す。今$\sup\{|\lambda|\mid\lambda\in\sigma(A)\}<\inf ||A^{n}||^{\frac{1}{n}}$を仮定すると、実数の連続性から間に実数$a$が存在する。
-この$a$に対して$E=\{\frac{1}{a^{n}}A^{n}\}$とおく。今$|\lambda|>\inf||A^{n}||^{\frac{1}{n}}=\lim ||A^{n}||^{\frac{1}{n}}$とすると、
+　逆は関数論の議論が必要となる。背理法により示す。今$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace<\inf ||A^{n}||^{\frac{1}{n}}$を仮定すると、実数の連続性から間に実数$a$が存在する。
+この$a$に対して$E= \lbrace \frac{1}{a^{n}}A^{n}  \rbrace$とおく。今$|\lambda|>\inf||A^{n}||^{\frac{1}{n}}=\lim ||A^{n}||^{\frac{1}{n}}$とすると、
 $\lim ||\left(\frac{1}{\lambda}A\right)^{n}||^{\frac{1}{n}}=\frac{1}{|\lambda|}\lim ||A^{n}||^{\frac{1}{n}}<1$より、
 \textup{Cauchy}の判定法から$\sum_{k=0}^{\infty}||\left(\frac{1}{\lambda}A\right)^{k}||<+\infty$は絶対収束する。
 故に$\sum_{k=0}^{\infty}\frac{1}{\lambda^{k}}A^{k}$はノルム収束し、展開式から$-\lambda A(\lambda)$に一致する。
-$A(\lambda)$は$\rho(A)$上解析的なので、この収束半径は$\sup\{|\lambda|\mid\lambda\in\sigma(A)\}$まで拡張できる。
-\footnote{原点周りの円環領域$\sup\{|\lambda|\mid\lambda\in\sigma(A)\}<r<\infty$におけるLaurent展開とみてもいいし、無限遠周りのTaylor展開と見ても良い。いずれにせよ一価正則性から解析接続が可能。}
+$A(\lambda)$は$\rho(A)$上解析的なので、この収束半径は$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace$まで拡張できる。
+\footnote{原点周りの円環領域$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace<r<\infty$におけるLaurent展開とみてもいいし、無限遠周りのTaylor展開と見ても良い。いずれにせよ一価正則性から解析接続が可能。}
 故に$\lambda=a$を展開式に代入ができて$A(a)=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}A^{k}$が成り立つ。
 ここで任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対し$\varphi(A(a))=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}\varphi(A^{k})$が線型性と連続性から従うので
 $\sup |\varphi\left(\frac{1}{a^{k}}A^{k}\right)| <\infty$となる。先に述べた事実から$\sup ||\frac{1}{a^{k}}A^{k}||<\infty$であるからこれを$\alpha$と置くと、
@@ -195,7 +193,7 @@ $\inf ||A^{n}||^{\frac{1}{n}}\le\lim\alpha^{\frac{1}{n}}\cdot a=a<\inf ||A^{n}||
 \end{enumerate}
 
 \begin{Rem}
-$0=C(\emptyset), \mathbb{C}=C(\{*\}), \mathbb{C}^{n}=C(\{*_{1}, \dotsc, *_{n}\})$である。
+$0=C(\emptyset), \mathbb{C}=C( \lbrace *  \rbrace), \mathbb{C}^{n}=C( \lbrace *_{1}, \dotsc, *_{n}  \rbrace)$である。
 $X$がコンパクトハウスドルフ空間であれば$C(X)=C_{b}(X)$である。
 \end{Rem}
 
