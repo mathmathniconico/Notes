@@ -34,17 +34,13 @@ $\sigma(A)=\mathbb{C}\backslash\rho_{\mathcal{A}}(A)$を **スペクトル** （
 
 $\lambda\in\rho(A)$に対し$(A-\lambda I)^{-1}\in\mathcal{A}$を対応させる写像を$A(\lambda)$と書き、レゾルベント関数という。
 
-<!--
-　いくつか性質を見てみよう。
+__命題__ $\mathcal{A}$を単位的代数とする。$A, B\in\mathscr{A}$とする。
 
-\begin{Prop}
-　単位的代数$\mathcal{A}$の元$A, B$に対し、スペクトル集合に関して次が成立する。
-\begin{enumerate}
-\item $\sigma(AB)\cup \lbrace 0  \rbrace=\sigma(BA)\cup \lbrace 0  \rbrace$が成り立つ。
-\item $A$が可逆なら$\sigma(A^{-1})=\sigma(A)^{-1}= \lbrace \lambda^{-1} : \lambda\in\sigma(A)  \rbrace$が成り立つ。
-\item $\mu\in\mathbb{C}, \neq 0$に対して$\sigma(\mu A)=\mu\sigma(A)$が成り立つ。
-\end{enumerate}
-\end{Prop}
+- $\sigma(AB)\cup \lbrace 0  \rbrace=\sigma(BA)\cup \lbrace 0  \rbrace$が成り立つ。
+- $A$が可逆なら$\sigma(A^{-1})=\sigma(A)^{-1}=\lbrace \lambda^{-1} : \lambda\in\sigma(A) \rbrace$が成り立つ。
+- $\mu\in\mathbb{C}, \neq 0$に対して$\sigma(\mu A)=\mu\sigma(A)$が成り立つ。
+
+<!--
 \begin{Proof}
 　(1) $\lambda\notin\sigma(AB) \lbrace 0  \rbrace$とすると、$AB-\lambda I$は可逆である。$C=(AB-\lambda I)^{-1}$と置く。
 $C(AB-\lambda I)=I=(AB-\lambda I)C$より、$CAB=\lambda C+I=ABC$が成り立つ。
