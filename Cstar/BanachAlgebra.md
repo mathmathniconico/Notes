@@ -40,20 +40,13 @@ __命題__ $\mathcal{A}$を単位的代数とする。$A, B\in\mathscr{A}$とす
 - $A$が可逆なら$\sigma(A^{-1})=\sigma(A)^{-1}=\lbrace \lambda^{-1} : \lambda\in\sigma(A) \rbrace$が成り立つ。
 - $\mu\in\mathbb{C}, \neq 0$に対して$\sigma(\mu A)=\mu\sigma(A)$が成り立つ。
 
-<!--
-\begin{Proof}
-　(1) $\lambda\notin\sigma(AB) \lbrace 0  \rbrace$とすると、$AB-\lambda I$は可逆である。$C=(AB-\lambda I)^{-1}$と置く。
-$C(AB-\lambda I)=I=(AB-\lambda I)C$より、$CAB=\lambda C+I=ABC$が成り立つ。
-今$(BA-\lambda I)(BCA-I)=B(ABC)A-BA-\lambda BCA+\lambda I=\lambda I$であり、
-また$(BCA-I)(BA-\lambda I)=B(CAB)A-\lambda BCA-BA+\lambda I=\lambda I$である。
-$\lambda\neq 0$だから$(BA-\lambda I)^{-1}=\lambda^{-1}(BA-\lambda I$が分かる。
-つまり$\lambda\notin\sigma(BA)\cup \lbrace 0  \rbrace$を得る。逆も同様。
-\\
-　(2) $A$が可逆なら$0\notin\sigma(A)$に注意すれば、$A-\lambda I=-\lambda A(A^{-1}-\lambda^{-1}I)$及び$A^{-1}-\lambda^{-1}I=-\lambda^{-1}A^{-1}(A-\lambda I)$より分かる。
-\\
-　(3) $\mu A-\lambda I=\mu(A-\frac{\lambda}{\mu}I)$より従う。
-\end{Proof}
+（証明）$\lambda\notin\sigma(AB)\lbrace 0 \rbrace$とすると、$AB-\lambda I$は可逆である。$C=(AB-\lambda I)^{-1}$と置く。$C(AB-\lambda I)=I=(AB-\lambda I)C$より、$CAB=\lambda C+I=ABC$が成り立つ。今$(BA-\lambda I)(BCA-I)=B(ABC)A-BA-\lambda BCA+\lambda I=\lambda I$であり、また$(BCA-I)(BA-\lambda I)=B(CAB)A-\lambda BCA-BA+\lambda I=\lambda I$である。$\lambda\neq 0$だから$(BA-\lambda I)^{-1}=\lambda^{-1}(BA-\lambda I$が分かる。つまり$\lambda\notin\sigma(BA)\cup\lbrace 0 \rbrace$を得る。逆も同様。
 
+$A$が可逆なら$0\notin\sigma(A)$に注意すれば、$A-\lambda I=-\lambda A(A^{-1}-\lambda^{-1}I)$及び$A^{-1}-\lambda^{-1}I=-\lambda^{-1}A^{-1}(A-\lambda I)$より分かる。
+
+三つ目は$\mu A-\lambda I=\mu(A-\frac{\lambda}{\mu}I)$より従う。$\square$
+
+<!--
 　定義空間を$\mathbb{C}$とする\textup{Banach}空間（代数？）値の関数論は、絶対値をノルムに変更することで複素数値の関数論と平行に議論できるらしい。
 故に\textup{Cauchy}の積分定理、\textup{Liouville}の定理などが\textup{Banach}空間値の関数に対しても成立する。
 
