@@ -46,33 +46,31 @@ $A$が可逆なら$0\notin\sigma(A)$に注意すれば、$A-\lambda I=-\lambda A
 
 三つ目は$\mu A-\lambda I=\mu(A-\frac{\lambda}{\mu}I)$より従う。$\square$
 
+定義空間を$\mathbb{C}$とするバナッハ空間（代数？）値の関数論は、絶対値をノルムに変更することで複素数値の関数論と平行に議論できる。故にコーシーの積分定理、リュービルの定理などがバナッハ空間値の関数に対しても成立する。
+
+__命題__ $\mathcal{B}$を単位的バナッハ代数、$A\in\mathcal{B}$とする。
+
+- $\sigma(A)\subset \lbrace \lambda\in\mathbb{C} : \vert \lambda \vert\le\Vert A \Vert \rbrace$が成り立つ。
+- $\sigma(A)$はコンパクトである。
+- レゾルベント等式$A(\lambda)-A(\mu)=(\lambda-\mu)A(\lambda)A(\mu)$が成り立つ。
+- レゾルベント関数$A(\lambda)$は解析的である。
+
+（証明）
+$\vert \lambda \vert\gt\Vert A \Vert$とすると$\Vert \frac{1}{\lambda}A \Vert=\frac{1}{\vert \lambda \vert}\Vert A \Vert\lt 1$だから、先に示した命題より$I-\frac{1}{\lambda}A$は可逆。だから$A-\lambda I\in\mathcal{R}$より$\lambda\in\rho(A)$が従う。
+
+有界性が示されたので、$\sigma(A)\subset\mathbb{C}$が閉集合であることを示せばよい。$A\mapsto A^{-1}$は$\mathcal{R}$上連続であるため、$\rho(A)\subset\mathbb{C}$は開集合である。
+
+$A(\lambda)-A(\mu)=A(\lambda)(A-\mu I -(A-\lambda I))A(\mu)=(\lambda-\mu)A(\lambda)A(\mu)$である。
+
+$\mu\in\rho(A)$に対し、レゾルベント等式より
+
+$$
+\lim_{\rho(A)\ni\lambda\rightarrow\mu}\frac{A(\lambda)-A(\mu)}{\lambda-\mu}=A(\mu)^{2}
+$$
+
+が従うから連続微分可能である。更に無限回連続微分可能が従うので解析的である。$\square$
+
 <!--
-　定義空間を$\mathbb{C}$とする\textup{Banach}空間（代数？）値の関数論は、絶対値をノルムに変更することで複素数値の関数論と平行に議論できるらしい。
-故に\textup{Cauchy}の積分定理、\textup{Liouville}の定理などが\textup{Banach}空間値の関数に対しても成立する。
-
-\begin{Prop}
-　$\mathcal{B}$を単位的\textup{Banach}代数、$A\in\mathcal{B}$とする。
-\begin{enumerate}
-\item $\sigma(A)\subset  \lbrace  \lambda\in\mathbb{C} :  |\lambda|\le ||A||   \rbrace$が成り立つ。
-\item $\sigma(A)$はコンパクト。
-\item レゾルベント等式$A(\lambda)-A(\mu)=(\lambda-\mu)A(\lambda)A(\mu)$が成り立つ。
-\item レゾルベント関数$A(\lambda)$は解析的。
-\end{enumerate}
-\end{Prop}
-\begin{Proof}
-　(1) $|\lambda|>||A||$とすると$||\frac{1}{\lambda}A||=\frac{1}{|\lambda|}||A||<1$だから、
-先に示した命題より$I-\frac{1}{\lambda}A$は可逆。だから$A-\lambda I\in\mathcal{R}$より$\lambda\in\rho(A)$が従う。
-\\
-　(2) 有界性は(1)で示したので、$\sigma(A)\subset\mathbb{C}$が閉集合であることを示せばよいのだが、
-$A\mapsto A^{-1}$は$\mathcal{R}$上連続であるため、$\rho(A)\subset\mathbb{C}$は開集合である。
-\\
-　(3) 少し技巧的だが、$A(\lambda)-A(\mu)=A(\lambda)(A-\mu I -(A-\lambda I))A(\mu)=(\lambda-\mu)A(\lambda)A(\mu)$を得る。
-\\
-　(4) $\mu\in\rho(A)$に対し、レゾルベント等式より
-\[ \lim_{\rho(A)\ni\lambda\rightarrow\mu}\frac{A(\lambda)-A(\mu)}{\lambda-\mu}=A(\mu)^{2} \]
-が従うから連続微分可能。更に無限回連続微分可能が従うので解析的である。
-\end{Proof}
-
 \begin{Thm}
 　単位的\textup{Banach}代数$\mathcal{B}$が$0$でないとき、$A\in\mathcal{B}$に対して$\sigma(A)$は空でない。
 また$\mathcal{B}=0$のとき$\sigma_{0}(0)$は空となる。
