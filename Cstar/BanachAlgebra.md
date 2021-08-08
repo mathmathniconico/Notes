@@ -70,11 +70,9 @@ $$
 
 が従うから連続微分可能である。更に無限回連続微分可能が従うので解析的である。$\square$
 
+__定理__ $\mathcal{B}$を単位的バナッハ代数とする。$\mathcal{B}\neq 0$のとき$A\in\mathcal{B}$について$\sigma(A)$は空でない。また$\mathcal{B}=0$のとき$\sigma_{0}(0)$は空となる。
+
 <!--
-\begin{Thm}
-　単位的\textup{Banach}代数$\mathcal{B}$が$0$でないとき、$A\in\mathcal{B}$に対して$\sigma(A)$は空でない。
-また$\mathcal{B}=0$のとき$\sigma_{0}(0)$は空となる。
-\end{Thm}
 \begin{Proof}
 　まず$\mathcal{B}\neq 0$なら$0\neq I$に注意しておく。まず$\sigma(A)=\emptyset$なら任意の有界線型汎関数
 $\varphi\in\mathcal{B}^{*}$に対して$\varphi(A(\lambda))$が整関数になることを示す。
