@@ -72,10 +72,8 @@ $$
 
 __定理__ $\mathcal{B}$を単位的バナッハ代数とする。$\mathcal{B}\neq 0$のとき$A\in\mathcal{B}$について$\sigma(A)$は空でない。また$\mathcal{B}=0$のとき$\sigma_{0}(0)$は空となる。
 
+（証明）まず$\mathcal{B}\neq 0$なら$0\neq I$に注意しておく。まず$\sigma(A)=\emptyset$なら任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対して$\varphi(A(\lambda))$が整関数になることを示す。
 <!--
-\begin{Proof}
-　まず$\mathcal{B}\neq 0$なら$0\neq I$に注意しておく。まず$\sigma(A)=\emptyset$なら任意の有界線型汎関数
-$\varphi\in\mathcal{B}^{*}$に対して$\varphi(A(\lambda))$が整関数になることを示す。
 $\lambda_{0}\in\rho(A)$に対し、$|\lambda-\lambda_{0}|<\delta$とする。
 $B=(\lambda-\lambda_{0})A(\lambda_{0})$は$||B||<\delta ||(A-\lambda_{0}I)^{-1}||$より、
 $\delta=||(A-\lambda_{0})^{-1}||^{-1}$とおけば$||B||<1$が従うので、級数展開$(I-B)^{-1}=\sum_{k=0}^{\infty}B^{k}$を得る。
