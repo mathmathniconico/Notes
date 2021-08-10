@@ -73,13 +73,9 @@ $$
 __定理__ $\mathcal{B}$を単位的バナッハ代数とする。$\mathcal{B}\neq 0$のとき$A\in\mathcal{B}$について$\sigma(A)$は空でない。また$\mathcal{B}=0$のとき$\sigma_{0}(0)$は空となる。
 
 （証明）まず$\mathcal{B}\neq 0$なら$0\neq I$に注意しておく。まず$\sigma(A)=\emptyset$なら任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対して$\varphi(A(\lambda))$が整関数になることを示す。
+
+$\lambda_{0}\in\rho(A)$に対し、$\vert \lambda-\lambda_{0} \vert\lt\delta$とする。$B=(\lambda-\lambda_{0})A(\lambda_{0})$は$\Vert B \Vert\lt\delta\Vert (A-\lambda_{0}I)^{-1} \Vert$より、$\delta=\Vert (A-\lambda_{0})^{-1} \Vert^{-1}$とおけば$\Vert B \Vert\lt 1$が従うので、級数展開$(I-B)^{-1}=\sum_{k=0}^{\infty}B^{k}$を得る。$I-B=(A-\lambda_{0}I-(\lambda-\lambda_{0})I)A(\lambda_{0})=(A-\lambda I)A(\lambda_{0})$より、$(I-B)^{-1}=(A-\lambda_{0}I)A(\lambda)$が従う。故に級数展開$A(\lambda)=\sum_{k=0}^{\infty}(\lambda-\lambda_{0})^{k}A(\lambda_{0})^{k+1}$を得る。そして$\varphi$の有界性から$\varphi( A(\lambda) )=\sum_{k=0}^{\infty}\varphi( A(\lambda_{0})^{k+1} )(\lambda-\lambda_{0})^{k}$の右辺が絶対収束することが示される。
 <!--
-$\lambda_{0}\in\rho(A)$に対し、$|\lambda-\lambda_{0}|<\delta$とする。
-$B=(\lambda-\lambda_{0})A(\lambda_{0})$は$||B||<\delta ||(A-\lambda_{0}I)^{-1}||$より、
-$\delta=||(A-\lambda_{0})^{-1}||^{-1}$とおけば$||B||<1$が従うので、級数展開$(I-B)^{-1}=\sum_{k=0}^{\infty}B^{k}$を得る。
-$I-B=(A-\lambda_{0}I-(\lambda-\lambda_{0})I)A(\lambda_{0})=(A-\lambda I)A(\lambda_{0})$より、
-$(I-B)^{-1}=(A-\lambda_{0}I)A(\lambda)$が従う。故に級数展開$A(\lambda)=\sum_{k=0}^{\infty}(\lambda-\lambda_{0})^{k}A(\lambda_{0})^{k+1}$を得る。
-そして$\varphi$の有界性から$\varphi(A(\lambda))=\sum_{k=0}^{\infty}\varphi(A(\lambda_{0})^{k+1})(\lambda-\lambda_{0})^{k}$の右辺が絶対収束することが示される。
 この級数展開は任意の$\lambda_{0}\in\rho(A)=\mathbb{C}$における\textup{Taylor}展開を与えていることから$\varphi(A(\lambda))$が整関数であることが分かる。
 ところが$|\lambda|\rightarrow\infty$のとき$-\frac{1}{\lambda}A\rightarrow 0$であるから
 $||A(\lambda)||\le||(-\lambda(I-\frac{1}{\lambda}A))^{-1}||=|\lambda|^{-1}||(I-\frac{1}{\lambda}A)^{-1}||\rightarrow 0$となる。
