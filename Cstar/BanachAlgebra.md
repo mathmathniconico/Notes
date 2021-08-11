@@ -75,16 +75,12 @@ __定理__ $\mathcal{B}$を単位的バナッハ代数とする。$\mathcal{B}\n
 （証明）まず$\mathcal{B}\neq 0$なら$0\neq I$に注意しておく。まず$\sigma(A)=\emptyset$なら任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対して$\varphi(A(\lambda))$が整関数になることを示す。
 
 $\lambda_{0}\in\rho(A)$に対し、$\vert \lambda-\lambda_{0} \vert\lt\delta$とする。$B=(\lambda-\lambda_{0})A(\lambda_{0})$は$\Vert B \Vert\lt\delta\Vert (A-\lambda_{0}I)^{-1} \Vert$より、$\delta=\Vert (A-\lambda_{0})^{-1} \Vert^{-1}$とおけば$\Vert B \Vert\lt 1$が従うので、級数展開$(I-B)^{-1}=\sum_{k=0}^{\infty}B^{k}$を得る。$I-B=(A-\lambda_{0}I-(\lambda-\lambda_{0})I)A(\lambda_{0})=(A-\lambda I)A(\lambda_{0})$より、$(I-B)^{-1}=(A-\lambda_{0}I)A(\lambda)$が従う。故に級数展開$A(\lambda)=\sum_{k=0}^{\infty}(\lambda-\lambda_{0})^{k}A(\lambda_{0})^{k+1}$を得る。そして$\varphi$の有界性から$\varphi( A(\lambda) )=\sum_{k=0}^{\infty}\varphi( A(\lambda_{0})^{k+1} )(\lambda-\lambda_{0})^{k}$の右辺が絶対収束することが示される。
-<!--
-この級数展開は任意の$\lambda_{0}\in\rho(A)=\mathbb{C}$における\textup{Taylor}展開を与えていることから$\varphi(A(\lambda))$が整関数であることが分かる。
-ところが$|\lambda|\rightarrow\infty$のとき$-\frac{1}{\lambda}A\rightarrow 0$であるから
-$||A(\lambda)||\le||(-\lambda(I-\frac{1}{\lambda}A))^{-1}||=|\lambda|^{-1}||(I-\frac{1}{\lambda}A)^{-1}||\rightarrow 0$となる。
-故に$|\varphi(A(\lambda))|\le||\varphi||||A(\lambda)||\rightarrow 0$であり、$\varphi(A(\lambda))$は有界となる。
-\textup{Liouville}の定理から定数であることが従い、先ほどの収束の議論より$\varphi(A(\lambda))$は恒等的に$0$となる。これは矛盾する。
-\footnote{実は$\mathcal{B}$上の有界線型汎関数が十分豊富に存在することを示す必要がある。つまりHahn-Banachの定理等から$\mathcal{B}\hookrightarrow\mathcal{B}^{**}$が従うので、
-任意の$\varphi\in\mathcal{B}^{*}$に対し$\tilde{A(\lambda)}(\varphi)=\varphi(A(\lambda))\equiv 0$が成り立ち$\mathcal{B}=0$を得る。}
-\end{Proof}
 
+この級数展開は任意の$\lambda_{0}\in\rho(A)=\mathbb{C}$におけるテイラー展開を与えていることから$\varphi(A(\lambda))$が整関数であることが分かる。ところが$\vert \lambda \vert\rightarrow\infty$のとき$-\frac{1}{\lambda}A\rightarrow 0$であるから$\Vert A(\lambda) \Vert\le\Vert (-\lambda(I-\frac{1}{\lambda}A))^{-1} \Vert=\vert \lambda \vert^{-1}\Vert (I-\frac{1}{\lambda}A)^{-1} \Vert\rightarrow 0$となる。故に$\vert \varphi(A(\lambda)) \vert\le\Vert \varphi \Vert\Vert A(\lambda) \Vert\rightarrow 0$であり、$\varphi(A(\lambda))$は有界となる。リュービルの定理から定数であることが従い、先ほどの収束の議論より$\varphi(A(\lambda))$は恒等的に$0$となる。これは矛盾する。
+
+> 実は$\mathcal{B}$上の有界線型汎関数が十分豊富に存在することを示す必要がある。ハーン・バナッハの定理等から$\mathcal{B}\hookrightarrow\mathcal{B}^{\ast\ast}$が従うので、任意の$\varphi\in\mathcal{B}^{\ast}$に対し$\tilde{A(\lambda)}(\varphi)=\varphi(A(\lambda))\equiv 0$が成り立ち$\mathcal{B}=0$を得る。
+
+<!--
 　次の系は明快だが重要な結果である。
 
 \begin{Cor}[Gelfand-Mazurの定理]
