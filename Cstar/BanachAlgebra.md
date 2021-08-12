@@ -76,22 +76,16 @@ __定理__ $\mathcal{B}$を単位的バナッハ代数とする。$\mathcal{B}\n
 
 $\lambda_{0}\in\rho(A)$に対し、$\vert \lambda-\lambda_{0} \vert\lt\delta$とする。$B=(\lambda-\lambda_{0})A(\lambda_{0})$は$\Vert B \Vert\lt\delta\Vert (A-\lambda_{0}I)^{-1} \Vert$より、$\delta=\Vert (A-\lambda_{0})^{-1} \Vert^{-1}$とおけば$\Vert B \Vert\lt 1$が従うので、級数展開$(I-B)^{-1}=\sum_{k=0}^{\infty}B^{k}$を得る。$I-B=(A-\lambda_{0}I-(\lambda-\lambda_{0})I)A(\lambda_{0})=(A-\lambda I)A(\lambda_{0})$より、$(I-B)^{-1}=(A-\lambda_{0}I)A(\lambda)$が従う。故に級数展開$A(\lambda)=\sum_{k=0}^{\infty}(\lambda-\lambda_{0})^{k}A(\lambda_{0})^{k+1}$を得る。そして$\varphi$の有界性から$\varphi( A(\lambda) )=\sum_{k=0}^{\infty}\varphi( A(\lambda_{0})^{k+1} )(\lambda-\lambda_{0})^{k}$の右辺が絶対収束することが示される。
 
-この級数展開は任意の$\lambda_{0}\in\rho(A)=\mathbb{C}$におけるテイラー展開を与えていることから$\varphi(A(\lambda))$が整関数であることが分かる。ところが$\vert \lambda \vert\rightarrow\infty$のとき$-\frac{1}{\lambda}A\rightarrow 0$であるから$\Vert A(\lambda) \Vert\le\Vert (-\lambda(I-\frac{1}{\lambda}A))^{-1} \Vert=\vert \lambda \vert^{-1}\Vert (I-\frac{1}{\lambda}A)^{-1} \Vert\rightarrow 0$となる。故に$\vert \varphi(A(\lambda)) \vert\le\Vert \varphi \Vert\Vert A(\lambda) \Vert\rightarrow 0$であり、$\varphi(A(\lambda))$は有界となる。リュービルの定理から定数であることが従い、先ほどの収束の議論より$\varphi(A(\lambda))$は恒等的に$0$となる。これは矛盾する。
+この級数展開は任意の$\lambda_{0}\in\rho(A)=\mathbb{C}$におけるテイラー展開を与えていることから$\varphi(A(\lambda))$が整関数であることが分かる。ところが$\vert \lambda \vert\rightarrow\infty$のとき$-\frac{1}{\lambda}A\rightarrow 0$であるから$\Vert A(\lambda) \Vert\le\Vert (-\lambda(I-\frac{1}{\lambda}A))^{-1} \Vert=\vert \lambda \vert^{-1}\Vert (I-\frac{1}{\lambda}A)^{-1} \Vert\rightarrow 0$となる。故に$\vert \varphi(A(\lambda)) \vert\le\Vert \varphi \Vert\Vert A(\lambda) \Vert\rightarrow 0$であり、$\varphi(A(\lambda))$は有界となる。リュービルの定理から定数であることが従い、先ほどの収束の議論より$\varphi(A(\lambda))$は恒等的に$0$となる。これは矛盾する。$\square$
 
 > 実は$\mathcal{B}$上の有界線型汎関数が十分豊富に存在することを示す必要がある。ハーン・バナッハの定理等から$\mathcal{B}\hookrightarrow\mathcal{B}^{\ast\ast}$が従うので、任意の$\varphi\in\mathcal{B}^{\ast}$に対し$\tilde{A(\lambda)}(\varphi)=\varphi(A(\lambda))\equiv 0$が成り立ち$\mathcal{B}=0$を得る。
 
-<!--
-　次の系は明快だが重要な結果である。
-
-\begin{Cor}[Gelfand-Mazurの定理]
-　$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash \lbrace 0  \rbrace$とする。
+__系__ （ゲルファンド・マズールの定理）$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash \lbrace 0  \rbrace$とする。
 このとき$\mathcal{B}=\mathbb{C}I$が成り立つ。
-\end{Cor}
-\begin{Proof}
-　仮定より$\mathcal{B}\neq 0$に注意する。任意の元$A\in\mathcal{B}$に対して定理より$\sigma(A)$は空でないから、ある元$\lambda\in\sigma(A)$が存在して$A-\lambda I\in\mathcal{S}$を満たす。
-ところが$\mathcal{S}= \lbrace 0  \rbrace$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
-\end{Proof}
 
+（証明）仮定より$\mathcal{B}\neq 0$に注意する。任意の元$A\in\mathcal{B}$に対して定理より$\sigma(A)$は空でないから、ある元$\lambda\in\sigma(A)$が存在して$A-\lambda I\in\mathcal{S}$を満たす。ところが$\mathcal{S}=\lbrace 0 \rbrace$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
+
+<!--
 \begin{Lem}[スペクトル写像定理（多項式版）]
 　$\mathcal{B}$を単位的\textup{Banach}代数、$A$を$\mathcal{B}$の元、$p(\zeta)\in\mathbb{C}[\zeta]$を多項式とする。
 このとき$p(\sigma(A))=\sigma(p(A))$が成り立つ。ただし$p(A)$は$\zeta$を$A$で置き換えた、$\mathcal{B}$における演算の下で定義される$\mathcal{B}$の元を意味する。
