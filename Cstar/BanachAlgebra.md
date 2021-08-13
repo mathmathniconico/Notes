@@ -85,11 +85,9 @@ __系__ （ゲルファンド・マズールの定理）$\mathcal{B}$を単位�
 
 （証明）仮定より$\mathcal{B}\neq 0$に注意する。任意の元$A\in\mathcal{B}$に対して定理より$\sigma(A)$は空でないから、ある元$\lambda\in\sigma(A)$が存在して$A-\lambda I\in\mathcal{S}$を満たす。ところが$\mathcal{S}=\lbrace 0 \rbrace$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
 
+__補題__ （スペクトル写像定理：多項式版）$\mathcal{B}$を単位的バナッハ代数とする。$A\in\mathcal{B}$、$p(\zeta)\in\mathbb{C}\lbrack \zeta \rbrack$を多項式とする。このとき$p(\sigma(A))=\sigma(p(A))$が成り立つ。ただし$p(A)$は$\zeta$を$A$で置き換えた、$\mathcal{B}$における演算の下で定義される$\mathcal{B}$の元を意味する。
+
 <!--
-\begin{Lem}[スペクトル写像定理（多項式版）]
-　$\mathcal{B}$を単位的\textup{Banach}代数、$A$を$\mathcal{B}$の元、$p(\zeta)\in\mathbb{C}[\zeta]$を多項式とする。
-このとき$p(\sigma(A))=\sigma(p(A))$が成り立つ。ただし$p(A)$は$\zeta$を$A$で置き換えた、$\mathcal{B}$における演算の下で定義される$\mathcal{B}$の元を意味する。
-\end{Lem}
 \begin{Proof}
 　$p$は$1$次以上としてよい。$\lambda\in\mathbb{C}$に対し、$\lambda_{k}\in\mathbb{C}$により$p(\zeta)-\lambda=a\prod_{k=1}^{n}(\zeta-\lambda_{k})$と因数分解しておく。
 このとき$p(A)-\lambda I=a\prod_{k=1}^{n}(A-\lambda_{k}I)$である。$A-\lambda I$の形の元達は互いに可換であることに注意する。
