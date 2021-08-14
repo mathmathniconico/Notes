@@ -87,20 +87,13 @@ __系__ （ゲルファンド・マズールの定理）$\mathcal{B}$を単位�
 
 __補題__ （スペクトル写像定理：多項式版）$\mathcal{B}$を単位的バナッハ代数とする。$A\in\mathcal{B}$、$p(\zeta)\in\mathbb{C}\lbrack \zeta \rbrack$を多項式とする。このとき$p(\sigma(A))=\sigma(p(A))$が成り立つ。ただし$p(A)$は$\zeta$を$A$で置き換えた、$\mathcal{B}$における演算の下で定義される$\mathcal{B}$の元を意味する。
 
-<!--
-\begin{Proof}
-　$p$は$1$次以上としてよい。$\lambda\in\mathbb{C}$に対し、$\lambda_{k}\in\mathbb{C}$により$p(\zeta)-\lambda=a\prod_{k=1}^{n}(\zeta-\lambda_{k})$と因数分解しておく。
-このとき$p(A)-\lambda I=a\prod_{k=1}^{n}(A-\lambda_{k}I)$である。$A-\lambda I$の形の元達は互いに可換であることに注意する。
-\\
-　($\subset$) $\lambda\in p(\sigma(A))$とすると、$\lambda=p(\mu)$なる$\mu\in\sigma(A)$が存在する。
-$0=p(\mu)-\lambda=a\prod_{k=1}^{n}(\mu-\lambda_{k})$より、ある$k$が存在して$\mu=\lambda_{k}$を満たす。
-$\mu\in\sigma(A)$より、 $A-\lambda_{k}I$は可逆でない。 ここでもし$p(A)-\lambda I$が可逆なら $I=(a(p(A)-\lambda I)^{-1}\prod_{j\neq k}(A-\lambda_{j}I))(A-\lambda_{k}I)$より
-$A-\lambda_{k}I$が可逆でないことに反するから$p(A)-\lambda I$は可逆でない。故に$\lambda\in\sigma(p(A))$となる。
-\\
-　($\supset$) $\lambda\in\sigma(p(A))$とすると$p(A)-\lambda I=\prod_{k=1}^{n}(A-\lambda_{k}I)$は可逆でないから、ある$k$が存在して$A-\lambda_{k}I$は可逆でない。
-故に$\lambda_{k}\in\sigma(A)$であり、$p(\lambda_{k})-\lambda=0$より$\lambda=p(\lambda_{k})$が従う。つまり$\lambda\in p(\sigma(A))$が成り立つ。
-\end{Proof}
+（証明）$p$は$1$次以上としてよい。$\lambda\in\mathbb{C}$に対し、$\lambda_{k}\in\mathbb{C}$により$p(\zeta)-\lambda=a\prod_{k=1}^{n}(\zeta-\lambda_{k})$と因数分解しておく。このとき$p(A)-\lambda I=a\prod_{k=1}^{n}(A-\lambda_{k}I)$である。$A-\lambda I$の形の元達は互いに可換であることに注意する。
 
+$\lambda\in p(\sigma(A))$とすると、$\lambda=p(\mu)$なる$\mu\in\sigma(A)$が存在する。$0=p(\mu)-\lambda=a\prod_{k=1}^{n}(\mu-\lambda_{k})$より、ある$k$が存在して$\mu=\lambda_{k}$を満たす。$\mu\in\sigma(A)$より、 $A-\lambda_{k}I$は可逆でない。 ここでもし$p(A)-\lambda I$が可逆なら $I=(a(p(A)-\lambda I)^{-1}\prod_{j\neq k}(A-\lambda_{j}I))(A-\lambda_{k}I)$より$A-\lambda_{k}I$が可逆でないことに反するから$p(A)-\lambda I$は可逆でない。故に$\lambda\in\sigma(p(A))$となる。
+
+$\lambda\in\sigma(p(A))$とすると$p(A)-\lambda I=\prod_{k=1}^{n}(A-\lambda_{k}I)$は可逆でないから、ある$k$が存在して$A-\lambda_{k}I$は可逆でない。故に$\lambda_{k}\in\sigma(A)$であり、$p(\lambda_{k})-\lambda=0$より$\lambda=p(\lambda_{k})$が従う。つまり$\lambda\in p(\sigma(A))$が成り立つ。$\square$
+
+<!--
 　ここでは多項式$p$に対する元$A$の代入を考えたが、一般の関数$f$に対する代入も考えたくなるのは自然である。
 近似定理などを用いて、多項式の極限として定める方法などを考えることができるが、対象となる$f$や$A$の範疇に問題が生じる。
 後の節において、この問題に対する一つの回答を示す。
