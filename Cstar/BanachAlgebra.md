@@ -80,7 +80,7 @@ $\lambda_{0}\in\rho(A)$に対し、$\vert \lambda-\lambda_{0} \vert\lt\delta$と
 
 > 実は$\mathcal{B}$上の有界線型汎関数が十分豊富に存在することを示す必要がある。ハーン・バナッハの定理等から$\mathcal{B}\hookrightarrow\mathcal{B}^{\ast\ast}$が従うので、任意の$\varphi\in\mathcal{B}^{\ast}$に対し$\tilde{A(\lambda)}(\varphi)=\varphi(A(\lambda))\equiv 0$が成り立ち$\mathcal{B}=0$を得る。
 
-__系__ （ゲルファンド・マズールの定理）$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash \lbrace 0  \rbrace$とする。
+__系__ （Gelfand-Mazurの定理）$\mathcal{B}$を単位的\textup{Banach}代数で、体つまり$\mathcal{R}=\mathcal{B}\backslash \lbrace 0  \rbrace$とする。
 このとき$\mathcal{B}=\mathbb{C}I$が成り立つ。
 
 （証明）仮定より$\mathcal{B}\neq 0$に注意する。任意の元$A\in\mathcal{B}$に対して定理より$\sigma(A)$は空でないから、ある元$\lambda\in\sigma(A)$が存在して$A-\lambda I\in\mathcal{S}$を満たす。ところが$\mathcal{S}=\lbrace 0 \rbrace$であるから$A=\lambda I$を得る。故に$\mathcal{B}\subset\mathbb{C}I$が成り立つ。逆も明白である。
@@ -93,18 +93,11 @@ $\lambda\in p(\sigma(A))$とすると、$\lambda=p(\mu)$なる$\mu\in\sigma(A)$�
 
 $\lambda\in\sigma(p(A))$とすると$p(A)-\lambda I=\prod_{k=1}^{n}(A-\lambda_{k}I)$は可逆でないから、ある$k$が存在して$A-\lambda_{k}I$は可逆でない。故に$\lambda_{k}\in\sigma(A)$であり、$p(\lambda_{k})-\lambda=0$より$\lambda=p(\lambda_{k})$が従う。つまり$\lambda\in p(\sigma(A))$が成り立つ。$\square$
 
-<!--
-　ここでは多項式$p$に対する元$A$の代入を考えたが、一般の関数$f$に対する代入も考えたくなるのは自然である。
-近似定理などを用いて、多項式の極限として定める方法などを考えることができるが、対象となる$f$や$A$の範疇に問題が生じる。
-後の節において、この問題に対する一つの回答を示す。
-\\
-　与えられたスペクトル集合を持つ元が存在するかという逆問題は、興味深い問題だがきっと難しいだろう。自分は詳しくない。
+> ここで多項式$p$に対する元$A$の代入を考えたが、一般の関数$f$に対する代入も考えたくなるのは自然である。近似定理などを用いて、多項式の極限として定める方法などを考えることができるが、対象となる$f$や$A$の範疇に問題が生じる。後の節において、この問題に対する一つの回答を示す。なお与えられたスペクトル集合を持つ元が存在するかという逆問題もある。
 
-\begin{Fact}[Banach-Steinhausの定理（または一様有界性定理）の系]
-　$\mathcal{B}$を\textup{Banach}代数、$E\subset\mathcal{B}$は空でないとする。
-任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対し$ \lbrace |\varphi(A)| :  A\in E  \rbrace$が有界ならば、$\sup \lbrace ||A|| :  A\in E  \rbrace<\infty$が成り立つ。
-\end{Fact}
-\begin{Proof}
+__事実__ （Banach-Steinhausの定理（または一様有界性定理）の系）$\mathcal{B}$をバナッハ代数、$E\subset\mathcal{B}$は空でないとする。任意の有界線型汎関数$\varphi\in\mathcal{B}^{\ast}$に対し$\lbrace \vert \varphi(A) \vert : A\in E  \rbrace$が有界ならば、$\sup\lbrace \Vert A \Vert : A\in E \rbrace\lt\infty$が成り立つ。
+
+<!--
 　元々の定理は\textup{Baire}のカテゴリー定理により示される。更に選択公理を用いて\textup{Hahn-Banach}の定理などが示され、$\mathcal{B}\hookrightarrow\mathcal{B}^{**}$を得る。この事実は以上より従う。
 \end{Proof}
 
