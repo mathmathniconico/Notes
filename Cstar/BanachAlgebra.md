@@ -97,16 +97,17 @@ $\lambda\in\sigma(p(A))$とすると$p(A)-\lambda I=\prod_{k=1}^{n}(A-\lambda_{k
 
 __事実__ （Banach-Steinhausの定理（または一様有界性定理）の系）$\mathcal{B}$をバナッハ代数、$E\subset\mathcal{B}$は空でないとする。任意の有界線型汎関数$\varphi\in\mathcal{B}^{\ast}$に対し$\lbrace \vert \varphi(A) \vert : A\in E  \rbrace$が有界ならば、$\sup\lbrace \Vert A \Vert : A\in E \rbrace\lt\infty$が成り立つ。
 
-<!--
-　元々の定理は\textup{Baire}のカテゴリー定理により示される。更に選択公理を用いて\textup{Hahn-Banach}の定理などが示され、$\mathcal{B}\hookrightarrow\mathcal{B}^{**}$を得る。この事実は以上より従う。
-\end{Proof}
+> 元々の定理はBaireのカテゴリー定理により示される。更に選択公理を用いてHahn-Banachの定理などが示され、$\mathcal{B}\hookrightarrow\mathcal{B}^{\ast\ast}$を得る。この事実は以上より従う。
 
-\begin{Thm}
-　$\mathcal{B}$を$0$でない単位的\textup{Banach}代数とする。$A\in\mathcal{B}$に対し、以下の値が存在して、
-\[ \lim_{n}||A^{n}||^{\frac{1}{n}}=\inf_{n}||A^{n}||^{\frac{1}{n}}=\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace \]
+__定理__ $\mathcal{B}$を$0$でない単位的\textup{Banach}代数とする。$A\in\mathcal{B}$に対し、以下の値が存在して、
+
+$$
+\lim_{n}\Vert A^{n} \Vert^{\frac{1}{n}}=\inf_{n}\Vert A^{n} \Vert^{\frac{1}{n}}=\sup\lbrace \vert \lambda \vert : \lambda\in\sigma(A) \rbrace
+$$
+
 が成り立つ。
-\end{Thm}
-\begin{Proof}
+
+<!--
 　自然数$m$を固定し、$n$に対して$0\le k<m$を用いて$n=mj+k$と表す。このとき積に関するノルムの条件から$||A^{n}||^{\frac{1}{n}}\le||A^{m}||^{\frac{j}{n}}||A^{k}||^{\frac{1}{n}}$が成り立つ。
 そこで$n\rightarrow\infty$をすると$\frac{j}{n}\rightarrow\frac{1}{m}, \frac{1}{n}\rightarrow 0$より$\limsup||A^{n}||^{\frac{1}{n}}\le||A^{m}||^{\frac{1}{m}}$が従う。
 これが任意の$m$に対して成立するから$\limsup||A^{n}||^{\frac{1}{n}}\le\inf||A^{m}||^{\frac{1}{m}}$を得る。
