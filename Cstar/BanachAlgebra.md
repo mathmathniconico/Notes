@@ -107,12 +107,9 @@ $$
 
 が成り立つ。
 
-<!--
-　自然数$m$を固定し、$n$に対して$0\le k<m$を用いて$n=mj+k$と表す。このとき積に関するノルムの条件から$||A^{n}||^{\frac{1}{n}}\le||A^{m}||^{\frac{j}{n}}||A^{k}||^{\frac{1}{n}}$が成り立つ。
-そこで$n\rightarrow\infty$をすると$\frac{j}{n}\rightarrow\frac{1}{m}, \frac{1}{n}\rightarrow 0$より$\limsup||A^{n}||^{\frac{1}{n}}\le||A^{m}||^{\frac{1}{m}}$が従う。
-これが任意の$m$に対して成立するから$\limsup||A^{n}||^{\frac{1}{n}}\le\inf||A^{m}||^{\frac{1}{m}}$を得る。
-つまり$\lim ||A^{n}||^{\frac{1}{n}}$が存在して$\lim ||A^{n}||^{\frac{1}{n}}=\inf ||A^{n}||^{\frac{1}{n}}$が分かる。
+（証明）自然数$m$を固定し、$n$に対して$0\le k\lt m$を用いて$n=mj+k$と表す。このとき積に関するノルムの条件から$\Vert A^{n} \Vert^{\frac{1}{n}}\le\Vert A^{m} \Vert^{\frac{j}{n}}\Vert A^{k} \Vert^{\frac{1}{n}}$が成り立つ。そこで$n\rightarrow\infty$をすると$\frac{j}{n}\rightarrow\frac{1}{m}, \frac{1}{n}\rightarrow 0$より$\limsup\Vert A^{n} \Vert^{\frac{1}{n}}\le\Vert A^{m} \Vert^{\frac{1}{m}}$が従う。これが任意の$m$に対して成立するから$\limsup\Vert A^{n} \Vert^{\frac{1}{n}}\le\inf\Vert A^{m} \Vert^{\frac{1}{m}}$を得る。つまり$\lim\Vert A^{n} \Vert^{\frac{1}{n}}$が存在して$\lim\Vert A^{n} \Vert^{\frac{1}{n}}=\inf\Vert A^{n} \Vert^{\frac{1}{n}}$が分かる。
 \\
+<!--
 　$\lambda\in\sigma(A)$とすると補題より$\lambda^{n}\in\sigma(A^{n})$であるから$|\lambda|^{n}=|\lambda^{n}|\le||A^{n}||$を得る。
 任意の$n$に対して言えるので$|\lambda|\le\inf ||A^{n}||^{\frac{1}{n}}$が従い、$sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace\le\inf ||A^{n}||^{\frac{1}{n}}$を得る。
 \\
