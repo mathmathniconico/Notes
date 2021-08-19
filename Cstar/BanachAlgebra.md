@@ -108,24 +108,16 @@ $$
 が成り立つ。
 
 （証明）自然数$m$を固定し、$n$に対して$0\le k\lt m$を用いて$n=mj+k$と表す。このとき積に関するノルムの条件から$\Vert A^{n} \Vert^{\frac{1}{n}}\le\Vert A^{m} \Vert^{\frac{j}{n}}\Vert A^{k} \Vert^{\frac{1}{n}}$が成り立つ。そこで$n\rightarrow\infty$をすると$\frac{j}{n}\rightarrow\frac{1}{m}, \frac{1}{n}\rightarrow 0$より$\limsup\Vert A^{n} \Vert^{\frac{1}{n}}\le\Vert A^{m} \Vert^{\frac{1}{m}}$が従う。これが任意の$m$に対して成立するから$\limsup\Vert A^{n} \Vert^{\frac{1}{n}}\le\inf\Vert A^{m} \Vert^{\frac{1}{m}}$を得る。つまり$\lim\Vert A^{n} \Vert^{\frac{1}{n}}$が存在して$\lim\Vert A^{n} \Vert^{\frac{1}{n}}=\inf\Vert A^{n} \Vert^{\frac{1}{n}}$が分かる。
-\\
-<!--
-　$\lambda\in\sigma(A)$とすると補題より$\lambda^{n}\in\sigma(A^{n})$であるから$|\lambda|^{n}=|\lambda^{n}|\le||A^{n}||$を得る。
-任意の$n$に対して言えるので$|\lambda|\le\inf ||A^{n}||^{\frac{1}{n}}$が従い、$sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace\le\inf ||A^{n}||^{\frac{1}{n}}$を得る。
-\\
-　逆は関数論の議論が必要となる。背理法により示す。今$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace<\inf ||A^{n}||^{\frac{1}{n}}$を仮定すると、実数の連続性から間に実数$a$が存在する。
-この$a$に対して$E= \lbrace \frac{1}{a^{n}}A^{n}  \rbrace$とおく。今$|\lambda|>\inf||A^{n}||^{\frac{1}{n}}=\lim ||A^{n}||^{\frac{1}{n}}$とすると、
-$\lim ||\left(\frac{1}{\lambda}A\right)^{n}||^{\frac{1}{n}}=\frac{1}{|\lambda|}\lim ||A^{n}||^{\frac{1}{n}}<1$より、
-\textup{Cauchy}の判定法から$\sum_{k=0}^{\infty}||\left(\frac{1}{\lambda}A\right)^{k}||<+\infty$は絶対収束する。
-故に$\sum_{k=0}^{\infty}\frac{1}{\lambda^{k}}A^{k}$はノルム収束し、展開式から$-\lambda A(\lambda)$に一致する。
-$A(\lambda)$は$\rho(A)$上解析的なので、この収束半径は$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace$まで拡張できる。
-\footnote{原点周りの円環領域$\sup \lbrace |\lambda| : \lambda\in\sigma(A)  \rbrace<r<\infty$におけるLaurent展開とみてもいいし、無限遠周りのTaylor展開と見ても良い。いずれにせよ一価正則性から解析接続が可能。}
-故に$\lambda=a$を展開式に代入ができて$A(a)=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}A^{k}$が成り立つ。
-ここで任意の有界線型汎関数$\varphi\in\mathcal{B}^{*}$に対し$\varphi(A(a))=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}\varphi(A^{k})$が線型性と連続性から従うので
-$\sup |\varphi\left(\frac{1}{a^{k}}A^{k}\right)| <\infty$となる。先に述べた事実から$\sup ||\frac{1}{a^{k}}A^{k}||<\infty$であるからこれを$\alpha$と置くと、
-$\inf ||A^{n}||^{\frac{1}{n}}\le\lim\alpha^{\frac{1}{n}}\cdot a=a<\inf ||A^{n}||^{\frac{1}{n}}$となり、これは矛盾する。
-\end{Proof}
 
+$\lambda\in\sigma(A)$とすると補題より$\lambda^{n}\in\sigma(A^{n})$であるから$\vert \lambda \vert^{n}=\vert \lambda^{n} \vert\le\Vert A^{n} \Vert$を得る。任意の$n$に対して言えるので$\vert \lambda \vert\le\inf\Vert A^{n} \Vert^{\frac{1}{n}}$が従い、$sup\lbrace \vert \lambda \vert : \lambda\in\sigma(A) \rbrace\le\inf\Vert A^{n} \Vert^{\frac{1}{n}}$を得る。
+
+逆は関数論の議論が必要となる。背理法により示す。今$\sup\lbrace \vert \lambda \vert : \lambda\in\sigma(A)  \rbrace\lt\inf\Vert A^{n} \Vert^{\frac{1}{n}}$を仮定すると、実数の連続性から間に実数$a$が存在する。この$a$に対して$E= \lbrace \frac{1}{a^{n}}A^{n} \rbrace$とおく。今$\vert \lambda \vert\gt\inf\Vert A^{n} \Vert^{\frac{1}{n}}=\lim\Vert A^{n} \Vert^{\frac{1}{n}}$とすると、$\lim\Vert \left(\frac{1}{\lambda}A\right)^{n} \Vert^{\frac{1}{n}}=\frac{1}{|\lambda|}\lim\Vert A^{n} \Vert^{\frac{1}{n}}<1$より、Cauchyの判定法から$\sum_{k=0}^{\infty}\Vert \left(\frac{1}{\lambda}A\right)^{k} \Vert\lt +\infty$は絶対収束する。故に$\sum_{k=0}^{\infty}\frac{1}{\lambda^{k}}A^{k}$はノルム収束し、展開式から$-\lambda A(\lambda)$に一致する。$A(\lambda)$は$\rho(A)$上解析的なので、この収束半径は$\sup \lbrace \vert \lambda \vert : \lambda\in\sigma(A) \rbrace$まで拡張できる。
+
+> 原点周りの円環領域$\sup\lbrace \vert \lambda \vert : \lambda\in\sigma(A) \rbrace\lt r \lt\infty$におけるLaurent展開とみてもいいし、無限遠周りのTaylor展開と見ても良い。いずれにせよ一価正則性から解析接続が可能。
+
+故に$\lambda=a$を展開式に代入ができて$A(a)=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}A^{k}$が成り立つ。ここで任意の有界線型汎関数$\varphi\in\mathcal{B}^{\ast}$に対し$\varphi(A(a))=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}\varphi(A^{k})$が線型性と連続性から従うので$\sup\vert \varphi\left(\frac{1}{a^{k}}A^{k}\right) \vert\lt\infty$となる。先に述べた事実から$\sup\Vert \frac{1}{a^{k}}A^{k} \Vert\lt\infty$であるからこれを$\alpha$と置くと、$\inf\Vert A^{n} \Vert^{\frac{1}{n}}\le\lim\alpha^{\frac{1}{n}}\cdot a=a\lt\inf\Vert A^{n} \Vert^{\frac{1}{n}}$となり、これは矛盾する。$\square$
+
+<!--
 \begin{Def}
 　この値を$r(A)$と書き、$A$のスペクトル半径\textup{:spectral radius}と呼ぶ。
 \end{Def}
