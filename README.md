@@ -33,6 +33,8 @@
 - [モノ射とエピ射](/Category/MonoEpi.md)
 - アーベル圏
 
+メモ的な文章
+
 - [一般的な元](/Category/GeneralizedElement.md)
 
 # 代数学
