@@ -117,15 +117,11 @@ $\lambda\in\sigma(A)$とすると補題より$\lambda^{n}\in\sigma(A^{n})$であ
 
 故に$\lambda=a$を展開式に代入ができて$A(a)=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}A^{k}$が成り立つ。ここで任意の有界線型汎関数$\varphi\in\mathcal{B}^{\ast}$に対し$\varphi(A(a))=-\frac{1}{a}\sum_{k=0}^{\infty}\frac{1}{a^{k}}\varphi(A^{k})$が線型性と連続性から従うので$\sup\vert \varphi\left(\frac{1}{a^{k}}A^{k}\right) \vert\lt\infty$となる。先に述べた事実から$\sup\Vert \frac{1}{a^{k}}A^{k} \Vert\lt\infty$であるからこれを$\alpha$と置くと、$\inf\Vert A^{n} \Vert^{\frac{1}{n}}\le\lim\alpha^{\frac{1}{n}}\cdot a=a\lt\inf\Vert A^{n} \Vert^{\frac{1}{n}}$となり、これは矛盾する。$\square$
 
+__定義__ この値を$r(A)$と書き、$A$のスペクトル半径（spectral radius）と呼ぶ。
+
+> 最後に述べた定理は一見単純に見えるが、関数論などを用いた極めて精密な議論により得られた結果である。ここから$r(A)\le\Vert A \Vert$はすぐに従うが、その逆は一般に成り立たない。
+
 <!--
-\begin{Def}
-　この値を$r(A)$と書き、$A$のスペクトル半径\textup{:spectral radius}と呼ぶ。
-\end{Def}
-
-　最後に述べた定理は一見単純に見えるが、関数論などを用いた極めて精密な議論により得られた結果である。
-ここから$r(A)\le ||A||$はすぐに従うが、その逆は一般に成り立たない。
-
-
 \subsection*{例}\addcontentsline{toc}{subsection}{例}
 　まずは単位的可換\textup{Banach}代数の例を挙げよう。
 \begin{enumerate}
