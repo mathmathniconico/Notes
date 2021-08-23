@@ -49,7 +49,7 @@ Leinsterは応用として、Internalな証明（図式を用いる）を、集�
 
 直積対象は$a\in_{S}A, b\in_{S}B$について$(a, b)\in_{S}A\prod B$が定まることと同義で、集合の積に対応する。
 
-またモノ射$f\colon X\rightarrow Y$は$a\in_{S}X, b\in_{S}Y$について$fa=fb$なら$a=b$が成り立つことなので、単射に対応する。
+またモノ射$f\colon X\rightarrow Y$は$a\in_{S}X, b\in_{S}X$について$fa=fb$なら$a=b$が成り立つことなので、単射に対応する。
 
 ----
 
