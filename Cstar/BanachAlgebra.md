@@ -121,21 +121,18 @@ __定義__ この値を$r(A)$と書き、$A$のスペクトル半径（spectral 
 
 > 最後に述べた定理は一見単純に見えるが、関数論などを用いた極めて精密な議論により得られた結果である。ここから$r(A)\le\Vert A \Vert$はすぐに従うが、その逆は一般に成り立たない。
 
+## 例
+
+まずは単位的可換Banach代数の例を挙げる。
+
+- $0, \mathbb{C}$は単位的可換Banach代数である。特に$\mathbb{C}$は規格化されている。
+- $n\le 2$に対し$\mathbb{C}^{n}$にノルムとして$\max$ノルムを取り、積を成分毎の積として定めれば、規格化された単位的可換Banach代数となる。このとき単位元は$(1, \dotsc, 1)$である。
+- コンパクトハウスドルフ空間$X$上の連続写像全体$C(X)$は$\sup$ノルム（$\max$ノルム）及び、各点における積により単位的可換Banach代数になる。$X\neq\emptyset$であれば規格化されている。
+- 局所コンパクトハウスドルフ空間$X$上の有界連続写像全体$C_{b}(X)$は$\sup$ノルム及び、各点における積により可換Banach代数になる。$X\neq\emptyset$であれば規格化されている。
+
+> $X$がコンパクトハウスドルフ空間であれば$C(X)=C_{b}(X)$である。また$0=C(\emptyset), \mathbb{C}=C( \lbrace \ast \rbrace ), \mathbb{C}^{n}=C( \lbrace \ast_{1}, \dotsc, \ast_{n}  \rbrace)$である。
+
 <!--
-\subsection*{例}\addcontentsline{toc}{subsection}{例}
-　まずは単位的可換\textup{Banach}代数の例を挙げよう。
-\begin{enumerate}
-\item $0, \mathbb{C}$は単位的可換\textup{Banach}代数である。特に$\mathbb{C}$は規格化されている。
-\item $n\le 2$に対し$\mathbb{C}^{n}$にノルムとして$\max$ノルムを取り、積を成分毎の積として定めれば、規格化された単位的可換\textup{Banach}代数となる。このとき単位元は$(1, \dotsc, 1)$である。
-\item コンパクトハウスドルフ空間$X$上の連続写像全体$C(X)$は$\sup$ノルム（$\max$ノルム）及び、各点における積により単位的可換\textup{Banach}代数になる。$X\neq\emptyset$であれば規格化されている。
-\item 局所コンパクトハウスドルフ空間$X$上の有界連続写像全体$C_{b}(X)$は$\sup$ノルム及び、各点における積により可換\textup{Banach}代数になる。$X\neq\emptyset$であれば規格化されている。
-\end{enumerate}
-
-\begin{Rem}
-$0=C(\emptyset), \mathbb{C}=C( \lbrace *  \rbrace), \mathbb{C}^{n}=C( \lbrace *_{1}, \dotsc, *_{n}  \rbrace)$である。
-$X$がコンパクトハウスドルフ空間であれば$C(X)=C_{b}(X)$である。
-\end{Rem}
-
 　次に非単位的な可換\textup{Banach}代数の例を挙げる。
 局所コンパクトハウスドルフ空間$X$上の
 
