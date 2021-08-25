@@ -132,26 +132,6 @@ __定義__ この値を$r(A)$と書き、$A$のスペクトル半径（spectral 
 
 > $X$がコンパクトハウスドルフ空間であれば$C(X)=C_{b}(X)$である。また$0=C(\emptyset), \mathbb{C}=C( \lbrace \ast \rbrace ), \mathbb{C}^{n}=C( \lbrace \ast_{1}, \dotsc, \ast_{n}  \rbrace)$である。
 
-<!--
-　次に非単位的な可換\textup{Banach}代数の例を挙げる。
-局所コンパクトハウスドルフ空間$X$上の
+- $\mathcal{B}$をBanach空間とする。$\mathcal{B}$上の有界線型作用素全体$\mathbb{B}(\mathcal{B})$は規格化された単位的Banach代数であるが、非可換となる。ただし積は合成、ノルムは作用素ノルムとして与えられ、このとき単位元は$\textup{id}_{\mathcal{B}}$である。
 
-\begin{enumerate}
-\item $\mathcal{B}$を\textup{Banach}空間とし、その上の有界線型作用素全体$\mathbb{B}(\mathcal{B})$は規格化された単位的\textup{Banach}代数であるが、非可換となる。
-ただし積は合成、ノルムは作用素ノルムとして与えられ、このとき単位元は$\textup{id}_{\mathcal{B}}$である。
-\end{enumerate}
-
-\begin{Rem}
-　$n\le 2$に対し$\mathbb{C}^{n\times n}$には$\max$ノルムとは別の\textup{Banach}代数の構造が入る。
-つまり$n\times n$行列は$\mathbb{C}^{n}$上の有界線型作用素とみなせるから、$\mathbb{B}(\mathbb{C}^{n})$の意味で規格化された単位的\textup{Banach}代数の構造が入る。
-これを行列代数\textup{:matrix algebra}と言い、$\mathbb{M}_{n}(\mathbb{C})$で表す。
-\end{Rem}
-
-%\\
-%　$L^{1}(\mathbb{R})$を\textup{Lebesgue}可測な$\mathbb{R}$上の実数値関数
-%$f$で$||f||_{L^{1}(\mathbb{R})}:=\int_{\mathbb{R}} |f|\textup{d}\mu <\infty$
-%を満たすもの全体とすると非単位的な\textup{Banach}代数となる。このときノルムは$L^{1}$ノルム、積は合成積
-%\[ f*g(x)=\int_{\mathbb{R}} f(y)g(x-y) \textup{d}\mu \]
-%として与えられる。
-
--->
+__注意__ $n\le 2$に対し$\mathbb{C}^{n\times n}$には$\max$ノルムとは別のBanach代数の構造が入る。つまり$n\times n$行列は$\mathbb{C}^{n}$上の有界線型作用素とみなせるから、$\mathbb{B}(\mathbb{C}^{n})$の意味で規格化された単位的Banach代数の構造が入る。これを行列代数（matrix algebra）と言い、$\mathbb{M}_{n}(\mathbb{C})$で表す。
