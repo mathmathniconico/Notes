@@ -192,6 +192,8 @@ $C^{\ast}$代数（普通$C^{\ast}$代数と書かれるが、markdownと相性�
 
 - [arXiv探訪](https://arxiv.hatenablog.com) ブログ
 - [マストドン](https://mathtod.online/@mathmathniconico) 数式が書けるツイッターみたいなSNS
+- [Mathlog](https://mathlog.info/users/432/articles) 数学の記事が書けるサービス
+- [リンク（個人用）](/Links.md)
 
 ### エッセイ
 
