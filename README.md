@@ -148,6 +148,7 @@
 $C^{\ast}$代数（普通$C^{\ast}$代数と書かれるが、markdownと相性が悪そうなのでCstarと表記する）
 
 - [バナッハ代数](/Cstar/BanachAlgebra.md)
+- [Cstar代数と準同型](/Cstar/Cstar.md)
 
 
 # 距離空間
