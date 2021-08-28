@@ -1,21 +1,23 @@
 
 # Cstar代数と準同型
 
+__定義__ 代数$\mathcal{A}$が
+
+$$
+(A^{\ast})^{\ast}=A, (AB)^{\ast}=B^{\ast}A^{\ast}, (\lambda A+\mu B)^{\ast}=\overline{\lambda}A^{\ast}+\overline{\mu}B^{\ast}
+$$
+
+をみたす写像$\ast:\mathcal{A}\ni A\mapsto A^{\ast}\in\mathcal{A}$を持つとき$\ast$代数であるという。この写像$\ST$を対合（involution）と呼び、$\ast$代数を対合代数（involutive algebra）と呼ぶこともある。
+
+特にノルム代数が$\ast$代数であり、対合に関するノルムの条件$\Vert A^{\ast} \Vert=\Vert A \Vert$を満たすときノルム$\ast$代数と呼ぶ。またBanach代数がノルム$\ast$代数であるときBanach$\ast$代数という。更にBanach$\ast$代数が$C^{\ast}$条件
+
+$$
+\Vert A^{\ast}A \Vert=\Vert A \Vert^{2}
+$$
+
+を満たすとき、$C^{\ast}$代数と呼ぶ。
 
 <!--
-\begin{Def}
-　代数$\mathcal{A}$が
-\[ (A^{*})^{*}=A, (AB)^{*}=B^{*}A^{*}, (\lambda A+\mu B)^{*}=\overline{\lambda}A^{*}+\overline{\mu}B^{*} \]
-をみたす写像$*:\mathcal{A}\ni A\mapsto A^{*}\in\mathcal{A}$を持つとき\textup{*}代数であるという。
-この写像$*$を対合\textup{:involution}と呼び、\textup{*}代数を対合代数\textup{:involutive algebra}と呼ぶこともある。
-特にノルム代数が\textup{*}代数であり、対合に関するノルムの条件
-\[ ||A^{*}||=||A|| \]
-を満たすときノルム\textup{*}代数と呼ぶ。また\textup{Banach}代数がノルム\textup{*}代数であるとき\textup{Banach*}代数という。
-更に\textup{Banach*}代数が\textup{C*}条件
-\[ ||A^{*}A||=||A||^{2} \]
-を満たすとき、\textup{C*}代数と呼ぶ。
-\end{Def}
-
 \begin{Ex}
 　$\mathbb{C}$は通常の積と絶対値、共役により\textup{C*}代数となる。
 \\
