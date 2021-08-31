@@ -30,10 +30,21 @@
 - [Mathlog](https://mathlog.info/)
 - [MathWills](https://www.mathwills.com)
 - [Mathpedia](https://math.jp/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8)
+- [MathOverflow](https://mathoverflow.net)
+- [Mathematics Stack Exchange](https://math.stackexchange.com)
 
-数学辞典
+プロジェクト
+- [nLab](https://ncatlab.org/nlab/show/HomePage)（最近すごく重い）
+- [The Stacks project](https://stacks.math.columbia.edu)
+- [NIST Digital Library of Mathematical Functions](https://dlmf.nist.gov)
+- [The Napkin project](https://web.evanchen.cc/napkin.html)（大学数学の網羅を目指している）
 - [Algebraic Topology: A guide to literature](http://pantodon.jp/index.rb?body=index)（代トポの文献案内）
 - [特殊函数グラフィックスライブラリー](http://math-functions-1.watson.jp/index.html)
+- [数理・データサイエンス教育強化拠点コンソーシアム](http://www.mi.u-tokyo.ac.jp/consortium/e-learning.html)
+- [上智大学数学講究録](https://dept.sophia.ac.jp/g/st/math/lecnotes.html)（はやく全部公開して）
+- [Algebraic Geometry](http://hartshorne-ag-solutions.wikidot.com)（Hartshorneの解答集）
+- [「yam＠広島大」物理化学Monographシリーズ](https://home.hiroshima-u.ac.jp/kyam/pages/results/monograph/)
+- [科学図書館](http://www.cam.hi-ho.ne.jp/munehiro/science/scilib.html)
 
 論文誌
 - [Theory and Applications of Categories](http://www.tac.mta.ca/tac/index.html)
@@ -64,6 +75,8 @@
 - [でぃぐのページ](https://fujidig.github.io)（基礎論）
 - [松谷茂樹](http://smatsutani.jp/index.html)
 - [箱@o-ccah](https://o-ccah.github.io)
+- [松尾信一郎の雑記帳](https://www.math.nagoya-u.ac.jp/~shinichiroh/notebook.html)
+- [村上順](https://www.f.waseda.jp/murakami/jun-home-j.html)：[量子群入門](https://www.f.waseda.jp/murakami/quantumgroup/quantumgroup_lecture_top.html)
 
 その他
 
