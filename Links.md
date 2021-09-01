@@ -45,9 +45,17 @@
 - [Algebraic Geometry](http://hartshorne-ag-solutions.wikidot.com)（Hartshorneの解答集）
 - [「yam＠広島大」物理化学Monographシリーズ](https://home.hiroshima-u.ac.jp/kyam/pages/results/monograph/)
 - [科学図書館](http://www.cam.hi-ho.ne.jp/munehiro/science/scilib.html)
+- [Project Euclid](https://projecteuclid.org)
+- [Internet Archive](https://archive.org)：[subject "Mathematics"](https://archive.org/search.php?query=subject%3A%22Mathematics%22)
 
-論文誌
+機関・論文誌
+- [American Mathematical Society](https://www.ams.org/home/page)：[Open Math Notes](https://www.ams.org/open-math-notes)
+- [Annals of Mathematics](https://annals.math.princeton.edu)
+- [arXiv.org](http://arxiv.org)（プレプリントサーバ）
+- [Front for the arXiv](http://front.math.ucdavis.edu)（検索しやすいarXivのフロントだったが現在ダウンしている）
 - [Theory and Applications of Categories](http://www.tac.mta.ca/tac/index.html)
+- [数学 - 日本数学会](https://www.jstage.jst.go.jp/browse/sugaku/-char/ja/)（J-stage）
+- [JSTOR](https://www.jstor.org)
 
 英文サイト
 - The n-Category Café：[Archives](https://golem.ph.utexas.edu/category/archives.html)
