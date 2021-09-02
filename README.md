@@ -33,9 +33,10 @@
 - [モノ射とエピ射](/Category/MonoEpi.md)
 - アーベル圏
 
-メモ的な文章
+その他文章
 
 - [一般的な元](/Category/GeneralizedElement.md)
+- [圏論に元を取り戻そう](/Category/BackToTheElements.md)（[Mathlog](https://mathlog.info/articles/2557)に投稿したもの）
 
 # 代数学
 
@@ -165,7 +166,6 @@ $C^{\ast}$代数（普通$C^{\ast}$代数と書かれるが、markdownと相性�
 - [ワイエルシュトラスのペー函数](/Misc/WeierstrassP.md)
 - [距離空間とリプシッツ写像](/Misc/LipschitzMap.md)
 - [整数の分割](/Misc/Partition.md)
-- [圏論に元を取り戻そう](/Misc/BackToTheElements.md)
 
 
 # 多様体のノート
