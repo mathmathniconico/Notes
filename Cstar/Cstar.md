@@ -7,7 +7,7 @@ $$
 (A^{\ast})^{\ast}=A, (AB)^{\ast}=B^{\ast}A^{\ast}, (\lambda A+\mu B)^{\ast}=\overline{\lambda}A^{\ast}+\overline{\mu}B^{\ast}
 $$
 
-をみたす写像$\ast:\mathcal{A}\ni A\mapsto A^{\ast}\in\mathcal{A}$を持つとき$\ast$代数であるという。この写像$\ST$を対合（involution）と呼び、$\ast$代数を対合代数（involutive algebra）と呼ぶこともある。
+をみたす写像$\ast\colon\mathcal{A}\ni A\mapsto A^{\ast}\in\mathcal{A}$を持つとき$\ast$代数であるという。この写像$\ast$を対合（involution）と呼び、$\ast$代数を対合代数（involutive algebra）と呼ぶこともある。
 
 特にノルム代数が$\ast$代数であり、対合に関するノルムの条件$\Vert A^{\ast} \Vert=\Vert A \Vert$を満たすときノルム$\ast$代数と呼ぶ。またBanach代数がノルム$\ast$代数であるときBanach$\ast$代数という。更にBanach$\ast$代数が$C^{\ast}$条件
 
@@ -21,24 +21,17 @@ __例__
 - $\mathbb{C}$は通常の積と絶対値、共役により$C^{\ast}$代数となる。
 - ヒルベルト空間$\mathcal{H}$上の有界線型作用素$\mathbb{B}(\mathcal{H})$は合成と作用素ノルム、随伴により$C^{\ast}$代数となる。
 
+次に対合から定義される幾つかの有用なクラスを定める。これらのクラスは基本的なものであり、他にも様々な種類が考えられている。
+
+__定義__ $\mathcal{A}$は$\ast$代数、$A\in\mathcal{A}$とする。
+
+- $A^{\ast}=A$を満たすとき$A$は自己共役（self-adjoint）という。$A^{\ast}A=AA^{\ast}$を満たすとき$A$は正規（normal）という。
+- 更に$\mathcal{A}$が単位的であれば、$A\in\mathcal{A}$が$A^{\ast}A=AA^{\ast}=I$を満たすとき$A$はユニタリー（unitary）という。
+- $\Re A=\frac{A+A^{\ast}}{2}$を$A$の実部、$\Im A=\frac{A-A^{\ast}}{2i}$を$A$の虚部という。
+
+> ヒルベルト空間上の線型作用素に対して$A^{\ast}A=I$であるとき等距離作用素、$AA^{\ast}=I$のとき余等距離作用素などと呼ぶこともある。従ってユニタリー条件の二つの等式は必ずしも両立する概念ではない。
+
 <!--
-　C*代数の公理系は長い年月をかけて整理されたという歴史的な経緯があるらしい。
-\\
-　次に対合から定義される幾つかの有用なクラスを定める。これらのクラスは基本的なものであり、他にも様々な種類が考えられている。
-\footnote{例えばクェーサイ正規\textup{:quasi-normal}やハイポ正規\textup{:hypo-normal}などが\cite{Hiai_Yanaghi}で扱われている。}
-
-\begin{Def}
-　$\mathcal{A}$は\textup{*}代数、$A\in\mathcal{A}$とする。
-$A^{*}=A$を満たすとき$A$は自己共役\textup{:self-adjoint}という。
-$A^{*}A=AA^{*}$を満たすとき$A$は正規\textup{:normal}という。
-\\
-　更に$\mathcal{A}$が単位的であれば、$A\in\mathcal{A}$が$A^{*}A=AA^{*}=I$を満たすとき$A$はユニタリー\textup{:unitary}という。
-\footnote{ヒルベルト空間上の線型作用素に対して$A^{*}A=I$であるとき等距離作用素、$AA^{*}=I$のとき余等距離作用素などと呼ぶこともある。
-従ってユニタリー条件の二つの等式は必ずしも両立する概念ではない。}
-\\
-$\Re A=\frac{A+A^{*}}{2}$を$A$の実部\textup{:real part}、$\Im A=\frac{A-A^{*}}{2i}$を$A$の虚部\textup{:imaginary part}という。
-\end{Def}
-
 \begin{Rem}
 　単位的\textup{*}代数において$I^{*}=I^{*}I=(I^{*}I)^{*}=(I^{*})^{*}=I$より$I^{*}=I$が成り立つ。
 また$A$が可逆であれば$A^{*}(A^{-1})^{*}=(A^{-1}A)^{*}=I^{*}=I$より$(A^{-1})^{*}=(A^{*})^{-1}$が分かる。
