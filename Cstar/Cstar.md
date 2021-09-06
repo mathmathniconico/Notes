@@ -27,21 +27,15 @@ __定義__ $\mathcal{A}$は$\ast$代数、$A\in\mathcal{A}$とする。
 
 - $A^{\ast}=A$を満たすとき$A$は自己共役（self-adjoint）という。$A^{\ast}A=AA^{\ast}$を満たすとき$A$は正規（normal）という。
 - 更に$\mathcal{A}$が単位的であれば、$A\in\mathcal{A}$が$A^{\ast}A=AA^{\ast}=I$を満たすとき$A$はユニタリー（unitary）という。
-- $\Re A=\frac{A+A^{\ast}}{2}$を$A$の実部、$\Im A=\frac{A-A^{\ast}}{2i}$を$A$の虚部という。
+- $\Re A=\frac{A+A^{\ast}}{2}$を$A$の実部、$\Im A=\frac{A-A^{\ast}}{2i}$を$A$の虚部という。実部と虚部は自己共役であり$A=\Re A+i\Im A$を満たす。
 
 > ヒルベルト空間上の線型作用素に対して$A^{\ast}A=I$であるとき等距離作用素、$AA^{\ast}=I$のとき余等距離作用素などと呼ぶこともある。従ってユニタリー条件の二つの等式は必ずしも両立する概念ではない。
 
+単位的$\ast$代数において$I^{\ast}=I^{\ast}I=(I^{\ast}I)^{\ast}=(I^{\ast})^{\ast}=I$より$I^{\ast}=I$が成り立つ。また$A$が可逆であれば$A^{\ast}(A^{-1})^{\ast}=(A^{-1}A)^{\ast}=I^{\ast}=I$より$(A^{-1})^{\ast}=(A^{\ast})^{-1}$が分かる。このことから一般の元$A$に対して$\sigma(A^{\ast})=\overline{\sigma(A)}=\lbrace \overline{\lambda}\mid\lambda\in\sigma(A) \rbrace$が示される。
+
+次の命題より、単位的$C^{\ast}$代数における正規元のスペクトル半径はノルムによってのみ決定され、所属する部分代数に依らないことが分かる。
+
 <!--
-\begin{Rem}
-　単位的\textup{*}代数において$I^{*}=I^{*}I=(I^{*}I)^{*}=(I^{*})^{*}=I$より$I^{*}=I$が成り立つ。
-また$A$が可逆であれば$A^{*}(A^{-1})^{*}=(A^{-1}A)^{*}=I^{*}=I$より$(A^{-1})^{*}=(A^{*})^{-1}$が分かる。
-このことから一般の元$A$に対して$\sigma(A^{*})=\overline{\sigma(A)}=\{\overline{\lambda}\mid\lambda\in\sigma(A)\}$が示される。
-\\
-　\textup{*}代数の任意の元$A$に対し、その実部と虚部は自己共役であり$A=\Re A+i\Im A$を満たす。
-\end{Rem}
-
-　次の命題より、単位的\textup{C*}代数における正規元のスペクトル半径はノルムによってのみ決定され、所属する部分代数に依らないことが分かる。
-
 \begin{Prop}
 　$0$でない単位的\textup{C*}代数$\mathcal{C}$に対して次が成り立つ。
 \begin{enumerate}
