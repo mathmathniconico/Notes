@@ -20,7 +20,7 @@
 # 圏論
 
 - [圏論について](/Category/AboutMyCat.md)
-- 自然数と倍数
+- [さあ、始めよう](/Category/GettingStarted.md)
 - [圏](/Category/Category.md)
 - [例示：圏](/Category/Category_Ex.md)
 - [普遍性](/Category/Universality.md)
