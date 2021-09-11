@@ -35,24 +35,16 @@ __定義__ $\mathcal{A}$は$\ast$代数、$A\in\mathcal{A}$とする。
 
 次の命題より、単位的$C^{\ast}$代数における正規元のスペクトル半径はノルムによってのみ決定され、所属する部分代数に依らないことが分かる。
 
+__命題__ $0$でない単位的$C^{\ast}$代数$\mathcal{C}$に対して次が成り立つ。
+
+- $\Vert I \Vert=1$である。つまり$0$でない$C^{\ast}$代数は常に規格化されている。
+- $A\in\mathcal{C}$が正規なら$r(A)=\Vert A \Vert$が成り立つ。
+
+（証明）$\Vert I \Vert^{2}=\Vert I^{\ast}I \Vert=\Vert I \Vert$であるが、$I\neq 0$より$\Vert I \Vert\neq\Vert 0 \Vert=0$つまり$\Vert I \Vert=1$を得る。
+
+$C^{\ast}$条件および正規性より$\Vert A^{2^{n}} \Vert^{2}=\Vert (A^{2^{n}})^{\ast}(A^{2^{n}}) \Vert=\Vert (A^{\ast})^{2^{n}}A^{2^{n}} \Vert=\Vert (A^{\ast}A)^{2^{n}} \Vert$が成り立つ。ここで一般に$(A^{\ast}A)^{\ast}=A^{\ast}A$であるから再び$C^{\ast}$条件より$\Vert (A^{\ast}A)^{2^{n}} \Vert=\Vert (A^{\ast}A)^{2^{n-1}} \Vert^{2}=\dotsb=\Vert A^{\ast}A \Vert^{2^{n}}=\Vert A \Vert^{2^{n+1}}$である。故に$\Vert A^{2^{n}} \Vert^{\frac{1}{2^{n}}}=\Vert A \Vert$が成り立つので、$r(A)=\inf \Vert A^{2^{n}} \Vert^{\frac{1}{2^{n}}}=\Vert A \Vert$が従う。$\square$
+
 <!--
-\begin{Prop}
-　$0$でない単位的\textup{C*}代数$\mathcal{C}$に対して次が成り立つ。
-\begin{enumerate}
-\item $||I||=1$である。つまり$0$でない\textup{C*}代数は常に規格化されている。
-\item $A\in\mathcal{C}$が正規なら$r(A)=||A||$が成り立つ。
-\end{enumerate}
-\end{Prop}
-\begin{Proof}
-　(1) $||I||^{2}=||I^{*}I||=||I||$であるが、$I\neq 0$より$||I||\neq ||0||=0$つまり$||I||=1$を得る。
-\\
-　(2) \textup{C*}条件および正規性より$||A^{2^{n}}||^{2}=||(A^{2^{n}})^{*}(A^{2^{n}})||=||(A^{*})^{2^{n}}A^{2^{n}}||=||(A^{*}A)^{2^{n}}||$が成り立つ。
-ここで一般に$(A^{*}A)^{*}=A^{*}A$であるから再び\textup{C*}条件より$||(A^{*}A)^{2^{n}}||=||(A^{*}A)^{2^{n-1}}||^{2}=\dotsb=||A^{*}A||^{2^{n}}=||A||^{2^{n+1}}$である。
-故に$||A^{2^{n}}||^{\frac{1}{2^{n}}}=||A||$が成り立つので、$r(A)=\inf ||A^{2^{n}}||^{\frac{1}{2^{n}}}=||A||$が従う。
-\end{Proof}
-
-　更にスペクトル集合に関しては、次のことが分かる。
-
 \begin{Prop}
 　単位的\textup{C*}代数$\mathcal{C}$の元に対して次が成立する。
 \begin{enumerate}
