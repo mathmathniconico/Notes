@@ -44,14 +44,12 @@ __命題__ $0$でない単位的$C^{\ast}$代数$\mathcal{C}$に対して次が�
 
 $C^{\ast}$条件および正規性より$\Vert A^{2^{n}} \Vert^{2}=\Vert (A^{2^{n}})^{\ast}(A^{2^{n}}) \Vert=\Vert (A^{\ast})^{2^{n}}A^{2^{n}} \Vert=\Vert (A^{\ast}A)^{2^{n}} \Vert$が成り立つ。ここで一般に$(A^{\ast}A)^{\ast}=A^{\ast}A$であるから再び$C^{\ast}$条件より$\Vert (A^{\ast}A)^{2^{n}} \Vert=\Vert (A^{\ast}A)^{2^{n-1}} \Vert^{2}=\dotsb=\Vert A^{\ast}A \Vert^{2^{n}}=\Vert A \Vert^{2^{n+1}}$である。故に$\Vert A^{2^{n}} \Vert^{\frac{1}{2^{n}}}=\Vert A \Vert$が成り立つので、$r(A)=\inf \Vert A^{2^{n}} \Vert^{\frac{1}{2^{n}}}=\Vert A \Vert$が従う。$\square$
 
+__命題__ 単位的$C^{\ast}$代数$\mathcal{C}$の元に対して次が成立する。
+
+- $U\in\mathcal{C}$がユニタリーであれば$\sigma(U)\subset\lbrace \lambda\in\mathbb{C} : \vert \lambda \vert=1 \rbrace$が成立する。つまり単位円周上に含まれる。
+- $A\in\mathcal{C}$が自己共役であれば$\sigma(A)\subset\lbrack -\Vert A \Vert, \Vert A \Vert \rbrack$が成り立つ。特に実数である。
+
 <!--
-\begin{Prop}
-　単位的\textup{C*}代数$\mathcal{C}$の元に対して次が成立する。
-\begin{enumerate}
-\item $U\in\mathcal{C}$がユニタリーであれば$\sigma(U)\subset\{\lambda\in\mathbb{C}\mid |\lambda|=1\}$が成立する。つまり単位円周上に含まれる。
-\item $A\in\mathcal{C}$が自己共役であれば$\sigma(A)\subset [-||A||, ||A||]$が成り立つ。特に実数である。
-\end{enumerate}
-\end{Prop}
 \begin{Proof}
 　$\mathcal{C}=0$のときは$\sigma(0)=\emptyset$より明らか。
 \\
