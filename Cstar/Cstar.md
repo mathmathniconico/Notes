@@ -49,13 +49,11 @@ __命題__ 単位的$C^{\ast}$代数$\mathcal{C}$の元に対して次が成立�
 - $U\in\mathcal{C}$がユニタリーであれば$\sigma(U)\subset\lbrace \lambda\in\mathbb{C} : \vert \lambda \vert=1 \rbrace$が成立する。つまり単位円周上に含まれる。
 - $A\in\mathcal{C}$が自己共役であれば$\sigma(A)\subset\lbrack -\Vert A \Vert, \Vert A \Vert \rbrack$が成り立つ。特に実数である。
 
+（証明）$\mathcal{C}=0$のときは$\sigma(0)=\emptyset$より明らか。
+
+$U^{\ast}U=I$より$C^{\ast}$条件より$1=\Vert I \Vert=\Vert U^{\ast}U \Vert=\Vert U \Vert^{2}$だから$\Vert U \Vert=1$を得る。故に$\lambda\in\sigma(U)$なら$\vert \lambda \vert\le 1$である。逆に$\lambda^{-1}\in\sigma(U^{-1})=\sigma(U^{\ast})$であるが、$U^{\ast}$もユニタリーであるから$\vert \lambda^{-1} \vert\le 1$を得る。つまり$\vert \lambda \vert=1$が成り立つ。
+\\
 <!--
-\begin{Proof}
-　$\mathcal{C}=0$のときは$\sigma(0)=\emptyset$より明らか。
-\\
-　(1) $U^{*}U=I$より\textup{C*}条件より$1=||I||=||U^{*}U||=||U||^{2}$だから$||U||=1$を得る。故に$\lambda\in\sigma(U)$なら$|\lambda|\le 1$である。
-逆に$\lambda^{-1}\in\sigma(U^{-1})=\sigma(U^{*})$であるが、$U^{*}$もユニタリーであるから$|\lambda^{-1}|\le 1$を得る。つまり$|\lambda|=1$が成り立つ。
-\\
 　(2) 実数$a, b\neq 0$と$\lambda=a+ib$に対し$A-\lambda I=b(b^{-1}(A-aI)-iI)$である。
 $B=b^{-1}(A-aI)$と置くと、$B^{*}=\overline{b^{-1}}(A^{*}-\overline{a}I^{*})=b^{-1}(A-aI)=B$より$B$は自己共役となる。
 このとき$B-iI$が可逆でないとすると、任意の実数$x$に対して$i(B-iI)=(iB-xI)+(x+1)I$より$x+1\in\sigma(iB-xI)$を得る。
