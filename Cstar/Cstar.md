@@ -55,20 +55,17 @@ $U^{\ast}U=I$より$C^{\ast}$条件より$1=\Vert I \Vert=\Vert U^{\ast}U \Vert=
 
 実数$a, b\neq 0$と$\lambda=a+ib$に対し$A-\lambda I=b(b^{-1}(A-aI)-iI)$である。$B=b^{-1}(A-aI)$と置くと、$B^{\ast}=\overline{b^{-1}}(A^{\ast}-\overline{a}I^{\ast})=b^{-1}(A-aI)=B$より$B$は自己共役となる。このとき$B-iI$が可逆でないとすると、任意の実数$x$に対して$i(B-iI)=(iB-xI)+(x+1)I$より$x+1\in\sigma(iB-xI)$を得る。$\vert x+1 \vert\le\Vert iB-xI \vert$であるから$C^{\ast}$条件より$(x+1)^{2}\le\Vert iB-xI \Vert^{2}=\Vert (-iB^{\ast}-xI)(iB-xI) \Vert=\Vert B^{2}+x^{2}I \Vert\le x^{2}+\Vert B \Vert^{2}$が成り立つ。整理すると$1+2x\le\Vert B \Vert^{2}$が任意の$x$に対して成り立つことになり、これは矛盾する。つまり$B-iI$は可逆であり、$A-\lambda I$も可逆となる。故に$\sigma(A)\subset\mathbb{R}$が分かる。特に$r(A)\le\Vert A \Vert$より$\sigma(A)\subset\lbrack -\Vert A \Vert, \Vert A \Vert\rbrack$が従う。
 
+__定義__ $\mathcal{A}, \mathcal{B}$を代数、$\pi$を$\mathcal{A}$から$\mathcal{B}$への線型写像とする。
+
+- $\pi$が準同型であるとは、任意の$A, B\in\mathcal{A}$に対して$\pi(AB)=\pi(A)\pi(B)$を満たすことを言う。
+- $\mathcal{A}, \mathcal{B}$が$\ast$代数で、任意の$A\in\mathcal{A}$に対して$\pi(A^{\ast})=\pi(A)^{\ast}$を満たすとき、$\ast$準同型と言う。
+- 準同型が全単射であるとき同型、$\ast$同型と呼ぶ。
+
+ノルム代数$\mathcal{A}, \mathcal{B}$及び、準同型$\pi:\mathcal{A}\rightarrow\mathcal{B}$に対し以下を定める
+
+- $\pi$が等距離（isometric）であるとは、任意の$A\in\mathcal{A}$に対して$\Vert \pi(A) \Vert_{\mathcal{B}}=\Vert A \Vert_{\mathcal{A}}$を満たすことを言う。
+
 <!--
-
-　これまでは代数という一つの対象と、その元について考察してきた。代数としての構造を深く理解するため、対象と対象との間にある関係について議論を深めよう。
-それは圏論の用語を用いれば、射とは何かを考えるということである。
-
-\begin{Def}
-　$\mathcal{A}, \mathcal{B}$を代数、$\pi$を$\mathcal{A}$から$\mathcal{B}$への線型写像とする。
-$\pi$が準同型\textup{:homomorphism}であるとは、任意の$A, B\in\mathcal{A}$に対して$\pi(AB)=\pi(A)\pi(B)$を満たすことを言う。
-更に$\mathcal{A}, \mathcal{B}$が\textup{*}代数で、任意の$A\in\mathcal{A}$に対して$\pi(A^{*})=\pi(A)^{*}$を満たすとき、\textup{*}準同型\textup{:*-homomorphism}と言う。
-それぞれ準同型が全単射であるとき同型\textup{:isomorphism}、\textup{*}同型\textup{:*-isomorphism}と呼ぶ。
-\\
-　ノルム代数$\mathcal{A}, \mathcal{B}$及び、準同型$\pi:\mathcal{A}\rightarrow\mathcal{B}$に対し、
-$\pi$が等距離\textup{:isometric}であるとは、任意の$A\in\mathcal{A}$に対して$||\pi(A)||_{\mathcal{B}}=||A||_{\mathcal{A}}$を満たすことを言う。
-\end{Def}
 
 \begin{Rem}
 　\textup{\textbf{Alg, Alg*, BanachAlg, BanachAlg*, C*}}及びその可換部分や単位的部分（\textup{\textbf{Comm.Alg, UnitalAlg}}等）は適切な対象\textup{:object}と射\textup{:morphism}により圏をなす。
