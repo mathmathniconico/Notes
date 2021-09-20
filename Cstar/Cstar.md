@@ -65,18 +65,13 @@ __定義__ $\mathcal{A}, \mathcal{B}$を代数、$\pi$を$\mathcal{A}$から$\ma
 
 - $\pi$が等距離（isometric）であるとは、任意の$A\in\mathcal{A}$に対して$\Vert \pi(A) \Vert_{\mathcal{B}}=\Vert A \Vert_{\mathcal{A}}$を満たすことを言う。
 
+> 代数、$\ast$代数、バナッハ代数、バナッハ$\ast$代数、$C^{\ast}$代数及びその可換部分や単位的部分は何れも適切な対象と射により圏をなす。
+
+__定義__ 単位的な代数$\mathcal{A}, \mathcal{B}$と準同型$\pi\colon\mathcal{A}\rightarrow\mathcal{B}$に対して、$\pi$が **単位元を保つ** （unit-preserving）とは、$\pi(I_{\mathcal{A}})=I_{\mathcal{B}}$を満たすことをいう。
+
+> 準同型は必ずしも単位元を保つとは限らない。これは$0$からの射を考えてみればすぐに分かる。ただし後に挙げる比較的重要な射に関しては大抵の場合に単位元を保つことを示すことができる。
+
 <!--
-
-\begin{Rem}
-　\textup{\textbf{Alg, Alg*, BanachAlg, BanachAlg*, C*}}及びその可換部分や単位的部分（\textup{\textbf{Comm.Alg, UnitalAlg}}等）は適切な対象\textup{:object}と射\textup{:morphism}により圏をなす。
-\end{Rem}
-
-\begin{Def}
-　単位的な代数$\mathcal{A}, \mathcal{B}$と準同型$\pi:\mathcal{A}\rightarrow\mathcal{B}$に対して、
-$\pi$が単位元を保つ\textup{:unit-preserving}とは、$\pi(I_{\mathcal{A}})=I_{\mathcal{B}}$を満たすことをいう。
-\footnote{準同型は必ずしも単位元を保つとは限らない。これは$0$からの射を考えてみればすぐに分かる。ただし後に挙げる比較的重要な射に関しては大抵の場合に単位元を保つことを示すことができる。}
-\end{Def}
-
 　\textup{\textbf{BanachAlg}}等における線型位相空間としての圏との整合性、即ち準同型が有界\footnote{連続であることと同値であった。}であることは、たとえ単位元を保つことを仮定しても一般には従わない。
 しかし単位的\textup{C*}代数のなす圏\textup{\textbf{C*}}においてはこの限りではなく、準同型性のみから有界性が従う。これは後述する。
 単位元を保つ準同型に限れば、規格化された単位的\textup{Banach}代数の範疇で、次のように簡単に示すことができる。
