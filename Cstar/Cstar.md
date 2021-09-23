@@ -75,20 +75,13 @@ $\mathbf{BanachAlg}$等における線型位相空間としての圏との整合
 
 __命題__ 単位的代数$\mathcal{A}, \mathcal{B}$と単位元を保つ準同型$\pi\colon\mathcal{A}\rightarrow\mathcal{B}$に対して逆元は逆元に写る。特に$\mathcal{A}, \mathcal{B}$がBanach代数で$\mathcal{B}$が規格化されているとき$\Vert \pi \Vert\le 1$つまり有界であり、更に$\mathcal{A}$も規格化されていれば$\Vert \pi \Vert=1$が成り立つ。
 
-<!--
-\begin{Proof}
-　まず$A\in\mathcal{A}$が可逆とすると、$\pi(A^{-1})\pi(A)=\pi(A^{-1}A)=\pi(I_{\mathcal{A}})=I_{\mathcal{B}}$より$\pi(A^{-1})=\pi(A)^{-1}$が従う。
-\\
-　次に$\mathcal{B}$が規格化されているときに$\pi$の有界性を示す。$\pi=0$なら常に有界であるから$\pi\neq 0$としてよい。このとき$\mathcal{A}, \mathcal{B}\neq 0$である。
-$A\in\mathcal{A}$に対し、$|\lambda|>||A||$とすると$A-\lambda I_{\mathcal{A}}\in\mathcal{R}_{\mathcal{A}}$である。
-このとき$\pi(A)-\lambda I_{\mathcal{B}}=\pi(A-\lambda I_{\mathcal{A}})\in\mathcal{R}_{\mathcal{B}}$であるから、
-$\mathcal{B}\neq 0$より$\pi(A)-\lambda I_{\mathcal{B}}\neq 0$すなわち$\pi(A)\neq \lambda I_{\mathcal{B}}$となる。
-$\mathcal{B}$は規格化されているから、両辺のノルムを取ると$||\pi(A)||\neq ||\lambda I_{\mathcal{B}}||=|\lambda|\cdot||I_{\mathcal{B}}||=|\lambda|$が従う。
-これが任意の$|\lambda|>||A||$に対して成り立つので$||\pi(A)||\le ||A||$を得る。つまり$||\pi||\le 1$を得る。
-\\
-　更に$\mathcal{A}$が規格化されているときは、$1=||I_{\mathcal{B}}||=||\pi(I_{\mathcal{A}})||\le ||\pi||\cdot ||I_{\mathcal{A}}||=||\pi||$から$||\pi||=1$が従う。
-\end{Proof}
+（証明）まず$A\in\mathcal{A}$が可逆とすると、$\pi(A^{-1})\pi(A)=\pi(A^{-1}A)=\pi(I_{\mathcal{A}})=I_{\mathcal{B}}$より$\pi(A^{-1})=\pi(A)^{-1}$が従う。
 
+次に$\mathcal{B}$が規格化されているときに$\pi$の有界性を示す。$\pi=0$なら常に有界であるから$\pi\neq 0$としてよい。このとき$\mathcal{A}, \mathcal{B}\neq 0$である。$A\in\mathcal{A}$に対し、$\vert \lambda \vert\gt\Vert A \Vert$とすると$A-\lambda I_{\mathcal{A}}\in\mathcal{R}_{\mathcal{A}}$である。このとき$\pi(A)-\lambda I_{\mathcal{B}}=\pi(A-\lambda I_{\mathcal{A}})\in\mathcal{R}_{\mathcal{B}}$であるから、$\mathcal{B}\neq 0$より$\pi(A)-\lambda I_{\mathcal{B}}\neq 0$すなわち$\pi(A)\neq \lambda I_{\mathcal{B}}$となる。$\mathcal{B}$は規格化されているから、両辺のノルムを取ると$\Vert \pi(A) \Vert\neq\Vert \lambda I_{\mathcal{B}} \Vert=\vert \lambda \vert\cdot\Vert I_{\mathcal{B}} \Vert=\vert \lambda \vert$が従う。これが任意の$\vert \lambda \vert\gt\Vert A \Vert$に対して成り立つので$\Vert \pi(A) \Vert\le\Vert A \Vert$を得る。つまり$\Vert \pi \Vert\le 1$を得る。
+
+更に$\mathcal{A}$が規格化されているときは、$1=\Vert I_{\mathcal{B}} \Vert=\Vert \pi(I_{\mathcal{A}}) \Vert\le\Vert \pi \Vert\cdot\Vert I_{\mathcal{A}} \Vert=\Vert \pi \Vert$から$\Vert \pi \Vert=1$が従う。$\square$
+
+<!--
 \begin{Def}
 　$\mathcal{A}$を代数とする。$\mathcal{A}$の部分空間$\mathcal{I}$が$\mathcal{A}\mathcal{I}\subset\mathcal{I}$を満たすとき左イデアル\textup{:left ideal}と言う。
 同様に$\mathcal{I}\mathcal{A}\subset\mathcal{I}$を満たすとき右イデアル\textup{:right ideal}と言う。
