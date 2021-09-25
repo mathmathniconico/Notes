@@ -81,15 +81,11 @@ __命題__ 単位的代数$\mathcal{A}, \mathcal{B}$と単位元を保つ準同�
 
 更に$\mathcal{A}$が規格化されているときは、$1=\Vert I_{\mathcal{B}} \Vert=\Vert \pi(I_{\mathcal{A}}) \Vert\le\Vert \pi \Vert\cdot\Vert I_{\mathcal{A}} \Vert=\Vert \pi \Vert$から$\Vert \pi \Vert=1$が従う。$\square$
 
-<!--
-\begin{Def}
-　$\mathcal{A}$を代数とする。$\mathcal{A}$の部分空間$\mathcal{I}$が$\mathcal{A}\mathcal{I}\subset\mathcal{I}$を満たすとき左イデアル\textup{:left ideal}と言う。
-同様に$\mathcal{I}\mathcal{A}\subset\mathcal{I}$を満たすとき右イデアル\textup{:right ideal}と言う。
-左イデアルかつ右イデアルのとき、両側イデアル\textup{:two-sided ideal}と言う。
-\\
-　$\{0\}, \mathcal{A}$は両側イデアルとなる。これを自明\textup{:trivial}な両側イデアルと言う。両側イデアルが自明でないとき、非自明\textup{:non-trivial}であると言う。
-\end{Def}
+__定義__ $\mathcal{A}$を代数とする。$\mathcal{A}$の部分空間$\mathcal{I}$が$\mathcal{A}\mathcal{I}\subset\mathcal{I}$を満たすとき **左イデアル** （left ideal）と言う。同様に$\mathcal{I}\mathcal{A}\subset\mathcal{I}$を満たすとき **右イデアル** （right ideal）と言う。左イデアルかつ右イデアルのとき **両側イデアル** （two-sided ideal）と言う。
 
+- $\lbrace 0 \rbrace, \mathcal{A}$は両側イデアルとなる。これを自明な両側イデアルと言う。
+
+<!--
 \begin{Rem}
 　準同型$\pi:\mathcal{A}\rightarrow\mathcal{B}$の核$\Ker\pi\subset\mathcal{A}$は両側イデアルとなる。
 \\
