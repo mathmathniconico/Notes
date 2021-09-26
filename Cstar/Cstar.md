@@ -84,19 +84,12 @@ __命題__ 単位的代数$\mathcal{A}, \mathcal{B}$と単位元を保つ準同�
 __定義__ $\mathcal{A}$を代数とする。$\mathcal{A}$の部分空間$\mathcal{I}$が$\mathcal{A}\mathcal{I}\subset\mathcal{I}$を満たすとき **左イデアル** （left ideal）と言う。同様に$\mathcal{I}\mathcal{A}\subset\mathcal{I}$を満たすとき **右イデアル** （right ideal）と言う。左イデアルかつ右イデアルのとき **両側イデアル** （two-sided ideal）と言う。
 
 - $\lbrace 0 \rbrace, \mathcal{A}$は両側イデアルとなる。これを自明な両側イデアルと言う。
+- 準同型$\pi\colon\mathcal{A}\rightarrow\mathcal{B}$の核$\Ker\pi\subset\mathcal{A}$は両側イデアルとなる。
+- 両側イデアル$\mathcal{I}, \mathcal{J}, \mathcal{I}_{\lambda}(\lambda\in\Lambda)$に対し、$\mathcal{I}\cap\mathcal{J}, \bigcup_{\lambda\in\Lambda}\mathcal{I}_{\lambda}$は両側イデアルになる。
+
+ノルム代数$\mathcal{A}$の両側イデアルがノルム位相において閉集合であるとき、両側閉イデアル（two-sided closed ideal）、あるいは単にイデアルと呼ぶ。
 
 <!--
-\begin{Rem}
-　準同型$\pi:\mathcal{A}\rightarrow\mathcal{B}$の核$\Ker\pi\subset\mathcal{A}$は両側イデアルとなる。
-\\
-　両側イデアル$\mathcal{I}, \mathcal{J}, \mathcal{I}_{\lambda}(\lambda\in\Lambda)$に対し、
-$\mathcal{I}\cap\mathcal{J}, \bigcup_{\lambda\in\Lambda}\mathcal{I}_{\lambda}$は両側イデアルになる。
-\end{Rem}
-
-\begin{Def}
-　ノルム代数$\mathcal{A}$の両側イデアルがノルム位相において閉集合であるとき、両側閉イデアル\textup{:two-sided closed ideal}、あるいは単にイデアル\textup{:ideal}と呼ぶ。
-\end{Def}
-
 \begin{Prop}
 　\textup{Banach}代数$\mathcal{B}$とイデアル$\mathcal{I}\subset\mathcal{B}$に対して、
 商空間$\mathcal{B}/\mathcal{I}$は\textup{Banach}代数となる。
