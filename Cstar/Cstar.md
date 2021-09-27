@@ -89,17 +89,11 @@ __定義__ $\mathcal{A}$を代数とする。$\mathcal{A}$の部分空間$\mathc
 
 ノルム代数$\mathcal{A}$の両側イデアルがノルム位相において閉集合であるとき、両側閉イデアル（two-sided closed ideal）、あるいは単にイデアルと呼ぶ。
 
-<!--
-\begin{Prop}
-　\textup{Banach}代数$\mathcal{B}$とイデアル$\mathcal{I}\subset\mathcal{B}$に対して、
-商空間$\mathcal{B}/\mathcal{I}$は\textup{Banach}代数となる。
-\end{Prop}
-\begin{Proof}
-　$A, B\in\mathcal{B}$の同値類を$[A], [B]$で表せば、自然なノルム$||[A]||=\inf\{||A+Q||\mid Q\in\mathcal{I}\}$により$\mathcal{B}/\mathcal{I}$が\textup{Banach}空間になることはよい。
-そこで積を$[A]\cdot [B]=[AB]$と定めれば、$||[AB]||=\inf\{||AB+Q||\mid Q\in\mathcal{I}\}\le\inf\{||A+Q_{1}||\cdot ||A+Q_{2}||\mid Q_{1}, Q_{2}\in\mathcal{I}\}=||[A]||\cdot||[B]||$
-より積に関するノルムの条件を満たすことが分かる。故に商空間$\mathcal{B}/\mathcal{I}$は\textup{Banach}代数である。
-\end{Proof}
+__命題__ Banach代数$\mathcal{B}$とイデアル$\mathcal{I}\subset\mathcal{B}$に対して、商空間$\mathcal{B}/\mathcal{I}$はBanach代数となる。
 
+（証明）$A, B\in\mathcal{B}$の同値類を$\lbrack A \rbrack, \lbrack B \rbrack$で表せば、自然なノルム$\Vert \lbrack A \rbrack \Vert=\inf\lbrace \Vert A+Q \Vert \mid Q\in\mathcal{I} \rbrace$により$\mathcal{B}/\mathcal{I}$はBanach空間である。そこで積を$\lbrack A \rbrack\cdot\lbrack B \rbrack=\lbrack AB \rbrack$と定めれば$\Vert \lbrack AB \rbrack \Vert=\inf\lbrace \Vert AB+Q \Vert \mid Q\in\mathcal{I} \rbrace\le\inf\lbrace \Vert A+Q_{1} \Vert\cdot\Vert A+Q_{2} \Vert\mid Q_{1}, Q_{2}\in\mathcal{I} \rbrace=\Vert \lbrack A \rbrack \Vert\cdot\Vert \lbrack B \rbrack\Vert$より積に関するノルムの条件を満たすことが分かる。故に商空間$\mathcal{B}/\mathcal{I}$はBanach代数である。$\square$
+
+<!--
 \begin{Rem}
 　$\mathcal{B}$が可換なら$\mathcal{B}/\mathcal{I}$も可換となる。
 \\
