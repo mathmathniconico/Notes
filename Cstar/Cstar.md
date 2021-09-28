@@ -93,23 +93,15 @@ __命題__ Banach代数$\mathcal{B}$とイデアル$\mathcal{I}\subset\mathcal{B
 
 （証明）$A, B\in\mathcal{B}$の同値類を$\lbrack A \rbrack, \lbrack B \rbrack$で表せば、自然なノルム$\Vert \lbrack A \rbrack \Vert=\inf\lbrace \Vert A+Q \Vert \mid Q\in\mathcal{I} \rbrace$により$\mathcal{B}/\mathcal{I}$はBanach空間である。そこで積を$\lbrack A \rbrack\cdot\lbrack B \rbrack=\lbrack AB \rbrack$と定めれば$\Vert \lbrack AB \rbrack \Vert=\inf\lbrace \Vert AB+Q \Vert \mid Q\in\mathcal{I} \rbrace\le\inf\lbrace \Vert A+Q_{1} \Vert\cdot\Vert A+Q_{2} \Vert\mid Q_{1}, Q_{2}\in\mathcal{I} \rbrace=\Vert \lbrack A \rbrack \Vert\cdot\Vert \lbrack B \rbrack\Vert$より積に関するノルムの条件を満たすことが分かる。故に商空間$\mathcal{B}/\mathcal{I}$はBanach代数である。$\square$
 
+- $\mathcal{B}$が可換なら$\mathcal{B}/\mathcal{I}$も可換となる。
+- $\mathcal{B}$が単位的なら$\mathcal{B}/\mathcal{I}$も単位的であり、その単位元は$I_{\mathcal{B}/\mathcal{I}}=\lbrack I_{\mathcal{B}} \rbrack$である。すなわち商写像は単位元を保つ準同型である。
+
+__定義__ 代数$\mathcal{A}$及び両側イデアル$\mathcal{I}\subsetneq\mathcal{A}$に対し次を定める。
+
+- $\mathcal{I}$が **素** （prime）であるとは、任意の$A, B\in\mathcal{A}$に対し、$AB\in\mathcal{I}$なら$A\in\mathcal{I}$または$B\in\mathcal{I}$が成り立つことをいう。$\mathcal{A}$の素な両側イデアル全体を$\Prime(\mathcal{A})$で表す。
+- $\mathcal{I}$が **極大** （maximal）であるとは$\mathcal{I}$を含む非自明な両側イデアルが存在しないことを言う。$\mathcal{A}$の極大な両側イデアル全体を$\Max(\mathcal{A})$で表す。
+
 <!--
-\begin{Rem}
-　$\mathcal{B}$が可換なら$\mathcal{B}/\mathcal{I}$も可換となる。
-\\
-　$\mathcal{B}$が単位的なら$\mathcal{B}/\mathcal{I}$も単位的であり、その単位元は$I_{\mathcal{B}/\mathcal{I}}=[I_{\mathcal{B}}]$である。
-すなわち商写像は単位元を保つ準同型である。
-\end{Rem}
-
-\begin{Def}
-　代数$\mathcal{A}$及び両側イデアル$\mathcal{I}\subsetneq\mathcal{A}$に対し、次を定める。
-\begin{enumerate}
-\item $\mathcal{I}$が素\textup{:prime}であるとは、任意の$A, B\in\mathcal{A}$に対し、$AB\in\mathcal{I}$なら$A\in\mathcal{I}$または$B\in\mathcal{I}$が成り立つことをいう。
-$\mathcal{A}$の素な両側イデアル全体を$\Prime(\mathcal{A})$で表す。
-\item $\mathcal{I}$が極大\textup{:maximal}であるとは$\mathcal{I}$を含む非自明な両側イデアルが存在しないことを言う。$\mathcal{A}$の極大な両側イデアル全体を$\Max(\mathcal{A})$で表す。
-\end{enumerate}
-\end{Def}
-
 \begin{Prop}
 　代数$\mathcal{A}$に対し、$\Max(\mathcal{A})$は$\Prime(\mathcal{A})$の部分集合となる。
 \end{Prop}
