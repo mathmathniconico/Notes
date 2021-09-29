@@ -101,10 +101,9 @@ __定義__ 代数$\mathcal{A}$及び両側イデアル$\mathcal{I}\subsetneq\mat
 - $\mathcal{I}$が **素** （prime）であるとは、任意の$A, B\in\mathcal{A}$に対し、$AB\in\mathcal{I}$なら$A\in\mathcal{I}$または$B\in\mathcal{I}$が成り立つことをいう。$\mathcal{A}$の素な両側イデアル全体を$\Prime(\mathcal{A})$で表す。
 - $\mathcal{I}$が **極大** （maximal）であるとは$\mathcal{I}$を含む非自明な両側イデアルが存在しないことを言う。$\mathcal{A}$の極大な両側イデアル全体を$\Max(\mathcal{A})$で表す。
 
+__命題__ 代数$\mathcal{A}$に対し、$\Max(\mathcal{A})$は$\Prime(\mathcal{A})$の部分集合となる。
+
 <!--
-\begin{Prop}
-　代数$\mathcal{A}$に対し、$\Max(\mathcal{A})$は$\Prime(\mathcal{A})$の部分集合となる。
-\end{Prop}
 \begin{Proof}
 　$\mathcal{I}\in\Max(\mathcal{A})$に対し、$AB\in\mathcal{I}, A\notin\mathcal{I}$とする。
 このとき$\mathcal{J}=\{CA+D\mid C\in\mathcal{A}, D\in\mathcal{I}\}$は$\mathcal{I}$を真に含む両側イデアルとなる。
