@@ -103,15 +103,9 @@ __定義__ 代数$\mathcal{A}$及び両側イデアル$\mathcal{I}\subsetneq\mat
 
 __命題__ 代数$\mathcal{A}$に対し、$\Max(\mathcal{A})$は$\Prime(\mathcal{A})$の部分集合となる。
 
-<!--
-\begin{Proof}
-　$\mathcal{I}\in\Max(\mathcal{A})$に対し、$AB\in\mathcal{I}, A\notin\mathcal{I}$とする。
-このとき$\mathcal{J}=\{CA+D\mid C\in\mathcal{A}, D\in\mathcal{I}\}$は$\mathcal{I}$を真に含む両側イデアルとなる。
-極大性から$\mathcal{J}=\mathcal{A}$であり、ある$C\in\mathcal{A}, D\in\mathcal{I}$により$CA+D=I$を満たす。
-両辺に右から$B$をかけると$CAB+DB=B$となり、$AB, D\in\mathcal{I}$より左辺は$\mathcal{I}$に属する。つまり$B\in\mathcal{I}$を得る。
-これは$\mathcal{I}$が素であることを意味する。
-\end{Proof}
+（証明）$\mathcal{I}\in\Max(\mathcal{A})$に対し、$AB\in\mathcal{I}, A\notin\mathcal{I}$とする。このとき$\mathcal{J}=\lbrace CA+D\mid C\in\mathcal{A}, D\in\mathcal{I} \rbrace$は$\mathcal{I}$を真に含む両側イデアルとなる。極大性から$\mathcal{J}=\mathcal{A}$であり、ある$C\in\mathcal{A}, D\in\mathcal{I}$により$CA+D=I$を満たす。両辺に右から$B$をかけると$CAB+DB=B$となり、$AB, D\in\mathcal{I}$より左辺は$\mathcal{I}$に属する。つまり$B\in\mathcal{I}$を得る。これは$\mathcal{I}$が素であることを意味する。$\square$
 
+<!--
 \begin{Lem}
 　単位的\textup{Banach}代数$\mathcal{B}$の極大な両側イデアルは両側閉イデアルであり、それを極大イデアルと呼ぶことができる。また全体でない両側イデアルに対し、それを含む極大イデアルは必ず存在する。
 \end{Lem}
